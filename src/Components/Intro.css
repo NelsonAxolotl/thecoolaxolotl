@@ -1,0 +1,723 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Quicksand:wght@300..700&display=swap");
+
+.transition-bubble {
+  position: absolute;
+  bottom: -10%; /* Les bulles commencent en bas de l'écran */
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  animation: rise 4s ease-out forwards; /* Les bulles montent et disparaissent */
+  pointer-events: none; /* Empêche toute interaction avec les bulles */
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-80vh); /* Monte presque hors de l'écran */
+    opacity: 1; /* Visible jusqu'à la fin de la montée */
+  }
+  100% {
+    transform: translateY(-150vh); /* Hors de l'écran */
+    opacity: 0; /* Disparaît */
+  }
+}
+
+/* Style des bulles roses */
+.bubble-pink {
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 200, 200, 0.8),
+    rgba(240, 128, 128, 0.3) 70%,
+    rgba(139, 69, 69, 0.1) 100%
+  );
+  box-shadow: inset 0 -5px 10px rgba(240, 128, 128, 0.4),
+    inset -3px 3px 5px rgba(255, 230, 230, 0.5),
+    0 0 15px rgba(255, 160, 160, 0.4);
+}
+
+/* Style des bulles turquoise */
+.bubble-turquoise {
+  background: radial-gradient(
+    circle at top left,
+    rgba(0, 206, 209, 0.8),
+    rgba(0, 129, 138, 0.3) 70%,
+    rgba(0, 77, 83, 0.1) 100%
+  );
+  box-shadow: inset 0 -5px 10px rgba(0, 129, 138, 0.4),
+    inset -3px 3px 5px rgba(0, 77, 83, 0.5), 0 0 15px rgba(0, 179, 179, 0.4);
+}
+
+.intro-container {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 0; /* Background layer */
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 3.5s ease-out; /* Transition pour le changement de couleur de fond */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Permet de remplir le conteneur */
+  z-index: -1; /* Envoie l'image en arrière-plan */
+  opacity: 0; /* Démarre avec l'opacité à 0 */
+  background-image: url("../Pics/art.jpeg"); /* Remplacez par le chemin de votre image */
+  background-size: cover; /* L'image couvre tout le conteneur */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat;
+  animation: fadeInImage 5s ease-out forwards;
+}
+
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Vidéo en arrière-plan */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Permet de remplir le conteneur */
+  z-index: -1; /* Envoie la vidéo en arrière-plan */
+  opacity: 0; /* Démarre avec l'opacité à 0 */
+  animation-delay: 2s;
+  animation: fadeInVideo 8s ease-out forwards,
+    fadeInOut 16s ease-in-out infinite; /* Animation pour faire apparaître la vidéo */
+}
+
+/* Animation pour l'apparition de la vidéo */
+@keyframes fadeInVideo {
+  0% {
+    opacity: 0; /* La vidéo commence invisible */
+  }
+  100% {
+    opacity: 0.3; /* La vidéo devient complètement visible */
+  }
+}
+
+/* Styles pour le logo et les bulles */
+.intro-logo-container,
+.bubble-container {
+  position: relative;
+  z-index: 2; /* Au-dessus de la vidéo */
+}
+
+.intro-logo-container {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  clip-path: circle(
+    0% at 50% 50%
+  ); /* Démarre avec un cercle minuscule au centre */
+  opacity: 0; /* Commence avec une opacité de 0 */
+  animation: zoomInFadeIn 10s ease-out forwards; /* Animation combinée de zoom et d'apparition */
+  transition: clip-path 11s ease-out; /* Transition douce pour l'agrandissement */
+}
+
+.intro-container.zoom-in .intro-logo-container {
+  clip-path: circle(
+    150% at 50% 50%
+  ); /* Agrandit le cercle pour révéler tout le logo */
+  opacity: 1; /* Le logo devient complètement visible lorsque l'animation de zoom est en cours */
+}
+
+/* Animation de zoom et d'apparition */
+@keyframes zoomInFadeIn {
+  0% {
+    clip-path: circle(0% at 50% 50%); /* Petit cercle initial */
+    opacity: 0; /* Commence avec une opacité de 0 */
+    transform: scale(0.8); /* Commence légèrement plus petit */
+  }
+  100% {
+    clip-path: circle(150% at 50% 50%); /* Agrandissement du cercle */
+    opacity: 1; /* Le logo devient complètement visible */
+    transform: scale(1); /* Atteint sa taille normale */
+  }
+}
+
+/* Transition en fade-out pour la page entière */
+.intro-container.fade-out-page {
+  opacity: 0;
+  transition: opacity 3s ease-in-out; /* Transition plus lente et douce */
+}
+
+/* Animation de zoom-out pour réduire le logo */
+.intro-container.zoom-out .intro-logo {
+  transform: scale(0); /* Réduction à zéro */
+  opacity: 0; /* Disparition progressive */
+  transition: transform 4s ease-in-out, opacity 4s ease-in-out;
+}
+
+.intro-logo {
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+  width: 100%;
+  height: auto;
+  animation: shake 0.5s ease-in-out, floatLogo 5s ease-in-out infinite;
+  animation-delay: 2s, 3s; /* Délai pour que la vibration démarre après la révélation */
+  animation-iteration-count: 2, infinite; /* Vibre trois fois */
+}
+
+/* Animation de flottement */
+@keyframes floatLogo {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Animation de vibration */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+/* Positionnement de base des bulles */
+.bubble-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+
+/* Styles communs pour toutes les bulles */
+.bubble {
+  cursor: pointer;
+  position: absolute;
+  display: flex; /* Pour centrer le texte */
+  justify-content: center; /* Centre le texte horizontalement */
+  align-items: center; /* Centre le texte verticalement */
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0;
+  font-size: 18px;
+  transform: scale(0.5);
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.8),
+    rgba(173, 216, 230, 0.3) 70%,
+    rgba(0, 128, 255, 0.1) 100%
+  );
+  box-shadow: inset 0 -5px 10px rgba(0, 128, 255, 0.4),
+    inset -3px 3px 5px rgba(255, 255, 255, 0.5), 0 0 15px rgba(0, 200, 255, 0.4);
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease,
+    background-color 0.6s, filter 0.3s ease-in-out; /* Ajout de la transition pour `scale` et `opacity` */
+  animation: bubble-rise 3s ease forwards, float 8s ease-in-out infinite; /* Animation de montée */
+  /* Transition fluide pour les changements de style */
+  transition: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1); /* Courbe Bézier progress*/
+}
+
+/* Couleurs spécifiques pour les bulles Parcours, Portfolio et Contact */
+.bubble.bubble-1, /* Parcours */
+.bubble.bubble-2 /* Portfolio */ {
+  /* Contact */
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 200, 200, 0.8),
+    rgba(240, 128, 128, 0.3) 70%,
+    rgba(139, 69, 69, 0.1) 100%
+  ); /* Couleur rose terre inspirée de l'image */
+  box-shadow: inset 0 -5px 10px rgba(240, 128, 128, 0.4),
+    inset -3px 3px 5px rgba(255, 230, 230, 0.5),
+    0 0 15px rgba(255, 160, 160, 0.4);
+}
+
+/* Couleurs spécifiques pour les bulles Devis et Services */
+.bubble.bubble-3, /* Services */
+.bubble.bubble-4 {
+  /* Devis */
+  background: radial-gradient(
+    circle at top left,
+    rgba(0, 206, 209, 0.8),
+    /* Vert turquoise clair */ rgba(0, 129, 138, 0.3) 70%,
+    /* Vert turquoise moyen */ rgba(0, 77, 83, 0.1) 100%
+      /* Vert turquoise foncé */
+  ); /* Couleur verte turquoise */
+  box-shadow: inset 0 -5px 10px rgba(0, 129, 138, 0.4),
+    /* Ombre interne */ inset -3px 3px 5px rgba(0, 77, 83, 0.5),
+    /* Éclairage doux */ 0 0 15px rgba(0, 179, 179, 0.4); /* Effet lumineux autour */
+}
+
+/* Animation de flottement pour les bulles principales */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+/* Animation de montée avec opacité */
+@keyframes bubble-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.5);
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
+  }
+}
+
+/* L'effet de mise à l'échelle avec hover */
+.bubble:hover {
+  filter: blur(1px) contrast(1.1); /* Effet de distorsion */
+  transform: scale(1.1) rotate(1deg) translateY(-5px); /* Augmenter légèrement la taille au survol */
+  opacity: 1; /* Assurer que l'opacité soit à 100% au survol */
+  z-index: 999; /* Mettre la bulle au-dessus des autres */
+  background-color: rgba(18, 150, 125, 0.5); /* 30% d'opacité */
+}
+
+/* Style hover pour les bulles parcours, contact, portfolio */
+.bubble.bubble-1:hover, /* Parcours */
+.bubble.bubble-2:hover /* Portfolio */ {
+  /* Contact */
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 200, 200, 1),
+    rgba(240, 128, 128, 0.5) 70%,
+    rgba(139, 69, 69, 0.2) 100%
+  ); /* Maintient la couleur rose terre pendant le hover */
+  box-shadow: inset 0 -5px 10px rgba(240, 128, 128, 0.6),
+    inset -3px 3px 5px rgba(255, 230, 230, 0.7),
+    0 0 15px rgba(255, 160, 160, 0.6);
+}
+
+/* Styles spécifiques pour chaque bulle : position et taille */
+.bubble-1 {
+  width: 150px;
+  height: 150px;
+  top: 18%;
+  left: -10%;
+  animation-delay: 1s;
+}
+
+.bubble-2 {
+  width: 180px;
+  height: 180px;
+  top: 10%;
+  right: -13%;
+  animation-delay: 2.5s;
+}
+
+.bubble-3 {
+  width: 130px;
+  height: 130px;
+  bottom: -20px;
+  left: 0%;
+  animation-delay: 3s;
+}
+
+.bubble-4 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  right: -5%;
+  animation-delay: 1.5s;
+}
+
+/* Styles pour les petites bulles supplémentaires autour des bulles principales */
+.small-bubble {
+  position: absolute;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.8),
+    rgba(173, 216, 230, 0.3) 70%,
+    rgba(0, 128, 255, 0.1) 100%
+  );
+  box-shadow: inset 0 -5px 10px rgba(0, 128, 255, 0.4),
+    inset -3px 3px 5px rgba(255, 255, 255, 0.5), 0 0 15px rgba(0, 200, 255, 0.4);
+  opacity: 0;
+  transform: scale(0.5);
+  cursor: auto;
+  pointer-events: none; /* Désactive toute interaction de la souris */
+  animation: small-bubble-rise 8s ease forwards infinite;
+}
+
+/* Small bubbles en rose terre */
+.small-bubble-1, /* Parcours - 1 */
+.small-bubble-2, /* Parcours - 2 */
+.small-bubble-3, /* Portfolio - 3 */
+.small-bubble-4, /* Portfolio - 4 */
+ /* Contact - 8 */
+.small-bubble-9,
+.small-bubble-12,
+.small-bubble-13,
+.small-bubble-15 {
+  /* Contact - 9 */
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 200, 200, 0.8),
+    rgba(240, 128, 128, 0.3) 70%,
+    rgba(139, 69, 69, 0.1) 100%
+  ); /* Couleur rose terre inspirée de l'image */
+  box-shadow: inset 0 -5px 10px rgba(240, 128, 128, 0.4),
+    inset -3px 3px 5px rgba(255, 230, 230, 0.5),
+    0 0 15px rgba(255, 160, 160, 0.4);
+}
+
+/* Small bubbles en vert turquoise */
+.small-bubble-5, /* Devis - 5 */
+.small-bubble-6, /* Services - 6 */
+.small-bubble-7, /* Devis - 7 */
+.small-bubble-10,
+.small-bubble-11,
+.small-bubble-14,
+.small-bubble-18,
+.small-bubble-19 {
+  /* Services - 10 */
+  background: radial-gradient(
+    circle at top left,
+    rgba(0, 206, 209, 0.8),
+    /* Vert turquoise clair */ rgba(0, 129, 138, 0.3) 70%,
+    /* Vert turquoise moyen */ rgba(0, 77, 83, 0.1) 100%
+      /* Vert turquoise foncé */
+  ); /* Couleur verte turquoise */
+  box-shadow: inset 0 -5px 10px rgba(0, 129, 138, 0.4),
+    /* Ombre interne */ inset -3px 3px 5px rgba(0, 77, 83, 0.5),
+    /* Éclairage doux */ 0 0 15px rgba(0, 179, 179, 0.4); /* Effet lumineux autour */
+}
+
+.small-bubble-1 {
+  width: 30px;
+  height: 30px;
+  top: -20px;
+  left: -20px;
+  animation-delay: 3s;
+}
+
+.small-bubble-2 {
+  width: 20px;
+  height: 20px;
+  top: 25px;
+  right: -30px;
+  animation-delay: 5s;
+}
+
+.small-bubble-3 {
+  width: 35px;
+  height: 35px;
+  top: -15px;
+  left: 15px;
+  animation-delay: 4.6s;
+}
+
+.small-bubble-4 {
+  width: 20px;
+  height: 20px;
+  top: 175px;
+  left: -20px;
+  animation-delay: 3.8s;
+}
+
+.small-bubble-5 {
+  top: -35px;
+  right: 35px;
+  animation-delay: 4s;
+}
+
+.small-bubble-6 {
+  width: 40px;
+  height: 40px;
+  top: 120px;
+  left: -40px;
+  animation-delay: 2.3s;
+}
+
+.small-bubble-7 {
+  width: 25px;
+  height: 25px;
+  bottom: -25px;
+  left: -20px;
+  animation-delay: 5s;
+}
+
+.small-bubble-9 {
+  width: 50px;
+  height: 50px;
+  bottom: 10px;
+  right: -30px;
+  animation-delay: 5.8s;
+}
+
+.small-bubble-10 {
+  width: 35px;
+  height: 35px;
+  bottom: 80px;
+  right: 0px;
+  animation-delay: 5.8s;
+}
+
+.small-bubble-11 {
+  width: 15px;
+  height: 15px;
+  bottom: 0px;
+  right: -10px;
+  animation-delay: 5.8s;
+}
+
+.small-bubble-12 {
+  width: 50px;
+  height: 50px;
+  bottom: -40px;
+  right: -10px;
+  animation-delay: 4s;
+}
+
+.small-bubble-13 {
+  width: 70px;
+  height: 70px;
+  bottom: 150px;
+  right: -50px;
+  animation-delay: 4s;
+}
+
+.small-bubble-14 {
+  width: 90px;
+  height: 90px;
+  bottom: -90px;
+  right: -50px;
+  animation-delay: 7s;
+}
+
+.small-bubble-15 {
+  width: 100px;
+  height: 100px;
+  bottom: -120px;
+  right: 120px;
+  animation-delay: 2s;
+}
+
+.small-bubble-18 {
+  width: 60px;
+  height: 60px;
+  bottom: -20px;
+  right: -60px;
+  animation-delay: 5s;
+}
+
+.small-bubble-19 {
+  width: 60px;
+  height: 60px;
+  bottom: 100px;
+  right: 100px;
+  animation-delay: 5s;
+}
+
+/* Animation pour les petites bulles */
+@keyframes small-bubble-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(0px) scale(0.5);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-10px) scale(0.7);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateY(-20px) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0px) scale(0.5);
+  }
+}
+
+.bubble-container a {
+  font-family: "quicksand", cursive;
+  font-size: 19px;
+}
+
+/* Pour les écrans plus petits, réduire la taille des bulles */
+@media screen and (max-width: 768px) {
+  .intro-container {
+    padding-top: 0;
+  }
+
+  .intro-logo-container {
+    width: 90%;
+  }
+
+  .bubble-1 {
+    width: 150px;
+    height: 150px;
+    top: 0;
+    left: 10%;
+    animation-delay: 1s;
+  }
+
+  .bubble-2 {
+    width: 150px;
+    height: 150px;
+    top: 80%;
+    right: 10%;
+    animation-delay: 1.8s;
+    /* Couleur de fond avec un dégradé radial */
+    background: radial-gradient(
+      circle at top left,
+      rgba(0, 206, 209, 0.8),
+      /* Vert turquoise clair */ rgba(0, 129, 138, 0.3) 70%,
+      /* Vert turquoise moyen */ rgba(0, 77, 83, 0.1) 100%
+        /* Vert turquoise foncé */
+    ) !important;
+
+    /* Ombres pour correspondre au style vert turquoise */
+    box-shadow: inset 0 -5px 10px rgba(0, 129, 138, 0.4),
+      inset -3px 3px 5px rgba(0, 77, 83, 0.5), 0 0 15px rgba(0, 179, 179, 0.4) !important;
+  }
+
+  .bubble-2:hover {
+    background: radial-gradient(
+      circle at top left,
+      rgba(0, 206, 209, 1),
+      /* Plus saturé au survol */ rgba(0, 129, 138, 0.5) 70%,
+      rgba(0, 77, 83, 0.2) 100%
+    );
+    box-shadow: inset 0 -5px 10px rgba(0, 129, 138, 0.6),
+      inset -3px 3px 5px rgba(0, 77, 83, 0.7), 0 0 15px rgba(0, 179, 179, 0.6);
+  }
+
+  .bubble-3 {
+    width: 120px;
+    height: 120px;
+    bottom: 10%;
+    left: 10%;
+    animation-delay: 3s;
+  }
+
+  .bubble-4 {
+    width: 100px;
+    height: 100px;
+    bottom: 75%;
+    right: 3%;
+    animation-delay: 1.5s;
+    background: radial-gradient(
+      circle at top left,
+      rgba(255, 200, 200, 0.8),
+      rgba(240, 128, 128, 0.3) 70%,
+      rgba(139, 69, 69, 0.1) 100%
+    ) !important; /* Couleur rose terre inspirée de l'image */
+    box-shadow: inset 0 -5px 10px rgba(240, 128, 128, 0.4),
+      inset -3px 3px 5px rgba(255, 230, 230, 0.5),
+      0 0 15px rgba(255, 160, 160, 0.4) !important;
+  }
+
+  .small-bubble-3,
+  .small-bubble-4,
+  .small-bubble-9,
+  .small-bubble-13 {
+    /* Couleur de fond avec un dégradé radial */
+    background: radial-gradient(
+      circle at center,
+      rgba(48, 199, 181, 0.8),
+      /* Vert clair */ rgba(48, 150, 136, 0.4) 70%,
+      /* Vert moyen */ rgba(48, 100, 91, 0.1) 100% /* Vert foncé */
+    ) !important;
+
+    /* Ombres pour un effet 3D subtil */
+    box-shadow: inset 0 -3px 8px rgba(48, 150, 136, 0.5),
+      /* Ombre interne légère */ inset -2px 2px 5px rgba(48, 100, 91, 0.3),
+      /* Ombre interne plus sombre */ 0 0 10px rgba(48, 199, 181, 0.4) !important; /* Lueur externe */
+  }
+
+  .small-bubble-7,
+  .small-bubble-10,
+  .small-bubble-18 {
+    background: radial-gradient(
+      circle at top left,
+      rgba(255, 200, 200, 0.8),
+      rgba(240, 128, 128, 0.3) 70%,
+      rgba(139, 69, 69, 0.1) 100%
+    ) !important; /* Couleur rose terre inspirée de l'image */
+    box-shadow: inset 0 -5px 10px rgba(240, 128, 128, 0.4),
+      inset -3px 3px 5px rgba(255, 230, 230, 0.5),
+      0 0 15px rgba(255, 160, 160, 0.4) !important;
+  }
+
+  .small-bubble-13 {
+    width: 70px;
+    height: 70px;
+    bottom: 70px;
+    right: -80px;
+    animation-delay: 4s;
+  }
+
+  .small-bubble-14 {
+    width: 90px;
+    height: 90px;
+    bottom: -120px;
+    right: -10px;
+    animation-delay: 5s;
+  }
+
+  .small-bubble-18 {
+    width: 60px;
+    height: 60px;
+    bottom: 150px;
+    right: -30px;
+    animation-delay: 5s;
+  }
+
+  .small-bubble-19 {
+    width: 60px;
+    height: 60px;
+    bottom: 180px;
+    right: 80px;
+    animation-delay: 5s;
+  }
+}

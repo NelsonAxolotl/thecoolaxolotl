@@ -1,0 +1,705 @@
+/* Conteneur principal */
+.portfolio-container {
+  max-width: 1250px;
+  margin: 50px auto;
+  padding: 20px 20px;
+  background: #1e1f1fdc;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0; /* Début masqué pour l'animation */
+  transform: translateY(20px); /* Légère translation vers le bas au départ */
+  transition: opacity 2s ease-out, transform 1.5s ease-out; /* Transition de fade-in et déplacement */
+}
+
+.background-video-container {
+  position: fixed; /* Positionnement absolu pour couvrir toute la page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Assurez-vous que la vidéo reste derrière le contenu */
+}
+
+.background-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* L'image vidéo couvrira l'ensemble de la fenêtre sans déformation */
+}
+
+/* Animation */
+.portfolio-container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Résumé */
+.summary-container {
+  margin: 40px auto 40px;
+  padding: 20px;
+  background: #212121d9;
+  border-radius: 10px;
+  color: #fffefe;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 880px) {
+  .summary-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.portfolio-title {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+@media (max-width: 880px) {
+  .portfolio-title {
+    font-size: 3rem;
+  }
+}
+
+.summary-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  font-weight: 500;
+}
+
+@media (max-width: 880px) {
+  .summary-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Titre de la section des projets */
+.projects-section-title {
+  display: flex;
+  align-items: center; /* Alignement vertical */
+  justify-content: center; /* Alignement horizontal */
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fffafa;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  gap: 10px;
+}
+
+@media (max-width: 880px) {
+  .projects-section-title {
+    font-size: 2rem;
+    flex-direction: column; /* Passe en colonne */
+    align-items: center; /* Centrage */
+    text-align: center;
+    margin-top: 60px;
+  }
+}
+
+.title-icon {
+  width: 70px; /* Taille de l'icône */
+  height: 70px;
+  border-radius: 50%; /* Rend l'image totalement ronde */
+  object-fit: cover; /* Garde une bonne qualité d'image */
+  border: 2px solid #ccc; /* Optionnel : ajoute une petite bordure */
+}
+
+.maquettes-section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fffafa;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  gap: 10px;
+}
+
+@media (max-width: 880px) {
+  .maquettes-section-title {
+    font-size: 2rem;
+    flex-direction: column; /* Passe en colonne */
+    align-items: center; /* Centrage */
+    text-align: center;
+    margin-top: 60px;
+  }
+}
+
+.projects-section-description {
+  font-size: 1.2rem;
+  color: #eaeaea;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 880px) {
+  .projects-section-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .projects-section-description {
+    text-align: left;
+    padding: 0 30px;
+  }
+}
+
+.maquettes-section-description {
+  font-size: 1.2rem;
+  color: #eaeaea;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 880px) {
+  .maquettes-section-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .maquettes-section-description {
+    text-align: left;
+    padding: 0 30px;
+  }
+}
+
+/* Liste des projets */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 5px;
+}
+
+/* Wrapper de chaque projet */
+.project-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+  background: #dcdcdc66;
+}
+
+.project-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #f4f0f0;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-image-container:hover .project-image {
+  transform: scale(1.05);
+}
+
+.last-project-image {
+  background: #fff;
+  object-fit: contain;
+  object-position: center;
+  border: 3px solid #f4f0f0;
+}
+
+/* Informations */
+.project-info {
+  flex: 2; /* Contrôler l'espace pris par la carte */
+  text-align: left;
+  padding: 15px; /* Réduire l'espace interne */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optionnel : ajout d'un fond semi-transparent */
+  border-radius: 10px;
+  max-width: 50%; /* Limiter la largeur pour réduire la taille */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.project-title {
+  font-size: 1.8rem; /* Réduire la taille du titre */
+  margin: 10px 0 20px; /* Réduire l'espace sous le titre */
+  text-align: center;
+  font-weight: 500;
+}
+
+.project-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #dcdcdc;
+  font-weight: 400;
+}
+
+.project-description {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #f5f5f5;
+  margin-bottom: 20px;
+}
+
+.project-technologies {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.technology-item {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  background: #426e7f;
+  color: #fff;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.technology-item:hover {
+  background: #6ca4c7;
+}
+
+/* Tablette (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .projects-container {
+    flex-direction: column;
+  }
+
+  .project-wrapper {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .project-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .project-info {
+    max-width: 90%;
+  }
+
+  .project-technologies {
+    justify-content: center;
+  }
+}
+
+/* Mobile (jusqu'à 767px) */
+@media screen and (max-width: 768px) {
+  .project-wrapper {
+    flex-direction: column;
+    width: 95%;
+    padding: 15px;
+  }
+
+  .project-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .project-info {
+    max-width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .project-technologies {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .technology-item {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+.maquettes-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  text-align: center;
+  background: #dcdcdc35;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
+  padding: 40px 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.maquettes-container:hover {
+  transform: translateY(-5px);
+}
+
+.maquettes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+
+.maquette-card {
+  position: relative;
+  display: flex; /* Pour que Flexbox soit actif */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  background-color: #000; /* Par défaut, noir */
+  background-size: cover; /* Assurez-vous que l'image de fond est bien recouverte */
+  background-position: left center no-repeat; /* Position de l'image de fond */
+  transition: background-position 1s ease-in-out, background-size 1s ease-in-out,
+    transform 0.8s ease, background-color 0.5s ease-in-out; /* Transition fluide */
+  margin-top: 15px;
+}
+
+/* Lors du survol, changement de la position de l'image de fond et effet de zoom */
+.maquette-card:hover {
+  background-position: center center; /* Changement de la position au survol */
+  border: 1px solid white;
+  background-size: 570px; /* Agrandir l'image de fond au survol */
+}
+
+/* Empêcher l'image interne (si utilisée) d'affecter le positionnement du fond */
+.maquette-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Centre l'image dans le conteneur */
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Appliquer l'effet de zoom à l'image interne */
+.maquette-card img:hover {
+  transform: scale(1.1);
+}
+
+.maquette-card .content {
+  position: absolute;
+  display: flex; /* Active Flexbox */
+  flex-direction: column; /* Empile le titre et la description verticalement */
+  justify-content: center; /* Centre verticalement à l'intérieur de .content */
+  align-items: center; /* Centre horizontalement */
+  bottom: 10%;
+  color: white;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.8s ease-in-out;
+  text-align: center; /* Centrer le texte */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.maquette-card:hover .content {
+  opacity: 1; /* Affiche le texte au survol */
+}
+
+.maquette-card .maquette-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fffafa;
+  margin: 10px 0;
+}
+
+.maquette-card .maquette-description {
+  font-size: 0.9rem;
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Le bouton positionné en haut à gauche */
+.maquette-card .maquette-button {
+  position: absolute;
+  top: 10px; /* Un petit décalage du haut */
+  left: 10px; /* Un petit décalage à gauche */
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.5); /* Fond noir semi-transparent */
+  color: #0b0b0b;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 2; /* Pour qu'il soit au-dessus de l'image */
+  opacity: 0; /* Non visible au départ */
+  transition: opacity 1s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+/* Afficher le bouton au survol de la carte */
+.maquette-card:hover .maquette-button {
+  opacity: 1; /* Devient visible au survol */
+  background-color: rgba(255, 255, 255, 0.5); /* Fond plus sombre au survol */
+}
+
+.project-reviews {
+  max-width: 260px;
+  height: 180px;
+  background-color: #000000;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating span {
+  color: gold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.flip-card {
+  width: 250px; /* Ajustez selon vos besoins */
+  height: 250px;
+  perspective: 1000px; /* Ajoute un effet de profondeur */
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Face avant */
+.flip-card-front,
+.flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Image en face avant */
+.flip-card-front {
+  background: #fff;
+}
+
+.avis-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Face arrière */
+.flip-card-back {
+  background: #1a1a1a;
+  color: white;
+  text-align: left; /* Aligne le texte à gauche */
+  font-size: 14px; /* Réduit la taille de la police */
+  padding: 20px;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flip-card-back p {
+  font-size: 14px; /* Réduction supplémentaire pour le texte */
+  line-height: 1.4; /* Espacement pour la lisibilité */
+}
+
+.maquette-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.maquette-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px; /* Espacement entre l'image et la carte */
+  border: 1px solid white;
+}
+
+/* ---- Styles généraux de la section Blog ---- */
+.blog-container {
+  display: flex;
+  flex-direction: column; /* Place l’image au-dessus du titre */
+  align-items: center; /* Centre horizontalement */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px 20px;
+  background-color: #f8f9fa38;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.title-icon {
+  width: 100px; /* Ajuste la taille selon tes besoins */
+  height: 100px;
+  border-radius: 50%; /* Rend l’image totalement ronde */
+  object-fit: cover; /* Ajuste bien l’image dans le cercle */
+  margin-bottom: 10px; /* Ajoute un espace sous l’image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ---- Titre principal ---- */
+.blog-container h2 {
+  align-items: center;
+  gap: 10px; /* Espacement entre l’image et le titre */
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #d6d2d2;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .blog-container h2 {
+    font-size: 28px;
+  }
+}
+
+/* ---- Catégories du blog ---- */
+.blog-category {
+  background-color: rgba(255, 255, 255, 0.437);
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ---- Effet de zoom au survol ---- */
+.blog-category:hover {
+  transform: translateY(-5px);
+}
+
+/* ---- Titres des catégories ---- */
+.blog-category h3 {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .blog-category h3 {
+    font-size: 18px;
+  }
+}
+
+.blog-category h3 span {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+/* ---- Texte des catégories ---- */
+.blog-category p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  font-weight: 550;
+}
+
+/* ---- Liste d'articles ---- */
+.article-list {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.category-title {
+  display: flex;
+  align-items: center; /* Aligne le texte et l’image sur la même ligne */
+  justify-content: space-between; /* Écarte le texte à gauche et l’image à droite */
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.category-title h3 {
+  margin: 0; /* Supprime les marges par défaut pour un bon alignement */
+  display: flex;
+  align-items: center; /* Assure que l'emoji et le texte sont bien alignés */
+  gap: 8px; /* Ajoute un petit espace entre l'emoji et le texte */
+}
+
+.category-icon {
+  width: 50px; /* Taille ajustable */
+  height: 50px;
+  border-radius: 50%; /* Rend l’image totalement ronde */
+  object-fit: cover; /* Ajuste bien l’image dans le cercle */
+  border: 1px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .category-icon {
+    display: none;
+  }
+}

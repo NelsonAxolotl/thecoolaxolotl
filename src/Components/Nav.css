@@ -1,0 +1,324 @@
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: -170px; /* Position initiale hors de la vue */
+  width: 100%;
+  min-height: 75px;
+  box-shadow: 0 4px 10px transparent;
+  backdrop-filter: blur(10px); /* Effet de flou derrière */
+  z-index: 1000;
+  animation: fadeInNavbar 2s ease-in-out forwards;
+}
+
+/* Si showNavbarOnScroll est vrai, la navbar apparaît avec un effet de transition */
+.navbar.visible-navbar {
+  top: 0; /* Réduit la position de la navbar en haut pour qu'elle devienne visible */
+  transition: all 0.5s ease-in-out; /* Augmentation de la durée de la transition à 0.8s */
+}
+
+.navbar.hidden-navbar {
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes fadeInNavbar {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.navbar.show-nav,
+.navbar.hide-nav {
+  opacity: 1;
+}
+
+.navbar-logo img {
+  height: 120px;
+  width: auto;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Par défaut : affichage en ligne sur les écrans larges */
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar-links-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-background-video {
+  display: none; /* Masqué par défaut */
+}
+
+.navbar-link {
+  color: inherit;
+  transition: all 0.67s ease-in-out;
+  display: block;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-link:hover {
+  text-decoration: none;
+  color: rgb(172, 18, 103);
+  transform: scale(1.05);
+  border-bottom: 1px solid rgb(172, 18, 103);
+}
+
+.navbar-burger {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  display: none;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-hover {
+  padding: 8px 0px;
+}
+
+.navbar-hover a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-item.active .navbar-link {
+  color: rgb(126, 58, 58);
+}
+
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .navbar-link {
+    padding: 10px 25px;
+  }
+}
+
+@media screen and (max-width: 1042px) {
+  .navbar-link:hover {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Style lorsque le burger est ouvert */
+  .navbar-logo img.burger-logo {
+    width: 120px;
+    height: 120px;
+    transition: all 0.3s ease-in-out;
+  }
+  .navbar {
+    z-index: 100;
+    flex-direction: column;
+    padding-top: 20px; /* Un petit espace en haut pour le logo */
+  }
+
+  nav {
+    padding-bottom: 0;
+  }
+
+  .navbar-item {
+    flex: none; /* Chaque élément occupe 1/3 de la largeur */
+    text-align: center;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 100vw;
+    height: 130vw;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.461);
+    visibility: hidden;
+    z-index: -10;
+    transition: all 0.8s ease-out;
+  }
+
+  .navbar-links.visible-navbar {
+    right: 0;
+    visibility: visible;
+  }
+
+  .navbar-background-video {
+    position: absolute; /* Positionner la vidéo en fond */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* La vidéo couvre toute la zone */
+    display: block; /* Afficher la vidéo uniquement en mode responsive */
+    z-index: -1; /* La vidéo en arrière-plan */
+  }
+
+  .navbar-links-list {
+    position: relative; /* Les liens doivent être devant la vidéo */
+    z-index: 1; /* Les liens sont devant la vidéo */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .show-nav .navbar-links {
+    right: 0;
+    width: 100vw;
+    visibility: visible;
+  }
+
+  .navbar-item:last-child::after {
+    display: none;
+  }
+
+  .navbar-link {
+    display: block;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    margin: 0;
+    color: rgb(255, 251, 251);
+  }
+
+  .navbar-burger {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .navbar-burger:hover {
+    cursor: pointer;
+  }
+
+  .burger-bar,
+  .burger-bar::before,
+  .burger-bar::after {
+    display: block;
+    width: 40px;
+    height: 3px;
+    position: relative;
+    border-radius: 3px;
+    background: rgb(255, 255, 255);
+    transition: all 0.8s ease-in-out;
+  }
+
+  .burger-bar::before,
+  .burger-bar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+
+  .burger-bar::before {
+    transform: translateY(-12px);
+  }
+
+  .burger-bar::after {
+    transform: translateY(12px);
+  }
+
+  .show-nav .burger-bar {
+    background: transparent;
+    width: 0;
+  }
+
+  .show-nav .burger-bar::before {
+    transform: rotate(45deg);
+  }
+
+  .show-nav .burger-bar::after {
+    transform: rotate(-45deg);
+  }
+
+  .navbar-item {
+    transform: translateX(200vh);
+  }
+
+  .show-nav .navbar-item {
+    transform: translateX(0);
+  }
+
+  .show-nav .slideInDown-1 {
+    transition: all 1.2s ease-out;
+  }
+
+  .show-nav .slideInDown-2 {
+    transition: all 1.5s ease-out;
+  }
+
+  .show-nav .slideInDown-3 {
+    transition: all 2s ease-out;
+  }
+
+  .show-nav .slideInDown-4 {
+    transition: all 2.5s ease-out;
+  }
+
+  .show-nav .slideInDown-5 {
+    transition: all 3s ease-out;
+  }
+
+  .navbar-link:hover {
+    color: rgb(126, 58, 58);
+    border-bottom: none;
+  }
+
+  .navbar-item {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar-links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 100vw;
+    height: 200vw;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.461);
+    visibility: hidden;
+    z-index: -10;
+    transition: all 0.8s ease-out;
+  }
+}

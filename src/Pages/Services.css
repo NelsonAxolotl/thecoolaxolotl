@@ -1,0 +1,847 @@
+.nav-container-services {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: 60px 0;
+  background: url("../Pics/time.webp");
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0; /* Début masqué pour l'animation */
+  transform: translateY(20px); /* Légère translation vers le bas au départ */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Transition de fade-in et déplacement */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4); /* Ajout d'une ombre */
+}
+
+.nav-container-services.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Conteneur principal */
+.services-container {
+  padding: 10px 50px 40px;
+  text-align: center;
+  background-color: #0195a8d9;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s ease;
+  max-width: 1200px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.services-container:hover {
+  transform: scale(1.003); /* Léger zoom au survol */
+}
+
+.services-container h1 {
+  font-size: 3.8rem;
+  font-weight: bold;
+  margin: 50px 0 50px;
+  color: #fff; /* Texte blanc */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Légère ombre sur le texte */
+}
+
+.intro-text {
+  font-size: 1.5rem;
+  color: #f9f6f6;
+  line-height: 28px;
+  margin-bottom: 80px;
+  font-weight: 550;
+  max-width: 800px;
+  text-align: justify;
+  margin-top: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Légère ombre sur le texte */
+}
+
+.intro-text span {
+  color: rgb(255, 203, 212);
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Grid des services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* À partir de 1000px, réorganiser pour placer la carte WordPress en dessous */
+@media (max-width: 1000px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr; /* Deux colonnes pour les autres cartes */
+    gap: 20px;
+  }
+
+  .service-card.future {
+    grid-column: 1 / -1; /* Occupe toute la largeur */
+    margin: 0 auto; /* Centre horizontalement */
+    max-width: 450px; /* Limite la largeur pour rester cohérente avec les autres cartes */
+  }
+}
+
+/* Animation pour faire glisser depuis la droite */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%); /* Commence hors de l'écran à droite */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* Arrive à sa position normale */
+    opacity: 1;
+  }
+}
+
+/* Appliquer l'animation aux cartes de service une fois visibles */
+.service-card.visible {
+  animation: slideInRight 1.5s ease-out forwards;
+}
+
+/* Ajouter un délai différent pour chaque carte pour un effet en cascade */
+.service-card:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.service-card:nth-child(2) {
+  animation-delay: 1s;
+}
+.service-card:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+/* Carte de service */
+.service-card {
+  background-color: #e7dbdb;
+  border: 3px solid #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s ease box-shadow 0.3s ease;
+  opacity: 0;
+  margin: 0 auto; /* Centrer les cartes */
+}
+
+.service-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  padding: 10px;
+  border-radius: 15px; /* Ajout des coins arrondis */
+  background-color: #e9e9e9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajout d'une ombre douce */
+}
+
+.service-title {
+  font-size: 1.4rem;
+  color: #333;
+  margin: 15px 0;
+  font-weight: 600;
+  margin-top: 25px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1270px) {
+  .service-title {
+    font-size: 1.2rem;
+  }
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #4b4a4a;
+  padding: 0 20px;
+  line-height: 22px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  text-align: left;
+  font-weight: 500;
+}
+
+@media (max-width: 1270px) {
+  .service-description {
+    font-size: 0.9rem;
+  }
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 15px 0px;
+  text-align: left;
+}
+
+.service-features li {
+  font-size: 0.9rem;
+  color: #434242;
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Carte pour WordPress */
+.service-card.future {
+  background: linear-gradient(145deg, #cde5f5, #eaf5ff);
+  border: 1px solid #b0c4de; /* Bordure plus claire */
+}
+
+.service-card.future .service-title {
+  color: #007bff; /* Couleur du titre différente */
+  text-shadow: 1px 1px 3px rgba(0, 123, 255, 0.3);
+}
+
+.service-card.future .service-description {
+  color: #555; /* Texte de description avec une couleur moins intense */
+}
+
+.timeline-container2 {
+  margin-top: 60px;
+  padding: 20px;
+  background-color: #385d6cab;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  max-width: 1200px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-title2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fffafa;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 40px 0;
+}
+
+.timeline2 {
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.timeline2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ddd;
+  transform: translateX(-50%);
+}
+
+.timeline-item2 {
+  position: relative;
+  width: 50%;
+  padding: 40px;
+}
+
+.timeline-item2.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item2.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-number2 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item2.left .timeline-number2 {
+  right: -20px;
+}
+
+.timeline-item2.right .timeline-number2 {
+  left: -20px;
+}
+
+.timeline-content2 {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.timeline-step2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+.timeline-description2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c2929;
+  margin-top: 10px;
+  line-height: 1.5;
+  text-align: left;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Initialement masqué */
+.timeline-item2.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Apparition progressive */
+.timeline-item2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Position des images */
+.timeline-image2 {
+  position: absolute;
+  top: 50%; /* Centre verticalement */
+  transform: translateY(-50%);
+  width: 180px;
+  height: 180px;
+}
+
+.timeline-item2.left .timeline-image2 {
+  right: -350px; /* Place l'image à droite de la ligne */
+}
+
+.timeline-item2.right .timeline-image2 {
+  left: -350px; /* Place l'image à gauche de la ligne */
+}
+
+.timeline-image2 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  border: 1px solid white;
+}
+
+@media (max-width: 1000px) {
+  .timeline-item2.left .timeline-image2 {
+    right: -300px; /* Place l'image à droite de la ligne */
+  }
+
+  .timeline-item2.right .timeline-image2 {
+    left: -300px; /* Place l'image à gauche de la ligne */
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-item2.left .timeline-image2,
+  .timeline-item2.right .timeline-image2 {
+    position: static;
+    margin: 0 auto;
+    display: block;
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .timeline-image2 {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Section du formulaire de devis */
+.quote-section {
+  position: relative;
+  background: linear-gradient(145deg, #c1c1c1, #e4e4e4);
+  border: 5px solid #dcdcdc;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  margin-top: 50px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.quote-section p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.quote-price {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 450;
+}
+
+.quote-price strong {
+  color: #0195a8;
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote-form label {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.quote-form strong {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  width: 80%;
+  max-width: 500px;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fcfeff;
+  color: black;
+}
+
+.quote-form textarea {
+  resize: none;
+}
+
+.quote-button {
+  background: linear-gradient(135deg, #01c6d9, #0056b3);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.quote-button:hover {
+  background: linear-gradient(135deg, #0195a8, #003d7a);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+}
+
+#otherProjectTypeField {
+  margin-top: 20px;
+}
+
+.file {
+  display: flex;
+  max-width: 800px;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.file a {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.file a:hover {
+  color: rgb(7, 131, 115);
+}
+
+.quote-intro {
+  max-width: 880px;
+  margin-top: 50px;
+  background: rgba(0, 0, 0, 0.206);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  color: whitesmoke;
+  padding: 20px;
+  border: 1px solid white;
+  opacity: 0;
+  transform: rotateY(90deg); /* Cache avec une rotation sur l'axe Y */
+  transition: transform 2s ease, opacity 3s ease; /* Animation fluide */
+}
+
+.quote-intro[data-inview="true"] {
+  opacity: 1;
+  transform: rotateY(0); /* Retourne à sa position normale */
+}
+
+.quote-intro h2 {
+  font-size: 2rem;
+  margin: 20px 0 30px;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.quote-intro p {
+  text-align: left;
+  line-height: 24px;
+  font-weight: 450;
+  font-size: 1.15rem;
+}
+
+.quote-intro strong {
+  color: rgb(95, 227, 239);
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.texte-centre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.texte-centre h3 {
+  margin: 15px 0; /* Espacement entre le titre et les paragraphes */
+  font-size: 1.2rem;
+}
+
+.texte-centre p {
+  margin-bottom: 10px;
+}
+
+.tarifs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.tarifs h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.tarifs p {
+  margin: 5px;
+}
+
+.tarifs strong {
+  color: rgb(5, 167, 182);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.package-sur-mesure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+}
+
+.package-sur-mesure a {
+  color: rgb(95, 227, 239);
+  transition: all 0.3s ease-in-out;
+}
+
+.package-sur-mesure a:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.success-message {
+  font-size: 1.5rem;
+  color: #4c4faf;
+  animation: smoothHeartbeat 1s ease-in-out infinite;
+}
+
+/* Animation fluide de battement */
+@keyframes smoothHeartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.error-message {
+  font-size: 1.2rem;
+  color: #ff4d4d;
+}
+
+/* Container pour l'axolotl avec positionnement à droite */
+.axolotl-container-happy2 {
+  position: absolute;
+  top: 80%;
+  right: 20%; /* Positionne l'axolotl à droite du formulaire */
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+/* Animation de l'axolotl */
+@keyframes axolotlJump2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px); /* Saute */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.axolotl-image-happy2 {
+  margin-top: 20px;
+  width: 150px;
+  height: 150px;
+  opacity: 0;
+  transition: opacity 3s ease-in-out; /* Transition pour le fondu */
+}
+
+/* Animation de l'axolotl après l'envoi du message */
+.axolotl-image-happy2.sent {
+  opacity: 1;
+  animation: axolotlJump2 1s ease-out;
+  animation-iteration-count: 6;
+}
+
+.consent-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px; /* Ajustez selon vos besoins */
+  margin-bottom: -30px;
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: left;
+}
+
+.consent-cont input[type="checkbox"] {
+  width: 16px; /* Ajuste la taille si besoin */
+  height: 16px;
+  border: 2px solid #333; /* Ajoute une bordure pour remplacer le style natif */
+  border-radius: 4px; /* Optionnel : arrondir légèrement */
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.consent-cont label {
+  line-height: 1.2;
+  display: inline-block;
+  font-weight: 550;
+  max-width: 800px;
+  color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+  /* Adapter la hauteur pour réduire l'espacement */
+  .nav-container-services {
+    height: auto; /* Ajuste automatiquement la hauteur */
+    flex-direction: column; /* Aligne les éléments en colonne */
+    padding: 10px;
+  }
+
+  .services-container {
+    padding: 15px 25px;
+  }
+
+  .services-container h1 {
+    font-size: 2.5rem;
+    margin: 30px 0 10px;
+  }
+
+  .intro-text {
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+    margin-bottom: 40px;
+    padding: 10px 0px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* Une seule colonne */
+    width: 330px;
+    gap: 25px; /* Espacement réduit entre les cartes */
+  }
+
+  .service-image {
+    height: 150px; /* Réduire la taille de l'image */
+  }
+
+  .service-title {
+    font-size: 1.3rem;
+  }
+
+  .service-description {
+    font-size: 0.95rem;
+  }
+
+  .service-features li {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    font-weight: 450;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-container2 {
+    margin-top: 30px;
+    padding: 0;
+  }
+
+  .timeline-item2.left,
+  .timeline-item2.right {
+    left: 0;
+  }
+
+  .timeline2::before {
+    display: none;
+  }
+
+  .timeline2 {
+    padding: 10px;
+    margin-top: -20px;
+  }
+
+  .timeline-item2 {
+    width: 100%;
+    text-align: left;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+  }
+
+  .timeline-content2 {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+
+  .timeline-title2 {
+    font-size: 2.3rem;
+  }
+
+  .timeline-description2 {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+
+  .timeline-number2 {
+    font-size: 1.2rem;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+    position: static;
+    margin: 0 auto 15px;
+  }
+
+  .timeline-step2 {
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .quote-section {
+    padding: 20px;
+  }
+
+  .quote-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .quote-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .quote-form input,
+  .quote-form select,
+  .quote-form textarea {
+    width: 90%; /* Occupe plus d'espace disponible */
+    font-size: 0.9rem;
+  }
+
+  .quote-button {
+    font-size: 1rem;
+    padding: 15px 15px;
+  }
+
+  .quote-intro {
+    font-size: 1rem;
+  }
+
+  .quote-intro h2 {
+    font-size: 1.2rem;
+  }
+
+  .quote-intro p {
+    font-size: 0.9rem;
+  }
+
+  .quote-form p {
+    font-size: 0.9rem;
+  }
+
+  .file p {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .file a {
+    margin-left: 40px;
+    font-size: 1rem;
+  }
+
+  .flex-pack h3 {
+    font-size: 1rem;
+  }
+
+  .package-sur-mesure p {
+    font-size: 1rem;
+  }
+}
