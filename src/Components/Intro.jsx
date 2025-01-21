@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import "./Intro.css";
 import axo from "../Pics/axolotl2.webp";
 import art from "../Pics/art.jpeg";
-// import water from "../Vidéos/waves2.mp4";
+import water from "../Vidéos/waves2.mp4";
 import introSound from "../Son/axoson.mp3";
 
 const Intro = () => {
@@ -110,10 +110,10 @@ const Intro = () => {
         <img src={art} alt="abstract" className="background-image" />
         {/* Vidéo de fond */}
         <div className="background-video">
-          {/* <video autoPlay muted loop className="background-video">
+          <video autoPlay muted loop className="background-video">
             <source src={water} type="video/mp4" />
             Votre navigateur ne prend pas en charge les vidéos.
-          </video> */}
+          </video>
         </div>
         {/* Logo avec animation de réduction */}
         <div className="intro-logo-container">

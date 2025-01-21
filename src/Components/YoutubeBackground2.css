@@ -1,0 +1,39 @@
+.youtube-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Derrière le contenu */
+  overflow: hidden;
+}
+
+.youtube-background iframe {
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Empêche d'interagir avec la vidéo */
+  opacity: 0;
+  animation: fadeInVideo 8s ease-out forwards,
+    fadeInOut 16s ease-in-out infinite;
+}
+
+/* Animation pour l'apparition progressive */
+@keyframes fadeInVideo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.3; /* Ajuste l'opacité selon ton design */
+  }
+}
+
+/* Effet de fondu enchaîné (optionnel) */
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
