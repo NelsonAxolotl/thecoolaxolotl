@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Apropos.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
-// import marin from "../Vidéos/sousmarin.mp4";
+import marin from "../Vidéos/sousmarin.mp4";
 import cuty from "../Pics/axopic.png";
 import audioaxo from "../Son/joy.mp3";
 import boat from "../Pics/axoaqua.png";
@@ -13,7 +13,6 @@ import relax from "../Pics/relax.webp";
 const Apropos = () => {
   const [showPage, setShowPage] = useState(false);
   const [showSection, setShowSection] = useState(false);
-  const [volume, setVolume] = useState(0.001);
   const [showEnd, setShowEnd] = useState(false);
 
   useEffect(() => {
@@ -97,17 +96,27 @@ const Apropos = () => {
     };
   }, []);
 
+  const [isAudioBlocked, setIsAudioBlocked] = useState();
+
   const playAudio = () => {
     const audio = document.getElementById("background-audio");
     if (audio) {
-      audio.volume = volume;
-      audio.play().catch((err) => {
-        console.log("La lecture automatique a été bloquée :", err);
-      });
+      audio.volume = 0.03; // Appliquer le volume réduit
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setIsAudioBlocked(false);
+          })
+          .catch(() => {
+            setIsAudioBlocked(true);
+          });
+      }
     }
   };
-
-  playAudio();
+  useEffect(() => {
+    playAudio();
+  }, []);
 
   return (
     <>
@@ -126,10 +135,10 @@ const Apropos = () => {
           <span></span>
         </div>
       </div>
-      {/* <video autoPlay muted loop playsInline className="background-vid">
+      <video autoPlay muted loop playsInline className="background-vid">
         <source src={marin} type="video/mp4" />
         Votre navigateur ne prend pas en charge les vidéos.
-      </video> */}
+      </video>
       <audio id="background-audio" src={audioaxo} loop />
       <div className="overlay"></div>
       <div className="intro-content">

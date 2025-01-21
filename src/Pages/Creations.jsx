@@ -12,7 +12,7 @@ import avis from "../Pics/axoavis.webp";
 import axorando from "../Pics/axorando.webp";
 import axotrip from "../Pics/axotrip.webp";
 import axogame from "../Pics/axogame.webp";
-// import jelly from "../Vidéos/underwater.mp4";
+import jelly from "../Vidéos/underwater.mp4";
 import portfolio from "../Pics/portfolio.webp";
 import maquette from "../Pics/maquette.webp";
 import carnet from "../Pics/carnet.webp";
@@ -138,7 +138,7 @@ const Creations = () => {
     <>
       <Nav />
       <div className="background-video-container">
-        {/* <video
+        <video
           ref={videoRef}
           autoPlay
           loop
@@ -151,7 +151,7 @@ const Creations = () => {
         >
           <source src={jelly} type="video/mp4" />
           Votre navigateur ne prend pas en charge la vidéo.
-        </video> */}
+        </video>
       </div>
       <div className={`portfolio-container ${showPage ? "fade-in" : ""}`}>
         <div className="summary-container">
