@@ -4,7 +4,7 @@ import emailjs from "emailjs-com";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
 import happy from "../Pics/happy.png";
-// import watou from "../Vidéos/eau4.mp4";
+import watou from "../Vidéos/eau4.mp4";
 import backgroundImage from "../Pics/axopic.png";
 
 const Contact = () => {
@@ -94,7 +94,7 @@ const Contact = () => {
           alt="Background"
           className="background-image-contact"
         />
-        {/* <video
+        <video
           ref={videoRef}
           autoPlay
           muted
@@ -103,7 +103,7 @@ const Contact = () => {
         >
           <source src={watou} type="video/mp4" />
           Votre navigateur ne prend pas en charge la vidéo.
-        </video> */}
+        </video>
       </div>
 
       <div className={`nav-container ${showNav ? "fade-in" : ""}`}>

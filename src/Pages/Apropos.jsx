@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Apropos.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
-// import marin from "../Vidéos/sousmarin.mp4";
+import marin from "../Vidéos/sousmarin.mp4";
 import cuty from "../Pics/axopic.png";
 import audioaxo from "../Son/joy.mp3";
 import boat from "../Pics/axoaqua.png";
@@ -126,10 +126,10 @@ const Apropos = () => {
           <span></span>
         </div>
       </div>
-      {/* <video autoPlay muted loop playsInline className="background-vid">
+      <video autoPlay muted loop playsInline className="background-vid">
         <source src={marin} type="video/mp4" />
         Votre navigateur ne prend pas en charge les vidéos.
-      </video> */}
+      </video>
       <audio id="background-audio" src={audioaxo} loop />
       <div className="overlay"></div>
       <div className="intro-content">
