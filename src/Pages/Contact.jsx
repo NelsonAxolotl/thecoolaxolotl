@@ -4,7 +4,7 @@ import emailjs from "emailjs-com";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
 import happy from "../Pics/happy.png";
-import watou from "../Vidéos/eau4.mp4";
+// import watou from "../Vidéos/eau4.mp4";
 import backgroundImage from "../Pics/axopic.png";
 
 const Contact = () => {
@@ -101,7 +101,7 @@ const Contact = () => {
           loop
           className="background-video-contact"
         >
-          <source src={watou} type="video/mp4" />
+          <source src="/Vidéos/eau4.mp4" type="video/mp4" />
           Votre navigateur ne prend pas en charge la vidéo.
         </video>
       </div>
