@@ -58,7 +58,7 @@ const Creations = () => {
       title: "Compagnie PolyR",
       subtitle: "Compagnie d'Opéra Ambulant",
       description:
-        "Un site élégant mettant en avant ses spectacles à travers une galerie de photos saisissantes et des descriptions détaillées des performances.",
+        "Un site élégant mettant en avant nos spectacles à travers une galerie de photos saisissantes et des descriptions détaillées des performances.",
       image: poly,
       link: "https://www.compagniepolyr.fr",
       technologies: ["HTML", "REACT", "JAVASCRIPT", "CSS", "SEO"],
