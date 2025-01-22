@@ -101,7 +101,7 @@ const Apropos = () => {
   const playAudio = () => {
     const audio = document.getElementById("background-audio");
     if (audio) {
-      audio.volume = 0.03; // Appliquer le volume réduit
+      audio.volume = 0.02; // Appliquer le volume réduit
       const playPromise = audio.play();
       if (playPromise !== undefined) {
         playPromise

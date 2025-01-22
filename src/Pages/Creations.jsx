@@ -16,7 +16,6 @@ import axogame from "../Pics/axogame.webp";
 import portfolio from "../Pics/portfolio.webp";
 import maquette from "../Pics/maquette.webp";
 import carnet from "../Pics/carnet.webp";
-import client from "../Pics/client.webp";
 
 const Creations = () => {
   const [showPage, setShowPage] = useState(false);
@@ -318,11 +317,6 @@ const Creations = () => {
                 </span>{" "}
                 Mes premiers clients
               </h3>
-              <img
-                src={client}
-                alt="Icône Parcours"
-                className="category-icon"
-              />
             </div>
             <p>
               Après ma formation, j’ai rapidement compris qu’il fallait se

@@ -39,7 +39,7 @@
 .summary-container {
   margin: 40px auto 40px;
   padding: 20px;
-  background: #212121d9;
+  background: #212121c6;
   border-radius: 10px;
   color: #fffefe;
   text-align: center;
@@ -201,7 +201,7 @@
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease;
-  background: #dcdcdc66;
+  background: #dcdcdc2c;
 }
 
 .project-wrapper:hover {
