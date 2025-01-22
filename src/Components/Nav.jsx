@@ -1,4 +1,4 @@
-import React from "react"; // Ajoutez cette ligne
+import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./Nav.css";
@@ -57,16 +57,16 @@ const Nav = () => {
 
       {/* Container des liens avec la vidéo de fond */}
       <div className={`navbar-links ${showLinks ? "video-active" : ""}`}>
-        {/* <video
+        <video
           autoPlay
           muted
           loop
           className="navbar-background-video"
           aria-hidden="true"
         >
-          <source src={eau} type="video/mp4" />
+          <source src="/Vidéos/art.mp4" type="video/mp4" />
           Votre navigateur ne supporte pas les vidéos.
-        </video> */}
+        </video>
 
         <ul className="navbar-links-list">
           {[
