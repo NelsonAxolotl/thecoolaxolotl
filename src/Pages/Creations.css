@@ -201,11 +201,13 @@
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease;
-  background: #dcdcdc2c;
+  background: #dcdcdc7f;
+  transition: all 0.5s ease-in-out;
 }
 
 .project-wrapper:hover {
   transform: translateY(-5px);
+  background: #dcdcdca4;
 }
 
 .project-image {
@@ -219,6 +221,13 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
+.project-image-container {
+  position: relative; /* Permet à la flèche d'être bien placée */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .project-image-container:hover .project-image {
   transform: scale(1.05);
 }
@@ -230,20 +239,75 @@
   border: 3px solid #f4f0f0;
 }
 
+.click-indicator {
+  position: absolute;
+  top: 105%; /* Place l'indicateur juste SOUS l’image */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 5px;
+  animation: fadeInLogo 1.5s ease-in-out infinite;
+}
+
+/* Flèche vers le haut */
+.arrow-up {
+  width: 15px;
+  height: 15px;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  transform: rotate(45deg);
+  margin-top: 5px;
+  animation: bounce-up 1.5s infinite;
+}
+
+/* Animation de la flèche */
+@keyframes bounce-up {
+  0%,
+  100% {
+    transform: rotate(135deg) translateY(0);
+  }
+  50% {
+    transform: rotate(135deg) translateY(-5px);
+  }
+}
+
+/* Animation du texte */
+@keyframes fadeInLogo {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
 /* Informations */
 .project-info {
   flex: 2; /* Contrôler l'espace pris par la carte */
   text-align: left;
-  padding: 15px; /* Réduire l'espace interne */
+  padding: 25px; /* Réduire l'espace interne */
   background-color: rgba(
     0,
     0,
     0,
-    0.5
+    0.6
   ); /* Optionnel : ajout d'un fond semi-transparent */
   border-radius: 10px;
   max-width: 50%; /* Limiter la largeur pour réduire la taille */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.8s ease-in-out;
+}
+
+.project-info:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .project-title {
@@ -362,16 +426,18 @@
   max-width: 1200px;
   margin: 50px auto;
   text-align: center;
-  background: #dcdcdc35;
+  background: #dcdcdc5f;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
   padding: 40px 10px;
   border-radius: 10px;
   transition: transform 0.3s ease;
+  transition: all 0.5s ease-in-out;
 }
 
 .maquettes-container:hover {
   transform: translateY(-5px);
+  background: #dcdcdc8c;
 }
 
 .maquettes-grid {
@@ -396,7 +462,6 @@
   background-position: left center no-repeat; /* Position de l'image de fond */
   transition: background-position 1s ease-in-out, background-size 1s ease-in-out,
     transform 0.8s ease, background-color 0.5s ease-in-out; /* Transition fluide */
-  margin-top: 15px;
 }
 
 /* Lors du survol, changement de la position de l'image de fond et effet de zoom */
@@ -504,8 +569,8 @@
 }
 
 .flip-card {
-  width: 250px; /* Ajustez selon vos besoins */
-  height: 250px;
+  width: 200px; /* Ajustez selon vos besoins */
+  height: 200px;
   perspective: 1000px; /* Ajoute un effet de profondeur */
   cursor: pointer;
 }
@@ -555,7 +620,7 @@
   color: white;
   text-align: left; /* Aligne le texte à gauche */
   font-size: 14px; /* Réduit la taille de la police */
-  padding: 20px;
+  padding: 15px;
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -563,7 +628,7 @@
 }
 
 .flip-card-back p {
-  font-size: 14px; /* Réduction supplémentaire pour le texte */
+  font-size: 13px; /* Réduction supplémentaire pour le texte */
   line-height: 1.4; /* Espacement pour la lisibilité */
 }
 
@@ -590,17 +655,22 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px 20px 20px;
-  background-color: #f8f9fa38;
+  background-color: #f8f9fa55;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  transition: all 0.5s ease-in-out;
+}
+
+.blog-container:hover {
+  background-color: #f8f9fa70;
 }
 
 .title-icon {
-  width: 100px; /* Ajuste la taille selon tes besoins */
-  height: 100px;
+  width: 150px; /* Ajuste la taille selon tes besoins */
+  height: 150px;
   border-radius: 50%; /* Rend l’image totalement ronde */
   object-fit: cover; /* Ajuste bien l’image dans le cercle */
-  margin-bottom: 10px; /* Ajoute un espace sous l’image */
+  margin-bottom: 15px; /* Ajoute un espace sous l’image */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -609,7 +679,7 @@
   align-items: center;
   gap: 10px; /* Espacement entre l’image et le titre */
   text-align: center;
-  font-size: 32px;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #d6d2d2;
   margin-bottom: 30px;
@@ -662,7 +732,7 @@
 /* ---- Texte des catégories ---- */
 .blog-category p {
   font-size: 16px;
-  color: #555;
+  color: #3b3a3a;
   line-height: 1.6;
   font-weight: 550;
 }

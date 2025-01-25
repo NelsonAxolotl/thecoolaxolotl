@@ -13,6 +13,8 @@ import proto from "../Pics/proto.webp";
 import dev from "../Pics/dev.webp";
 import deplo from "../Pics/deplo.webp";
 import maintenance from "../Pics/maintenance.webp";
+import hand from "../Pics/hand.webp";
+import analyse from "../Pics/analyse.webp";
 
 const Services = () => {
   const [showNav, setShowNav] = useState(false);
@@ -256,7 +258,7 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="timeline-image2">
-                  <img src={know} alt="Axolotl Step 1" />
+                  <img src={hand} alt="Axolotl Step 1" />
                 </div>
               </div>
 
@@ -274,7 +276,7 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="timeline-image2">
-                  <img src={axowork} alt="Axolotl Step 2" />
+                  <img src={analyse} alt="Axolotl Step 2" />
                 </div>
               </div>
               <div className="timeline-item2 left hidden">

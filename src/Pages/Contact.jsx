@@ -89,11 +89,11 @@ const Contact = () => {
     <>
       <Nav />
       <div className="video-background-contact">
-        <img
+        {/* <img
           src={backgroundImage}
           alt="Background"
           className="background-image-contact"
-        />
+        /> */}
         <video
           ref={videoRef}
           autoPlay
