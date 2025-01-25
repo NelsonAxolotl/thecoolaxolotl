@@ -229,7 +229,7 @@
   justify-content: center;
   text-align: center;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
   color: white;
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -463,24 +463,24 @@
 }
 
 .icon-green {
-  color: rgba(46, 215, 184, 0.564); /* green  */
+  color: rgba(46, 215, 184, 0.6); /* green  */
 }
 
 .icon-yellow {
-  color: rgba(193, 149, 3, 0.479); /* yellow */
+  color: rgba(193, 149, 3, 0.6); /* yellow */
 }
 
 .icon-blue {
-  color: rgba(0, 123, 255, 0.68); /* bleu  */
+  color: rgba(0, 123, 255, 0.6); /* bleu  */
 }
 
 .icon-pink {
-  color: rgba(226, 7, 255, 0.659); /* Pink */
+  color: rgba(226, 7, 255, 0.6); /* Pink */
 }
 
 .timeline-content {
   background: rgba(46, 215, 184, 0.1);
-  padding: 15px 50px;
+  padding: 20px 50px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   flex: 1;
@@ -510,20 +510,20 @@
     46,
     215,
     184,
-    0.3
+    0.4
   ); /* Couleur plus sombre pour l'élément 2 */
 }
 
 .timeline-item:nth-child(3) .timeline-content:hover {
-  background: rgba(193, 149, 3, 0.3); /* Couleur plus sombre pour l'élément 2 */
+  background: rgba(193, 149, 3, 0.4); /* Couleur plus sombre pour l'élément 2 */
 }
 
 .timeline-item:nth-child(2) .timeline-content:hover {
-  background: rgba(0, 123, 255, 0.3); /* Couleur plus sombre pour l'élément 2 */
+  background: rgba(0, 123, 255, 0.4); /* Couleur plus sombre pour l'élément 2 */
 }
 
 .timeline-item:nth-child(4) .timeline-content:hover {
-  background: rgba(226, 7, 255, 0.3); /* Couleur plus sombre pour l'élément 3 */
+  background: rgba(226, 7, 255, 0.4); /* Couleur plus sombre pour l'élément 3 */
 }
 
 /* Effet de hover sur la timeline-item */
@@ -568,19 +568,19 @@
 }
 
 .timeline-item:nth-child(1) .timeline-content {
-  background: rgba(46, 215, 184, 0.1); /* Couleur 1 */
+  background: rgba(46, 215, 184, 0.3); /* Couleur 1 */
 }
 
 .timeline-item:nth-child(3) .timeline-content {
-  background: rgba(193, 149, 3, 0.1); /* Couleur 2 */
+  background: rgba(193, 149, 3, 0.3); /* Couleur 2 */
 }
 
 .timeline-item:nth-child(2) .timeline-content {
-  background: rgba(0, 123, 255, 0.1); /* Couleur 2 */
+  background: rgba(0, 123, 255, 0.3); /* Couleur 2 */
 }
 
 .timeline-item:nth-child(4) .timeline-content {
-  background: rgba(226, 7, 255, 0.1); /* Couleur 3 */
+  background: rgba(226, 7, 255, 0.3); /* Couleur 3 */
 }
 
 .timeline-content p {
@@ -822,16 +822,33 @@
 .bubble-parcours {
   text-align: center;
   transform: translateX(-50%);
-  background-color: rgb(255, 131, 7, 0.8);
+  background-color: rgba(255, 131, 7, 0.9);
   color: white;
   padding: 20px 20px;
   margin-top: 30px;
   border-radius: 20px;
+  border: 1px solid white;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(255, 131, 7, 0.6);
-  animation: floatAnimation 5s infinite ease-in-out; /* Ajout de l'animation */
+  box-shadow: 0 4px 8px rgba(255, 131, 7, 0.4);
+  animation: floatAnimationOrange 5s infinite ease-in-out; /* Ajout de l'animation */
   transition: all 0.3s ease-in-out;
+}
+
+/* CSS pour les animations */
+@keyframes floatAnimationOrange {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .bubble-parcours:hover {
@@ -844,7 +861,7 @@
   padding: 20px;
   border: 2px solid white; /* Bordure blanche */
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.3); /* Fond semi-transparent */
+  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
   color: white;
   text-align: center;
   font-size: 1.2rem;

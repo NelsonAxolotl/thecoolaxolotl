@@ -143,6 +143,7 @@ const Intro = () => {
               <div className="small-bubble small-bubble-2"></div>
               <div className="small-bubble small-bubble-12"></div>
               <div className="small-bubble small-bubble-15"></div>
+              <div className="small-bubble small-bubble-20"></div>
             </a>
             <a
               href="Portfolio"
@@ -155,6 +156,8 @@ const Intro = () => {
               <div className="small-bubble small-bubble-4"></div>
               <div className="small-bubble small-bubble-9"></div>
               <div className="small-bubble small-bubble-13"></div>
+              <div className="small-bubble small-bubble-21"></div>
+              <div className="small-bubble small-bubble-22"></div>
             </a>
             <a
               href="Prestations"
@@ -179,6 +182,7 @@ const Intro = () => {
               <div className="small-bubble small-bubble-7"></div>
               <div className="small-bubble small-bubble-10"></div>
               <div className="small-bubble small-bubble-18"></div>
+              <div className="small-bubble small-bubble-23"></div>
             </a>
           </div>
         )}

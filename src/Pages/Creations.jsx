@@ -49,7 +49,7 @@ const Creations = () => {
       subtitleColor: "#fff",
       descriptionColor: "#f0f0f0",
       review: {
-        text: "Hyper réactif, à l'écoute de nos envies, force de proposition et de créativité, très précis dans son travail, The Cool Axolot a su comprendre nos besoins et s'adapter pour nous proposer un site à notre image! Notre site est dynamique, simple d'utilisation, très clair , un suivi parfait !!!",
+        text: "Hyper réactif, créatif, précis dans son travail, à l'écoute de nos envies. Notre site est dynamique, simple d'utilisation, très clair. Un suivi parfait à notre image!!!",
         stars: 5,
       },
     },
@@ -65,7 +65,7 @@ const Creations = () => {
       subtitleColor: "#fff",
       descriptionColor: "#dfe6e9",
       review: {
-        text: "L’équipe de la Compagnie Poly R est absolument ravie du travail du Cool Axolotl qui a su créer un site internet sur mesure. Aujourd'hui, la compagnie gagne en visibilité.",
+        text: "L’équipe de la Compagnie Poly R est absolument ravie du travail du Cool Axolotl qui a su créer un site internet sur mesure. Aujourd'hui, la compagnie gagne en visibilité !",
         stars: 5,
       },
     },
@@ -93,21 +93,21 @@ const Creations = () => {
       description: "Maquette axée sur le monde du gaming",
       image: game,
       link: "https://site-maquette-gaming.netlify.app/", // Exemple de lien
-      avatar: axogame,
+      // avatar: axogame,
     },
     {
       title: "Reproduction TripAdvisor",
       description: "Exercice de reproduction du célèbre site",
       image: trip,
       link: "https://tripadvisorangola-exo.netlify.app/",
-      avatar: axotrip,
+      // avatar: axotrip,
     },
     {
       title: "La Montagne",
       description: "Maquette rando, nature et montagnes",
       image: rando,
       link: "https://site-maquette-rando.netlify.app/",
-      avatar: axorando,
+      // avatar: axorando,
     },
   ];
   const [isVisible, setIsVisible] = useState(false);
@@ -193,6 +193,11 @@ const Creations = () => {
                       index === projects.length - 1 ? "last-project-image" : ""
                     }`}
                   />
+                  {/* Ajout du texte et de la flèche sous le logo */}
+                  <div className="click-indicator">
+                    <div className="arrow-up"></div>
+                    <span>Cliquer ici</span>
+                  </div>
                 </div>
               </a>
 
@@ -272,11 +277,11 @@ const Creations = () => {
             {maquettes.map((maquette, index) => (
               <div key={index} className="maquette-item">
                 {/* Image ronde au-dessus de la carte */}
-                <img
+                {/* <img
                   src={maquette.avatar} // Image ronde dynamique
                   alt={`Avatar de ${maquette.title}`}
                   className="maquette-avatar"
-                />
+                /> */}
 
                 {/* Carte de maquette avec image d'arrière-plan */}
                 <div
@@ -307,7 +312,7 @@ const Creations = () => {
         </div>
         <div className={`blog-container ${isVisible ? "visible" : "hidden"}`}>
           <img src={carnet} alt="Icône" className="title-icon" />
-          <h2>Mon Carnet de Route</h2>
+          <h2>Carnet de Route</h2>
 
           <div className="blog-category">
             <div className="category-title">

@@ -108,7 +108,7 @@
     opacity: 0; /* La vidéo commence invisible */
   }
   100% {
-    opacity: 0.3; /* La vidéo devient complètement visible */
+    opacity: 0.25; /* La vidéo devient complètement visible */
   }
 }
 
@@ -234,7 +234,7 @@
   text-decoration: none;
   font-weight: bold;
   opacity: 0;
-  font-size: 18px;
+  font-size: 22px !important;
   transform: scale(0.5);
   background: radial-gradient(
     circle at top left,
@@ -244,32 +244,32 @@
   );
   box-shadow: inset 0 -5px 10px rgba(0, 128, 255, 0.4),
     inset -3px 3px 5px rgba(255, 255, 255, 0.5), 0 0 15px rgba(0, 200, 255, 0.4);
-  transition: transform 0.6s ease-in-out, opacity 0.6s ease,
-    background-color 0.6s, filter 0.3s ease-in-out; /* Ajout de la transition pour `scale` et `opacity` */
-  animation: bubble-rise 3s ease forwards, float 8s ease-in-out infinite; /* Animation de montée */
-  /* Transition fluide pour les changements de style */
-  transition: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1); /* Courbe Bézier progress*/
+  transition: transform 0.8s ease-in-out, opacity 0.6s ease,
+    background-color 0.8s ease;
+  animation: bubble-rise 3s ease forwards, float 8s ease-in-out infinite;
 }
 
-/* Couleurs spécifiques pour les bulles Parcours, Portfolio et Contact */
+/* Styles pour Parcours et Portfolio */
 .bubble.bubble-1, /* Parcours */
-.bubble.bubble-2 /* Portfolio */ {
-  /* Contact */
+.bubble.bubble-2 {
+  /* Portfolio */
   background: radial-gradient(
     circle at top left,
     rgba(255, 200, 200, 0.8),
     rgba(240, 128, 128, 0.3) 70%,
     rgba(139, 69, 69, 0.1) 100%
-  ); /* Couleur rose terre inspirée de l'image */
+  ) !important; /* Forcer l’application */
   box-shadow: inset 0 -5px 10px rgba(240, 128, 128, 0.4),
     inset -3px 3px 5px rgba(255, 230, 230, 0.5),
-    0 0 15px rgba(255, 160, 160, 0.4);
+    0 0 15px rgba(255, 160, 160, 0.4) !important;
+  transition: transform 0.8s ease-in-out, opacity 0.6s ease,
+    background-color 0.8s ease !important;
+  animation: bubble-rise 3s ease forwards, float 8s ease-in-out infinite !important;
 }
 
 /* Couleurs spécifiques pour les bulles Devis et Services */
-.bubble.bubble-3, /* Services */
+.bubble.bubble-3,
 .bubble.bubble-4 {
-  /* Devis */
   background: radial-gradient(
     circle at top left,
     rgba(0, 206, 209, 0.8),
@@ -310,26 +310,28 @@
 
 /* L'effet de mise à l'échelle avec hover */
 .bubble:hover {
-  filter: blur(1px) contrast(1.1); /* Effet de distorsion */
-  transform: scale(1.1) rotate(1deg) translateY(-5px); /* Augmenter légèrement la taille au survol */
-  opacity: 1; /* Assurer que l'opacité soit à 100% au survol */
-  z-index: 999; /* Mettre la bulle au-dessus des autres */
-  background-color: rgba(18, 150, 125, 0.5); /* 30% d'opacité */
+  transform: scale(1.05) translateY(-3px); /* Effet plus doux */
+  opacity: 1;
+  z-index: 999;
+  background-color: rgba(18, 150, 125, 0.4); /* Légère transparence */
+  transition: transform 0.4s ease-in-out, background-color 0.6s ease-in-out,
+    filter 0.5s ease-in-out;
+  filter: blur(1px) contrast(1.1);
 }
 
-/* Style hover pour les bulles parcours, contact, portfolio */
+/* Styles de hover forcés */
 .bubble.bubble-1:hover, /* Parcours */
-.bubble.bubble-2:hover /* Portfolio */ {
-  /* Contact */
+.bubble.bubble-2:hover {
+  /* Portfolio */
   background: radial-gradient(
     circle at top left,
     rgba(255, 200, 200, 1),
     rgba(240, 128, 128, 0.5) 70%,
     rgba(139, 69, 69, 0.2) 100%
-  ); /* Maintient la couleur rose terre pendant le hover */
+  ) !important;
   box-shadow: inset 0 -5px 10px rgba(240, 128, 128, 0.6),
     inset -3px 3px 5px rgba(255, 230, 230, 0.7),
-    0 0 15px rgba(255, 160, 160, 0.6);
+    0 0 15px rgba(255, 160, 160, 0.6) !important;
 }
 
 /* Styles spécifiques pour chaque bulle : position et taille */
@@ -350,16 +352,16 @@
 }
 
 .bubble-3 {
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   bottom: -20px;
   left: 0%;
   animation-delay: 3s;
 }
 
 .bubble-4 {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   bottom: 20%;
   right: -5%;
   animation-delay: 1.5s;
@@ -395,7 +397,10 @@
 .small-bubble-9,
 .small-bubble-12,
 .small-bubble-13,
-.small-bubble-15 {
+.small-bubble-15, 
+.small-bubble-20,
+.small-bubble-21,
+.small-bubble-22 {
   /* Contact - 9 */
   background: radial-gradient(
     circle at top left,
@@ -416,7 +421,8 @@
 .small-bubble-11,
 .small-bubble-14,
 .small-bubble-18,
-.small-bubble-19 {
+.small-bubble-19,
+.small-bubble-23 {
   /* Services - 10 */
   background: radial-gradient(
     circle at top left,
@@ -533,8 +539,8 @@
 }
 
 .small-bubble-15 {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   bottom: -120px;
   right: 120px;
   animation-delay: 2s;
@@ -554,6 +560,38 @@
   bottom: 100px;
   right: 100px;
   animation-delay: 5s;
+}
+
+.small-bubble-20 {
+  width: 100px;
+  height: 100px;
+  bottom: 60px;
+  right: 180px;
+  animation-delay: 0.5s;
+}
+
+.small-bubble-21 {
+  width: 100px;
+  height: 100px;
+  bottom: 100px;
+  right: 200px;
+  animation-delay: 2s;
+}
+
+.small-bubble-22 {
+  width: 70px;
+  height: 70px;
+  bottom: -100px;
+  left: 40px;
+  animation-delay: 1s;
+}
+
+.small-bubble-23 {
+  width: 80px;
+  height: 80px;
+  bottom: -120px;
+  left: 0;
+  animation-delay: 4s;
 }
 
 /* Animation pour les petites bulles */
