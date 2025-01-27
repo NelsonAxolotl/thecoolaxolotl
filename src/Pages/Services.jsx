@@ -7,14 +7,16 @@ import react from "../Pics/axoreact.webp";
 import politic from "../Pics/politic.webp";
 import word from "../Pics/axopress.webp"; // Ajoutez une image WordPress si nécessaire
 import fly from "../Pics/fly.png";
-import axowork from "../Pics/axowork.webp";
+// import axowork from "../Pics/axowork.webp";
 import know from "../Pics/know.webp";
 import proto from "../Pics/proto.webp";
 import dev from "../Pics/dev.webp";
 import deplo from "../Pics/deplo.webp";
-import maintenance from "../Pics/maintenance.webp";
+// import maintenance from "../Pics/maintenance.webp";
 import hand from "../Pics/hand.webp";
 import analyse from "../Pics/analyse.webp";
+import update from "../Pics/update.webp";
+import int from "../Pics/int.webp";
 
 const Services = () => {
   const [showNav, setShowNav] = useState(false);
@@ -307,7 +309,7 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="timeline-image2">
-                  <img src={deplo} alt="Axolotl Step 1" />
+                  <img src={int} alt="Axolotl Step 1" />
                 </div>
               </div>
               <div className="timeline-item2 left hidden">
@@ -337,7 +339,7 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="timeline-image2">
-                  <img src={maintenance} alt="Axolotl Step 6" />
+                  <img src={update} alt="Axolotl Step 6" />
                 </div>
               </div>
             </div>
