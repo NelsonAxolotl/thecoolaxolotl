@@ -11,7 +11,7 @@
   z-index: 1;
   opacity: 0; /* Début masqué pour l'animation */
   transform: translateY(20px); /* Légère translation vers le bas au départ */
-  transition: opacity 2s ease-out, transform 1.5s ease-out; /* Transition de fade-in et déplacement */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Transition de fade-in et déplacement */
 }
 
 .background-video-container {
@@ -116,6 +116,20 @@
   border-radius: 50%; /* Rend l'image totalement ronde */
   object-fit: cover; /* Garde une bonne qualité d'image */
   border: 2px solid #ccc; /* Optionnel : ajoute une petite bordure */
+  transition: transform 0.5s ease-in-out;
+}
+
+.title-icon.visible {
+  animation: rotateImage 0.5s linear;
+}
+
+@keyframes rotateImage {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .maquettes-section-title {
@@ -658,11 +672,11 @@
   background-color: #f8f9fa55;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-  transition: all 0.5s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 
 .blog-container:hover {
-  background-color: #f8f9fa70;
+  background-color: #f8f9fa81;
 }
 
 .title-icon {
@@ -700,11 +714,25 @@
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.8);
   transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  opacity: 0; /* L'élément est invisible au départ */
+  transform: translateY(50px); /* Départ avec un léger décalage */
+  /* Regroupement des transitions pour éviter les conflits */
+  transition: opacity 1s ease-out, transform 1.5s ease-out,
+    background-color 0.3s ease-in-out;
+}
+
+/* Au survol (lorsque l'élément devient visible), les éléments se déplacent et deviennent visibles */
+.blog-category.visible {
+  opacity: 1;
+  transform: translateY(0); /* L'élément se déplace à sa position finale */
 }
 
 /* ---- Effet de zoom au survol ---- */
 .blog-category:hover {
   transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.676);
 }
 
 /* ---- Titres des catégories ---- */
@@ -716,6 +744,14 @@
   color: #222;
   margin-bottom: 20px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateX(50px); /* Départ depuis la droite */
+  transition: opacity 1.5s ease-out 0.5s, transform 2s ease-out 0.5s;
+}
+
+.blog-category.visible h3 {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 @media (max-width: 768px) {
@@ -735,6 +771,14 @@
   color: #3b3a3a;
   line-height: 1.6;
   font-weight: 550;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s ease-out; /* Transition pour le paragraphe */
+}
+
+.blog-category.visible p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ---- Liste d'articles ---- */
@@ -742,6 +786,28 @@
   margin-top: 15px;
   padding-top: 15px;
   border-top: 2px solid #e0e0e0;
+  transition: border-top 0.7s ease-in-out; /* Ajout de la transition douce */
+}
+
+.visible .article-list {
+  animation: expandLine 1.5s ease-out forwards;
+}
+
+/* ---- Survol de la catégorie, changement de la bordure de .article-list ---- */
+.blog-category:hover .article-list {
+  border-top: 2px solid black;
+}
+
+/* Effet d'animation pour la ligne qui part du centre */
+@keyframes expandLine {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
 }
 
 .category-title {

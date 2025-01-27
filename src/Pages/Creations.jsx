@@ -19,7 +19,67 @@ import carnet from "../Pics/carnet.webp";
 
 const Creations = () => {
   const [showPage, setShowPage] = useState(false);
-  const videoRef = useRef(null); // Référence pour la vidéo
+  const videoRef = useRef(null);
+
+  const [hasBeenVisible, setHasBeenVisible] = useState({
+    blogCategory1: false,
+    blogCategory2: false,
+    blogCategory3: false,
+    imageRef: false,
+    imageBlogRef: false,
+  });
+
+  const blogCategory1Ref = useRef(null);
+  const blogCategory2Ref = useRef(null);
+  const blogCategory3Ref = useRef(null);
+  const imageRef = useRef(null);
+  const imageBlogRef = useRef(null);
+
+  // Un seul useEffect pour observer tous les éléments
+  useEffect(() => {
+    const elementsToObserve = [
+      { ref: blogCategory1Ref, key: "blogCategory1" },
+      { ref: blogCategory2Ref, key: "blogCategory2" },
+      { ref: blogCategory3Ref, key: "blogCategory3" },
+      { ref: imageRef, key: "imageRef" },
+      { ref: imageBlogRef, key: "imageBlogRef" },
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // On vérifie si l'élément est visible pour la première fois
+          if (
+            entry.isIntersecting &&
+            !hasBeenVisible[entry.target.dataset.key]
+          ) {
+            entry.target.classList.add("visible");
+            setHasBeenVisible((prev) => ({
+              ...prev,
+              [entry.target.dataset.key]: true,
+            }));
+          }
+        });
+      },
+      { threshold: 0.3 } // Seuil d'intersection de 30% de l'élément visible
+    );
+
+    // Observer tous les éléments
+    elementsToObserve.forEach(({ ref, key }) => {
+      const element = ref.current;
+      if (element) {
+        element.dataset.key = key; // Ajoute une propriété data-key à chaque élément observé
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      elementsToObserve.forEach(({ ref }) => {
+        const element = ref.current;
+        if (element) observer.unobserve(element);
+      });
+    };
+  }, [hasBeenVisible]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -165,7 +225,12 @@ const Creations = () => {
         </div>
 
         <h2 className="projects-section-title">
-          <img src={portfolio} alt="Icône artistique" className="title-icon" />
+          <img
+            ref={imageRef}
+            src={portfolio}
+            alt="Icône artistique"
+            className="title-icon"
+          />
           Sites artistiques
         </h2>
 
@@ -263,7 +328,12 @@ const Creations = () => {
         </div>
 
         <h2 className="maquettes-section-title">
-          <img src={maquette} alt="Icône artistique" className="title-icon" />
+          <img
+            ref={imageRef}
+            src={maquette}
+            alt="Icône artistique"
+            className="title-icon"
+          />
           Maquettes
         </h2>
         <p className="maquettes-section-description">
@@ -314,25 +384,25 @@ const Creations = () => {
           <img src={carnet} alt="Icône" className="title-icon" />
           <h2>Carnet de Route</h2>
 
-          <div className="blog-category">
+          <div className="blog-category " ref={blogCategory1Ref}>
             <div className="category-title">
-              <h3>
+              <h3 className="animate-from-right">
                 <span role="img" aria-label="parcours">
                   👨‍💻
                 </span>{" "}
                 Mes premiers clients
               </h3>
             </div>
-            <p>
-              Après ma formation, j’ai rapidement compris qu’il fallait se
-              démarquer pour trouver mes premiers clients. Je voulais créer des
-              sites qui ne soient pas simplement fonctionnels, mais qui portent
-              une véritable identité visuelle, à l’image des personnes et des
-              projets qu’ils représentent. <br />
+            <p className="animate-from-bottom">
+              Après ma formation Boot Camp "Le Reacteur", j’ai rapidement
+              compris qu’il fallait se démarquer pour trouver mes premiers
+              clients. Je voulais créer des sites qui ne soient pas simplement
+              fonctionnels, mais qui portent une véritable identité visuelle, à
+              l’image des personnes et des projets qu’ils représentent. <br />
               C’est en mettant en avant cette approche que j’ai décroché mes
               premiers contrats !
             </p>
-            <p>
+            <p className="animate-from-bottom">
               Très vite, j’ai compris que la meilleure façon d’attirer des
               clients était de me différencier. Plutôt que de proposer des sites
               basiques ou de copier ce qui existait déjà, j’ai décidé de mettre
@@ -340,7 +410,7 @@ const Creations = () => {
               racontent une histoire, qui capturent l’essence et l’identité de
               mes clients.
             </p>
-            <p>
+            <p className="animate-from-bottom">
               Mon premier client est venu grâce au bouche-à-oreille. Un ami
               connaissait quelqu'un qui cherchait à refaire son site, mais il
               voulait quelque chose qui sorte du lot. En discutant avec lui,
@@ -349,29 +419,29 @@ const Creations = () => {
               C’est en écoutant attentivement ses besoins et en apportant ma
               vision que j’ai décroché ce premier projet.
             </p>
-            <p>
+            <p className="animate-from-bottom">
               Aujourd’hui, j’applique la même approche : chaque site doit être
               unique et marquant, comme une carte de visite numérique qui attire
               immédiatement l’attention et transmet une vraie identité visuelle.
             </p>
 
-            <div className="article-list">{/* Liste d'articles ici */}</div>
+            <div className="article-list ">{/* Liste d'articles ici */}</div>
           </div>
 
-          <div className="blog-category">
-            <h3>
+          <div className="blog-category" ref={blogCategory2Ref}>
+            <h3 className="animate-from-right">
               <span role="img" aria-label="tech">
                 💻
               </span>{" "}
               Des sites qui sortent du lot
             </h3>
-            <p>
+            <p className="animate-from-bottom">
               Dans un monde où tout va très vite et où les modèles préconçus
               dominent, j’ai voulu prendre une autre direction. Mon objectif
               n’est pas seulement de créer des sites, mais de concevoir des
               expériences visuelles qui captivent et marquent les esprits.
             </p>
-            <p>
+            <p className="animate-from-bottom">
               Je suis particulièrement attiré par les sites artistiques, car ils
               offrent une liberté de création immense. Ils permettent d’explorer
               des univers graphiques variés, d’expérimenter avec des animations,
@@ -380,7 +450,7 @@ const Creations = () => {
               identité, et j’aime traduire cette singularité à travers le design
               et l’expérience utilisateur.
             </p>
-            <p>
+            <p className="animate-from-bottom">
               Que ce soit un artiste, un artisan, un thérapeute ou un
               entrepreneur, chacun mérite un site qui lui ressemble, qui met en
               avant son savoir-faire et qui se démarque des modèles
@@ -389,24 +459,24 @@ const Creations = () => {
               une âme.
             </p>
 
-            <div className="article-list">{/* Liste d'articles ici */}</div>
+            <div className="article-list ">{/* Liste d'articles ici */}</div>
           </div>
 
-          <div className="blog-category">
-            <h3>
+          <div className="blog-category" ref={blogCategory3Ref}>
+            <h3 className="animate-from-right">
               <span role="img" aria-label="freelance">
                 🌱
               </span>{" "}
               Une question d'éthique
             </h3>
-            <p>
+            <p className="animate-from-bottom">
               Travailler en tant que freelance, c’est aussi faire des choix. Dès
               le début, j’ai voulu rester fidèle à mes valeurs et choisir des
               projets qui ont du sens. Pour moi, un site web n’est pas qu’une
               simple interface : c’est un moyen d’expression, un outil qui
               véhicule une identité, une histoire et des valeurs.
             </p>
-            <p>
+            <p className="animate-from-bottom">
               C’est pourquoi je ne travaille pas uniquement pour gagner des
               contrats, mais pour construire des collaborations sincères et
               authentiques. <br />
@@ -415,21 +485,19 @@ const Creations = () => {
               étant à l’écoute que je peux proposer un site qui leur correspond
               vraiment, et qui va bien au-delà d’un simple produit technique.
             </p>
-            <p>
-              Cette démarche m’a amené à refuser certains projets qui n’étaient
-              pas en accord avec mes principes. Par exemple, je préfère
-              travailler avec des indépendants, des artistes, des associations,
-              ou encore des entrepreneurs qui partagent des valeurs
-              d’authenticité et de créativité.
+            <p className="animate-from-bottom">
+              Je préfère travailler avec des indépendants, des artistes, des
+              associations, ou encore des entrepreneurs, des entreprises qui
+              partagent des valeurs d’authenticité et de créativité.
             </p>
-            <p>
+            <p className="animate-from-bottom">
               Mon objectif n’est pas de produire en masse, mais de concevoir des
               sites qui ont une âme, qui apportent une réelle plus-value, et qui
               reflètent la singularité de chaque personne ou entreprise avec qui
               je collabore.
             </p>
 
-            <div className="article-list">{/* Liste d'articles ici */}</div>
+            <div className="article-list ">{/* Liste d'articles ici */}</div>
           </div>
         </div>
       </div>
