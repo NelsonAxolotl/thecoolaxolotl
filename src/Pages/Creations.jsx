@@ -98,7 +98,7 @@ const Creations = () => {
 
   const projects = [
     {
-      title: "Cie Wanubida",
+      title: "Compagnie Wanubida",
       subtitle: "Compagnie de Cirque",
       description:
         "Un site immersif reflétant l'énergie et la créativité de la compagnie de cirque Wanubida. Calendrier interactif et galerie dynamique intégrés.",
@@ -117,7 +117,7 @@ const Creations = () => {
       title: "Compagnie PolyR",
       subtitle: "Compagnie d'Opéra Ambulant",
       description:
-        "Un site élégant mettant en avant nos spectacles à travers une galerie de photos saisissantes et des descriptions détaillées des performances.",
+        "Un site élégant mettant en avant les spectacles à travers une galerie de photos saisissantes et des descriptions détaillées des performances.",
       image: poly,
       link: "https://www.compagniepolyr.fr",
       technologies: ["HTML", "REACT", "JAVASCRIPT", "CSS", "SEO"],
@@ -236,7 +236,7 @@ const Creations = () => {
 
         <p className="projects-section-description">
           Découvrez une sélection de sites vitrines inspirés par le monde de
-          l'art.
+          l'art et du spectacle.
         </p>
 
         {/* Liste des projets */}
@@ -398,9 +398,9 @@ const Creations = () => {
               compris qu’il fallait se démarquer pour trouver mes premiers
               clients. Je voulais créer des sites qui ne soient pas simplement
               fonctionnels, mais qui portent une véritable identité visuelle, à
-              l’image des personnes et des projets qu’ils représentent. <br />
-              C’est en mettant en avant cette approche que j’ai décroché mes
-              premiers contrats !
+              l’image des personnes et des projets qu’ils représentent. C’est en
+              mettant en avant cette approche que j’ai décroché mes premiers
+              contrats !
             </p>
             <p className="animate-from-bottom">
               Très vite, j’ai compris que la meilleure façon d’attirer des

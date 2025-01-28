@@ -258,12 +258,12 @@
     rgba(255, 200, 200, 0.8),
     rgba(240, 128, 128, 0.3) 70%,
     rgba(139, 69, 69, 0.1) 100%
-  ) !important; /* Forcer l’application */
+  ); /* Forcer l’application */
   box-shadow: inset 0 -5px 10px rgba(240, 128, 128, 0.4),
     inset -3px 3px 5px rgba(255, 230, 230, 0.5),
-    0 0 15px rgba(255, 160, 160, 0.4) !important;
+    0 0 15px rgba(255, 160, 160, 0.4);
   transition: transform 0.8s ease-in-out, opacity 0.6s ease,
-    background-color 0.8s ease !important;
+    background-color 0.8s ease;
   animation: bubble-rise 3s ease forwards, float 8s ease-in-out infinite !important;
 }
 
@@ -328,10 +328,10 @@
     rgba(255, 200, 200, 1),
     rgba(240, 128, 128, 0.5) 70%,
     rgba(139, 69, 69, 0.2) 100%
-  ) !important;
+  );
   box-shadow: inset 0 -5px 10px rgba(240, 128, 128, 0.6),
     inset -3px 3px 5px rgba(255, 230, 230, 0.7),
-    0 0 15px rgba(255, 160, 160, 0.6) !important;
+    0 0 15px rgba(255, 160, 160, 0.6);
 }
 
 /* Styles spécifiques pour chaque bulle : position et taille */
@@ -653,7 +653,6 @@
       /* Vert turquoise moyen */ rgba(0, 77, 83, 0.1) 100%
         /* Vert turquoise foncé */
     ) !important;
-
     /* Ombres pour correspondre au style vert turquoise */
     box-shadow: inset 0 -5px 10px rgba(0, 129, 138, 0.4),
       inset -3px 3px 5px rgba(0, 77, 83, 0.5), 0 0 15px rgba(0, 179, 179, 0.4) !important;
@@ -665,9 +664,9 @@
       rgba(0, 206, 209, 1),
       /* Plus saturé au survol */ rgba(0, 129, 138, 0.5) 70%,
       rgba(0, 77, 83, 0.2) 100%
-    );
+    ) !important;
     box-shadow: inset 0 -5px 10px rgba(0, 129, 138, 0.6),
-      inset -3px 3px 5px rgba(0, 77, 83, 0.7), 0 0 15px rgba(0, 179, 179, 0.6);
+      inset -3px 3px 5px rgba(0, 77, 83, 0.7), 0 0 15px rgba(0, 179, 179, 0.6) !important;
   }
 
   .bubble-3 {
@@ -698,7 +697,9 @@
   .small-bubble-3,
   .small-bubble-4,
   .small-bubble-9,
-  .small-bubble-13 {
+  .small-bubble-13,
+  .small-bubble-21,
+  .small-bubble-22 {
     /* Couleur de fond avec un dégradé radial */
     background: radial-gradient(
       circle at center,
@@ -715,7 +716,10 @@
 
   .small-bubble-7,
   .small-bubble-10,
-  .small-bubble-18 {
+  .small-bubble-18,
+  .small-bubble-19,
+  .small-bubble-20,
+  .small-bubble-23 {
     background: radial-gradient(
       circle at top left,
       rgba(255, 200, 200, 0.8),
