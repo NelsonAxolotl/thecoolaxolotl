@@ -18,6 +18,7 @@
   .portfolio-container {
     margin: 0;
     border-radius: 0;
+    background: #1e1f1fc9;
   }
 }
 .background-video-container {
