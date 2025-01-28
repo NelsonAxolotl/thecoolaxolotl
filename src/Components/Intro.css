@@ -670,16 +670,16 @@
   }
 
   .bubble-3 {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     bottom: 10%;
     left: 10%;
     animation-delay: 3s;
   }
 
   .bubble-4 {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     bottom: 75%;
     right: 3%;
     animation-delay: 1.5s;
@@ -761,5 +761,33 @@
     bottom: 180px;
     right: 80px;
     animation-delay: 5s;
+  }
+  .small-bubble-20 {
+    width: 70px;
+    height: 70px;
+    bottom: 30px;
+    right: -80px;
+    animation-delay: 0.5s;
+  }
+  .small-bubble-21 {
+    width: 100px;
+    height: 100px;
+    bottom: 140px;
+    right: -30px;
+    animation-delay: 2s;
+  }
+  .small-bubble-22 {
+    width: 70px;
+    height: 70px;
+    bottom: 0px;
+    left: -30px;
+    animation-delay: 1s;
+  }
+  .small-bubble-23 {
+    width: 80px;
+    height: 80px;
+    bottom: -10px;
+    left: 50;
+    animation-delay: 4s;
   }
 }

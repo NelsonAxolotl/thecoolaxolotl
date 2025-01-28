@@ -5,6 +5,9 @@ import End from "../Components/End";
 import legale from "../Pics/legal.webp";
 
 const Legale = () => {
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
   return (
     <>
       <Nav />

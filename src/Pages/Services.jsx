@@ -205,7 +205,9 @@ const Services = () => {
       projectTypeField.removeEventListener("change", () => {});
     };
   }, []);
-
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
   return (
     <>
       <Nav />

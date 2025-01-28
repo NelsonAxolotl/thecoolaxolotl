@@ -4,6 +4,9 @@ import Nav from "../Components/Nav";
 import politic from "../Pics/politique.webp";
 
 const Politic = () => {
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
   return (
     <>
       <Nav />
