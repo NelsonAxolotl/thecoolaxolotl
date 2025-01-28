@@ -6,6 +6,7 @@ import End from "../Components/End";
 import happy from "../Pics/happy.png";
 // import watou from "../Vidéos/eau4.mp4";
 import backgroundImage from "../Pics/axopic.png";
+import contact from "../Pics/halo.webp";
 
 const Contact = () => {
   const [showAxolotl, setShowAxolotl] = useState(false);
@@ -89,11 +90,11 @@ const Contact = () => {
     <>
       <Nav />
       <div className="video-background-contact">
-        {/* <img
-          src={backgroundImage}
+        <img
+          src={contact}
           alt="Background"
           className="background-image-contact"
-        /> */}
+        />
         <video
           ref={videoRef}
           autoPlay

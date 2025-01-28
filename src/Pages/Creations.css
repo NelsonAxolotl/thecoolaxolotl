@@ -451,7 +451,7 @@
 
 .maquettes-container:hover {
   transform: translateY(-5px);
-  background: #dcdcdc8c;
+  background: #dcdcdc96;
 }
 
 .maquettes-grid {
@@ -676,7 +676,7 @@
 }
 
 .blog-container:hover {
-  background-color: #f8f9fa81;
+  background-color: #f8f9fa9b;
 }
 
 .title-icon {

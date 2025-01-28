@@ -654,9 +654,9 @@
   margin: 20px auto;
   padding: 20px 30px 30px;
   gap: 80px; /* Ajoute de l'espace entre les icônes */
-  background: rgba(0, 0, 0, 0.142); /* Fond semi-transparent */
+  background: rgba(58, 58, 58, 0.1); /* Fond semi-transparent */
   border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px); /* Effet de flou derrière */
   animation: fadeInUp 5s ease-out forwards;
   margin-bottom: 80px;
