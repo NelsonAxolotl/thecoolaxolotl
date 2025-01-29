@@ -68,13 +68,14 @@
   display: block;
   padding: 10px 15px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   text-decoration: none;
   color: rgb(255, 255, 255);
   transition: all 0.3s ease-in-out;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
 }
 
 .navbar-link:hover {
