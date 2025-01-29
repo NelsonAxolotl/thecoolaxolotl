@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Legale.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
 import legale from "../Pics/legal.webp";
 
 const Legale = () => {
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
-  return (
+  const [showPage, setShowPage] = useState(false);
+
+  useEffect(() => {
+    const pageTimer = setTimeout(() => {
+      setShowPage(true);
+    }, 500);
+
+    return () => clearTimeout(pageTimer); // Nettoyage du timeout
+  }, []);
+
+  return showPage ? (
     <>
       <Nav />
-      <div className="legale">
+      <div className="legale fade-in-legale">
         <img src={legale} alt="Axolotl" className="round-image-legale" />
         <div className="legal-container">
           <h1>Mentions Légales</h1>
@@ -113,7 +120,7 @@ const Legale = () => {
       </div>
       <End />
     </>
-  );
+  ) : null; // Affiche rien tant que `showPage` est false
 };
 
 export default Legale;

@@ -1,16 +1,23 @@
+import React, { useState, useEffect } from "react";
 import "./Politic.css";
 import End from "../Components/End";
 import Nav from "../Components/Nav";
 import politic from "../Pics/politique.webp";
 
 const Politic = () => {
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
-  return (
+  const [showPage, setShowPage] = useState(false);
+
+  useEffect(() => {
+    const pageTimer = setTimeout(() => {
+      setShowPage(true);
+    }, 500);
+
+    return () => clearTimeout(pageTimer); // Nettoyage du timeout
+  }, []);
+  return showPage ? (
     <>
       <Nav />
-      <div className="politic">
+      <div className="politic fade-in-legale">
         <img
           src={politic}
           alt="axolotl politic"
@@ -201,6 +208,6 @@ const Politic = () => {
       </div>
       <End />
     </>
-  );
+  ) : null; // Affiche rien tant que `showPage` est false
 };
 export default Politic;
