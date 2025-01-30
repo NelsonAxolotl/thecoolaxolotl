@@ -115,7 +115,7 @@ const Creations = () => {
     },
     {
       title: "Compagnie PolyR",
-      subtitle: "Compagnie d'Opéra Ambulant",
+      subtitle: "Compagnie d'Opéra",
       description:
         "Un site élégant mettant en avant les spectacles à travers une galerie de photos saisissantes et des descriptions détaillées des performances.",
       image: poly,
@@ -238,8 +238,8 @@ const Creations = () => {
         </h2>
 
         <p className="projects-section-description">
-          Découvrez une sélection de sites vitrines inspirés par le monde de
-          l'art et du spectacle.
+          Découvrez une sélection de sites vitrines sur le monde de l'art et du
+          spectacle.
         </p>
 
         {/* Liste des projets */}
@@ -340,8 +340,7 @@ const Creations = () => {
           Maquettes
         </h2>
         <p className="maquettes-section-description">
-          Explorez ces maquettes allant de jeux vidéo, reproduction célèbre et
-          nature.
+          Explorez ces maquettes allant de jeux vidéo, reproduction et nature.
         </p>
 
         {/* Liste des maquettes */}
@@ -436,7 +435,7 @@ const Creations = () => {
               <span role="img" aria-label="tech">
                 💻
               </span>{" "}
-              Des sites qui sortent du lot
+              Sites qui sortent du lot
             </h3>
             <p className="animate-from-bottom">
               Dans un monde où tout va très vite et où les modèles préconçus

@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   display: flex;
-  padding: 60px 0;
+  padding: 60px 20px;
   background: url("../Pics/time.webp");
   justify-content: center;
   align-items: center;
@@ -88,7 +88,7 @@
 }
 
 /* À partir de 1000px, réorganiser pour placer la carte WordPress en dessous */
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .services-grid {
     grid-template-columns: 1fr 1fr; /* Deux colonnes pour les autres cartes */
     gap: 20px;
@@ -700,7 +700,7 @@
   .nav-container-services {
     height: auto; /* Ajuste automatiquement la hauteur */
     flex-direction: column; /* Aligne les éléments en colonne */
-    padding: 10px;
+    padding: 20px;
   }
 
   .services-container {
@@ -742,9 +742,7 @@
     margin-bottom: 0;
     font-weight: 450;
   }
-}
 
-@media (max-width: 768px) {
   .timeline-container2 {
     margin-top: 30px;
     padding: 0;
@@ -799,9 +797,7 @@
     text-align: center;
     line-height: 24px;
   }
-}
 
-@media (max-width: 768px) {
   .quote-section {
     padding: 20px;
   }

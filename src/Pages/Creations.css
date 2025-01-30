@@ -338,6 +338,7 @@
   margin: 10px 0 20px; /* Réduire l'espace sous le titre */
   text-align: center;
   font-weight: 500;
+  line-height: 26px;
 }
 
 .project-subtitle {
@@ -424,7 +425,7 @@
   }
 
   .project-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .project-subtitle {

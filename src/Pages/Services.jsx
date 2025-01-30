@@ -8,15 +8,15 @@ import politic from "../Pics/politic.webp";
 import word from "../Pics/axopress.webp"; // Ajoutez une image WordPress si nécessaire
 import fly from "../Pics/fly.png";
 // import axowork from "../Pics/axowork.webp";
-import know from "../Pics/know.webp";
+// import know from "../Pics/know.webp";
 import proto from "../Pics/proto.webp";
-import dev from "../Pics/dev.webp";
-import deplo from "../Pics/deplo.webp";
+import dev from "../Pics/production.webp";
+// import deplo from "../Pics/deplo.webp";
 // import maintenance from "../Pics/maintenance.webp";
 import hand from "../Pics/hand.webp";
 import analyse from "../Pics/analyse.webp";
 import update from "../Pics/update.webp";
-import int from "../Pics/int.webp";
+import int from "../Pics/prototype.webp";
 
 const Services = () => {
   const [showNav, setShowNav] = useState(false);

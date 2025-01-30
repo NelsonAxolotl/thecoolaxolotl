@@ -670,9 +670,9 @@
   }
 
   .bubble-3 {
-    width: 140px;
-    height: 140px;
-    bottom: 10%;
+    width: 150px;
+    height: 150px;
+    bottom: 5%;
     left: 10%;
     animation-delay: 3s;
   }
@@ -680,7 +680,7 @@
   .bubble-4 {
     width: 120px;
     height: 120px;
-    bottom: 75%;
+    bottom: 70%;
     right: 3%;
     animation-delay: 1.5s;
     background: radial-gradient(
@@ -698,6 +698,7 @@
   .small-bubble-4,
   .small-bubble-9,
   .small-bubble-13,
+  .small-bubble-19,
   .small-bubble-21,
   .small-bubble-22 {
     /* Couleur de fond avec un dégradé radial */
@@ -717,7 +718,6 @@
   .small-bubble-7,
   .small-bubble-10,
   .small-bubble-18,
-  .small-bubble-19,
   .small-bubble-20,
   .small-bubble-23 {
     background: radial-gradient(
@@ -786,8 +786,8 @@
   .small-bubble-23 {
     width: 80px;
     height: 80px;
-    bottom: -10px;
-    left: 50;
+    bottom: -100px;
+    left: 60px;
     animation-delay: 4s;
   }
 }

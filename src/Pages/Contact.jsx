@@ -5,7 +5,7 @@ import Nav from "../Components/Nav";
 import End from "../Components/End";
 import happy from "../Pics/happy.png";
 // import watou from "../Vidéos/eau4.mp4";
-import backgroundImage from "../Pics/axopic.png";
+// import backgroundImage from "../Pics/axopic.png";
 import contact from "../Pics/halo.webp";
 
 const Contact = () => {
