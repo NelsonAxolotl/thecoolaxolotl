@@ -396,16 +396,45 @@ const Services = () => {
             <p>
               Si vous êtes intéressé par mes services et souhaitez obtenir{" "}
               <br />
-              un devis personnalisé, remplissez le formulaire ci-dessous. <br />
-              Je reviendrais vers vous dans les plus brefs délais.
+              un devis personnalisé, remplissez le formulaire ci-dessous.{" "}
             </p>
+            <p>Je reviendrais vers vous dans les plus brefs délais.</p>
+
             <div className="tarifs">
               <h3>💰 Tarifs standards :</h3>
+
               <p>
-                <strong>200€ net / jour</strong>
+                Je propose des prestations de développement front-end avec React{" "}
+                <br />à des tarifs adaptés en fonction de la durée et de la
+                complexité du projet.
               </p>
               <p>
-                <strong>25€ net / heure</strong>
+                Voici mes <strong>tarifs standards</strong> :
+              </p>
+              <ul>
+                <li>
+                  <strong>280€ / jour</strong> : <br />
+                  <p>
+                    Cela inclut une journée complète de travail, généralement de
+                    7 heures. <br />
+                    Ce tarif est parfait pour des missions de courte ou moyenne
+                    durée (1 à 3 jours).
+                  </p>{" "}
+                </li>
+                <li>
+                  <strong>40€ / heure</strong> : <br />
+                  <p>
+                    Pour des missions ponctuelles ou des tâches plus
+                    spécifiques, je facture à l'heure. <br />
+                    Ce tarif est adapté pour les projets nécessitant des
+                    interventions ponctuelles ou des consultations techniques.
+                  </p>
+                </li>
+              </ul>
+              <p>
+                Les prix sont <strong>hors taxes</strong> et peuvent varier en
+                fonction de la durée de la mission, de la complexité et des
+                délais.
               </p>
             </div>
             <form className="quote-form" onSubmit={handleQuoteSubmit}>
