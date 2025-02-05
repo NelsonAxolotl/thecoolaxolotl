@@ -252,9 +252,7 @@ const Services = () => {
           {/* Nouvelle section pour Shopify */}
           <div className="shopify-section">
             <img src={boutik} alt="Shopify" className="shopify-image" />
-            <h2 className="shopify-title">
-              🛍️ Création de sites e-commerce 🛍️
-            </h2>
+            <h2 className="shopify-title">🛍️ Création de sites e-commerce</h2>
             <p className="shopify-description">
               Besoin de créer une boutique en ligne simple, mais performante ?
               <br />
@@ -598,8 +596,8 @@ const Services = () => {
                 type="number"
                 id="numberOfPages"
                 name="numberOfPages"
-                min="1"
-                placeholder="Indiquez le nombre de pages"
+                min="0"
+                placeholder="Indiquez le nombre de pages (0 = Je ne sais pas)"
                 value={quoteData.numberOfPages}
                 onChange={handleQuoteChange}
                 required
