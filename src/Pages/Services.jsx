@@ -17,6 +17,7 @@ import hand from "../Pics/hand.webp";
 import analyse from "../Pics/analyse.webp";
 import update from "../Pics/update.webp";
 import int from "../Pics/prototype.webp";
+import boutik from "../Pics/boutik.webp";
 
 const Services = () => {
   const [showNav, setShowNav] = useState(false);
@@ -248,6 +249,34 @@ const Services = () => {
             ))}
           </div>
 
+          {/* Nouvelle section pour Shopify */}
+          <div className="shopify-section">
+            <img src={boutik} alt="Shopify" className="shopify-image" />
+            <h2 className="shopify-title">
+              🛍️ Création de sites e-commerce 🛍️
+            </h2>
+            <p className="shopify-description">
+              Besoin de créer une boutique en ligne simple, mais performante ?
+              <br />
+              Je vous propose des solutions avec des plateformes de e-commerce
+              <br />
+              fiable et flexible, idéale pour gérer votre boutique en ligne en
+              toute simplicité. <br />
+              Profitez d'une boutique prête à l'emploi, personnalisée selon vos
+              besoins, <br />
+              et facile à gérer sans compétences techniques.
+            </p>
+            <ul className="shopify-features">
+              <li>Création rapide et facile de votre boutique en ligne</li>
+              <li>Gestion simple des produits et des commandes</li>
+              <li>Design moderne et responsive</li>
+              <li>
+                Intégration des moyens de paiement et des options d'expédition
+              </li>
+              <li>Suivi et analyse des ventes en temps réel</li>
+            </ul>
+          </div>
+
           {/* Timeline Section */}
           <div className="timeline-container2">
             <h2 className="timeline-title2">Processus</h2>
@@ -467,10 +496,11 @@ const Services = () => {
                 required
               >
                 <option value="">Sélectionnez une option</option>
-                <option value="site-vitrine">Site vitrine</option>
+                <option value="site vitrine">Site vitrine</option>
                 <option value="plateform web">Plateforme web</option>
                 <option value="blog">Blog</option>
                 <option value="portfolio">Portfolio</option>
+                <option value="boutique en ligne">Boutique en ligne</option>
                 <option value="autre">Autre</option>
               </select>
 
