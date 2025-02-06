@@ -11,7 +11,14 @@ const End = () => {
       <div className="end">
         <div className="legal">
           <Link to="/Mentions-légales">
-            <img src={legal} alt="mention légale" className="round-image4" />
+            <img
+              src={legal}
+              alt="mention légale"
+              width="300"
+              height="300"
+              className="round-image4"
+              loading="lazy"
+            />
           </Link>{" "}
           <p>Mentions légales</p>
         </div>
@@ -19,7 +26,7 @@ const End = () => {
           <Link to="/">
             <img
               src={axo}
-              width="300"
+              width="500"
               height="300"
               alt="logo"
               className="round-image5"

@@ -108,7 +108,7 @@ const Contact = () => {
           loop
           className="background-video-contact"
         >
-          <source src="/Vidéos/eau8.mp4" type="video/mp4" />
+          <source src="/Vidéos/eau8.mp4" type="video/mp4" loading="lazy" />
           Votre navigateur ne prend pas en charge la vidéo.
         </video>
       </div>
@@ -219,6 +219,7 @@ const Contact = () => {
                   src={happy}
                   alt="Axolotl"
                   className="axolotl-image-happy sent"
+                  loading="lazy"
                 />
                 <div className="bubble-happy">Message envoyé !</div>
               </div>
