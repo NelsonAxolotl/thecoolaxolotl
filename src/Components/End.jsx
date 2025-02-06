@@ -17,7 +17,14 @@ const End = () => {
         </div>
         <div className="copy">
           <Link to="/">
-            <img src={axo} alt="logo" className="round-image5" />
+            <img
+              src={axo}
+              width="300"
+              height="300"
+              alt="logo"
+              className="round-image5"
+              loading="lazy"
+            />
           </Link>
           <p>Copyright © 2025 | The Cool Axolotl </p>
         </div>
@@ -25,8 +32,11 @@ const End = () => {
           <Link to="/Politique-de-confidentialité">
             <img
               src={politic}
+              width="300"
+              height="300"
               alt="politique de confidentialité axolotl"
               className="round-image4"
+              loading="lazy"
             />
           </Link>
           <p>Politique de confidentialité</p>
