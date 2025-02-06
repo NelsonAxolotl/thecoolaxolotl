@@ -155,6 +155,8 @@ const Apropos = () => {
                 src={cuty}
                 alt="Axolotl ou sous-marin"
                 className="round-image"
+                width="400"
+                height="400"
               />
             </div>
             <div className="text-content">
