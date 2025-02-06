@@ -1,9 +1,9 @@
 import React from "react"; // Ajoutez cette ligne
 import "./End.css";
 import { Link } from "react-router-dom";
-import legal from "../Pics/legal.webp";
-import axo from "../Pics/axolotl2.webp";
-import politic from "../Pics/politique.webp";
+import legal from "/legal.webp";
+import axo from "/axolotl2.webp";
+import politic from "/politique.webp";
 
 const End = () => {
   return (
@@ -30,7 +30,6 @@ const End = () => {
               height="300"
               alt="logo"
               className="round-image5"
-              loading="lazy"
             />
           </Link>
           <p>Copyright © 2025 | The Cool Axolotl </p>
