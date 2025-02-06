@@ -26,7 +26,7 @@ const End = () => {
           <Link to="/">
             <img
               src={axo}
-              width="500"
+              width="300"
               height="300"
               alt="logo"
               className="round-image5"

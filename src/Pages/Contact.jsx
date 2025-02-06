@@ -98,7 +98,6 @@ const Contact = () => {
           alt="Background"
           width="800"
           height="400"
-          loading="lazy"
           className="background-image-contact"
         />
         <video
