@@ -1,0 +1,10 @@
+# Autoriser tous les robots à explorer le site principal
+User-agent: *
+Allow: /
+
+# Sitemap pour aider les moteurs de recherche à indexer le contenu
+Sitemap: https://thecoolaxolotl/sitemap.xml
+
+# Directive pour Googlebot 
+User-agent: Googlebot
+Allow: /public/

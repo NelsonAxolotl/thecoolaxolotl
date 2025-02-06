@@ -597,7 +597,7 @@ const Services = () => {
                 id="numberOfPages"
                 name="numberOfPages"
                 min="0"
-                placeholder="Indiquez le nombre de pages (0 = Je ne sais pas)"
+                placeholder="Indiquez le nombre de pages"
                 value={quoteData.numberOfPages}
                 onChange={handleQuoteChange}
                 required
