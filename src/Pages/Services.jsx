@@ -68,7 +68,7 @@ const Services = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowNav(true); // Affiche la navigation après 500ms
-    }, 500);
+    }, 300);
 
     return () => clearTimeout(timer); // Nettoyage du timer
   }, []);
@@ -127,7 +127,7 @@ const Services = () => {
         setTimeout(() => {
           setQuoteSent(false);
           setShowAxolotl(false);
-        }, 4000);
+        }, 2000);
       })
       .catch((error) => {
         console.error("Erreur lors de l'envoi du devis:", error);
