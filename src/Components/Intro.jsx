@@ -130,6 +130,7 @@ const Intro = () => {
             width="600px"
             height="600px"
             className="intro-logo"
+            loading="lazy"
           />
         </div>
 

@@ -27,6 +27,7 @@
     "globals": "^15.14.0",
     "terser": "^5.38.1",
     "vite": "^6.0.5",
-    "vite-plugin-compression": "^0.5.1"
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-imagemin": "^0.6.1"
   }
 }

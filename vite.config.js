@@ -1,9 +1,36 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import compression from "vite-plugin-compression";
+import imagemin from "vite-plugin-imagemin"; // Importation du plugin imagemin
 
 export default defineConfig({
-  plugins: [react(), compression()],
+  plugins: [
+    react(),
+    compression(),
+    imagemin({
+      // Configuration d'imagemin
+      gifsicle: {
+        optimizationLevel: 3,
+        interlaced: true,
+      },
+      optipng: {
+        optimizationLevel: 3,
+      },
+      mozjpeg: {
+        quality: 80,
+      },
+      pngquant: {
+        quality: [0.65, 0.9], // Contrôle de la qualité des PNG
+        speed: 4,
+      },
+      svgo: {
+        plugins: [{ removeViewBox: false }, { cleanupIDs: false }],
+      },
+      webp: {
+        quality: 75,
+      },
+    }),
+  ],
   build: {
     minify: "terser",
     sourcemap: false, // Désactive les sourcemaps en production pour réduire le poids des fichiers
