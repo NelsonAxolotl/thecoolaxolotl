@@ -69,7 +69,7 @@
 .parcours-container.fade-in {
   opacity: 0; /* Rendre le conteneur visible */
   transform: translateY(0); /* Ramener à la position originale */
-  animation: fadeIn 3s ease-out forwards; /* Animation */
+  animation: fadeIn 1s ease-out forwards; /* Animation */
 }
 
 .parcours-title {

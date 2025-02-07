@@ -70,11 +70,11 @@ const Apropos = () => {
   useEffect(() => {
     const pageTimer = setTimeout(() => {
       setShowPage(true);
-    }, 500);
+    }, 200);
 
     const sectionTimer = setTimeout(() => {
       setShowSection(true);
-    }, 500);
+    }, 200);
 
     const endTimer = setTimeout(() => {
       setShowEnd(true); // Affiche le footer après un délai
