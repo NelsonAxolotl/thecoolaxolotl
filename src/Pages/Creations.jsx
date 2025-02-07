@@ -211,7 +211,11 @@ const Creations = () => {
             }
           }}
         >
-          <source src="/Vidéos/underwater.mp4" type="video/mp4" />
+          <source
+            src="/Vidéos/underwater.mp4"
+            type="video/mp4"
+            loading="lazy"
+          />
           Votre navigateur ne prend pas en charge la vidéo.
         </video>
       </div>
@@ -231,6 +235,9 @@ const Creations = () => {
           <img
             ref={imageRef}
             src={portfolio}
+            width="400"
+            height="400"
+            loading="lazy"
             alt="Icône artistique"
             className="title-icon"
           />
@@ -257,6 +264,9 @@ const Creations = () => {
                   <img
                     src={project.image}
                     alt={project.title}
+                    width="400"
+                    height="400"
+                    loading="lazy"
                     className={`project-image ${
                       index === projects.length - 1 ? "last-project-image" : ""
                     }`}
@@ -308,6 +318,9 @@ const Creations = () => {
                       <img
                         src={avis}
                         alt="Avis client"
+                        width="400"
+                        height="400"
+                        loading="lazy"
                         className="avis-image"
                       />
                     </div>
@@ -334,6 +347,9 @@ const Creations = () => {
           <img
             ref={imageRef}
             src={maquette}
+            width="600"
+            height="600"
+            loading="lazy"
             alt="Icône artistique"
             className="title-icon"
           />
@@ -383,7 +399,14 @@ const Creations = () => {
           </div>
         </div>
         <div className={`blog-container ${isVisible ? "visible" : "hidden"}`}>
-          <img src={carnet} alt="Icône" className="title-icon" />
+          <img
+            src={carnet}
+            alt="Icône"
+            width="400"
+            height="400"
+            loading="lazy"
+            className="title-icon"
+          />
           <h2>Carnet de Route</h2>
 
           <div className="blog-category " ref={blogCategory1Ref}>
