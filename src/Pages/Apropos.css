@@ -3,6 +3,7 @@
   src: url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap");
   font-display: swap;
 }
+
 .parcours-container {
   position: relative;
   height: 75vh;
@@ -827,7 +828,7 @@
 .bubble-parcours {
   text-align: center;
   transform: translateX(-50%);
-  background-color: rgba(255, 131, 7, 0.9);
+  background-color: rgba(255, 131, 7);
   color: white;
   padding: 20px 20px;
   margin-top: 30px;
@@ -848,7 +849,7 @@
   }
   50% {
     transform: translateY(-20px);
-    opacity: 0.8;
+    opacity: 0.9;
   }
   100% {
     transform: translateY(0);
@@ -866,7 +867,7 @@
   padding: 20px;
   border: 2px solid white; /* Bordure blanche */
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+  background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
   color: white;
   text-align: center;
   font-size: 1.2rem;
