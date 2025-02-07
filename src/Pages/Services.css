@@ -138,6 +138,7 @@
   transition: transform 0.5s ease box-shadow 0.3s ease;
   opacity: 0;
   margin: 0 auto; /* Centrer les cartes */
+  padding-bottom: 10px;
 }
 
 .service-image {
@@ -192,7 +193,7 @@
 .service-features li {
   font-size: 0.9rem;
   color: #434242;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   padding-left: 5px;
   font-weight: 500;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -564,7 +565,7 @@
 
 .tarifs p {
   text-align: left;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 .tarifs strong {
@@ -576,12 +577,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .tarifs li {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   list-style: none;
+  margin-top: 15px;
 }
 
 .package-sur-mesure {
@@ -806,6 +808,7 @@
     font-size: 0.85rem;
     margin-bottom: 0;
     font-weight: 450;
+    padding: 10px 0;
   }
 
   .timeline-container2 {
@@ -877,6 +880,10 @@
     line-height: 1.5;
   }
 
+  .quote-section br {
+    display: none;
+  }
+
   .quote-form input,
   .quote-form select,
   .quote-form textarea {
@@ -923,8 +930,17 @@
     font-size: 1rem;
   }
 
+  .consent-cont {
+    margin-bottom: -50px;
+    padding: 10px;
+  }
+
+  .tarifs {
+    margin: 30px 0 30px;
+  }
+
   .tarifs ul {
-    margin-top: 10px;
+    margin-top: 0;
   }
 
   .tarifs strong {
@@ -949,12 +965,12 @@
     line-height: 20px;
     margin-bottom: 0;
     text-align: left;
-    padding-left: 5px;
+    padding-left: 10px;
     position: relative;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   .shopify-features li::before {
-    left: -15px;
+    left: -10px;
   }
 }

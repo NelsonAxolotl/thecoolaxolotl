@@ -67,7 +67,7 @@ const Services = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowNav(true); // Affiche la navigation après 500ms
+      setShowNav(true); // Affiche la navigation après 300ms
     }, 300);
 
     return () => clearTimeout(timer); // Nettoyage du timer
@@ -159,9 +159,9 @@ const Services = () => {
         "Création de sites vitrines modernes, interactifs et performants pour offrir des expériences utilisateur fluides.",
       image: react,
       features: [
-        "Design moderne et animation",
-        "Performances et le SEO",
-        "Adaptabilité totale",
+        "✨ Design moderne et animation",
+        "✨ Performances et le SEO",
+        "✨ Adaptabilité totale",
       ],
     },
     {
@@ -170,9 +170,9 @@ const Services = () => {
         "Création d'interfaces uniques et sur mesure pour une expérience utilisateur captivante, quel que soit l'outil utilisé.",
       image: politic,
       features: [
-        "Étude de votre identité visuelle",
-        "Prototypes interactifs",
-        "Design responsive",
+        "✨Étude de votre identité visuelle",
+        "✨Prototypes interactifs",
+        "✨Design responsive",
       ],
     },
     {
@@ -181,9 +181,9 @@ const Services = () => {
         "Prochainement, création de sites vitrines avec WordPress pour gérer vos sites de manière autonome et ludique.",
       image: word,
       features: [
-        "Gestion autonome du contenu",
-        "Idéal pour les sites vitrines simples",
-        "Mise à jour et maintenance",
+        "✨Gestion autonome du contenu",
+        "✨Idéal pour les sites vitrines simples",
+        "✨Mise à jour et maintenance",
       ],
     },
   ];
@@ -431,9 +431,9 @@ const Services = () => {
               <h3>💰 Tarifs standards :</h3>
 
               <p>
-                Je propose des prestations de développement front-end avec React{" "}
-                <br />à des tarifs adaptés en fonction de la durée et de la
-                complexité du projet.
+                Je propose diverses prestations de développement front-end avec
+                React <br />à des tarifs adaptés en fonction de la durée et de
+                la complexité du projet.
               </p>
               <p>
                 Voici mes <strong>tarifs standards</strong> :
@@ -623,8 +623,8 @@ const Services = () => {
               <p>
                 <strong>
                   Veuillez noter que le coût du nom de domaine n'est pas inclus
-                  dans le devis, <br />
-                  il sera ajouté selon le fournisseur choisi.
+                  <br />
+                  dans le devis, il sera ajouté selon le fournisseur choisi.
                 </strong>
               </p>
 
