@@ -9,6 +9,15 @@ export default defineConfig({
     sourcemap: false, // Désactive les sourcemaps en production pour réduire le poids des fichiers
     brotliSize: false, // Désactive le calcul des tailles Brotli pour améliorer la vitesse de build
     chunkSizeWarningLimit: 4096, // Évite les warnings inutiles pour les gros fichiers
+    terserOptions: {
+      compress: {
+        drop_console: true, // Supprime les console.log en prod
+        drop_debugger: true, // Supprime les debuggers
+      },
+      output: {
+        comments: false, // Supprime les commentaires
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks(id) {
