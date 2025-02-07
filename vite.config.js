@@ -50,6 +50,7 @@ export default defineConfig({
         manualChunks(id) {
           if (id.includes("node_modules")) {
             if (id.includes("react")) return "react"; // Sépare React dans un fichier dédié
+            if (id.includes("react-dom")) return "react-dom";
             if (id.includes("three")) return "three"; // Ex. pour Three.js
             return "vendor"; // Mettre les autres dépendances dans "vendor"
           }
