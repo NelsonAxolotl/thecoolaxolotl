@@ -175,7 +175,7 @@ const Apropos = () => {
             {/* Section Mon Évolution */}
             <section className="evolution-section">
               <img
-                src={boat}
+                src="/assets/axoaqua-optimized.webp"
                 alt="Axolotl ou sous-marin"
                 className="round-image2"
                 width="400"
