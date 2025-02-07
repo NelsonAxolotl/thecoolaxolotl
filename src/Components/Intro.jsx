@@ -2,7 +2,7 @@ import React from "react"; // Ajoutez cette ligne
 import { useEffect, useState, useRef } from "react";
 import "./Intro.css";
 import axo from "../Pics/axolotl2.webp";
-import art from "../Pics/art.jpeg";
+import art from "../Pics/art.webp";
 // import water from "../Vidéos/waves2.mp4";
 import introSound from "../Son/axoson.mp3";
 
@@ -107,7 +107,13 @@ const Intro = () => {
           zoomOut ? "zoom-out" : ""
         } ${fadeOutPage ? "fade-out-page" : ""}`}
       >
-        <img src={art} alt="abstract" className="background-image" />
+        <img
+          src={art}
+          alt="abstract"
+          width="400"
+          height="400"
+          className="background-image"
+        />
         {/* Vidéo de fond */}
         <div className="background-video">
           <video autoPlay muted loop className="background-video">
