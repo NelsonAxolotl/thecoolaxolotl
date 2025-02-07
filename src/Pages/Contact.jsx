@@ -17,7 +17,7 @@ const Contact = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => setShowNav(true), 300);
-    const formTimer = setTimeout(() => setShowForm(true), 800);
+    const formTimer = setTimeout(() => setShowForm(true), 300);
 
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.4;

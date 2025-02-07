@@ -262,7 +262,7 @@ textarea:focus {
   object-position: center;
   transform: translate(-51%, -55%); /* Décale l’image vers le haut de 10% */
   z-index: -2; /* Derrière la vidéo */
-  animation: fadeInContact 1.5s ease-in-out forwards;
+  animation: fadeInContact 1s ease-in-out forwards;
 }
 
 @keyframes fadeInContact {

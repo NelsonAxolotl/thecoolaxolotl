@@ -9,9 +9,9 @@ import rando from "../Pics/rando.jpg";
 import game from "../Pics/bg.jpg";
 import trip from "../Pics/tripaxo.jpg";
 import avis from "../Pics/axoavis.webp";
-import axorando from "../Pics/axorando.webp";
-import axotrip from "../Pics/axotrip.webp";
-import axogame from "../Pics/axogame.webp";
+// import axorando from "../Pics/axorando.webp";
+// import axotrip from "../Pics/axotrip.webp";
+// import axogame from "../Pics/axogame.webp";
 // import jelly from "../Vidéos/underwater.mp4";
 import portfolio from "../Pics/portfolio.webp";
 import maquette from "../Pics/maquette.webp";
@@ -84,7 +84,7 @@ const Creations = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPage(true);
-    }, 600);
+    }, 300);
 
     return () => clearTimeout(timer);
   }, []);
