@@ -8,4 +8,7 @@ export default defineConfig({
   build: {
     minify: "terser",
   },
+  define: {
+    "process.env.NODE_ENV": JSON.stringify("production"),
+  },
 });
