@@ -23,6 +23,6 @@ export default defineConfig({
   },
   assetsInclude: ["**/*.mp4", "**/*.webp", "**/*.woff2"], // Gère les assets volumineux
   define: {
-    "process.env.NODE_ENV": JSON.stringify("production"),
+    // "process.env.NODE_ENV": JSON.stringify("production"),
   },
 });

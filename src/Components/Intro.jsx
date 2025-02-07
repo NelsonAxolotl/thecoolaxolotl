@@ -118,7 +118,7 @@ const Intro = () => {
         {/* Vidéo de fond */}
         <div className="background-video">
           <video autoPlay muted loop className="background-video">
-            <source src="/Vidéos/waves2.mp4" type="video/mp4" />
+            <source src="/Vidéos/waves2.mp4" type="video/mp4" loading="lazy" />
             Votre navigateur ne prend pas en charge les vidéos.
           </video>
         </div>
