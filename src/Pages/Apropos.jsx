@@ -136,7 +136,7 @@ const Apropos = () => {
         </div>
       </div>
       <video autoPlay muted loop playsInline className="background-vid">
-        <source src="/Vidéos/sousmarin.mp4" type="video/mp4" />
+        <source src="/Vidéos/sousmarin.mp4" type="video/mp4" loading="lazy" />
         Votre navigateur ne prend pas en charge les vidéos.
       </video>
       <audio id="background-audio" src={audioaxo} loop />
@@ -157,6 +157,7 @@ const Apropos = () => {
                 className="round-image"
                 width="400"
                 height="400"
+                loading="lazy"
               />
             </div>
             <div className="text-content">
@@ -177,6 +178,9 @@ const Apropos = () => {
                 src={boat}
                 alt="Axolotl ou sous-marin"
                 className="round-image2"
+                width="400"
+                height="400"
+                loading="lazy"
               />
               <h2 className="section-title2">Navigations</h2>
               <div className="timeline">
@@ -290,6 +294,9 @@ const Apropos = () => {
                 src={capitain}
                 alt="Axolotl ou sous-marin"
                 className="round-image3 zoom-effect"
+                width="400"
+                height="400"
+                loading="lazy"
                 style={{ width: "150px", height: "150px", borderRadius: "50%" }}
               />
               <div className="text-content">
@@ -339,7 +346,14 @@ const Apropos = () => {
           {/* Appel à l’Action */}
           <section className="appel-a-action">
             <div className="axolotl-container">
-              <img src={relax} alt="Axolotl" className="axolotl-image" />
+              <img
+                src={relax}
+                alt="Axolotl"
+                width="400"
+                height="400"
+                loading="lazy"
+                className="axolotl-image"
+              />
               <div className="text-parcours">
                 <p>
                   "Votre histoire pourrait bien devenir la prochaine étape de

@@ -52,7 +52,7 @@ const Nav = () => {
         onClick={() => handleNavClick("/")}
         aria-label="Retour à l'accueil"
       >
-        <img src={logo} alt="Logo" />
+        <img src={logo} alt="Logo" width="300" height="300" loading="lazy" />
       </div>
 
       {/* Container des liens avec la vidéo de fond */}
