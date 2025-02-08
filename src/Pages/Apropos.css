@@ -75,13 +75,13 @@
 .parcours-container.fade-in {
   opacity: 0; /* Rendre le conteneur visible */
   transform: translateY(0); /* Ramener à la position originale */
-  animation: fadeIn 3s ease-out forwards; /* Animation */
+  animation: fadeIn 1s ease-out forwards; /* Animation */
 }
 
 .parcours-title {
   position: sticky; /* Permet de positionner le titre sur l'image */
   margin-bottom: 400px;
-  margin-top: -400px;
+  margin-top: -410px;
   color: white; /* Couleur du texte */
   font-size: 3.5rem; /* Taille du texte */
   font-weight: bold; /* Gras */
@@ -339,6 +339,10 @@
   padding: 0 15px;
   text-align: justify;
   max-width: 700px;
+}
+
+.section-description br {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -897,9 +901,14 @@
   }
 
   .p-title {
+    font-size: 1.5rem;
     line-height: 30px;
     text-align: left;
     margin-left: 20px;
     margin-top: -20px;
+  }
+
+  .section-description br {
+    display: block;
   }
 }

@@ -265,12 +265,10 @@ const Services = () => {
               et facile à gérer sans compétences techniques.
             </p>
             <ul className="shopify-features">
-              <li>Création rapide et facile de votre boutique en ligne</li>
-              <li>Gestion simple des produits et des commandes</li>
+              <li>Création de votre boutique en ligne</li>
+              <li>Gestion des produits et des commandes</li>
               <li>Design moderne et responsive</li>
-              <li>
-                Intégration des moyens de paiement et des options d'expédition
-              </li>
+              <li>Intégration des moyens de paiement </li>
               <li>Suivi et analyse des ventes en temps réel</li>
             </ul>
           </div>
@@ -682,7 +680,8 @@ const Services = () => {
                 <a href="mailto:thecoolaxolotldesigner.com">
                   thecoolaxolotldesigner.com
                 </a>
-                <br />
+              </p>
+              <p>
                 Cette méthode est rapide et permet de garantir que je reçois vos
                 fichiers dans leur intégralité.
               </p>

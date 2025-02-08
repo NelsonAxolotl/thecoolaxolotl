@@ -337,7 +337,7 @@
   font-size: 1.8rem; /* Réduire la taille du titre */
   margin: 10px 0 25px; /* Réduire l'espace sous le titre */
   text-align: center;
-  font-weight: 500;
+  font-weight: 550;
   line-height: 26px;
 }
 
@@ -345,7 +345,7 @@
   font-size: 1.3rem;
   margin-bottom: 15px;
   color: #dcdcdc;
-  font-weight: 400;
+  font-weight: 450;
 }
 
 .project-description {
@@ -741,6 +741,12 @@
     background-color 0.3s ease-in-out;
 }
 
+@media (max-width: 768px) {
+  .blog-category {
+    padding: 25px 14px;
+  }
+}
+
 /* Au survol (lorsque l'élément devient visible), les éléments se déplacent et deviennent visibles */
 .blog-category.visible {
   opacity: 1;
@@ -797,6 +803,11 @@
 @media screen and (max-width: 768px) {
   .blog-category p {
     font-size: 0.9rem;
+    margin-top: 5px;
+  }
+
+  .blog-category br {
+    display: none;
   }
 }
 

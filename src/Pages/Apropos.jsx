@@ -165,10 +165,10 @@ const Apropos = () => {
               <p className="section-description">
                 Tout a commencé par une passion pour la créativité et les idées
                 uniques. Ce premier élan m'a conduit sur un chemin riche de
-                découvertes et d'apprentissages. À l'image de l'axolotl, capable
-                de se régénérer et d'évoluer tout en restant fidèle à son
-                essence, je m'efforce de rester singulier tout en explorant sans
-                cesse de nouvelles idées.
+                découvertes et d'apprentissages. <br />À l'image de l'axolotl,
+                capable de se régénérer et d'évoluer tout en restant fidèle à
+                son essence, je m'efforce de rester singulier tout en explorant
+                sans cesse de nouvelles idées.
               </p>
             </div>
 

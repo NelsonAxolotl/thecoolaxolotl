@@ -157,7 +157,7 @@ const Creations = () => {
     },
     {
       title: "Reproduction TripAdvisor",
-      description: "Exercice de reproduction du célèbre site",
+      description: "Maquette de reproduction du célèbre site",
       image: trip,
       link: "https://tripadvisorangola-exo.netlify.app/",
       // avatar: axotrip,
