@@ -19,7 +19,14 @@ const Legale = () => {
     <>
       <Nav />
       <div className="legale fade-in-legale">
-        <img src={legale} alt="Axolotl" className="round-image-legale" />
+        <img
+          src={legale}
+          alt="Axolotl"
+          width="300"
+          height="300"
+          loading="lazy"
+          className="round-image-legale"
+        />
         <div className="legal-container">
           <h1>Mentions Légales</h1>
 
