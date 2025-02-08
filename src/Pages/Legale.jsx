@@ -52,7 +52,6 @@ const Legale = () => {
             <p>Le site est hébergé par :</p>
             <p>
               <strong>Nom de l’hébergeur :</strong> <br />
-              <strong>Adresse :</strong> 4 rue de Metz
               <br />
               <strong>Téléphone :</strong> 06 17 80 67 15
             </p>

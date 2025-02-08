@@ -170,9 +170,9 @@ const Services = () => {
         "Création d'interfaces uniques et sur mesure pour une expérience utilisateur captivante, quel que soit l'outil utilisé.",
       image: politic,
       features: [
-        "✨Étude de votre identité visuelle",
-        "✨Prototypes interactifs",
-        "✨Design responsive",
+        "✨ Étude de votre identité visuelle",
+        "✨ Prototypes interactifs",
+        "✨ Design responsive",
       ],
     },
     {
@@ -181,9 +181,9 @@ const Services = () => {
         "Prochainement, création de sites vitrines avec WordPress pour gérer vos sites de manière autonome et ludique.",
       image: word,
       features: [
-        "✨Gestion autonome du contenu",
-        "✨Idéal pour les sites vitrines simples",
-        "✨Mise à jour et maintenance",
+        "✨ Gestion autonome du contenu",
+        "✨ Idéal pour les sites vitrines simples",
+        "✨ Mise à jour et maintenance",
       ],
     },
   ];

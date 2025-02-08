@@ -92,6 +92,11 @@
 
 .legal-container a {
   cursor: pointer;
+  color: white;
+}
+
+.legal-container a:hover {
+  color: bisque;
 }
 
 @media screen and (max-width: 500px) {
