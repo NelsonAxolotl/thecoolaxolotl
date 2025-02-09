@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon standard -->
@@ -16,56 +15,43 @@
       href="/favicon-192x192.png"
     />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
     <!-- Préconnexion pour améliorer la vitesse de chargement -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="/assets/styles.css" as="style" />
-    <link
-      href="style.css"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
 
+    <!-- Preload for essential CSS -->
+    <link rel="preload" href="/assets/styles.css" as="style" />
+    <link rel="preload" href="/assets/index-Dhdb0agR.css" as="style" />
+
+    <!-- Preload for critical fonts -->
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?=Caveat:wght@400..700&family=Quicksand:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
       as="style"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?=Caveat:wght@400..700&family=Quicksand:wght@300..700&display=swap"
-      media="print"
-      onload="this.media='all'"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
     />
 
-    <link
-      rel="stylesheet"
-      href="/assets/index-Dhdb0agR.css"
-      media="print"
-      onload="this.onload=null;this.removeAttribute('media');"
-    />
-
+    <!-- Preload for images -->
     <link
       rel="preload"
-      as="image"
       href="/assets/halo-ahAqCE3q.webp"
+      as="image"
       type="image/webp"
     />
     <link
       rel="preload"
-      as="image"
       href="/assets/legal-Bcop4z3h.webp"
+      as="image"
       type="image/webp"
     />
     <link
       rel="preload"
-      as="image"
       href="/assets/politiqueaxo-CYqOUljI.webp"
+      as="image"
       type="image/webp"
     />
     <link
@@ -81,17 +67,20 @@
       type="image/webp"
     />
 
-    <!-- FontAwesome Icons (déféré) -->
+    <!-- FontAwesome Icons (deferred loading) -->
     <script
       src="https://kit.fontawesome.com/b78f7f545e.js"
       crossorigin="anonymous"
       defer
     ></script>
     <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin />
+
     <title>The Cool Axolotl</title>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Defer loading of JavaScript -->
     <script type="module" src="/src/main.jsx" defer></script>
   </body>
 </html>
