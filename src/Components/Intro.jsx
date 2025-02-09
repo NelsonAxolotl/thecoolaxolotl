@@ -113,7 +113,6 @@ const Intro = () => {
           width="800"
           height="600"
           className="background-image"
-          loading="lazy"
         />
         {/* Vidéo de fond */}
         <div className="background-video">
@@ -130,7 +129,6 @@ const Intro = () => {
             width="600px"
             height="600px"
             className="intro-logo"
-            loading="lazy"
           />
         </div>
 
