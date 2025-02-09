@@ -231,6 +231,8 @@ const Creations = () => {
           <img
             ref={imageRef}
             src={portfolio}
+            width={300}
+            height={300}
             alt="Icône artistique"
             className="title-icon"
           />
@@ -257,6 +259,8 @@ const Creations = () => {
                   <img
                     src={project.image}
                     alt={project.title}
+                    width={300}
+                    height={300}
                     className={`project-image ${
                       index === projects.length - 1 ? "last-project-image" : ""
                     }`}
@@ -308,6 +312,8 @@ const Creations = () => {
                       <img
                         src={avis}
                         alt="Avis client"
+                        width={300}
+                        height={300}
                         className="avis-image"
                       />
                     </div>
@@ -334,6 +340,8 @@ const Creations = () => {
           <img
             ref={imageRef}
             src={maquette}
+            width={500}
+            height={500}
             alt="Icône artistique"
             className="title-icon"
           />
@@ -348,14 +356,6 @@ const Creations = () => {
           <div className="maquettes-grid">
             {maquettes.map((maquette, index) => (
               <div key={index} className="maquette-item">
-                {/* Image ronde au-dessus de la carte */}
-                {/* <img
-                  src={maquette.avatar} // Image ronde dynamique
-                  alt={`Avatar de ${maquette.title}`}
-                  className="maquette-avatar"
-                /> */}
-
-                {/* Carte de maquette avec image d'arrière-plan */}
                 <div
                   className="maquette-card"
                   style={{ backgroundImage: `url(${maquette.image})` }} // Image de fond dynamique
@@ -383,7 +383,13 @@ const Creations = () => {
           </div>
         </div>
         <div className={`blog-container ${isVisible ? "visible" : "hidden"}`}>
-          <img src={carnet} alt="Icône" className="title-icon" />
+          <img
+            src={carnet}
+            alt="Icône"
+            width={300}
+            height={300}
+            className="title-icon"
+          />
           <h2>Carnet de Route</h2>
 
           <div className="blog-category " ref={blogCategory1Ref}>
