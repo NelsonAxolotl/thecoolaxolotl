@@ -14,8 +14,8 @@ const End = () => {
             <img
               src={legal}
               alt="mention légale"
-              width="300"
-              height="300"
+              width="150"
+              height="150"
               className="round-image4"
               loading="lazy"
             />
@@ -26,8 +26,8 @@ const End = () => {
           <Link to="/">
             <img
               src={axo}
-              width="300"
-              height="300"
+              width="150"
+              height="150"
               alt="logo"
               className="round-image5"
             />
@@ -39,7 +39,7 @@ const End = () => {
             <img
               src={politic}
               width="300"
-              height="300"
+              height="150"
               alt="politique de confidentialité axolotl"
               className="round-image4"
               loading="lazy"

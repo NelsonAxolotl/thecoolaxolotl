@@ -21,8 +21,8 @@ const Politic = () => {
         <img
           src={politic}
           alt="axolotl politic"
-          width="500"
-          height="500"
+          width="400"
+          height="400"
           className="round-image-politic"
         />
         <div className="container-politic">
