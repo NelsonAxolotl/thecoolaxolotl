@@ -24,7 +24,6 @@ const Politic = () => {
           width="300"
           height="300"
           className="round-image-politic"
-          loading="lazy"
         />
         <div className="container-politic">
           <h1>Politique de Confidentialité</h1>
