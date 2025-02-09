@@ -78,7 +78,7 @@ const Apropos = () => {
 
     const endTimer = setTimeout(() => {
       setShowEnd(true); // Affiche le footer après un délai
-    }, 1000); // Vous pouvez ajuster ce délai pour contrôler l'apparition de <End />
+    }, 500); // Vous pouvez ajuster ce délai pour contrôler l'apparition de <End />
 
     const slowVideo = () => {
       const video = document.querySelector(".background-vid");

@@ -29,7 +29,6 @@ const End = () => {
               width="300"
               height="300"
               alt="logo"
-              loading="lazy"
               className="round-image5"
             />
           </Link>
