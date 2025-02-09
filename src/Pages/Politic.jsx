@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Politic.css";
 import End from "../Components/End";
 import Nav from "../Components/Nav";
-import politic from "../Pics/politique.webp";
+import politic from "../Pics/politiqueaxo.webp";
 
 const Politic = () => {
   const [showPage, setShowPage] = useState(false);
@@ -21,8 +21,8 @@ const Politic = () => {
         <img
           src={politic}
           alt="axolotl politic"
-          width="300"
-          height="300"
+          width="500"
+          height="500"
           className="round-image-politic"
         />
         <div className="container-politic">
