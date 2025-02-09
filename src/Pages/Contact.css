@@ -127,6 +127,7 @@ textarea::placeholder {
   ); /* Bouton avec fond semi-transparent */
   color: white;
   font-size: 1rem;
+  font-weight: 450;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -307,7 +308,7 @@ textarea::placeholder {
 .contact-email {
   display: block;
   font-size: 1.6rem;
-  color: #0177b7;
+  color: #eaebec;
   text-decoration: none;
   margin-top: 50px;
   margin-bottom: -50px;
@@ -371,7 +372,7 @@ textarea::placeholder {
 .social-icons a {
   font-size: 2.8rem;
   font-weight: 550;
-  color: #828282;
+  color: #bbb1b1;
   text-decoration: none;
   transition: color 0.3s;
   cursor: pointer;
@@ -409,6 +410,7 @@ textarea::placeholder {
 .consent-container label {
   line-height: 1.5;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
 }
 
 @media screen and (max-width: 768px) {

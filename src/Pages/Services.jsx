@@ -236,6 +236,8 @@ const Services = () => {
                 <img
                   src={service.image}
                   alt={service.title}
+                  width={200}
+                  height={200}
                   className="service-image"
                 />
                 <h2 className="service-title">{service.title}</h2>
@@ -288,7 +290,12 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="timeline-image2">
-                  <img src={hand} alt="Axolotl Step 1" />
+                  <img
+                    src={hand}
+                    alt="Axolotl Step 1"
+                    width={200}
+                    height={200}
+                  />
                 </div>
               </div>
 
@@ -306,7 +313,12 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="timeline-image2">
-                  <img src={analyse} alt="Axolotl Step 2" />
+                  <img
+                    src={analyse}
+                    alt="Axolotl Step 2"
+                    width={200}
+                    height={200}
+                  />
                 </div>
               </div>
               <div className="timeline-item2 left hidden">
@@ -320,7 +332,12 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="timeline-image2">
-                  <img src={proto} alt="Axolotl Step 1" />
+                  <img
+                    src={proto}
+                    alt="Axolotl Step 1"
+                    width={200}
+                    height={200}
+                  />
                 </div>
               </div>
               <div className="timeline-item2 right hidden">
@@ -337,7 +354,12 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="timeline-image2">
-                  <img src={int} alt="Axolotl Step 1" />
+                  <img
+                    src={int}
+                    alt="Axolotl Step 1"
+                    width={200}
+                    height={200}
+                  />
                 </div>
               </div>
               <div className="timeline-item2 left hidden">
@@ -353,7 +375,12 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="timeline-image2">
-                  <img src={dev} alt="Axolotl Step 1" />
+                  <img
+                    src={dev}
+                    alt="Axolotl Step 1"
+                    width={200}
+                    height={200}
+                  />
                 </div>
               </div>
               <div className="timeline-item2 right hidden">
@@ -367,7 +394,12 @@ const Services = () => {
                   </p>
                 </div>
                 <div className="timeline-image2">
-                  <img src={update} alt="Axolotl Step 6" />
+                  <img
+                    src={update}
+                    alt="Axolotl Step 6"
+                    width={200}
+                    height={200}
+                  />
                 </div>
               </div>
             </div>
