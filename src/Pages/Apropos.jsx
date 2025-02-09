@@ -210,7 +210,7 @@ const Apropos = () => {
                   </div>
                   <div className="timeline-content">
                     <h3 className="timeline-title">
-                      Les Aventures à Travers le Monde
+                      Les Aventures dans le Monde
                     </h3>
                     <div className="timeline-date">
                       <p>2006 - 2009</p>

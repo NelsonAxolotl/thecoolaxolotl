@@ -88,7 +88,7 @@
 
 @media (max-width: 880px) {
   .summary-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 
@@ -182,6 +182,7 @@
     padding: 0 20px;
     font-size: 0.9rem;
     line-height: 1.1rem;
+    font-weight: 500;
   }
 }
 
@@ -202,6 +203,9 @@
   .maquettes-section-description {
     text-align: left;
     padding: 0 30px;
+    font-weight: 500;
+    line-height: 1.1rem;
+    font-size: 0.9rem;
   }
 }
 
