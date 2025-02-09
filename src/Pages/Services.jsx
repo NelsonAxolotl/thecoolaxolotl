@@ -9,14 +9,14 @@ import word from "../Pics/axopress.webp"; // Ajoutez une image WordPress si néc
 import fly from "../Pics/fly.png";
 // import axowork from "../Pics/axowork.webp";
 // import know from "../Pics/know.webp";
-import proto from "../Pics/proto.webp";
-import dev from "../Pics/production.webp";
+import proto from "../Pics/proto2.webp";
+import dev from "../Pics/production2.webp";
 // import deplo from "../Pics/deplo.webp";
 // import maintenance from "../Pics/maintenance.webp";
-import hand from "../Pics/hand.webp";
+import hand from "../Pics/hand2.webp";
 import analyse from "../Pics/analyse.webp";
 import update from "../Pics/update.webp";
-import int from "../Pics/prototype.webp";
+import int from "../Pics/prototype2.webp";
 import boutik from "../Pics/boutik.webp";
 
 const Services = () => {
