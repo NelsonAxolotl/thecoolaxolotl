@@ -306,8 +306,8 @@ const Services = () => {
                     Analyse de votre produit et secteur
                   </h3>
                   <p className="timeline-description2">
-                    Lors de la phase de découverte, nous explorons votre métier,
-                    vos attentes et vos besoins spécifiques. Nous analysons vos
+                    Lors de la phase de découverte, j'explore votre métier, vos
+                    attentes et vos besoins spécifiques. J'analyse vos
                     utilisateurs et les tendances du marché pour définir des
                     objectifs clairs et concevoir une solution sur-mesure.
                   </p>
@@ -326,9 +326,9 @@ const Services = () => {
                 <div className="timeline-content2">
                   <h3 className="timeline-step2">Conception et prototype</h3>
                   <p className="timeline-description2">
-                    Nous concevons des prototypes pour vous permettre de
-                    visualiser votre futur projet. Vos retours et préférences
-                    guident ensuite la création des designs finaux.
+                    Je conçois des prototypes pour vous permettre de visualiser
+                    votre futur projet. Vos retours et préférences guident
+                    ensuite la création des designs finaux.
                   </p>
                 </div>
                 <div className="timeline-image2">
@@ -347,8 +347,8 @@ const Services = () => {
                     Développement et intégration
                   </h3>
                   <p className="timeline-description2">
-                    Nous implémentons les fonctionnalités définies, intégrons
-                    les modèles et les contenus, et déployons une plateforme
+                    J'implante les fonctionnalités définies, intégrons les
+                    modèles et les contenus, et déployons une plateforme
                     provisoire pour collecter vos retours et effectuer les
                     ajustements nécessaires.
                   </p>
@@ -369,7 +369,7 @@ const Services = () => {
                     Déploiement et mise en production
                   </h3>
                   <p className="timeline-description2">
-                    Une fois validé, nous déployons votre projet dans un
+                    Une fois validé, Je déploie votre projet dans un
                     environnement optimisé, assurant sa robustesse, sa stabilité
                     et ses performances.
                   </p>
@@ -388,7 +388,7 @@ const Services = () => {
                 <div className="timeline-content2">
                   <h3 className="timeline-step2">Maintenance</h3>
                   <p className="timeline-description2">
-                    Nous offrons une maintenance personnalisée pour assurer des
+                    J'offre une maintenance personnalisée pour assurer des
                     améliorations continues et préserver votre présence en ligne
                     en accord avec les dernières tendances.
                   </p>
