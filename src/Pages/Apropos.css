@@ -92,6 +92,7 @@
   left: 50%; /* Positionne le titre au centre de l'image en horizontal */
   transform: translate(-50%, -50%); /* Ajuste le titre exactement au centre */
   white-space: nowrap; /* Empêche le texte de se couper sur plusieurs lignes */
+  font-family: "Quicksand", sans-serif;
   color: white; /* Couleur du texte */
   font-size: 2rem; /* Taille du texte */
   font-weight: bold; /* Gras */
