@@ -78,6 +78,8 @@
       as="image"
       href="/assets/art-DW6cSYRN.webp"
       type="image/webp"
+      importance="high"
+      fetchpriority="high"
     />
     <link
       rel="preload"
@@ -86,13 +88,48 @@
       type="image/webp"
     />
 
-    <!-- CSS -->
+    <!-- CSS Critique Inline -->
+    <style>
+      /* Styles critiques pour éviter le blocage du rendu */
+      body {
+        font-family: "Quicksand", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      .p-title {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+
+    <!-- Chargement différé des CSS -->
+    <link
+      rel="stylesheet"
+      href="/assets/styles.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/index-Dhdb0agR.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="/assets/styles.css" />
+      <link rel="stylesheet" href="/assets/index-Dhdb0agR.css" />
+    </noscript>
+
+    <!-- Google Fonts -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
     />
-    <link rel="stylesheet" href="/assets/styles.css" />
-    <link rel="stylesheet" href="/assets/index-Dhdb0agR.css" />
 
     <!-- FontAwesome Icons -->
     <script
@@ -105,9 +142,11 @@
     <title>The Cool Axolotl</title>
   </head>
   <body>
+    <p class="p-title">Bienvenue sur The Cool Axolotl</p>
+
     <div id="root"></div>
 
     <!-- Chargement différé du script principal -->
-    <script type="module" src="/src/main.jsx" defer></script>
+    <script type="module" src="/src/main.jsx" async></script>
   </body>
 </html>
