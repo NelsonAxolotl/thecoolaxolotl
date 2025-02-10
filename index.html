@@ -1,79 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The Cool Axolotl est un web designer spécialisé dans les sites vitrines."
+    />
+    <meta
+      name="keywords"
+      content="Web Designer, sites vitrines, React, WordPress"
+    />
+    <meta name="author" content="The Cool Axolotl" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Politique de Sécurité de Contenu (CSP) -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self'; 
+        script-src 'self' 'unsafe-inline' https://kit.fontawesome.com https://unpkg.com https://vercel.live; 
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://ka-f.fontawesome.com https://unpkg.com; 
+        img-src 'self' data: https://thecoolaxolotl.com https://unpkg.com; 
+        font-src 'self' data: https://fonts.gstatic.com https://ka-f.fontawesome.com; 
+        connect-src 'self' https://ka-f.fontawesome.com;"
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <!-- SEO Meta Tags Open Graph -->
+    <meta property="og:title" content="The Cool Axolotl - Web Designer" />
+    <meta
+      property="og:description"
+      content="Créations sur mesure, sites vitrines avec React et WordPress."
+    />
+    <meta property="og:image" content="https://thecoolaxolotl.com/image.webp" />
+    <meta property="og:image:alt" content="logo The Cool Axolotl" />
+    <meta property="og:url" content="https://thecoolaxolotl.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Cool Axolotl" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Cool Axolotl - Web Designer" />
+    <meta
+      name="twitter:description"
+      content="Créations sur mesure, sites vitrines avec React et WordPress."
+    />
+    <meta
+      name="twitter:image"
+      content="https://thecoolaxolotl.com/axolotl.webp"
+    />
+    <meta name="twitter:image:alt" content="logo The Cool Axolotl" />
+
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://thecoolaxolotl.com" />
+    <link rel="alternate" href="https://thecoolaxolotl.com" hreflang="fr-FR" />
 
     <!-- Favicon standard -->
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/favicon-192x192.png"
-    />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-    <!-- Préconnexion pour améliorer la vitesse de chargement -->
+    <!-- Préconnexion -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Preload for essential CSS -->
-    <link rel="preload" href="/assets/styles.css" as="style" />
-    <link rel="preload" href="/assets/index-Dhdb0agR.css" as="style" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="stylesheet" href="/assets/index-Dhdb0agR.css" />
 
-    <!-- Preload for critical fonts -->
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
-      as="style"
-    />
+    <!-- Google Fonts -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
     />
 
-    <!-- Preload for images -->
-    <link
-      rel="preload"
-      href="/assets/halo-ahAqCE3q.webp"
-      as="image"
-      type="image/webp"
-    />
-    <link
-      rel="preload"
-      href="/assets/legal-Bcop4z3h.webp"
-      as="image"
-      type="image/webp"
-    />
-    <link
-      rel="preload"
-      href="/assets/politiqueaxo-CYqOUljI.webp"
-      as="image"
-      type="image/webp"
-    />
-    <link
-      rel="preload"
-      href="/assets/axolotl2-DYkQeObo.webp"
-      as="image"
-      type="image/webp"
-    />
-    <link
-      rel="preload"
-      href="/assets/time-YROw8_Sc.webp"
-      as="image"
-      type="image/webp"
-    />
-
-    <!-- FontAwesome Icons (deferred loading) -->
+    <!-- FontAwesome Icons -->
     <script
+      type="text/javascript"
       src="https://kit.fontawesome.com/b78f7f545e.js"
       crossorigin="anonymous"
       defer
     ></script>
-    <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin />
 
     <title>The Cool Axolotl</title>
   </head>
