@@ -86,54 +86,21 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
     />
 
-    <!-- Préchargement des images principales pour le LCP -->
+    <!-- Préchargement de l'image LCP -->
     <link
       rel="preload"
       as="image"
-      href="./src/Pics/axolotllogo.webp"
+      href="/assets/axolotllogo.webp"
       type="image/webp"
+      fetchpriority="high"
     />
 
-    <link
-      rel="preload"
-      as="image"
-      href="./src/Pics/arty.webp"
-      type="image/webp"
-    />
-
-    <link
-      rel="preload"
-      as="image"
-      href="./src/Pics/time.webp"
-      type="image/webp"
-    />
-
-    <link
-      rel="preload"
-      as="image"
-      href="./src/Pics/halo.webp"
-      type="image/webp"
-    />
-
-    <link
-      rel="preload"
-      as="image"
-      href="./public/politiqueaxo.webp"
-      type="image/webp"
-    />
-
-    <link
-      rel="preload"
-      as="image"
-      href="./public/legal.webp"
-      type="image/webp"
-    />
-
-    <link
-      rel="preload"
-      as="image"
-      href="./public/axolotllogo.webp"
-      type="image/webp"
+    <!-- Chargement différé des images non critiques -->
+    <img
+      src="/assets/axolotllogo.webp"
+      alt="Logo Axolotl"
+      style="display: none"
+      fetchpriority="high"
     />
 
     <!-- CSS -->
