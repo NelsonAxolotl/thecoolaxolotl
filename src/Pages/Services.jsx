@@ -32,6 +32,7 @@ const Services = () => {
     projectNature: "",
     numberOfPages: "",
     ideas: "",
+    consent: false, // Si tu l'utilises pour une case à cocher
   });
 
   const [quoteSent, setQuoteSent] = useState(false);
@@ -194,18 +195,20 @@ const Services = () => {
       "otherProjectTypeField"
     );
 
-    projectTypeField.addEventListener("change", () => {
-      if (projectTypeField.value === "autre") {
-        otherProjectTypeField.style.display = "block";
-      } else {
-        otherProjectTypeField.style.display = "none";
-      }
-    });
+    if (!projectTypeField || !otherProjectTypeField) return; // Évite l'erreur
+
+    const handleProjectTypeChange = () => {
+      otherProjectTypeField.style.display =
+        projectTypeField.value === "autre" ? "block" : "none";
+    };
+
+    projectTypeField.addEventListener("change", handleProjectTypeChange);
 
     return () => {
-      projectTypeField.removeEventListener("change", () => {});
+      projectTypeField.removeEventListener("change", handleProjectTypeChange);
     };
   }, []);
+
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   };
@@ -501,25 +504,27 @@ const Services = () => {
                 id="name"
                 name="name"
                 placeholder="Entrez votre nom"
-                value={quoteData.name}
+                value={quoteData.name || ""}
                 onChange={handleQuoteChange}
                 required
               />
+
               <label htmlFor="email">Votre email :</label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 placeholder="Entrez votre email"
-                value={quoteData.email}
+                value={quoteData.email || ""}
                 onChange={handleQuoteChange}
                 required
               />
+
               <label htmlFor="projectType">Type de projet :</label>
               <select
                 id="projectType"
                 name="projectType"
-                value={quoteData.projectType}
+                value={quoteData.projectType || ""}
                 onChange={handleQuoteChange}
                 required
               >
@@ -537,9 +542,9 @@ const Services = () => {
                   <label
                     htmlFor="otherProjectType"
                     style={{
-                      display: "block", // Force le label à occuper toute la largeur
-                      marginBottom: "10px", // Espace sous le label
-                      fontWeight: "500", // Optionnel : met le texte en gras pour une meilleure visibilité
+                      display: "block",
+                      marginBottom: "10px",
+                      fontWeight: "500",
                     }}
                   >
                     Précisez votre projet :
@@ -549,7 +554,7 @@ const Services = () => {
                     id="otherProjectType"
                     name="otherProjectType"
                     placeholder="Décrivez le type de projet"
-                    value={quoteData.otherProjectType}
+                    value={quoteData.otherProjectType || ""}
                     onChange={handleQuoteChange}
                     style={{
                       width: "500px",
@@ -562,12 +567,12 @@ const Services = () => {
                   />
                 </div>
               )}
-              {/* Nouveau champ pour le type de client (Particulier, Entreprise, Association, Autre) */}
+
               <label htmlFor="clientType">Type de client :</label>
               <select
                 id="clientType"
                 name="clientType"
-                value={quoteData.clientType}
+                value={quoteData.clientType || ""}
                 onChange={handleQuoteChange}
                 required
               >
@@ -583,9 +588,9 @@ const Services = () => {
                   <label
                     htmlFor="otherClientType"
                     style={{
-                      display: "block", // Force le label à occuper toute la largeur
-                      marginBottom: "10px", // Espace sous le label
-                      fontWeight: "500", // Optionnel : met le texte en gras pour une meilleure visibilité
+                      display: "block",
+                      marginBottom: "10px",
+                      fontWeight: "500",
                     }}
                   >
                     Précisez votre type de client :
@@ -595,7 +600,7 @@ const Services = () => {
                     id="otherClientType"
                     name="otherClientType"
                     placeholder="Décrivez le type de client"
-                    value={quoteData.otherClientType}
+                    value={quoteData.otherClientType || ""}
                     onChange={handleQuoteChange}
                     style={{
                       width: "500px",
@@ -608,11 +613,12 @@ const Services = () => {
                   />
                 </div>
               )}
+
               <label htmlFor="projectNature">Nature du projet :</label>
               <select
                 id="projectNature"
                 name="projectNature"
-                value={quoteData.projectNature}
+                value={quoteData.projectNature || ""}
                 onChange={handleQuoteChange}
                 required
               >
@@ -628,7 +634,7 @@ const Services = () => {
                 name="numberOfPages"
                 min="0"
                 placeholder="Indiquez le nombre de pages"
-                value={quoteData.numberOfPages}
+                value={quoteData.numberOfPages || ""}
                 onChange={handleQuoteChange}
                 required
               />
@@ -639,14 +645,13 @@ const Services = () => {
                 name="ideas"
                 rows="4"
                 style={{
-                  width:
-                    "100%" /* Largeur à 100% ou ajustez selon vos besoins */,
-                  height: "200px" /* Ajustez la hauteur en pixels */,
-                  fontSize: "16px" /* Taille de la police */,
-                  padding: "10px" /* Espacement interne */,
+                  width: "100%",
+                  height: "200px",
+                  fontSize: "16px",
+                  padding: "10px",
                 }}
                 placeholder="Détaillez vos idées"
-                value={quoteData.ideas}
+                value={quoteData.ideas || ""}
                 onChange={handleQuoteChange}
               ></textarea>
 
@@ -661,12 +666,13 @@ const Services = () => {
               <button type="submit" className="quote-button">
                 Demander un devis
               </button>
+
               <div className="consent-cont">
                 <input
                   type="checkbox"
                   id="consent"
                   name="consent"
-                  checked={quoteData.consent} // Synchronise avec l'état
+                  checked={quoteData.consent || false}
                   onChange={(e) =>
                     setQuoteData({ ...quoteData, consent: e.target.checked })
                   }
