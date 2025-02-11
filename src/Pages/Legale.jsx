@@ -24,7 +24,6 @@ const Legale = () => {
           alt="Axolotl"
           width="300"
           height="300"
-          loading="lazy"
           className="round-image-legale"
         />
         <div className="legal-container">

@@ -69,7 +69,6 @@
   object-fit: cover; /* Permet de remplir le conteneur */
   z-index: -1; /* Envoie l'image en arrière-plan */
   opacity: 0; /* Démarre avec l'opacité à 0 */
-  background-image: url("../Pics/art.jpeg"); /* Remplacez par le chemin de votre image */
   background-size: cover; /* L'image couvre tout le conteneur */
   background-position: center; /* Centre l'image */
   background-repeat: no-repeat;
