@@ -259,9 +259,9 @@ const Services = () => {
             <img src={boutik} alt="Shopify" className="shopify-image" />
             <h2 className="shopify-title">🛍️ Création de sites e-commerce</h2>
             <p className="shopify-description">
-              Besoin de créer une boutique en ligne simple, mais performante ?
-              <br />
-              Je vous propose des solutions avec des plateformes de e-commerce
+              Besoin de créer une boutique en ligne simple, mais performante?
+              <br /> Je vous propose des solutions avec des plateformes de
+              e-commerce
               <br />
               fiable et flexible, idéale pour gérer votre boutique en ligne en
               toute simplicité. <br />
@@ -269,13 +269,15 @@ const Services = () => {
               besoins, <br />
               et facile à gérer sans compétences techniques.
             </p>
-            <ul className="shopify-features">
-              <li>Création de votre boutique en ligne</li>
-              <li>Gestion des produits et des commandes</li>
-              <li>Design moderne et responsive</li>
-              <li>Intégration des moyens de paiement </li>
-              <li>Suivi et analyse des ventes en temps réel</li>
-            </ul>
+            <div className="shopflex">
+              <ul className="shopify-features">
+                <li>Création de votre boutique en ligne</li>
+                <li>Gestion des produits et commandes</li>
+                <li>Design moderne et responsive</li>
+                <li>Intégration des moyens de paiement </li>
+                <li>Suivi des ventes en temps réel</li>
+              </ul>
+            </div>
           </div>
 
           {/* Timeline Section */}
@@ -369,7 +371,7 @@ const Services = () => {
                 <span className="timeline-number2">5</span>
                 <div className="timeline-content2">
                   <h3 className="timeline-step2">
-                    Déploiement et mise en production
+                    Déploiement/mise en production
                   </h3>
                   <p className="timeline-description2">
                     Une fois validé, Je déploie votre projet dans un

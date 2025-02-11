@@ -1,8 +1,8 @@
 import React from "react"; // Ajoutez cette ligne
 import { useEffect, useState, useRef } from "react";
 import "./Intro.css";
-import axo from "../Pics/axolotl2.webp";
-import art from "../Pics/art.webp";
+import axo from "../Pics/axolotllogo.webp";
+import art from "../Pics/arty.webp";
 // import water from "../Vidéos/waves2.mp4";
 import introSound from "../Son/axoson.mp3";
 

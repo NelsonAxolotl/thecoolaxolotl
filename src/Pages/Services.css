@@ -772,6 +772,12 @@
   color: #4caf50;
 }
 
+.shopflex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   /* Adapter la hauteur pour réduire l'espacement */
   .nav-container-services {
@@ -987,6 +993,10 @@
     font-size: 0.9rem;
     padding: 5px;
     margin-bottom: 5px;
+  }
+
+  .shopify-description br {
+    display: none;
   }
 
   .shopify-features li {
