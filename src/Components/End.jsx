@@ -2,8 +2,8 @@ import React from "react"; // Ajoutez cette ligne
 import "./End.css";
 import { Link } from "react-router-dom";
 import legal from "/legal.webp";
-import axo from "/axolotl2.webp";
-import politic from "/politique.webp";
+import axo from "/axolotllogo.webp";
+import politic from "/politiqueaxo.webp";
 
 const End = () => {
   return (
