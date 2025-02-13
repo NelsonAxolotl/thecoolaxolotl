@@ -322,4 +322,9 @@
     z-index: -10;
     transition: all 0.8s ease-out;
   }
+
+  .navbar-link {
+    font-size: 30px !important; /* Encore plus grand pour les très petits écrans */
+    padding: 25px !important; /* Augmente l’espace cliquable */
+  }
 }
