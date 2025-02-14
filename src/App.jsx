@@ -3,7 +3,8 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop";
 
-const Intro = lazy(() => import("./Components/Intro"));
+import Intro from "./Components/Intro";
+
 const Apropos = lazy(() => import("./Pages/Apropos"));
 const Contact = lazy(() => import("./Pages/Contact"));
 const Creations = lazy(() => import("./Pages/Creations"));
