@@ -17,18 +17,17 @@ function App() {
   return (
     <Router basename="/">
       <ScrollToTop />
-      <Suspense fallback={<div>Chargement...</div>}>
-        <Routes>
-          <Route path="/" element={<Intro />} />
-          <Route path="/Parcours" element={<Apropos />} />
-          <Route path="/Portfolio" element={<Creations />} />
-          <Route path="/Prestations" element={<Services />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/Mentions-légales" element={<Legale />} />
-          <Route path="/Politique-de-confidentialité" element={<Politic />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
+
+      <Routes>
+        <Route path="/" element={<Intro />} />
+        <Route path="/Parcours" element={<Apropos />} />
+        <Route path="/Portfolio" element={<Creations />} />
+        <Route path="/Prestations" element={<Services />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Mentions-légales" element={<Legale />} />
+        <Route path="/Politique-de-confidentialité" element={<Politic />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </Router>
   );
 }
