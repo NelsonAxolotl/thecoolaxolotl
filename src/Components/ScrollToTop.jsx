@@ -6,7 +6,10 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     console.log("Navigating to:", pathname); // 🔍 Vérifier si le hook fonctionne
-    window.scrollTo(0, 0);
+
+    setTimeout(() => {
+      document.documentElement.scrollTop = 0; // Forcer le scroll en haut
+    }, 100);
   }, [pathname]);
 
   return null;
