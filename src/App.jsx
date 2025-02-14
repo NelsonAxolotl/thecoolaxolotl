@@ -14,7 +14,7 @@ const Politic = lazy(() => import("./Pages/Politic"));
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <ScrollToTop />
       <Suspense fallback={<div>Chargement...</div>}>
         <Routes>
