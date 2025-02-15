@@ -5,8 +5,9 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    console.log("Navigating to:", pathname); // Ajoute ce log pour suivre les changements de route
-    window.scrollTo(0, 0); // Remet le scroll en haut
+    console.log("Navigating to:", pathname); // 🔍 Vérifier si le hook fonctionne
+
+    document.documentElement.scrollTop = 0; // Forcer le scroll en haut immédiatement après la navigation
   }, [pathname]);
 
   return null;

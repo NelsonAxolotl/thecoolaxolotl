@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+// import React, { Suspense, lazy } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop";
