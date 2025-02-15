@@ -475,7 +475,7 @@ const Services = () => {
               </p>
               <ul>
                 <li>
-                  <strong>280€ / jour</strong> : <br />
+                  <strong>200€ / jour</strong> : <br />
                   <p>
                     Cela inclut une journée complète de travail, généralement de
                     7 heures. <br />
@@ -484,7 +484,7 @@ const Services = () => {
                   </p>{" "}
                 </li>
                 <li>
-                  <strong>40€ / heure</strong> : <br />
+                  <strong>30€ / heure</strong> : <br />
                   <p>
                     Pour des missions ponctuelles ou des tâches plus
                     spécifiques, je facture à l'heure. <br />
