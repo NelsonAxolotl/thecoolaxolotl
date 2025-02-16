@@ -84,7 +84,7 @@ const Creations = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPage(true);
-    }, 300);
+    }, 350);
 
     return () => clearTimeout(timer);
   }, []);
@@ -192,9 +192,6 @@ const Creations = () => {
       if (blogContainer) observer.unobserve(blogContainer);
     };
   }, []);
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
 
   return (
     <>

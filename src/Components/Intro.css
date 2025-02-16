@@ -220,6 +220,7 @@
 
 /* Styles communs pour toutes les bulles */
 .bubble {
+  all: unset; /* ✅ Supprime les styles par défaut des boutons */
   cursor: pointer;
   position: absolute;
   display: flex; /* Pour centrer le texte */
@@ -243,7 +244,7 @@
     inset -3px 3px 5px rgba(255, 255, 255, 0.5), 0 0 15px rgba(0, 200, 255, 0.4);
   transition: transform 0.8s ease-in-out, opacity 0.6s ease,
     background-color 0.8s ease;
-  animation: bubble-rise 3s ease forwards, float 8s ease-in-out infinite;
+  animation: bubble-rise 2s ease forwards, float 8s ease-in-out infinite;
 }
 
 /* Styles pour Parcours et Portfolio */

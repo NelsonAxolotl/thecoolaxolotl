@@ -15,7 +15,7 @@
 .nav-container.fade-in {
   opacity: 1; /* Navigation visible */
   transform: translateY(0); /* Position normale */
-  transition: opacity 0.5s ease-in; /* Diminuez la durée de transition */
+  transition: opacity 1.5s ease-in; /* Diminuez la durée de transition */
 }
 
 /* Section "Appel à l'Action" */

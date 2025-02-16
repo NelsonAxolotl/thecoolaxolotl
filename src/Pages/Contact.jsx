@@ -12,12 +12,13 @@ const Contact = () => {
   const [showAxolotl, setShowAxolotl] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [showForm, setShowForm] = useState(false);
+  const [showEnd, setShowEnd] = useState(false); // État pour afficher End après un délai
 
   const videoRef = useRef(null);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowNav(true), 300);
-    const formTimer = setTimeout(() => setShowForm(true), 300);
+    const timer = setTimeout(() => setShowNav(true), 350);
+    const formTimer = setTimeout(() => setShowForm(true), 400);
 
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.4;
@@ -66,6 +67,10 @@ const Contact = () => {
         setShowAxolotl(true);
         setErrorMessage("");
 
+        setTimeout(() => {
+          setShowEnd(true);
+        }, 2000);
+
         setTimeout(() => setShowAxolotl(false), 4000);
 
         // Réinitialisation du formulaire après soumission
@@ -84,9 +89,6 @@ const Contact = () => {
           "Une erreur est survenue. Veuillez réessayer plus tard."
         );
       });
-  };
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
   };
 
   return (
@@ -132,7 +134,7 @@ const Contact = () => {
               </p>
               <div className="social-icons">
                 <a
-                  href="https://linkedin.com/in/votreprofil"
+                  href="https://www.linkedin.com/in/the-cool-axolotl-8555a5351/"
                   aria-label="The cool Axolotl"
                   target="_blank"
                   rel="noopener noreferrer"

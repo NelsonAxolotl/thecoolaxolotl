@@ -70,7 +70,7 @@ const Apropos = () => {
   useEffect(() => {
     const pageTimer = setTimeout(() => {
       setShowPage(true);
-    }, 200);
+    }, 350);
 
     const sectionTimer = setTimeout(() => {
       setShowSection(true);
@@ -94,14 +94,14 @@ const Apropos = () => {
       clearTimeout(sectionTimer);
       clearTimeout(endTimer); // Nettoie le timer de <End />
     };
-  }, []);
+  }, [showPage]);
 
   const [isAudioBlocked, setIsAudioBlocked] = useState();
 
   const playAudio = () => {
     const audio = document.getElementById("background-audio");
     if (audio) {
-      audio.volume = 0.01; // Appliquer le volume réduit
+      audio.volume = 0.005; // Appliquer le volume réduit
       const playPromise = audio.play();
       if (playPromise !== undefined) {
         playPromise

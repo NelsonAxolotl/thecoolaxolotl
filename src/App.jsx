@@ -2,7 +2,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop";
-
 import Intro from "./Components/Intro";
 import Apropos from "./Pages/Apropos";
 import Contact from "./Pages/Contact";
