@@ -9,10 +9,13 @@ import happy from "../Pics/happy.png";
 import contact from "../Pics/halo.webp";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Force le scroll en haut dès que le composant est monté
+  }, []);
+
   const [showAxolotl, setShowAxolotl] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [showForm, setShowForm] = useState(false);
-  const [showEnd, setShowEnd] = useState(false); // État pour afficher End après un délai
 
   const videoRef = useRef(null);
 
@@ -66,10 +69,6 @@ const Contact = () => {
         setIsSent(true);
         setShowAxolotl(true);
         setErrorMessage("");
-
-        setTimeout(() => {
-          setShowEnd(true);
-        }, 2000);
 
         setTimeout(() => setShowAxolotl(false), 4000);
 
