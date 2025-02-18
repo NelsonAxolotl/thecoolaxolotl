@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Indiquer le Sitemap
-Sitemap: https://thecoolaxolotl.com/sitemap.xml
+Sitemap: https://www.thecoolaxolotl.com/sitemap.xml
 
 # Directive spécifique pour Googlebot (inutile si tout est déjà autorisé)
 User-agent: Googlebot
