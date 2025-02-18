@@ -20,6 +20,11 @@ import int from "../Pics/prototype2.webp";
 import boutik from "../Pics/boutik.webp";
 
 const Services = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100); // Attends 100ms avant de forcer le scroll
+  }, []);
   const [showNav, setShowNav] = useState(false);
 
   const [quoteData, setQuoteData] = useState({

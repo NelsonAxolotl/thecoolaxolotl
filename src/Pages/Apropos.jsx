@@ -11,6 +11,11 @@ import capitain from "../Pics/capitain.webp";
 import relax from "../Pics/relax.webp";
 
 const Apropos = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100); // Attends 100ms avant de forcer le scroll
+  }, []);
   const [showPage, setShowPage] = useState(false);
   const [showSection, setShowSection] = useState(false);
   const [showEnd, setShowEnd] = useState(false);

@@ -18,6 +18,11 @@ import maquette from "../Pics/maquette.webp";
 import carnet from "../Pics/carnet.webp";
 
 const Creations = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100); // Attends 100ms avant de forcer le scroll
+  }, []);
   const [showPage, setShowPage] = useState(false);
   const videoRef = useRef(null);
 

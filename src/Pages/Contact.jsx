@@ -10,9 +10,10 @@ import contact from "../Pics/halo.webp";
 
 const Contact = () => {
   useEffect(() => {
-    window.scrollTo(0, 0); // Force le scroll en haut dès que le composant est monté
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100); // Attends 100ms avant de forcer le scroll
   }, []);
-
   const [showAxolotl, setShowAxolotl] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [showForm, setShowForm] = useState(false);
