@@ -309,7 +309,7 @@ const Services = () => {
                 <span className="timeline-number2">2</span>
                 <div className="timeline-content2">
                   <h3 className="timeline-step2">
-                    Analyse de votre produit et secteur
+                    Analyse du produit et secteur
                   </h3>
                   <p className="timeline-description2">
                     Lors de la phase de découverte, j'explore votre métier, vos

@@ -233,7 +233,7 @@
   font-weight: bold;
   opacity: 0;
   font-size: 22px !important;
-  transform: scale(0.5);
+  transform: scale(0.1);
   background: radial-gradient(
     circle at top left,
     rgba(255, 255, 255, 0.8),
