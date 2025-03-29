@@ -106,7 +106,7 @@ const Creations = () => {
       title: "Compagnie Wanubida",
       subtitle: "Compagnie de Cirque",
       description:
-        "Un site immersif reflétant l'énergie et la créativité de la compagnie de cirque Wanubida. Calendrier interactif et galerie dynamique intégrés.",
+        "Un site immersif reflétant l'énergie, la créativité de la compagnie de cirque Wanubida et une galerie dynamique intégrés.",
       image: wanubida,
       link: "https://www.wanubida.com",
       technologies: ["HTML", "REACT", "JAVASCRIPT", "CSS", "SEO"],
