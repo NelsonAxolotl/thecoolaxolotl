@@ -3,8 +3,8 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 // Import des fichiers de traductions
-import translationFR from "./locales/fr.json";
-import translationEN from "./locales/en.json";
+import translationFR from "./Locales/fr.json";
+import translationEN from "./Locales/en.json";
 
 // Configuration de i18n
 i18n
