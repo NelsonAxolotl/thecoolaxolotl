@@ -1,10 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // Importation du hook
 import "./Nav.css";
 import logo from "../Pics/axolotl2.webp";
 
 const Nav = () => {
+  const { t } = useTranslation();
   const [showLinks, setShowLinks] = useState(false);
   const [showNavbarOnScroll, setShowNavbarOnScroll] = useState(false);
   const location = useLocation();
@@ -70,10 +72,11 @@ const Nav = () => {
 
         <ul className="navbar-links-list">
           {[
-            { path: "/Parcours", label: "Parcours" },
-            { path: "/Portfolio", label: "Portfolio" },
-            { path: "/Prestations", label: "Prestations" },
-            { path: "/Contact", label: "Contact" },
+            { path: "/Parcours", label: t("navbar.parcours") },
+            { path: "/Portfolio", label: t("navbar.portfolio") },
+            { path: "/Prestations", label: t("navbar.prestations") },
+            ,
+            { path: "/Contact", label: t("navbar.contact") },
           ].map(({ path, label }, index) => (
             <li
               key={index}

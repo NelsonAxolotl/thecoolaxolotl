@@ -1,4 +1,5 @@
-// import React, { Suspense, lazy } from "react";
+import React from "react";
+import "./i18n";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop";
@@ -10,6 +11,7 @@ import Services from "./Pages/Services";
 import NotFound from "./Pages/NotFound";
 import Legale from "./Pages/Legale";
 import Politic from "./Pages/Politic";
+import LanguageSwitcher from "./Components/LanguageSwitcher";
 
 // const Apropos = lazy(() => import("./Pages/Apropos"));
 // const Contact = lazy(() => import("./Pages/Contact"));
@@ -24,6 +26,7 @@ function App() {
     <Router>
       {/* <Suspense fallback={<div>Chargement...</div>}> */}
       <ScrollToTop />
+      <LanguageSwitcher /> {/* Ajoute le sélecteur de langue ici */}
       <Routes>
         <Route path="/" element={<Intro />} />
         <Route path="/Parcours" element={<Apropos />} />

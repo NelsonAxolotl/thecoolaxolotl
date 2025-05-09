@@ -351,6 +351,9 @@
   margin-bottom: 15px;
   color: #dcdcdc;
   font-weight: 450;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-description {

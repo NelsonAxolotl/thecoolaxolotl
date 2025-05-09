@@ -1,4 +1,5 @@
-import React from "react"; // Ajoutez cette ligne
+import React from "react";
+import { useTranslation } from "react-i18next";
 import "./End.css";
 import { Link } from "react-router-dom";
 import legal from "/legal.webp";
@@ -6,6 +7,8 @@ import axo from "/axolotllogo.webp";
 import politic from "/politiqueaxo.webp";
 
 const End = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="end">
@@ -13,14 +16,14 @@ const End = () => {
           <Link to="/Mentions-légales">
             <img
               src={legal}
-              alt="mention légale"
+              alt={t("end.legalAlt")}
               width="150"
               height="150"
               className="round-image4"
               loading="lazy"
             />
           </Link>{" "}
-          <p>Mentions légales</p>
+          <p>{t("end.legal")}</p>
         </div>
         <div className="copy">
           <Link to="/">
@@ -28,27 +31,28 @@ const End = () => {
               src={axo}
               width="150"
               height="150"
-              alt="logo"
+              alt={t("end.logoAlt")}
               className="round-image5"
             />
           </Link>
-          <p>Copyright © 2025 | The Cool Axolotl </p>
+          <p>{t("end.copyright")}</p>
         </div>
-        <div className="politique ">
+        <div className="politique">
           <Link to="/Politique-de-confidentialité">
             <img
               src={politic}
               width="300"
               height="150"
-              alt="politique de confidentialité axolotl"
+              alt={t("end.politicAlt")}
               className="round-image4"
               loading="lazy"
             />
           </Link>
-          <p>Politique de confidentialité</p>
+          <p>{t("end.politic")}</p>
         </div>
       </div>
     </>
   );
 };
+
 export default End;

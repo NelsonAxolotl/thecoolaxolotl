@@ -1,0 +1,23 @@
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 2000;
+}
+
+.flag {
+  width: 32px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Version mobile : position sous le menu burger */
+@media screen and (max-width: 768px) {
+  .language-switcher {
+    position: absolute;
+    top: 25px; /* Ajuste en fonction de la hauteur de ton menu burger */
+    right: 22px;
+  }
+}

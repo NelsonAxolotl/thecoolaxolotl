@@ -328,3 +328,17 @@
     padding: 25px !important; /* Augmente l’espace cliquable */
   }
 }
+.fixed-language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+  display: flex;
+  gap: 10px;
+}
+
+.fixed-language-switcher img {
+  width: 32px;
+  height: auto;
+  cursor: pointer;
+}

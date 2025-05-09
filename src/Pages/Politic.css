@@ -27,6 +27,7 @@
   font-weight: 700;
   margin-bottom: 50px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-top: -20px;
 }
 
 .container-politic h2 {
@@ -42,7 +43,7 @@ li {
   font-size: 1.2rem;
   color: white;
   line-height: 26px;
-  padding: 10px 0;
+  padding: 0px 0 20px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 

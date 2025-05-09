@@ -1,0 +1,33 @@
+import React from "react";
+import { useTranslation } from "react-i18next";
+import frFlag from "../Pics/fr-flag.png";
+import enFlag from "../Pics/uk-flag.png";
+import "./LanguageSwitcher.css"; // ajoute cette ligne pour le CSS externe
+
+const LanguageSwitcher = () => {
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    document.documentElement.lang = lng;
+  };
+
+  return (
+    <div className="language-switcher">
+      <img
+        src={frFlag}
+        alt="Français"
+        onClick={() => changeLanguage("fr")}
+        className="flag"
+      />
+      <img
+        src={enFlag}
+        alt="English"
+        onClick={() => changeLanguage("en")}
+        className="flag"
+      />
+    </div>
+  );
+};
+
+export default LanguageSwitcher;

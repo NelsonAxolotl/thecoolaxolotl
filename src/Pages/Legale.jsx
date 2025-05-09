@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next"; // Importation du hook
 import "./Legale.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
 import legale from "../Pics/legal.webp";
 
 const Legale = () => {
+  const { t } = useTranslation(); // Utilisation du hook pour la traduction
   const [showPage, setShowPage] = useState(false);
 
   useEffect(() => {
@@ -27,99 +29,68 @@ const Legale = () => {
           className="round-image-legale"
         />
         <div className="legal-container">
-          <h1>Mentions Légales</h1>
+          <h1>{t("legal.title")}</h1>
 
           <section>
-            <h2>1. Présentation du site</h2>
-            <p>
-              Le site <strong>thecoolaxolotl.com</strong> (ci-après « le Site »)
-              est édité par :
-            </p>
+            <h2>{t("legal.section1.title")}</h2>
+            <p>{t("legal.section1.description1")}</p>
+
             <ul>
               <li>The Cool Axolotl</li>
             </ul>
             <p>
-              <strong>Siège social :</strong> Montpellier <br />
-              <strong>Email :</strong>{" "}
+              <strong>{t("legal.section1.address")} :</strong> Montpellier{" "}
+              <br />
+              <strong>{t("legal.section1.email")} :</strong>{" "}
               <a href="mailto:thecoolaxolotldesigner@gmail.com">
                 thecoolaxolotldesigner@gmail.com
               </a>{" "}
               <br />
-              <strong>Téléphone :</strong> 06 17 80 67 15 <br />
-              <strong>SIRET :</strong> / <strong>NDA :</strong>
-            </p>
-            <p>
-              <strong>Directeur de la publication :</strong> The Cool Axolotl
-            </p>
-          </section>
-
-          <section>
-            <h2>2. Hébergement du site</h2>
-            <p>Le site est hébergé par :</p>
-            <p>
-              <strong>Nom de l’hébergeur :</strong> <br />
+              <strong>{t("legal.section1.phone")} :</strong> 06 17 80 67 15{" "}
               <br />
-              <strong>Téléphone :</strong> 06 17 80 67 15
+              <strong>{t("legal.section1.siret")} :</strong>{" "}
+              <strong>9430225660001</strong>
+            </p>
+            <p>
+              <strong>{t("legal.section1.director")} :</strong> The Cool Axolotl
             </p>
           </section>
 
           <section>
-            <h2>3. Propriété intellectuelle</h2>
+            <h2>{t("legal.section2.title")}</h2>
+            <p>{t("legal.section2.description")}</p>
             <p>
-              Le contenu du site <strong>thecoolaxolotl.com</strong> (textes,
-              images, graphismes, logo, icônes, sons, logiciels, etc.) est la
-              propriété exclusive de [Nom de votre entreprise] ou de ses
-              partenaires. <br />
-              Toute reproduction, représentation, modification, publication ou
-              adaptation de tout ou partie des éléments du site, quel que soit
-              le moyen ou le procédé utilisé, est interdite sans l’autorisation
-              préalable écrite de [Nom de votre entreprise].
+              <strong>{t("legal.section2.hostName")} : The Cool Axololt</strong>{" "}
+              <br />
+              <br />
+              <strong>{t("legal.section2.phone")} :</strong> 06 17 80 67 15
             </p>
           </section>
 
           <section>
-            <h2>4. Responsabilité</h2>
-            <p>
-              Les responsables de la publication ne peuvent être tenus pour
-              responsables des dommages directs ou indirects causés au matériel
-              de l’utilisateur lors de l’accès au site{" "}
-              <strong>thecoolaxolotl.com</strong>. <br />
-              Le site contient des liens hypertextes vers d’autres sites,
-              toutefois, les éditeurs du site n’assument aucune responsabilité
-              quant au contenu de ces sites.
-            </p>
+            <h2>{t("legal.section3.title")}</h2>
+            <p>{t("legal.section3.text")}</p>
           </section>
 
           <section>
-            <h2>5. Données personnelles</h2>
-            <p>
-              Conformément à la réglementation en vigueur (notamment le RGPD),
-              les utilisateurs disposent d’un droit d’accès, de rectification et
-              de suppression des données personnelles les concernant. Pour
-              exercer ce droit, veuillez envoyer un email à{" "}
-              <strong>[Votre adresse email de contact]</strong>.
-            </p>
+            <h2>{t("legal.section4.title")}</h2>
+            <p>{t("legal.section4.text")}</p>
           </section>
 
           <section>
-            <h2>6. Cookies</h2>
-            <p>
-              Le site <strong>thecoolaxolotl.com</strong> utilise des cookies
-              pour améliorer l’expérience utilisateur et analyser le trafic du
-              site. <br />
-              Vous avez la possibilité de désactiver les cookies en modifiant
-              les paramètres de votre navigateur.
-            </p>
+            <h2>{t("legal.section5.title")}</h2>
+            <p>{t("legal.section5.text")}</p>
           </section>
 
           <section>
-            <h2>7. Droit applicable</h2>
-            <p>
-              Les présentes mentions légales sont régies par la loi française.
-              Tout litige relatif à l’utilisation du site{" "}
-              <strong>thecoolaxolotl.com</strong> sera soumis à la compétence
-              des tribunaux français.
-            </p>
+            <h2>{t("legal.section6.title")}</h2>
+            <p>{t("legal.section6.text")}</p>
+          </section>
+
+          <section>
+            <h2>{t("legal.section7.title")}</h2>
+
+            <p>{t("legal.section7.text")}</p>
           </section>
         </div>
       </div>

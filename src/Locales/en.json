@@ -1,0 +1,381 @@
+{
+  "introBackground": "Intro image",
+  "about": "About me",
+  "contact": "Contact",
+  "services": "Services",
+  "portfolio": "Portfolio",
+  "title": "Journey",
+  "subtitle": "A unique voyage where each step is a renewal.",
+  "explorer": "Explorer",
+  "explorerDescription": "It all started with a passion for creativity and unique ideas. This first impulse led me on a path full of discoveries and learning. Like the axolotl, capable of regenerating and evolving while staying true to its essence, I strive to remain singular while constantly exploring new ideas.",
+  "navigations": "Navigations",
+  "discover_notes": "Discovery of Notes",
+  "timeline1_date": "2001 - 2005",
+  "timeline1_text": "My journey began in London, where I pursued a DEUG in musicology as a guitarist. This experience was a springboard: it allowed me to play concerts, improve my musical skills through the study of various styles (classical, traditional, and contemporary) and collaborate with passionate artists.",
+
+  "world_adventures": "Adventures Around the World",
+  "timeline2_date": "2006 - 2009",
+  "timeline2_text": "I explored rich cultures across different countries and continents, worked in multicultural environments, and held a variety of roles. These experiences broadened my worldview, strengthening my appreciation for cultural differences and their contribution to the creative field.",
+
+  "stage_exploration": "Exploring the Stage",
+  "timeline3_date": "2010 - 2025",
+  "timeline3_text": "For 15 years, I worked as a lighting technician after obtaining a degree in live performance techniques. I worked on various productions: theater, concerts, outdoor events, dance, and multimedia performances. I gained expertise in stage lighting, show management, and team coordination. This role also allowed me to collaborate with artists from diverse backgrounds, understand the needs of a performance, and anticipate logistical challenges. Precision, anticipation, and the ability to work under pressure became key skills, and my approach evolved from simple technical application to a true artistic vision, where lighting becomes a form of expression.",
+
+  "digital_dive": "Diving into the Digital World",
+  "timeline4_date": "2023 - Present",
+  "timeline4_text": "Seeking renewal, I dived into the world of web design and full-stack development. Although this radical transition was a challenge, it has been incredibly enriching. I have learned to use design tools, code interactive websites, understand application architecture, and integrate user-friendly digital solutions. Involved in both personal and professional projects, I've experimented with web design, user experience, and programming. Today, my digital journey allows me to combine my passions for technology, art, and creativity, providing innovative solutions through digital platforms.",
+
+  "captain_title": "Captain",
+  "captain_description": "Today, I sail as the captain of a ship in the waters of creativity. Every project is a unique exploration, guided by strong values such as listening, perseverance, and curiosity. I am here to transform your ideas into a custom reality, blending innovation and authenticity.",
+
+  "creative_solutions": "Finding original solutions, tailored to each challenge.",
+  "creativity": "Creativity",
+  "understanding_needs": "Understanding your needs to offer a personalized approach.",
+  "listening": "Listening",
+  "responding_to_demands": "Responding to varied demands, in changing contexts.",
+  "adaptability": "Adaptability",
+  "transforming_obstacles": "Turning every obstacle into an opportunity for renewal.",
+  "resilience": "Resilience",
+
+  "call_to_action": "Ready to dive in together?",
+  "story_message": "Your story could very well become the next step in my journey. Share your ideas, and let's see where it takes us!",
+
+  "port": {
+    "title": "Portfolio",
+    "summary": "I create reliable, high-performance websites with clean code, optimized for SEO, fully responsive, intuitive, visually appealing, and unique—ensuring a smooth user experience and a modern design tailored to your needs."
+  },
+  "projects": {
+    "title": "Artistic websites",
+    "description": "Discover a selection of showcase websites from the world of art and performance.",
+    "wanubida": {
+      "title": "Wanubida Company",
+      "subtitle": "Circus company",
+      "description": "An immersive website reflecting the energy and creativity of the Wanubida circus company, with a dynamic integrated gallery.",
+      "review": "Super responsive, creative, precise in his work, attentive to our ideas. Our site is dynamic, easy to use, and very clear. A perfect follow-up that truly reflects our identity!",
+      "arrow": "Click here",
+      "review_image_alt": "Image representing a client review"
+    },
+    "polyr": {
+      "title": "PolyR Company",
+      "subtitle": "Opera company",
+      "description": "An elegant site showcasing performances with striking photo galleries and detailed descriptions.",
+      "review": "The Poly R Company team is absolutely delighted with the work of The Cool Axolotl, who created a tailor-made website. Today, the company is gaining visibility!",
+      "arrow": "Click here",
+      "review_image_alt": "Image representing a client review"
+    },
+    "emmanuelle": {
+      "title": "Emmanuelle Ferdyan",
+      "subtitle": "Artist portfolio",
+      "description": "A minimalist and visually stunning portfolio to highlight the works and unique universe of an incredible artist.",
+      "review": "The Cool Axolotl created a website that truly reflects me, and I am completely satisfied—and proud! Our exchanges were both friendly and efficient. A huge thank you!!!",
+      "arrow": "Click here",
+      "review_image_alt": "Image representing a client review"
+    }
+  },
+  "mockups": {
+    "title": "Mockups",
+    "description": "Explore mockups ranging from video games to replicas and nature themes.",
+
+    "gaming": {
+      "title": "Gaming",
+      "description": "Mockup focused on the gaming world",
+      "visiting": "Visiting the website"
+    },
+    "tripadvisor": {
+      "title": "TripAdvisor Replica",
+      "description": "Mockup recreating the famous website",
+      "visiting": "Visiting the website"
+    },
+    "mountain": {
+      "title": "The Mountain",
+      "description": "Mockup for hiking",
+      "visiting": "Visiting the website"
+    }
+  },
+  "blog": {
+    "journal": "Road Journal",
+    "category1": {
+      "title": " My First Clients",
+      "content1": "After completing my Boot Camp training at ' Le Reacteur ', I quickly realized that it wasn't enough to just create websites, but that I needed to stand out in order to attract my first clients. ",
+      "content2": "Instead of following standard templates, I chose to design websites that capture the essence of each project and client, telling a unique visual story. ",
+      "content3": "My first client came through word of mouth, and it was the perfect opportunity to put this personalized approach into practice, which would define my vision of design."
+    },
+    "category2": {
+      "title": "Stand-Out Websites",
+      "content1": "In a world where many websites look alike, I choose to move away from standard templates to offer visually engaging sites. ",
+      "content2": "I specialize in projects that highlight my clients' identities, whether they are artists, therapists, or entrepreneurs... ",
+      "content3": "Each site becomes an opportunity to create something unique, reflecting the people who use it.",
+      "content4": " It’s this creative freedom and diversity that fuel my passion for custom and truly personalized design."
+    },
+    "category3": {
+      "title": "A Matter of Ethics",
+      "content1": "Working as a freelancer is, above all, a choice guided by my values. I prioritize collaborations with independents, artists, associations, and entrepreneurs who share a vision of authenticity and creativity.",
+      "content2": "For me, each project is an opportunity to create bespoke websites that go beyond simple technical services, offering solutions that make sense and truly reflect the essence of those I work with. ",
+      "content3": "My goal is not to produce in bulk, but to design websites that have soul, that carry a real story, and that meet the unique needs of each client."
+    }
+  },
+  "contact-text": "Want to turn your project into a unique, tailor-made journey? Join the adventure and let’s bring your ideas to life with creativity and authenticity.",
+  "label-html": "By submitting this form, you agree that the information entered may be used to contact you in response to a quote request or inquiry.",
+  "button-submit": "Dive in with me !",
+  "placeholder": "name",
+  "subject": "subject",
+  "message": "Your message",
+  "navbar": {
+    "parcours": "Journey",
+    "portfolio": "Portfolio",
+    "prestations": "Services",
+    "contact": "Contact"
+  },
+  "prestations": "Services",
+  "prestationsIntro": "Passionate about creating modern and effective showcase websites, I use powerful tools like <0>React</0>, <1>JavaScript</1>, and <2>Vue.js</2> to craft solutions that reflect your identity and meet your needs. My commitment is to bring a fresh perspective, work with precision, and ensure each project is a success.",
+
+  "ser-vices": {
+    "react": {
+      "title": "Development with React",
+      "description": "Creation of modern, interactive and high-performance showcase websites to deliver smooth user experiences.",
+      "features": [
+        "✨ Modern design and animation",
+        "✨ Performance and SEO",
+        "✨ Full adaptability"
+      ]
+    },
+    "design": {
+      "title": "Custom Design",
+      "description": "Creation of unique and tailor-made interfaces for a captivating user experience, regardless of the tool used.",
+      "features": [
+        "✨ Study of your visual identity",
+        "✨ Interactive prototypes",
+        "✨ Responsive design"
+      ]
+    },
+    "wordpress": {
+      "title": "WordPress (Coming soon)",
+      "description": "Soon, creation of showcase sites with WordPress to manage your content in a fun and autonomous way.",
+      "features": [
+        "✨ Autonomous content management",
+        "✨ Ideal for simple showcase sites",
+        "✨ Updates and maintenance"
+      ]
+    }
+  },
+
+  "shopify": {
+    "title": "🛍️ E-commerce Website Creation",
+    "description": "Need to create a simple yet powerful online store?\nI offer solutions using reliable and flexible e-commerce platforms, perfect for managing your shop easily.\nEnjoy a ready-to-use store, customized to your needs and easy to manage without technical skills.",
+    "features": [
+      "Creation of your online store",
+      "Product and order management",
+      "Modern and responsive design",
+      "Payment integration",
+      "Real-time sales tracking"
+    ]
+  },
+  "timeline": {
+    "title": "Process",
+    "steps": [
+      {
+        "title": "Getting to know each other",
+        "description": "Let's take time to talk about your project to understand your needs, goals, and vision so I can offer the most suitable solution."
+      },
+      {
+        "title": "Product and market analysis",
+        "description": "In the discovery phase, I explore your business, expectations and target audience, analyze users and market trends to define clear goals and create a custom solution."
+      },
+      {
+        "title": "Design and prototyping",
+        "description": "I create prototypes so you can visualize your future project. Your feedback and preferences guide the creation of the final designs."
+      },
+      {
+        "title": "Development and integration",
+        "description": "I implement the planned features, integrate layouts and content, and deploy a test platform to collect your feedback and make necessary adjustments."
+      },
+      {
+        "title": "Deployment",
+        "description": "Once approved, I deploy your project in an optimized environment, ensuring its robustness, stability and performance."
+      },
+      {
+        "title": "Maintenance",
+        "description": "I offer tailored maintenance to ensure ongoing improvements and maintain your online presence in line with the latest trends."
+      }
+    ]
+  },
+  "customPackage": {
+    "title": "🌟 Custom Package 🌟",
+    "intro": "Every project is unique, and I understand that some needs are simpler than others. I offer personalized solutions tailored to your project's complexity and budget.",
+    "whyTitle": "💡 Why a custom package?",
+    "why": [
+      "✔️ A price adjusted to your real needs",
+      "✔️ A flexible and scalable solution",
+      "✔️ Support throughout your project"
+    ],
+    "offerTitle": "🔹 A custom package!",
+    "offerDescription": "Rather than charging by the day or hour, I tailor the service to your real needs, for a more cost-effective and efficient solution. 🚀",
+    "contact": "Contact me",
+    "estimation": "for a personalized quote!"
+  },
+  "quote": {
+    "title": "Request a Quote",
+    "intro": {
+      "line1": "If you're interested in my services and want a personalized quote,",
+      "line2": " fill out the form below.",
+      "line3": "I will get back to you as soon as possible."
+    },
+    "tarifs": {
+      "title": "💰 Standard Rates:",
+      "description1": "I offer various front-end development services using React,",
+      "description2": "with rates adapted to the project's duration and complexity.",
+      "description3": "Here are my standard rates:",
+      "daily": {
+        "label": "€200 / day",
+        "description": "This includes a full day of work, typically 8 hours.",
+        "description2": "Ideal for short or medium-duration projects (1 to 3 days)."
+      },
+      "hourly": {
+        "label": "€30 / hour",
+        "description": "For one-time tasks or specific needs, I charge by the hour.",
+        "description2": "This is suited for punctual work or technical consulting."
+      },
+      "note": "Prices are excluding taxes and may vary depending on project duration, complexity, and deadlines."
+    },
+    "form": {
+      "name": "Your name",
+      "email": "Your email",
+      "projectType": "Project type",
+      "projectNature": "Nature of the project",
+      "clientType": "Client type",
+      "numberOfPages": "Number of pages",
+      "ideas": "Do you have any ideas?",
+      "otherProjectType": "Specify your project:",
+      "otherClientType": "Specify your client type:",
+      "domainNote": "Please note that the domain name cost is not included in the quote and will be added based on the chosen provider.",
+      "submit": "Request a quote",
+      "consent": "By submitting this form, you agree that the information entered will be used to contact you regarding your quote or inquiry.",
+
+      "projectTypeOptions": {
+        "vitrine": "Showcase website",
+        "plateform": "Web platform",
+        "blog": "Blog",
+        "portfolio": "Portfolio",
+        "ecommerce": "Online store",
+        "autre": "Other"
+      },
+      "clientTypeOptions": {
+        "particulier": "Individual",
+        "entreprise": "Company",
+        "association": "Association",
+        "autre": "Other"
+      },
+      "projectNatureOptions": {
+        "maquette": "Mockup",
+        "creation": "Full creation",
+        "autre": "Other"
+      }
+    },
+    "messages": {
+      "success": "Quote sent successfully!",
+      "error": "An error occurred while sending the quote."
+    }
+  },
+  "file": {
+    "sendInstruction": "To help me better understand your needs and projects, you can also send additional files (images, PDFs) as attachments to:",
+    "reliabilityNote": "This method is quick and ensures that I receive your files in full."
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "section1": {
+      "title": "1. Website Overview",
+      "description1": "The site thecoolaxolotl.com (hereinafter referred to as “the Site”) is operated by:",
+      "company": "The Cool Axolotl",
+      "address": "Head office",
+      "email": "Email",
+      "phone": "Phone",
+      "siret": "Siret",
+      "director": "Publication Director"
+    },
+    "section2": {
+      "title": "2. Website Hosting",
+      "description": "The site is hosted by:",
+      "hostName": "Host Name",
+      "phone": "Phone"
+    },
+    "section3": {
+      "title": "3. Intellectual Property",
+      "text": "The content of the website thecoolaxolotl.com (texts, images, graphics, logo, icons, sounds, software, etc.) is the exclusive property of [Your Company Name] or its partners.Any reproduction, representation, modification, publication, or adaptation of all or part of the elements on the site, regardless of the means or process used, is prohibited without the prior written authorization of [Your Company Name]."
+    },
+    "section4": {
+      "title": "4. Liability",
+      "text": "The publishers cannot be held responsible for any direct or indirect damage caused to the user's equipment when accessing the site thecoolaxolotl.com. The site contains hyperlinks to other websites; however, the site’s publishers assume no responsibility for the content of those external sites."
+    },
+    "section5": {
+      "title": "5. Personal Data",
+      "text": "In accordance with current regulations (including the GDPR), users have the right to access, correct, and delete their personal data. To exercise this right, please send an email to [Your contact email address]."
+    },
+    "section6": {
+      "title": "6. Cookies",
+      "text": "The site uses cookies to enhance the user experience and analyze website traffic. You have the option to disable cookies by changing your browser settings."
+    },
+    "section7": {
+      "title": "7. Governing Law",
+      "text": "These legal notices are governed by French law. Any dispute related to the use of the site thecoolaxolotl.com will be subject to the jurisdiction of the French courts."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "section1": {
+      "title": "1. Introduction",
+      "content": "This privacy policy aims to inform users of thecoolaxolotl.com about how their personal data is collected, processed, and protected. It complies with the GDPR and French data protection laws."
+    },
+    "section2": {
+      "title": "2. Data Controller",
+      "content": "The website thecoolaxolotl.com is operated by: The Cool Axolotl. For any inquiries regarding your data, contact us at: thecoolaxolotl.com"
+    },
+    "section3": {
+      "title": "3. Data Collected",
+      "content": "Data collected includes: information you provide (forms, email, etc.) and data collected automatically (cookies, IPs, browsing behavior...)."
+    },
+    "section4": {
+      "title": "4. Purpose of Data Collection",
+      "content": "Data is used to improve user experience, respond to requests, send updates (if consented), and analyze website use."
+    },
+    "section5": {
+      "title": "5. Legal Basis",
+      "content": "Data is processed based on contractual necessity, legal obligations, or user consent."
+    },
+    "section6": {
+      "title": "6. Data Retention",
+      "content": "Personal data is kept only as long as necessary for the intended purpose. Cookies: max 13 months."
+    },
+    "section7": {
+      "title": "7. Data Sharing",
+      "content": "Your data will not be sold or shared without consent, except where required by law."
+    },
+    "section8": {
+      "title": "8. Data Security",
+      "content": "We implement appropriate technical and organizational measures to protect your data."
+    },
+    "section9": {
+      "title": "9. User Rights",
+      "content": "You have the right to access, correct, delete, transfer your data, and object to processing. Contact: thecoolaxolotl.com"
+    },
+    "section10": {
+      "title": "10. Cookies",
+      "content": "This site uses cookies to enhance navigation and analyze traffic. You can disable them in your browser."
+    },
+    "section11": {
+      "title": "11. Changes to this Privacy Policy",
+      "content": "We reserve the right to modify this policy at any time. Updates will be posted here."
+    },
+    "section12": {
+      "title": "12. Contact",
+      "content": "For any questions about this privacy policy, contact: thecoolaxolotl.com"
+    }
+  },
+  "end": {
+    "legal": "Legal Mentions",
+    "legalAlt": "legal mention",
+    "logoAlt": "The Cool Axolotl logo",
+    "copyright": "Copyright © 2025 | The Cool Axolotl",
+    "politic": "Privacy Policy",
+    "politicAlt": "axolotl privacy policy"
+  }
+}

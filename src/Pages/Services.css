@@ -574,7 +574,6 @@
 
 .tarifs p {
   text-align: left;
-  margin: 10px 0;
 }
 
 .tarifs strong {
@@ -593,7 +592,14 @@
 .tarifs li {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   list-style: none;
-  margin-top: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.tarifs-verts {
+  color: rgb(67, 163, 172);
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .package-sur-mesure {
@@ -607,6 +613,10 @@
 .package-sur-mesure a {
   color: rgb(95, 227, 239);
   transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* petit espace entre l’emoji et le texte */
+  text-decoration: none;
 }
 
 .package-sur-mesure a:hover {
@@ -745,6 +755,7 @@
   line-height: 1.6;
   text-align: left;
   font-weight: 550;
+  padding: 0 50px;
 }
 
 .shopify-features {
@@ -800,7 +811,7 @@
     font-size: 0.95rem;
     line-height: 1.4rem;
     margin-bottom: 40px;
-    padding: 10px 0px;
+    padding: 10px 10px;
   }
 
   .services-grid {
@@ -830,6 +841,8 @@
 
   .timeline-container2 {
     margin-top: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
     padding: 0;
   }
 
@@ -884,7 +897,7 @@
   }
 
   .quote-section {
-    padding: 20px 15px 20px;
+    padding: 20px 5px 20px;
   }
 
   .quote-section h2 {
@@ -915,6 +928,8 @@
 
   .quote-intro {
     font-size: 1rem;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .quote-intro h2 {
@@ -972,7 +987,8 @@
   }
 
   .tarifs ul {
-    margin-top: 0;
+    margin-top: 10x;
+    padding: 0 3px;
   }
 
   .tarifs strong {
@@ -982,6 +998,8 @@
   .shopify-section {
     padding: 20px 30px;
     margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .shopify-title {

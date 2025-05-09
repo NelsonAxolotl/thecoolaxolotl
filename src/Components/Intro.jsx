@@ -1,17 +1,19 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // Importation du hook
 import "./Intro.css";
 import axo from "../Pics/axolotllogo.webp";
 import art from "../Pics/arty.webp";
 import introSound from "../Son/axoson.mp3";
 
 const Intro = () => {
+  const { t } = useTranslation(); // Utilisation du hook pour la traduction
   const [zoomIn, setZoomIn] = useState(false);
   const [zoomOut, setZoomOut] = useState(false);
   const [showBubbles, setShowBubbles] = useState(false);
   const [fadeOutPage, setFadeOutPage] = useState(false);
   const [audioPlayed, setAudioPlayed] = useState(false);
-  const [isNavigating, setIsNavigating] = useState(false); // ✅ Empêche le double clic
+  const [isNavigating, setIsNavigating] = useState(false);
 
   const audioRef = useRef(null);
   const navigate = useNavigate();
@@ -32,27 +34,21 @@ const Intro = () => {
       }
     };
 
-    // Attendre un premier clic ou une interaction utilisateur pour lancer l'audio
     window.addEventListener("click", handleAudioPlay, { once: true });
 
-    // Nettoyage au moment où le composant est démonté
     return () => {
       window.removeEventListener("click", handleAudioPlay);
     };
   }, [audioPlayed]);
 
   const handleLinkClick = (path) => {
-    if (isNavigating) return; // ✅ Empêche le double-clic
+    if (isNavigating) return;
     setIsNavigating(true);
-    console.log("🔗 Clique détecté sur :", path);
-
     setZoomOut(true);
     setFadeOutPage(true);
 
-    // ✅ Scroll en haut avant la navigation
     window.scrollTo({ top: 0, behavior: "instant" });
 
-    // ✅ Effet des bulles sans ralentir la navigation
     for (let i = 0; i < 100; i++) {
       const bubble = document.createElement("div");
       bubble.classList.add("transition-bubble");
@@ -75,7 +71,7 @@ const Intro = () => {
 
     setTimeout(() => {
       navigate(path);
-      setIsNavigating(false); // ✅ Permet de cliquer à nouveau après la navigation
+      setIsNavigating(false);
     }, 800);
   };
 
@@ -87,7 +83,7 @@ const Intro = () => {
     >
       <img
         src={art}
-        alt="abstract"
+        alt={t("introBackground")} // Texte dynamique pour l'image
         className="background-image"
         loading="lazy"
       />
@@ -115,7 +111,7 @@ const Intro = () => {
             className="bubble bubble-1"
             onClick={() => handleLinkClick("/Parcours")}
           >
-            Parcours
+            {t("about")} {/* Utilisation de la traduction pour les boutons */}
             <div className="small-bubble small-bubble-1"></div>
             <div className="small-bubble small-bubble-2"></div>
             <div className="small-bubble small-bubble-12"></div>
@@ -126,7 +122,7 @@ const Intro = () => {
             className="bubble bubble-2"
             onClick={() => handleLinkClick("/Portfolio")}
           >
-            Portfolio
+            {t("portfolio")}
             <div className="small-bubble small-bubble-3"></div>
             <div className="small-bubble small-bubble-4"></div>
             <div className="small-bubble small-bubble-9"></div>
@@ -138,7 +134,7 @@ const Intro = () => {
             className="bubble bubble-3"
             onClick={() => handleLinkClick("/Prestations")}
           >
-            Prestations
+            {t("services")}
             <div className="small-bubble small-bubble-5"></div>
             <div className="small-bubble small-bubble-6"></div>
             <div className="small-bubble small-bubble-11"></div>
@@ -149,7 +145,7 @@ const Intro = () => {
             className="bubble bubble-4"
             onClick={() => handleLinkClick("/Contact")}
           >
-            Contact
+            {t("contact")}
             <div className="small-bubble small-bubble-7"></div>
             <div className="small-bubble small-bubble-10"></div>
             <div className="small-bubble small-bubble-18"></div>

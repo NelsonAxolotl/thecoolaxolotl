@@ -1,5 +1,6 @@
 import "./Creations.css";
 import React, { useState, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
 import wanubida from "../Pics/wanubida.png";
@@ -18,6 +19,8 @@ import maquette from "../Pics/maquette.webp";
 import carnet from "../Pics/carnet.webp";
 
 const Creations = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);
@@ -103,6 +106,7 @@ const Creations = () => {
 
   const projects = [
     {
+      id: "wanubida",
       title: "Compagnie Wanubida",
       subtitle: "Compagnie de Cirque",
       description:
@@ -119,6 +123,7 @@ const Creations = () => {
       },
     },
     {
+      id: "polyr",
       title: "Compagnie PolyR",
       subtitle: "Compagnie d'Opéra",
       description:
@@ -135,6 +140,7 @@ const Creations = () => {
       },
     },
     {
+      id: "emmanuelle",
       title: "Emmanuelle Ferdyan",
       subtitle: "Portfolio d'Artiste",
       description:
@@ -154,6 +160,7 @@ const Creations = () => {
 
   const maquettes = [
     {
+      id: "gaming",
       title: "Gaming",
       description: "Maquette axée sur le monde du gaming",
       image: game,
@@ -161,6 +168,7 @@ const Creations = () => {
       // avatar: axogame,
     },
     {
+      id: "tripadvisor",
       title: "Reproduction TripAdvisor",
       description: "Maquette de reproduction du célèbre site",
       image: trip,
@@ -168,6 +176,7 @@ const Creations = () => {
       // avatar: axotrip,
     },
     {
+      id: "mountain",
       title: "La Montagne",
       description: "Maquette rando, nature et montagnes",
       image: rando,
@@ -219,14 +228,8 @@ const Creations = () => {
       </div>
       <div className={`portfolio-container ${showPage ? "fade-in" : ""}`}>
         <div className="summary-container">
-          <h1 className="portfolio-title">Portfolio</h1>
-          <p className="summary-text">
-            Je réalise des sites fiables, performants, dotés d’un code propre,
-            optimisés pour un bon référencement (SEO), entièrement responsives,
-            intuitifs, visuellement attrayants et uniques, en garantissant une
-            expérience utilisateur fluide et un design moderne adapté à vos
-            besoins.
-          </p>
+          <h1 className="portfolio-title">{t("port.title")}</h1>
+          <p className="summary-text">{t("port.summary")}</p>
         </div>
 
         <h2 className="projects-section-title">
@@ -238,12 +241,11 @@ const Creations = () => {
             alt="Icône artistique"
             className="title-icon"
           />
-          Sites artistiques
+          {t("projects.title")}
         </h2>
 
         <p className="projects-section-description">
-          Découvrez une sélection de sites vitrines sur le monde de l'art et du
-          spectacle.
+          {t("projects.description")}
         </p>
 
         {/* Liste des projets */}
@@ -260,7 +262,7 @@ const Creations = () => {
                 <div className="project-image-container">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={t(`projects.${project.id}.title`)}
                     width={300}
                     height={300}
                     className={`project-image ${
@@ -270,7 +272,9 @@ const Creations = () => {
                   {/* Ajout du texte et de la flèche sous le logo */}
                   <div className="click-indicator">
                     <div className="arrow-up"></div>
-                    <span>Cliquer ici</span>
+                    <span>
+                      {t(`projects.${project.id}.arrow`, "Cliquer ici")}
+                    </span>
                   </div>
                 </div>
               </a>
@@ -281,19 +285,19 @@ const Creations = () => {
                   className="project-title"
                   style={{ color: project.titleColor }}
                 >
-                  {project.title}
+                  {t(`projects.${project.id}.title`)}
                 </h2>
                 <h3
                   className="project-subtitle"
                   style={{ color: project.subtitleColor }}
                 >
-                  {project.subtitle}
+                  {t(`projects.${project.id}.subtitle`)}
                 </h3>
                 <p
                   className="project-description"
                   style={{ color: project.descriptionColor }}
                 >
-                  {project.description}
+                  {t(`projects.${project.id}.description`)}
                 </p>
 
                 <ul className="project-technologies">
@@ -329,7 +333,7 @@ const Creations = () => {
                           )
                         )}
                       </div>
-                      <p>{project.review.text}</p>
+                      <p>{t(`projects.${project.id}.review`)}</p>
                     </div>
                   </div>
                 </div>
@@ -347,10 +351,10 @@ const Creations = () => {
             alt="Icône artistique"
             className="title-icon"
           />
-          Maquettes
+          {t("mockups.title")}
         </h2>
         <p className="maquettes-section-description">
-          Explorez ces maquettes allant de jeux vidéo, reproduction et nature.
+          {t("mockups.description")}
         </p>
 
         {/* Liste des maquettes */}
@@ -370,13 +374,18 @@ const Creations = () => {
                     className="card-link"
                   >
                     {/* Bouton Positionné en haut */}
-                    <button className="maquette-button">Visitez le site</button>
+                    <button className="maquette-button">
+                      {" "}
+                      {t(`mockups.${maquette.id}.visiting`)}
+                    </button>
                   </a>
 
                   <div className="content">
-                    <h3 className="maquette-title">{maquette.title}</h3>
+                    <h3 className="maquette-title">
+                      {t(`mockups.${maquette.id}.title`)}
+                    </h3>
                     <p className="maquette-description">
-                      {maquette.description}
+                      {t(`mockups.${maquette.id}.description`)}
                     </p>
                   </div>
                 </div>
@@ -392,47 +401,27 @@ const Creations = () => {
             height={300}
             className="title-icon"
           />
-          <h2>Carnet de Route</h2>
+          <h2>{t(`blog.journal`)}</h2>
 
           <div className="blog-category " ref={blogCategory1Ref}>
-            <div className="category-title">
-              <h3 className="animate-from-right">
-                <span role="img" aria-label="parcours">
-                  👨‍💻
-                </span>{" "}
-                Mes premiers clients
-              </h3>
-            </div>
+            <h3 className="animate-from-right">
+              <span role="img" aria-label="parcours">
+                👨‍💻
+              </span>{" "}
+              {t(`blog.category1.title`)}
+            </h3>
+
             <p className="animate-from-bottom">
-              Après ma formation Boot Camp "Le Reacteur", j’ai rapidement
-              compris qu’il fallait se démarquer pour trouver mes premiers
-              clients. Je voulais créer des sites qui ne soient pas simplement
-              fonctionnels, mais qui portent une véritable identité visuelle, à
-              l’image des personnes et des projets qu’ils représentent. C’est en
-              mettant en avant cette approche que j’ai décroché mes premiers
-              contrats !
+              {" "}
+              {t(`blog.category1.content1`)}
             </p>
             <p className="animate-from-bottom">
-              Très vite, j’ai compris que la meilleure façon d’attirer des
-              clients était de me différencier. Plutôt que de proposer des sites
-              basiques ou de copier ce qui existait déjà, j’ai décidé de mettre
-              en avant une approche plus personnalisée : créer des sites qui
-              racontent une histoire, qui capturent l’essence et l’identité de
-              mes clients.
+              {" "}
+              {t(`blog.category1.content2`)}
             </p>
             <p className="animate-from-bottom">
-              Mon premier client est venu grâce au bouche-à-oreille. Un ami
-              connaissait quelqu'un qui cherchait à refaire son site, mais il
-              voulait quelque chose qui sorte du lot. En discutant avec lui,
-              j’ai compris qu’il ne voulait pas juste une "vitrine", mais un
-              site qui reflète sa personnalité et sa passion. <br />
-              C’est en écoutant attentivement ses besoins et en apportant ma
-              vision que j’ai décroché ce premier projet.
-            </p>
-            <p className="animate-from-bottom">
-              Aujourd’hui, j’applique la même approche : chaque site doit être
-              unique et marquant, comme une carte de visite numérique qui attire
-              immédiatement l’attention et transmet une vraie identité visuelle.
+              {" "}
+              {t(`blog.category1.content3`)}
             </p>
 
             <div className="article-list ">{/* Liste d'articles ici */}</div>
@@ -443,30 +432,19 @@ const Creations = () => {
               <span role="img" aria-label="tech">
                 💻
               </span>{" "}
-              Sites qui sortent du lot
+              {t(`blog.category2.title`)}
             </h3>
             <p className="animate-from-bottom">
-              Dans un monde où tout va très vite et où les modèles préconçus
-              dominent, j’ai voulu prendre une autre direction. Mon objectif
-              n’est pas seulement de créer des sites, mais de concevoir des
-              expériences visuelles qui captivent et marquent les esprits.
+              {t(`blog.category2.content1`)}
             </p>
             <p className="animate-from-bottom">
-              Je suis particulièrement attiré par les sites artistiques, car ils
-              offrent une liberté de création immense. Ils permettent d’explorer
-              des univers graphiques variés, d’expérimenter avec des animations,
-              des mises en page audacieuses et des identités visuelles uniques.
-              Mais mon intérêt ne s’arrête pas là : chaque métier a sa propre
-              identité, et j’aime traduire cette singularité à travers le design
-              et l’expérience utilisateur.
+              {t(`blog.category2.content2`)}
             </p>
             <p className="animate-from-bottom">
-              Que ce soit un artiste, un artisan, un thérapeute ou un
-              entrepreneur, chacun mérite un site qui lui ressemble, qui met en
-              avant son savoir-faire et qui se démarque des modèles
-              standardisés. C’est ce qui me motive à aller plus loin, à
-              repousser les limites du design et à proposer des sites qui ont
-              une âme.
+              {t(`blog.category2.content3`)}
+            </p>
+            <p className="animate-from-bottom">
+              {t(`blog.category2.content4`)}
             </p>
 
             <div className="article-list ">{/* Liste d'articles ici */}</div>
@@ -477,34 +455,16 @@ const Creations = () => {
               <span role="img" aria-label="freelance">
                 🌱
               </span>{" "}
-              Une question d'éthique
+              {t(`blog.category3.title`)}
             </h3>
             <p className="animate-from-bottom">
-              Travailler en tant que freelance, c’est aussi faire des choix. Dès
-              le début, j’ai voulu rester fidèle à mes valeurs et choisir des
-              projets qui ont du sens. Pour moi, un site web n’est pas qu’une
-              simple interface : c’est un moyen d’expression, un outil qui
-              véhicule une identité, une histoire et des valeurs.
+              {t(`blog.category3.content1`)}
             </p>
             <p className="animate-from-bottom">
-              C’est pourquoi je ne travaille pas uniquement pour gagner des
-              contrats, mais pour construire des collaborations sincères et
-              authentiques. <br />
-              J’aime prendre le temps d’échanger avec mes clients, comprendre
-              leur vision, leurs besoins et leurs aspirations. Ce n’est qu’en
-              étant à l’écoute que je peux proposer un site qui leur correspond
-              vraiment, et qui va bien au-delà d’un simple produit technique.
+              {t(`blog.category3.content2`)}
             </p>
             <p className="animate-from-bottom">
-              Je préfère travailler avec des indépendants, des artistes, des
-              associations, ou encore des entrepreneurs, des entreprises qui
-              partagent des valeurs d’authenticité et de créativité.
-            </p>
-            <p className="animate-from-bottom">
-              Mon objectif n’est pas de produire en masse, mais de concevoir des
-              sites qui ont une âme, qui apportent une réelle plus-value, et qui
-              reflètent la singularité de chaque personne ou entreprise avec qui
-              je collabore.
+              {t(`blog.category3.content3`)}
             </p>
 
             <div className="article-list ">{/* Liste d'articles ici */}</div>

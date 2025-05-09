@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next"; // Importation du hook
 import "./Contact.css";
 import emailjs from "emailjs-com";
 import Nav from "../Components/Nav";
@@ -9,6 +10,7 @@ import happy from "../Pics/happy.png";
 import contact from "../Pics/halo.webp";
 
 const Contact = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 0);
@@ -118,7 +120,7 @@ const Contact = () => {
         <section className="appel-action">
           <div className={`form-container ${showForm ? "show-form" : ""}`}>
             <div className="contact-header">
-              <h1>Contact</h1>
+              <h1> {t("contact")}</h1>
               <p>
                 <a
                   href="mailto:thecoolaxolotldesigner@gmail.com"
@@ -142,7 +144,7 @@ const Contact = () => {
                   <i className="fa-brands fa-linkedin"></i>
                 </a>
                 <a
-                  href="https://instagram.com/votreprofil"
+                  href="https://www.instagram.com/thecoolaxoltl/"
                   aria-label="The cool Axolotl"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -152,18 +154,13 @@ const Contact = () => {
               </div>
             </div>
 
-            <p>
-              "Envie de faire de votre projet une exploration unique et sur
-              mesure ? <br />
-              Rejoignez l’aventure et donnons vie à vos idées avec créativité et
-              authenticité."
-            </p>
+            <p>{t("contact-text")}</p>
 
             <form onSubmit={handleSubmit}>
               <input
                 type="text"
                 name="name"
-                placeholder="Nom"
+                placeholder={t("placeholder")}
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -179,14 +176,14 @@ const Contact = () => {
               <input
                 type="text"
                 name="subject"
-                placeholder="Sujet"
+                placeholder={t("subject")}
                 value={formData.subject}
                 onChange={handleChange}
                 required
               />
               <textarea
                 name="message"
-                placeholder="Votre message"
+                placeholder={t("message")}
                 value={formData.message}
                 onChange={handleChange}
                 required
@@ -201,16 +198,11 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                 />
-                <label htmlFor="consent">
-                  En soumettant ce formulaire, vous acceptez que les
-                  informations saisies soient utilisées pour permettre de vous
-                  recontacter en retour dans le cadre d’une demande de devis ou
-                  de renseignements.
-                </label>
+                <label htmlFor="consent">{t("label-html")}</label>
               </div>
 
               <button type="submit" className="submit-button">
-                Plongez avec moi !
+                {t("button-submit")}
               </button>
             </form>
 
