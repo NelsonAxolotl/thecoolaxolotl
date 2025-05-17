@@ -323,6 +323,7 @@ const Services = () => {
                   <strong>{t("customPackage.offerTitle")}</strong>
                 </p>
                 <p>{t("customPackage.offerDescription")}</p>
+                <p>{t("customPackage.offerDescription1")}</p>
                 <p>
                   <strong>
                     <a href="mailto:thecoolaxolotldesigner.com">
@@ -340,29 +341,10 @@ const Services = () => {
           {/* Devis Section */}
           <div className="quote-section">
             <h2>{t("quote.title")}</h2>
-
             <p>{t("quote.intro.line1")}</p>
             <p>{t("quote.intro.line2")}</p>
             <p>{t("quote.intro.line3")}</p>
-            <div className="tarifs">
-              <h3>{t("quote.tarifs.title")}</h3>
-              <p>{t("quote.tarifs.description1")}</p>
-              <p>{t("quote.tarifs.description2")}</p>
-              <p className="tarifs-verts">{t("quote.tarifs.description3")}</p>
-              <ul>
-                <li>
-                  <strong>{t("quote.tarifs.daily.label")}</strong>
-                  <p>{t("quote.tarifs.daily.description")}</p>
-                  <p>{t("quote.tarifs.daily.description2")}</p>
-                </li>
-                <li>
-                  <strong>{t("quote.tarifs.hourly.label")}</strong>
-                  <p>{t("quote.tarifs.hourly.description")}</p>
-                  <p>{t("quote.tarifs.hourly.description2")}</p>
-                </li>
-              </ul>
-              <p>{t("quote.tarifs.note")}</p>
-            </div>
+
             <form className="quote-form" onSubmit={handleQuoteSubmit}>
               <label htmlFor="name">{t("quote.form.name")} :</label>
               <input

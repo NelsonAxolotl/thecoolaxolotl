@@ -209,7 +209,8 @@
       "✔️ Support throughout your project"
     ],
     "offerTitle": "🔹 A custom package!",
-    "offerDescription": "Rather than charging by the day or hour, I tailor the service to your real needs, for a more cost-effective and efficient solution. 🚀",
+    "offerDescription": "Rather than charging by the day or hour, I tailor the service to your real needs,",
+    "offerDescription1": "for a more cost-effective and efficient solution. 🚀",
     "contact": "Contact me",
     "estimation": "for a personalized quote!"
   },
