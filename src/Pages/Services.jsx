@@ -326,7 +326,7 @@ const Services = () => {
                 <p>{t("customPackage.offerDescription1")}</p>
                 <p>
                   <strong>
-                    <a href="mailto:thecoolaxolotldesigner.com">
+                    <a href="mailto:thecoolaxolotldesigner@gmail.com">
                       <span role="img" aria-label="mail">
                         📩
                       </span>
@@ -585,7 +585,7 @@ const Services = () => {
               <p>
                 {t("file.sendInstruction")}{" "}
                 <a href="mailto:thecoolaxolotldesigner@designer.com">
-                  thecoolaxolotldesigner@designer.com
+                  thecoolaxolotldesigner@gmail.com
                 </a>
               </p>
               <p>{t("file.reliabilityNote")}</p>
