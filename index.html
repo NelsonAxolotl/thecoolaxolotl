@@ -58,20 +58,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-    <!-- Chargement optimisé des polices -->
+    <!-- Préconnect pour améliorer la latence -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Chargement de la police avec swap pour éviter les blocages -->
     <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
+      rel="stylesheet"
     />
 
     <!-- Chargement optimisé des images -->
@@ -81,6 +75,27 @@
       href="/assets/axolotllogo.webp"
       type="image/webp"
       fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/axolotllogo-tjqQDiO6.webp"
+      type="image/webp"
+    />
+    <img
+      src="/assets/arty-Nwtbr5tl.webp"
+      srcset="/assets/arty-600.webp 600w, /assets/arty-1200.webp 1200w"
+      sizes="(max-width: 600px) 600px, 1200px"
+      alt="Intro image"
+      class="background-image"
+      loading="lazy"
+    />
+    <img
+      src="/assets/uk-flag-C0IWWmAK.png"
+      alt="English"
+      class="flag"
+      width="24"
+      height="24"
     />
 
     <!-- CSS -->

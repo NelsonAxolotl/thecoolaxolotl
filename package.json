@@ -34,5 +34,16 @@
     "vite": "^6.0.5",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-imagemin": "^0.6.1"
+  },
+  "browserslist": {
+    "production": [
+      "defaults",
+      "not IE 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

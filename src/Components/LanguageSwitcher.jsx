@@ -17,12 +17,16 @@ const LanguageSwitcher = () => {
       <img
         src={frFlag}
         alt="Français"
+        width="24"
+        height="24"
         onClick={() => changeLanguage("fr")}
         className="flag"
       />
       <img
         src={enFlag}
         alt="English"
+        width="24"
+        height="24"
         onClick={() => changeLanguage("en")}
         className="flag"
       />
