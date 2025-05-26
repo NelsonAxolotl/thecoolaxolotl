@@ -584,7 +584,7 @@ const Services = () => {
             <div className="file">
               <p>
                 {t("file.sendInstruction")}{" "}
-                <a href="mailto:thecoolaxolotldesigner@designer.com">
+                <a href="mailto:thecoolaxolotldesigner@gmail.com">
                   thecoolaxolotldesigner@gmail.com
                 </a>
               </p>
