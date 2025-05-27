@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next"; // Importation du hook
 import "./Intro.css";
 import axo from "../Pics/axolotllogo.webp";
-import art from "../Pics/arty.webp";
+import art from "../Pics/artybis.webp";
 import introSound from "../Son/axoson.mp3";
 
 const Intro = () => {
