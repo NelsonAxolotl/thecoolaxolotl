@@ -143,7 +143,7 @@ const Apropos = () => {
         </div>
       </div>
       <video autoPlay muted loop playsInline className="background-vid">
-        <source src="/Vidéos/sousmarin.mp4" type="video/mp4" loading="lazy" />
+        <source src="/Videos/sousmarin.mp4" type="video/mp4" loading="lazy" />
         Votre navigateur ne prend pas en charge les vidéos.
       </video>
       <audio id="background-audio" src={audioaxo} loop />

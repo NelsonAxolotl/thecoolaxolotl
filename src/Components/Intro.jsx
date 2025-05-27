@@ -90,7 +90,7 @@ const Intro = () => {
 
       <div className="background-video">
         <video autoPlay muted loop className="background-video">
-          <source src="/Vidéos/waves2.mp4" type="video/mp4" />
+          <source src="/Videos/waves2.mp4" type="video/mp4" />
         </video>
       </div>
 

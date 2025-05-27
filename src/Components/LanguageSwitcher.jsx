@@ -17,7 +17,7 @@ const LanguageSwitcher = () => {
         src={frFlag}
         alt="Français"
         width="24"
-        height="24"
+        height="12"
         onClick={() => changeLanguage("fr")}
         className="flag"
       />

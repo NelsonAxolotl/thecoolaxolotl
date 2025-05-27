@@ -111,7 +111,7 @@ const Contact = () => {
           loop
           className="background-video-contact"
         >
-          <source src="/Vidéos/eau8.mp4" type="video/mp4" loading="lazy" />
+          <source src="/Videos/eau8.mp4" type="video/mp4" loading="lazy" />
           Votre navigateur ne prend pas en charge la vidéo.
         </video>
       </div>
