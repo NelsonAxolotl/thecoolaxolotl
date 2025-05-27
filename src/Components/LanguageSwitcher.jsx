@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import frFlag from "../Pics/fr-flag.png";
 import enFlag from "../Pics/uk-flag.png";

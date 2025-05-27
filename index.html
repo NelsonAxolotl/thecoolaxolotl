@@ -62,25 +62,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Chargement de la police avec swap pour éviter les blocages -->
+    <!-- Préchargement pour signaler au navigateur que la police est prioritaire -->
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
-      rel="stylesheet"
     />
 
-    <!-- Chargement optimisé des images -->
     <link
-      rel="preload"
-      as="image"
-      href="/assets/axolotllogo.webp"
-      type="image/webp"
-      fetchpriority="high"
-    />
-    <link
-      rel="preload"
-      as="image"
-      href="/assets/axolotllogo-tjqQDiO6.webp"
-      type="image/webp"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
+      media="all"
     />
 
     <!-- CSS -->

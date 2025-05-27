@@ -99,6 +99,8 @@ const Intro = () => {
           src={axo}
           alt="Logo The Cool Axolotl"
           className="intro-logo"
+          width="642"
+          height="654"
           loading="eager"
         />
       </div>
