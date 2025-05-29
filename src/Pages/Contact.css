@@ -315,6 +315,9 @@ textarea::placeholder {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Légère ombre sur le texte */
+  font-weight: bold;
+  position: relative;
+  transition: all 0.5s ease;
 }
 
 @media screen and (max-width: 768px) {
@@ -326,9 +329,23 @@ textarea::placeholder {
   }
 }
 
+.contact-email:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0%;
+  background-color: #3ba6ed;
+  transition: width 0.5s ease;
+}
+
+.contact-email:hover::after {
+  width: 100%;
+}
+
 .contact-email:hover {
-  text-decoration: underline;
-  color: #14adff;
+  color: #3ba6ed;
 }
 
 .contact-phone {

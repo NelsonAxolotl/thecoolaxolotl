@@ -375,5 +375,8 @@
     "copyright": "Copyright © 2025 | The Cool Axolotl",
     "politic": "Politique de confidentialité",
     "politicAlt": "politique de confidentialité axolotl"
+  },
+  "form": {
+    "message_sent": "Message envoyé !"
   }
 }

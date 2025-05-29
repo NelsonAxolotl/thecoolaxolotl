@@ -214,7 +214,7 @@ const Contact = () => {
                   className="axolotl-image-happy sent"
                   loading="lazy"
                 />
-                <div className="bubble-happy">Message envoyé !</div>
+                <div className="bubble-happy">{t("form.message_sent")}</div>
               </div>
             )}
 

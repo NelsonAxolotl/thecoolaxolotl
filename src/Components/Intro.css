@@ -621,6 +621,15 @@
 
 /* Pour les écrans plus petits, réduire la taille des bulles */
 @media screen and (max-width: 768px) {
+  .bubble {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .bubble:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
   .intro-container {
     padding-top: 0;
   }
