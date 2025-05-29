@@ -66,7 +66,7 @@ const Nav = () => {
           className="navbar-background-video"
           aria-hidden="true"
         >
-          <source src="/Vidéos/bliss.mp4" type="video/mp4" />
+          <source src="/Videos/bliss.mp4" type="video/mp4" />
           Votre navigateur ne supporte pas les vidéos.
         </video>
 
