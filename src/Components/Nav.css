@@ -107,8 +107,13 @@
   color: black;
 }
 
-.navbar-item.active .navbar-link {
+/* .navbar-item.active .navbar-link {
   color: rgb(126, 58, 58);
+} */
+
+.navbar-link.active-link {
+  color: rgb(172, 18, 103);
+  transform: scale(1.08);
 }
 
 @keyframes slideInDown {
@@ -285,15 +290,11 @@
   }
 
   .show-nav .slideInDown-3 {
-    transition: all 2s ease-out;
+    transition: all 1.8s ease-out;
   }
 
   .show-nav .slideInDown-4 {
-    transition: all 2.5s ease-out;
-  }
-
-  .show-nav .slideInDown-5 {
-    transition: all 3s ease-out;
+    transition: all 2.1s ease-out;
   }
 
   .navbar-link:hover {

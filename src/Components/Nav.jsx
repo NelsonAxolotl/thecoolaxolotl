@@ -74,7 +74,6 @@ const Nav = () => {
             { path: "/Parcours", label: t("navbar.parcours") },
             { path: "/Portfolio", label: t("navbar.portfolio") },
             { path: "/Prestations", label: t("navbar.prestations") },
-            ,
             { path: "/Contact", label: t("navbar.contact") },
           ].map(({ path, label }, index) => (
             <li
@@ -84,7 +83,9 @@ const Nav = () => {
               }`}
             >
               <Link
-                className="navbar-link"
+                className={`navbar-link ${
+                  location.pathname === path ? "active-link" : ""
+                }`}
                 to={path}
                 onClick={() => handleNavClick(path)}
                 aria-label={`Navigate to ${label}`}
