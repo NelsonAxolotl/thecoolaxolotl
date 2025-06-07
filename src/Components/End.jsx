@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import "./End.css";
 import { Link } from "react-router-dom";
 import legal from "../Pics/legal.webp";
-import axo from "../Pics/axolotllogo.webp";
+import axo from "../Pics/axolotllogo150.webp";
 import privacypolitic from "../Pics/privacypolitic.webp";
 
 const End = () => {

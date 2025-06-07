@@ -2,6 +2,13 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLightbulb,
+  faEarListen,
+  faSyncAlt,
+  faLeaf,
+} from "@fortawesome/free-solid-svg-icons";
 import "./Apropos.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
@@ -12,6 +19,12 @@ import capitain from "../Pics/capitain.webp";
 import relax from "../Pics/relax.webp";
 
 const Apropos = () => {
+  const iconsMap = {
+    lightbulb: faLightbulb,
+    "ear-listen": faEarListen,
+    "sync-alt": faSyncAlt,
+    leaf: faLeaf,
+  };
   const { t } = useTranslation();
   const [showPage, setShowPage] = useState(false);
   const [showSection, setShowSection] = useState(false);
@@ -293,7 +306,8 @@ const Apropos = () => {
                     className="interactive-item"
                     data-tooltip={item.tooltip}
                   >
-                    <i className={`fas fa-${item.icon}`} aria-hidden="true"></i>
+                    <FontAwesomeIcon icon={iconsMap[item.icon]} />
+
                     <p>{item.text}</p>
                   </div>
                 ))}

@@ -700,14 +700,14 @@
   box-shadow: 0 0 15px rgba(255, 131, 7, 0.8), 0 0 30px rgba(151, 52, 10, 0.6);
 }
 
-.interactive-item i {
+.interactive-item svg {
   font-size: 2.5rem;
   color: rgb(255, 131, 7);
   transition: color 0.5s ease;
   padding-top: 10px;
 }
 
-.interactive-item:hover i {
+.interactive-item:hover svg {
   color: rgb(255, 131, 7);
 }
 
