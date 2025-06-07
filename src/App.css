@@ -21,15 +21,14 @@ a {
 
 @font-face {
   font-family: "Quicksand";
+  src: url("/Fonts/Quicksand-Regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url("/fonts/quicksand/quicksand-vn-300.woff2") format("woff2");
 }
+
 @font-face {
   font-family: "Quicksand";
+  src: url("/Fonts/Quicksand-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/quicksand/quicksand-vn-400.woff2") format("woff2");
 }

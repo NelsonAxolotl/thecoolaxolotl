@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
-import { useTranslation } from "react-i18next"; // Importation du hook
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import clsx from "clsx";
 import "./Nav.css";
-import logo from "../Pics/axolotl2.webp";
+import logo from "../Pics/axolotllogo.webp";
 
 const Nav = () => {
   const { t } = useTranslation();
@@ -10,21 +11,26 @@ const Nav = () => {
   const [showNavbarOnScroll, setShowNavbarOnScroll] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const firstLinkRef = useRef(null);
 
-  const isIntroPage = location.pathname === "/intro";
+  const isIntroPage = location.pathname === "/";
 
   const handleShowLinks = () => {
-    setShowLinks(!showLinks);
+    setShowLinks((prev) => !prev);
   };
 
-  const handleNavClick = (path) => {
+  const handleNavClick = () => {
     setShowLinks(false);
-    navigate(path);
   };
 
   useEffect(() => {
+    if (showLinks && firstLinkRef.current) {
+      firstLinkRef.current.focus();
+    }
+  }, [showLinks]);
+
+  useEffect(() => {
     const handleScroll = () => {
-      // Si on a défilé de plus de 50px, afficher la barre de navigation
       if (window.scrollY > 250) {
         setShowNavbarOnScroll(true);
       } else {
@@ -33,62 +39,84 @@ const Nav = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navLinks = [
+    { path: "/Parcours", label: t("navbar.parcours") },
+    { path: "/Portfolio", label: t("navbar.portfolio") },
+    { path: "/Prestations", label: t("navbar.prestations") },
+    { path: "/Contact", label: t("navbar.contact") },
+  ];
 
   return (
     <nav
-      className={`navbar ${isIntroPage ? "hide-navbar" : ""} ${
-        showLinks ? "show-nav" : "hide-nav"
-      } ${showNavbarOnScroll ? "visible-navbar" : "hidden-navbar"}`}
+      className={clsx("navbar", {
+        "hide-navbar": isIntroPage,
+        "show-nav": showLinks,
+        "hide-nav": !showLinks,
+        "visible-navbar": showNavbarOnScroll,
+        "hidden-navbar": !showNavbarOnScroll,
+      })}
       role="navigation"
       aria-label="Main navigation"
     >
       <div className="cursor"></div>
+
       <div
         className="navbar-logo"
-        onClick={() => handleNavClick("/")}
+        onClick={() => {
+          setShowLinks(false);
+          navigate("/");
+        }}
         aria-label="Retour à l'accueil"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            setShowLinks(false);
+            navigate("/");
+          }
+        }}
       >
-        <img src={logo} alt="Logo" width="300" height="300" loading="lazy" />
+        <img
+          src={logo}
+          alt="Logo Axolotl"
+          width="300"
+          height="300"
+          loading="lazy"
+        />
       </div>
 
-      {/* Container des liens avec la vidéo de fond */}
-      <div className={`navbar-links ${showLinks ? "video-active" : ""}`}>
-        <video
-          autoPlay
-          muted
-          loop
-          className="navbar-background-video"
-          aria-hidden="true"
-        >
-          <source src="/Videos/bliss.mp4" type="video/mp4" />
-          Votre navigateur ne supporte pas les vidéos.
-        </video>
+      <div className={clsx("navbar-links", { "video-active": showLinks })}>
+        {showLinks && (
+          <video
+            autoPlay
+            muted
+            loop
+            className="navbar-background-video"
+            aria-hidden="true"
+          >
+            <source src="/Videos/bliss.mp4" type="video/mp4" />
+            Votre navigateur ne supporte pas les vidéos.
+          </video>
+        )}
 
         <ul className="navbar-links-list">
-          {[
-            { path: "/Parcours", label: t("navbar.parcours") },
-            { path: "/Portfolio", label: t("navbar.portfolio") },
-            { path: "/Prestations", label: t("navbar.prestations") },
-            { path: "/Contact", label: t("navbar.contact") },
-          ].map(({ path, label }, index) => (
+          {navLinks.map(({ path, label }, index) => (
             <li
               key={index}
-              className={`navbar-item ${
-                showLinks ? `slideInDown-${index + 1}` : ""
-              }`}
+              className={clsx("navbar-item", {
+                [`slideInDown-${index + 1}`]: showLinks,
+              })}
             >
               <Link
-                className={`navbar-link ${
-                  location.pathname === path ? "active-link" : ""
-                }`}
                 to={path}
-                onClick={() => handleNavClick(path)}
+                onClick={handleNavClick}
+                className={clsx("navbar-link", {
+                  "active-link": location.pathname === path,
+                })}
                 aria-label={`Navigate to ${label}`}
+                ref={index === 0 ? firstLinkRef : null}
               >
                 {label}
               </Link>
@@ -101,6 +129,7 @@ const Nav = () => {
         className="navbar-burger"
         onClick={handleShowLinks}
         aria-label="Toggle navigation"
+        aria-expanded={showLinks}
       >
         <span className="burger-bar"></span>
       </button>

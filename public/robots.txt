@@ -1,11 +1,5 @@
-# Autoriser tous les robots à explorer le site
 User-agent: *
 Allow: /
+Disallow:
 
-# Indiquer le Sitemap
 Sitemap: https://www.thecoolaxolotl.com/sitemap.xml
-
-# Directive spécifique pour Googlebot (inutile si tout est déjà autorisé)
-User-agent: Googlebot
-Allow: /
-

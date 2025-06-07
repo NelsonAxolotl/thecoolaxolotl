@@ -80,6 +80,24 @@ strong {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
 }
 
+.container-politic section p {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.container-politic section a {
+  font-size: 1.1rem;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.container-politic section a:hover {
+  color: wheat; /* ou une autre couleur de hover */
+}
+
 @media screen and (max-width: 500px) {
   .round-image-politic {
     right: 120px;

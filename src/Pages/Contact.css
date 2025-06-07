@@ -430,6 +430,20 @@ textarea::placeholder {
   font-weight: 500;
 }
 
+.honeypot {
+  display: none;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 @media screen and (max-width: 768px) {
   .consent-container label {
     font-size: 0.9rem;

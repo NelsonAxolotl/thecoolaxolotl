@@ -1,5 +1,12 @@
 {
+  "homeTitle": "Accueil | The Cool Axolotl",
+  "homeDescription": "Création de sites web sur mesure à Montpellier.Design original, React et WordPress.",
   "introBackground": "Image d'introduction",
+  "about1": {
+    "metaTitle": "Axolotl - À propos",
+    "metaDescription": "Découvrez l'univers de l'Axolotl, sa mission, ses explorations et sa vision."
+  },
+
   "about": "Parcours",
   "contact": "Contact",
   "services": "Prestations",
@@ -279,44 +286,54 @@
     "reliabilityNote": "Cette méthode est rapide et permet de garantir que je reçois vos fichiers dans leur intégralité."
   },
   "legal": {
-    "title": "Mentions Légales",
+    "metaTitle": "Mentions légales - The Cool Axolotl",
+    "metaDescription": "Consultez nos mentions légales : éditeur, hébergement, droits d’auteur et propriété intellectuelle.",
+
+    "title": "Mentions légales",
+
     "section1": {
-      "title": "1. Présentation du site",
-      "description1": "Le site thecoolaxolotl.com (ci-après « le Site ») est édité par :",
-      "company": "The Cool Axolotl",
-      "address": "Siège social",
+      "title": "1. Éditeur du site",
+      "description1": "Le présent site est édité par :",
+      "address": "Adresse",
       "email": "Email",
       "phone": "Téléphone",
-      "siret": "Siret",
+      "siret": "SIRET",
       "director": "Directeur de la publication"
     },
+
     "section2": {
-      "title": "2. Hébergement du site",
-      "description": "Le site est hébergé par :",
+      "title": "2. Hébergeur du site",
+      "description": "L’hébergement du site est assuré par :",
       "hostName": "Nom de l’hébergeur",
       "phone": "Téléphone"
     },
+
     "section3": {
       "title": "3. Propriété intellectuelle",
-      "text": "  Le contenu du site thecoolaxolotl.com (textes, images, graphismes, logo, icônes, sons, logiciels, etc.) est la propriété exclusive de [Nom de votre entreprise] ou de ses partenaires.Toute reproduction, représentation, modification, publication ouadaptation de tout ou partie des éléments du site, quel que soitle moyen ou le procédé utilisé, est interdite sans l’autorisationpréalable écrite de [Nom de votre entreprise]."
+      "text": "Tous les contenus présents sur ce site (textes, images, logo, etc.) sont protégés par le droit d’auteur. Toute reproduction ou utilisation non autorisée est interdite."
     },
+
     "section4": {
-      "title": "4. Responsabilité",
-      "text": "Les responsables de la publication ne peuvent être tenus pour responsables des dommages directs ou indirects causés au matériel de l’utilisateur lors de l’accès au site thecoolaxolotl.com.Le site contient des liens hypertextes vers d’autres sites, toutefois, les éditeurs du site n’assument aucune responsabilité quant au contenu de ces sites."
+      "title": "4. Données personnelles",
+      "text": "Les informations personnelles collectées ne sont utilisées qu’à des fins de communication et ne sont jamais partagées sans consentement."
     },
+
     "section5": {
-      "title": "5. Données personnelles",
-      "text": " Conformément à la réglementation en vigueur (notamment le RGPD), les utilisateurs disposent d’un droit d’accès, de rectification etde suppression des données personnelles les concernant. Pour exercer ce droit, veuillez envoyer un email à [Votre adresse email de contact]."
+      "title": "5. Cookies",
+      "text": "Le site peut utiliser des cookies pour améliorer l’expérience utilisateur. Vous pouvez les désactiver dans les paramètres de votre navigateur."
     },
+
     "section6": {
-      "title": "6. Cookies",
-      "text": "Le site utilise des cookies pour améliorer l’expérience utilisateur et analyser le trafic du site. Vous avez la possibilité de désactiver les cookies en modifiant les paramètres de votre navigateur."
+      "title": "6. Responsabilité",
+      "text": "L’éditeur ne saurait être tenu responsable des erreurs ou de l’indisponibilité du site."
     },
+
     "section7": {
       "title": "7. Droit applicable",
-      "text": "Les présentes mentions légales sont régies par la loi française. Tout litige relatif à l’utilisation du site thecoolaxolotl.com sera soumis à la compétencedes tribunaux français."
+      "text": "Le présent site est soumis au droit français. En cas de litige, les tribunaux français seront seuls compétents."
     }
   },
+
   "privacy": {
     "title": "Politique de Confidentialité",
     "section1": {
@@ -365,8 +382,10 @@
     },
     "section12": {
       "title": "12. Contact",
-      "content": "Pour toute question concernant vos données personnelles, contactez : thecoolaxolotl.com"
-    }
+      "content": "Pour toute question concernant vos données personnelles, contactez : <a>{{email}}</a>"
+    },
+    "metaTitle": "Politique de confidentialité - The Cool Axolotl",
+    "metaDescription": "Découvrez comment The Cool Axolotl collecte, traite et protège vos données personnelles conformément au RGPD."
   },
   "end": {
     "legal": "Mentions légales",
@@ -376,7 +395,13 @@
     "politic": "Politique de confidentialité",
     "politicAlt": "politique de confidentialité axolotl"
   },
-  "form": {
-    "message_sent": "Message envoyé !"
+
+  "contact-meta": {
+    "title": "Contact - The Cool Axolotl",
+    "description": "Contactez-nous pour toute demande ou collaboration."
+  },
+  "form2": {
+    "message_sent": "Message envoyé avec succès !",
+    "error_message": "Une erreur est survenue. Veuillez réessayer plus tard."
   }
 }

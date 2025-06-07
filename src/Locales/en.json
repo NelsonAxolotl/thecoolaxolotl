@@ -1,5 +1,12 @@
 {
+  "homeTitle": "Home | The Cool Axolotl",
+  "homeDescription": "Custom-made websites from Montpellier. Original design, built with React and WordPress.",
   "introBackground": "Intro image",
+  "about1": {
+    "metaTitle": "Axolotl - About",
+    "metaDescription": "Discover the world of Axolotl, its mission, explorations, and vision."
+  },
+
   "about": "About me",
   "contact": "Contact",
   "services": "Services",
@@ -282,42 +289,51 @@
     "reliabilityNote": "This method is quick and ensures that I receive your files in full."
   },
   "legal": {
+    "metaTitle": "Legal Notice - The Cool Axolotl",
+    "metaDescription": "Read our legal notice: publisher, hosting, copyright, and intellectual property rights.",
+
     "title": "Legal Notice",
+
     "section1": {
-      "title": "1. Website Overview",
-      "description1": "The site thecoolaxolotl.com (hereinafter referred to as “the Site”) is operated by:",
-      "company": "The Cool Axolotl",
-      "address": "Head office",
+      "title": "1. Site Publisher",
+      "description1": "This website is published by:",
+      "address": "Address",
       "email": "Email",
       "phone": "Phone",
-      "siret": "Siret",
+      "siret": "SIRET",
       "director": "Publication Director"
     },
+
     "section2": {
-      "title": "2. Website Hosting",
-      "description": "The site is hosted by:",
-      "hostName": "Host Name",
+      "title": "2. Site Hosting",
+      "description": "This website is hosted by:",
+      "hostName": "Hosting provider name",
       "phone": "Phone"
     },
+
     "section3": {
       "title": "3. Intellectual Property",
-      "text": "The content of the website thecoolaxolotl.com (texts, images, graphics, logo, icons, sounds, software, etc.) is the exclusive property of [Your Company Name] or its partners.Any reproduction, representation, modification, publication, or adaptation of all or part of the elements on the site, regardless of the means or process used, is prohibited without the prior written authorization of [Your Company Name]."
+      "text": "All content on this site (text, images, logo, etc.) is protected by copyright. Any unauthorized use or reproduction is strictly prohibited."
     },
+
     "section4": {
-      "title": "4. Liability",
-      "text": "The publishers cannot be held responsible for any direct or indirect damage caused to the user's equipment when accessing the site thecoolaxolotl.com. The site contains hyperlinks to other websites; however, the site’s publishers assume no responsibility for the content of those external sites."
+      "title": "4. Personal Data",
+      "text": "Personal information is only used for communication purposes and is never shared without consent."
     },
+
     "section5": {
-      "title": "5. Personal Data",
-      "text": "In accordance with current regulations (including the GDPR), users have the right to access, correct, and delete their personal data. To exercise this right, please send an email to [Your contact email address]."
+      "title": "5. Cookies",
+      "text": "The website may use cookies to enhance user experience. You can disable cookies in your browser settings."
     },
+
     "section6": {
-      "title": "6. Cookies",
-      "text": "The site uses cookies to enhance the user experience and analyze website traffic. You have the option to disable cookies by changing your browser settings."
+      "title": "6. Liability",
+      "text": "The publisher cannot be held responsible for errors or unavailability of the site."
     },
+
     "section7": {
       "title": "7. Governing Law",
-      "text": "These legal notices are governed by French law. Any dispute related to the use of the site thecoolaxolotl.com will be subject to the jurisdiction of the French courts."
+      "text": "This website is governed by French law. In case of disputes, French courts will have exclusive jurisdiction."
     }
   },
   "privacy": {
@@ -379,7 +395,13 @@
     "politic": "Privacy Policy",
     "politicAlt": "axolotl privacy policy"
   },
-  "form": {
-    "message_sent": "Message sent!"
+
+  "contact-meta": {
+    "title": "Contact - The Cool Axolotl",
+    "description": "Contact us for any inquiries or collaboration."
+  },
+  "form2": {
+    "message_sent": "Message sent successfully!",
+    "error_message": "An error occurred. Please try again later."
   }
 }

@@ -1,27 +1,3 @@
-.transition-bubble {
-  position: absolute;
-  bottom: -10%; /* Les bulles commencent en bas de l'écran */
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-  animation: rise 4s ease-out forwards; /* Les bulles montent et disparaissent */
-  pointer-events: none; /* Empêche toute interaction avec les bulles */
-}
-
-@keyframes rise {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  80% {
-    transform: translateY(-80vh); /* Monte presque hors de l'écran */
-    opacity: 1; /* Visible jusqu'à la fin de la montée */
-  }
-  100% {
-    transform: translateY(-150vh); /* Hors de l'écran */
-    opacity: 0; /* Disparaît */
-  }
-}
-
 /* Style des bulles roses */
 .bubble-pink {
   background: radial-gradient(
@@ -46,40 +22,27 @@
   box-shadow: inset 0 -5px 10px rgba(0, 129, 138, 0.4),
     inset -3px 3px 5px rgba(0, 77, 83, 0.5), 0 0 15px rgba(0, 179, 179, 0.4);
 }
-
 .intro-container {
   padding-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  z-index: 0; /* Background layer */
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
+  z-index: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  transition: background-color 3.5s ease-out; /* Transition pour le changement de couleur de fond */
-}
-
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Permet de remplir le conteneur */
-  z-index: -1; /* Envoie l'image en arrière-plan */
-  opacity: 0; /* Démarre avec l'opacité à 0 */
-  background-size: cover; /* L'image couvre tout le conteneur */
-  background-position: center; /* Centre l'image */
+  background-image: url("/Pics/artybis.webp"); /* ✅ ici le fond */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+  /* ✅ animation comme tu faisais avant */
   animation: fadeInImage 5s ease-out forwards;
+  opacity: 0; /* pour l’animation */
 }
 
 @keyframes fadeInImage {
-  0% {
-    opacity: 0;
-  }
-  100% {
+  to {
     opacity: 1;
   }
 }
@@ -262,7 +225,7 @@
     0 0 15px rgba(255, 160, 160, 0.4);
   transition: transform 0.8s ease-in-out, opacity 0.6s ease,
     background-color 0.8s ease;
-  animation: bubble-rise s ease forwards, float 8s ease-in-out infinite !important;
+  animation: bubble-rise 4s ease forwards, float 8s ease-in-out infinite;
 }
 
 /* Couleurs spécifiques pour les bulles Devis et Services */
@@ -384,6 +347,22 @@
   cursor: auto;
   pointer-events: none; /* Désactive toute interaction de la souris */
   animation: small-bubble-rise 8s ease forwards infinite;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.small-bubble:nth-child(odd) {
+  animation-delay: 2s;
+  animation: small-bubble-rise 8s ease forwards infinite,
+    twinkle 7s ease-in-out infinite;
 }
 
 /* Small bubbles en rose terre */

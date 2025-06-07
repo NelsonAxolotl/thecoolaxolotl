@@ -842,8 +842,8 @@
 
   .timeline-container2 {
     margin-top: 30px;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
     padding: 0;
   }
 
@@ -999,8 +999,8 @@
   .shopify-section {
     padding: 20px 30px;
     margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .shopify-title {

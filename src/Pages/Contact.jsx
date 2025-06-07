@@ -1,35 +1,30 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useTranslation } from "react-i18next"; // Importation du hook
-import "./Contact.css";
+import { useState, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import emailjs from "emailjs-com";
+
+import "./Contact.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
 import happy from "../Pics/happy.png";
-// import watou from "../Vidéos/eau4.mp4";
-// import backgroundImage from "../Pics/axopic.png";
-import contact from "../Pics/halo.webp";
+import contact from "../Pics/contact.webp";
 
 const Contact = () => {
   const { t } = useTranslation();
+
   useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 100); // Attends 100ms avant de forcer le scroll
+    setTimeout(() => window.scrollTo(0, 0), 200);
   }, []);
+
   const [showAxolotl, setShowAxolotl] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [showForm, setShowForm] = useState(false);
-
   const videoRef = useRef(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setShowNav(true), 350);
     const formTimer = setTimeout(() => setShowForm(true), 400);
-
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 0.4;
-    }
-
+    if (videoRef.current) videoRef.current.playbackRate = 0.4;
     return () => {
       clearTimeout(timer);
       clearTimeout(formTimer);
@@ -41,7 +36,8 @@ const Contact = () => {
     email: "",
     subject: "",
     message: "",
-    consent: false, // Ajout de l'état pour la checkbox
+    consent: false,
+    "bot-field": "",
   });
 
   const [isSent, setIsSent] = useState(false);
@@ -58,43 +54,44 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const { name, email, subject, message } = formData;
-    const serviceID = "service_8gb8bdg";
-    const templateID = "template_2tt8tpr";
-    const userID = "gyOAWsFJuZoqM16PD";
+    if (formData["bot-field"]) return; // Anti-spam
 
-    const templateParams = { name, email, subject, message };
+    const { name, email, subject, message } = formData;
 
     emailjs
-      .send(serviceID, templateID, templateParams, userID)
-      .then((response) => {
-        console.log("Email envoyé avec succès:", response);
+      .send(
+        "service_8gb8bdg",
+        "template_2tt8tpr",
+        { name, email, subject, message },
+        "gyOAWsFJuZoqM16PD"
+      )
+      .then(() => {
         setIsSent(true);
         setShowAxolotl(true);
         setErrorMessage("");
-
         setTimeout(() => setShowAxolotl(false), 4000);
-
-        // Réinitialisation du formulaire après soumission
         setFormData({
           name: "",
           email: "",
           subject: "",
           message: "",
-          consent: false, // Réinitialisation de la checkbox
+          consent: false,
+          "bot-field": "",
         });
       })
-      .catch((error) => {
-        console.error("Erreur lors de l'envoi de l'email:", error);
+      .catch(() => {
         setIsSent(false);
-        setErrorMessage(
-          "Une erreur est survenue. Veuillez réessayer plus tard."
-        );
+        setErrorMessage(t("form.error_message"));
       });
   };
 
   return (
     <>
+      <Helmet>
+        <title>{t("contact-meta.title")}</title>
+        <meta name="description" content={t("contact-meta.description")} />
+      </Helmet>
+
       <Nav />
       <div className="video-background-contact">
         <img
@@ -111,7 +108,7 @@ const Contact = () => {
           loop
           className="background-video-contact"
         >
-          <source src="/Videos/eau8.mp4" type="video/mp4" loading="lazy" />
+          <source src="/Videos/eau8.mp4" type="video/mp4" />
           Votre navigateur ne prend pas en charge la vidéo.
         </video>
       </div>
@@ -120,7 +117,7 @@ const Contact = () => {
         <section className="appel-action">
           <div className={`form-container ${showForm ? "show-form" : ""}`}>
             <div className="contact-header">
-              <h1> {t("contact")}</h1>
+              <h1>{t("contact")}</h1>
               <p>
                 <a
                   href="mailto:thecoolaxolotldesigner@gmail.com"
@@ -137,7 +134,7 @@ const Contact = () => {
               <div className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/the-cool-axolotl-8555a5351/"
-                  aria-label="The cool Axolotl"
+                  aria-label="LinkedIn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -145,7 +142,7 @@ const Contact = () => {
                 </a>
                 <a
                   href="https://www.instagram.com/thecoolaxoltl/"
-                  aria-label="The cool Axolotl"
+                  aria-label="Instagram"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -157,37 +154,75 @@ const Contact = () => {
             <p>{t("contact-text")}</p>
 
             <form onSubmit={handleSubmit}>
+              {/* Honeypot */}
+              <div className="honeypot">
+                <label htmlFor="bot-field" className="sr-only">
+                  Ne pas remplir
+                </label>
+                <input
+                  type="text"
+                  name="bot-field"
+                  id="bot-field"
+                  autoComplete="off"
+                  onChange={handleChange}
+                  value={formData["bot-field"]}
+                />
+              </div>
+
+              <label htmlFor="name" className="sr-only">
+                Nom
+              </label>
               <input
+                id="name"
                 type="text"
                 name="name"
                 placeholder={t("placeholder")}
+                aria-label="Nom"
                 value={formData.name}
                 onChange={handleChange}
                 required
               />
+
+              <label htmlFor="email" className="sr-only">
+                Email
+              </label>
               <input
+                id="email"
                 type="email"
                 name="email"
                 placeholder="Email"
+                aria-label="Email"
                 value={formData.email}
                 onChange={handleChange}
                 required
               />
+
+              <label htmlFor="subject" className="sr-only">
+                Sujet
+              </label>
               <input
+                id="subject"
                 type="text"
                 name="subject"
                 placeholder={t("subject")}
+                aria-label="Sujet"
                 value={formData.subject}
                 onChange={handleChange}
                 required
               />
+
+              <label htmlFor="message" className="sr-only">
+                Message
+              </label>
               <textarea
+                id="message"
                 name="message"
                 placeholder={t("message")}
+                aria-label="Message"
                 value={formData.message}
                 onChange={handleChange}
                 required
-              ></textarea>
+              />
 
               <div className="consent-container">
                 <input
@@ -214,7 +249,7 @@ const Contact = () => {
                   className="axolotl-image-happy sent"
                   loading="lazy"
                 />
-                <div className="bubble-happy">{t("form.message_sent")}</div>
+                <div className="bubble-happy">{t("form2.message_sent")}</div>
               </div>
             )}
 

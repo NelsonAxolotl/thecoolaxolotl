@@ -1,14 +1,15 @@
 import "./Creations.css";
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
-import wanubida from "../Pics/wanubida.png";
-import poly from "../Pics/logo.jpg";
+import wanubida from "../Pics/logowanubida.webp";
+import poly from "../Pics/logopoly.webp";
 import manu from "../Pics/manu.png";
-import rando from "../Pics/rando.jpg";
-import game from "../Pics/bg.jpg";
-import trip from "../Pics/tripaxo.jpg";
+import rando from "../Pics/rando.webp";
+import game from "../Pics/bg.webp";
+import trip from "../Pics/trip.webp";
 import avis from "../Pics/axoavis.webp";
 import portfolio from "../Pics/portfolio.webp";
 import maquette from "../Pics/maquette.webp";
@@ -16,15 +17,12 @@ import carnet from "../Pics/carnet.webp";
 
 const Creations = () => {
   const { t } = useTranslation();
-
-  useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 100); // Attends 100ms avant de forcer le scroll
-  }, []);
   const [showPage, setShowPage] = useState(false);
   const videoRef = useRef(null);
 
+  useEffect(() => {
+    setTimeout(() => window.scrollTo(0, 0), 200);
+  }, []);
   const [hasBeenVisible, setHasBeenVisible] = useState({
     blogCategory1: false,
     blogCategory2: false,
@@ -39,7 +37,6 @@ const Creations = () => {
   const imageRef = useRef(null);
   const imageBlogRef = useRef(null);
 
-  // Un seul useEffect pour observer tous les éléments
   useEffect(() => {
     const elementsToObserve = [
       { ref: blogCategory1Ref, key: "blogCategory1" },
@@ -52,7 +49,6 @@ const Creations = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // On vérifie si l'élément est visible pour la première fois
           if (
             entry.isIntersecting &&
             !hasBeenVisible[entry.target.dataset.key]
@@ -65,14 +61,13 @@ const Creations = () => {
           }
         });
       },
-      { threshold: 0.3 } // Seuil d'intersection de 30% de l'élément visible
+      { threshold: 0.3 }
     );
 
-    // Observer tous les éléments
     elementsToObserve.forEach(({ ref, key }) => {
       const element = ref.current;
       if (element) {
-        element.dataset.key = key; // Ajoute une propriété data-key à chaque élément observé
+        element.dataset.key = key;
         observer.observe(element);
       }
     });
@@ -95,10 +90,9 @@ const Creations = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      console.log("Vidéo attachée :", videoRef.current); // Vérifie si la référence est bien attachée
-      videoRef.current.playbackRate = 0.7; // Ralentit la vidéo
+      videoRef.current.playbackRate = 0.7;
     }
-  }, [videoRef.current]); // Déclenchement lorsque la ref change
+  }, [videoRef.current]);
 
   const projects = [
     {
@@ -160,8 +154,7 @@ const Creations = () => {
       title: "Gaming",
       description: "Maquette axée sur le monde du gaming",
       image: game,
-      link: "https://site-maquette-gaming.netlify.app/", // Exemple de lien
-      // avatar: axogame,
+      link: "https://site-maquette-gaming.netlify.app/",
     },
     {
       id: "tripadvisor",
@@ -169,7 +162,6 @@ const Creations = () => {
       description: "Maquette de reproduction du célèbre site",
       image: trip,
       link: "https://tripadvisorangola-exo.netlify.app/",
-      // avatar: axotrip,
     },
     {
       id: "mountain",
@@ -177,9 +169,9 @@ const Creations = () => {
       description: "Maquette rando, nature et montagnes",
       image: rando,
       link: "https://site-maquette-rando.netlify.app/",
-      // avatar: axorando,
     },
   ];
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -187,12 +179,10 @@ const Creations = () => {
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
-          setIsVisible(true); // Les éléments deviennent visibles lorsque la section est dans la vue
+          setIsVisible(true);
         }
       },
-      {
-        threshold: 0.5, // Le seuil est de 50% pour que l'élément soit visible
-      }
+      { threshold: 0.5 }
     );
 
     const blogContainer = document.querySelector(".blog-container");
@@ -205,6 +195,28 @@ const Creations = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Mes Créations | Cool Axolotl</title>
+        <meta
+          name="description"
+          content="Découvrez mes projets de développement web, maquettes interactives et articles techniques."
+        />
+        <meta property="og:title" content="Mes Créations | Cool Axolotl" />
+        <meta
+          property="og:description"
+          content="Découvrez mes projets de développement web, maquettes interactives et articles techniques."
+        />
+        <meta
+          property="og:image"
+          content="https://thecoolaxolotl.com/Pics/portfolio.webp"
+        />
+        <meta
+          property="og:url"
+          content="https://www.thecoolaxolotl.com/creations"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <Nav />
       <div className="background-video-container">
         <video
@@ -261,6 +273,7 @@ const Creations = () => {
                     alt={t(`projects.${project.id}.title`)}
                     width={300}
                     height={300}
+                    loading="lazy"
                     className={`project-image ${
                       index === projects.length - 1 ? "last-project-image" : ""
                     }`}

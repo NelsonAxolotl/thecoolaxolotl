@@ -18,7 +18,7 @@
     />
     <meta name="author" content="The Cool Axolotl" />
 
-    <!-- Open Graph / SEO -->
+    <!-- Open Graph / Facebook -->
     <meta
       property="og:title"
       content="The Cool Axolotl - Création de sites web sur mesure"
@@ -27,14 +27,17 @@
       property="og:description"
       content="Web Designer à Montpellier, développeur en sites web sur mesure avec WordPress et React."
     />
-    <meta property="og:image" content="https://thecoolaxolotl.com/image.webp" />
+    <meta
+      property="og:image"
+      content="https://thecoolaxolotl.com/axolotllogo.webp"
+    />
     <meta property="og:image:alt" content="logo The Cool Axolotl" />
     <meta property="og:url" content="https://thecoolaxolotl.com" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="The Cool Axolotl" />
     <meta property="og:locale" content="fr_FR" />
 
-    <!-- Twitter Cards -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -46,39 +49,38 @@
     />
     <meta
       name="twitter:image"
-      content="https://thecoolaxolotl.com/axolotl.webp"
+      content="https://thecoolaxolotl.com/axolotllogo.webp"
     />
     <meta name="twitter:image:alt" content="logo The Cool Axolotl" />
 
-    <!-- Canonical & hreflang -->
+    <!-- Canonical & Hreflang -->
     <link rel="canonical" href="https://thecoolaxolotl.com" />
-    <link rel="alternate" href="https://thecoolaxolotl.com" hreflang="fr-FR" />
+    <link rel="alternate" hreflang="fr-FR" href="https://thecoolaxolotl.com" />
 
     <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-    <!-- Préconnect pour améliorer la latence -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Préchargement pour signaler au navigateur que la police est prioritaire -->
+    <!-- Preload Local Fonts -->
     <link
       rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
+      href="/Fonts/Quicksand-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
     />
-
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
-      media="all"
+      rel="preload"
+      href="/Fonts/Quicksand-500.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
     />
 
-    <!-- CSS -->
+    <!-- Styles -->
     <link rel="stylesheet" href="/assets/styles.css" />
 
-    <!-- FontAwesome Icons -->
+    <!-- FontAwesome -->
     <script
       src="https://kit.fontawesome.com/b78f7f545e.js"
       crossorigin="anonymous"
@@ -89,11 +91,11 @@
     <meta
       http-equiv="Content-Security-Policy"
       content="
-        default-src 'self'; 
-        script-src 'self' 'unsafe-inline' https://kit.fontawesome.com https://unpkg.com https://vercel.live; 
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com https://ka-f.fontawesome.com; 
-        img-src 'self' data: https://thecoolaxolotl.com https://unpkg.com; 
-        font-src 'self' https://fonts.gstatic.com https://ka-f.fontawesome.com; 
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://kit.fontawesome.com https://unpkg.com https://vercel.live;
+        style-src 'self' 'unsafe-inline' https://ka-f.fontawesome.com;
+        img-src 'self' data: https://thecoolaxolotl.com https://unpkg.com;
+        font-src 'self' https://ka-f.fontawesome.com;
         connect-src 'self' https://ka-f.fontawesome.com https://api.emailjs.com;"
     />
   </head>
@@ -101,7 +103,7 @@
   <body>
     <div id="root"></div>
 
-    <!-- Chargement différé du script principal -->
+    <!-- Main Script -->
     <script type="module" src="/src/main.jsx" defer></script>
   </body>
 </html>

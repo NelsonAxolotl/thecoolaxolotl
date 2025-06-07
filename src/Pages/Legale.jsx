@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next"; // Importation du hook
+import { Helmet } from "react-helmet-async";
 import "./Legale.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
@@ -19,6 +20,16 @@ const Legale = () => {
 
   return showPage ? (
     <>
+      <Helmet>
+        <title>{t("legal.metaTitle")}</title>
+        <meta name="description" content={t("legal.metaDescription")} />
+        <meta property="og:title" content={t("legal.metaTitle")} />
+        <meta property="og:description" content={t("legal.metaDescription")} />
+        <meta
+          property="og:image"
+          content="https://thecoolaxolotl.com/Pics/legal.webp"
+        />
+      </Helmet>
       <Nav />
       <div className="legale fade-in-legale">
         <img
@@ -63,7 +74,7 @@ const Legale = () => {
               <strong>{t("legal.section2.hostName")} : The Cool Axololt</strong>{" "}
               <br />
               <br />
-              <strong>{t("legal.section2.phone")} :</strong> 06 17 80 67 15
+              <strong>{t("legal.section2.phone")} : 06 17 80 67 15</strong>
             </p>
           </section>
 

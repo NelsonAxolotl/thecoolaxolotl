@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 import "./End.css";
 import { Link } from "react-router-dom";
-import legal from "/legal.webp";
-import axo from "/axolotllogo.webp";
-import politic from "/politiqueaxo.webp";
+import legal from "../Pics/legal.webp";
+import axo from "../Pics/axolotllogo.webp";
+import privacypolitic from "../Pics/privacypolitic.webp";
 
 const End = () => {
   const { t } = useTranslation();
@@ -39,7 +39,7 @@ const End = () => {
         <div className="politique">
           <Link to="/Politique-de-confidentialité">
             <img
-              src={politic}
+              src={privacypolitic}
               width="300"
               height="150"
               alt={t("end.politicAlt")}
