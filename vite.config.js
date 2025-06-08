@@ -35,7 +35,7 @@ export default defineConfig({
     }),
   ],
   build: {
-    target: "esnext",
+    target: "es2017",
     minify: "terser",
     sourcemap: false, // Désactive les sourcemaps en production pour réduire le poids des fichiers
     brotliSize: false, // Désactive le calcul des tailles Brotli pour améliorer la vitesse de build

@@ -777,7 +777,7 @@
 /* Section "Appel à l'Action" */
 .appel-a-action {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   z-index: 1;
   text-align: center;
