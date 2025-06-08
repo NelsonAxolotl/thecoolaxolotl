@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import DOMPurify from "dompurify";
 import {
   faLightbulb,
   faEarListen,
@@ -274,9 +275,12 @@ const Apropos = () => {
               />
               <div className="text-content">
                 <h2 className="section-title3">{t("captain_title")}</h2>
-                <p className="section-description">
-                  {t("captain_description")}
-                </p>
+                <p
+                  className="section-description"
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(t("captain_description")),
+                  }}
+                />
               </div>
 
               <div className="interactive-section">
