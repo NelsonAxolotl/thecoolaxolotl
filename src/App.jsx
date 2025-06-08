@@ -18,13 +18,7 @@ function App() {
   return (
     <>
       <LanguageSwitcher />
-      <Suspense
-        fallback={
-          <div style={{ textAlign: "center", marginTop: "50px" }}>
-            Chargement en cours...
-          </div>
-        }
-      >
+      <Suspense>
         <Routes>
           <Route path="/" element={<Intro />} />
           <Route path="/Parcours" element={<Apropos />} />
