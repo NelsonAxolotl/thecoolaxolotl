@@ -12,6 +12,16 @@ const Intro = () => {
   const [showBubbles, setShowBubbles] = useState(false);
   const [audioPlayed, setAudioPlayed] = useState(false);
 
+  useEffect(() => {
+    // 👉 Préchargement silencieux des pages clés en arrière-plan
+    import("../Pages/Contact");
+    import("../Pages/Creations");
+    import("../Pages/Services");
+    import("../Pages/Apropos");
+    import("../Pages/Legale");
+    import("../Pages/Politic");
+  }, []);
+
   const audioRef = useRef(null);
 
   useEffect(() => {
