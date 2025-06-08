@@ -99,7 +99,6 @@ strong {
 
 @media screen and (max-width: 500px) {
   .round-image-politic {
-    right: 120px;
     width: 150px;
     height: 150px;
   }

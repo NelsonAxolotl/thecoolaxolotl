@@ -101,7 +101,6 @@
 
 @media screen and (max-width: 500px) {
   .round-image-legale {
-    right: 120px;
     width: 150px;
     height: 150px;
     margin-top: -80px;

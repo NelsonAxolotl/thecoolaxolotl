@@ -11,7 +11,7 @@ const TimelineSection = ({ steps }) => {
   const { t } = useTranslation();
 
   const images = [hand, analyse, proto, int, dev, maintenance];
-  const safeIndex = Math.max(0, Math.min(images.length - 1, Number(index)));
+
   return (
     <div className="timeline-container2">
       <h2 className="timeline-title2">{t("timeline.title")}</h2>
@@ -30,7 +30,7 @@ const TimelineSection = ({ steps }) => {
             </div>
             <div className="timeline-image2">
               <img
-                src={images[safeIndex]}
+                src={images[index]}
                 alt={`Step ${index + 1}`}
                 width={200}
                 height={200}
