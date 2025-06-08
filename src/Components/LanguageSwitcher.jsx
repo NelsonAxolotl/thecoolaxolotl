@@ -22,7 +22,6 @@ const LanguageSwitcher = () => {
         role="button"
         tabIndex="0"
         className="flag"
-        loading="lazy"
       />
       <img
         src={enFlag}
@@ -33,7 +32,6 @@ const LanguageSwitcher = () => {
         role="button"
         tabIndex="0"
         className="flag"
-        loading="lazy"
       />
     </div>
   );
