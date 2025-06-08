@@ -6,7 +6,10 @@ import imagemin from "vite-plugin-imagemin"; // Importation du plugin imagemin
 export default defineConfig({
   plugins: [
     react(),
-    compression(),
+    compression({
+      algorithm: "gzip",
+      ext: ".gz",
+    }),
     imagemin({
       // Configuration d'imagemin
       gifsicle: {
