@@ -777,7 +777,7 @@
 /* Section "Appel à l'Action" */
 .appel-a-action {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   z-index: 2;
   text-align: center;
@@ -828,7 +828,7 @@
 .bubble-parcours {
   text-align: center;
   transform: translateX(-50%);
-  background-color: rgba(255, 131, 7);
+  background-color: #c65300; /* Orange foncé pour bon contraste */
   color: white;
   padding: 20px 20px;
   margin-top: 30px;

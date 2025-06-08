@@ -161,12 +161,13 @@ const Apropos = () => {
         playsInline
         className="background-vid"
         aria-hidden="true"
+        preload="none"
       >
         <source src="/Videos/sousmarin.mp4" type="video/mp4" />
         Votre navigateur ne prend pas en charge les vidéos.
       </video>
 
-      <audio id="background-audio" src="/Sons/joy.mp3" loop />
+      <audio id="background-audio" src="/Sons/joy.mp3" loop preload="none" />
 
       <div className="overlay" />
 
