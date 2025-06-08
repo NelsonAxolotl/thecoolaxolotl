@@ -49,7 +49,6 @@ const Politic = () => {
 
           {[...Array(12)].map((_, i) => {
             const sectionKey = `privacy.section${i + 1}`;
-            const sectionId = i + 1;
 
             return (
               <section key={i} id={`section-${i + 1}`}>

@@ -59,7 +59,9 @@ const Apropos = () => {
     const audio = document.getElementById("background-audio");
     if (audio) {
       audio.volume = 0.01;
-      audio.play().catch(() => {});
+      audio.play().catch((err) => {
+        console.error("Audio playback failed", err);
+      });
     }
   }, []);
 
@@ -272,10 +274,9 @@ const Apropos = () => {
               />
               <div className="text-content">
                 <h2 className="section-title3">{t("captain_title")}</h2>
-                <p
-                  className="section-description"
-                  dangerouslySetInnerHTML={{ __html: t("captain_description") }}
-                />
+                <p className="section-description">
+                  {t("captain_description")}
+                </p>
               </div>
 
               <div className="interactive-section">
