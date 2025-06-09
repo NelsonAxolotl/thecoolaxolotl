@@ -34,7 +34,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: auto;
+  height: 100vh;
   object-fit: cover;
   z-index: -1;
   opacity: 0;
@@ -272,30 +272,26 @@
   }
 }
 
-/* L'effet de mise à l'échelle avec hover */
 .bubble:hover {
-  transform: scale(1.05) translateY(-3px);
+  transform: scale(1.03) translateY(-2px); /* moins de mouvement */
   opacity: 1;
-  z-index: 999;
-  background-color: rgba(18, 150, 125, 0.4);
-  transition: transform 0.4s ease-in-out, background-color 0.6s ease-in-out,
-    filter 0.5s ease-in-out;
-  filter: blur(1px) contrast(1.1);
+  z-index: 10;
+  background-color: rgba(18, 150, 125, 0.25); /* plus léger */
+  filter: contrast(1.05); /* retiré le blur pour plus de douceur */
 }
 
-/* Styles de hover forcés */
-.bubble.bubble-1:hover, /* Parcours */
+/* Hover personnalisé pour bulles spécifiques */
+.bubble.bubble-1:hover,
 .bubble.bubble-2:hover {
-  /* Portfolio */
   background: radial-gradient(
     circle at top left,
-    rgba(255, 200, 200, 1),
-    rgba(240, 128, 128, 0.5) 70%,
-    rgba(139, 69, 69, 0.2) 100%
+    rgba(255, 200, 200, 0.9),
+    rgba(240, 128, 128, 0.4) 70%,
+    rgba(139, 69, 69, 0.1) 100%
   );
-  box-shadow: inset 0 -5px 10px rgba(240, 128, 128, 0.6),
-    inset -3px 3px 5px rgba(255, 230, 230, 0.7),
-    0 0 15px rgba(255, 160, 160, 0.6);
+  box-shadow: inset 0 -3px 6px rgba(240, 128, 128, 0.3),
+    inset -2px 2px 4px rgba(255, 230, 230, 0.4),
+    0 0 8px rgba(255, 160, 160, 0.3);
 }
 
 /* Styles spécifiques pour chaque bulle : position et taille */
