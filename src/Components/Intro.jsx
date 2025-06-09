@@ -83,18 +83,19 @@ const Intro = () => {
           </video>
         </div>
 
-        <img
-          src="/Pics/axolotllogo300.webp"
-          srcSet="/Pics/axolotllogo600.webp 2x"
-          alt="Logo The Cool Axolotl"
-          className="intro-logo"
-          width="300"
-          height="300"
-          loading="eager"
-          decoding="async"
-          role="img"
-          aria-label="Logo The Cool Axolotl"
-        />
+        <div className="intro-logo-container">
+          <img
+            src="/Pics/axolotllogo300.webp"
+            alt="Logo The Cool Axolotl"
+            className="intro-logo"
+            width="300"
+            height="300"
+            loading="eager"
+            decoding="async"
+            role="img"
+            aria-label="Logo The Cool Axolotl"
+          />
+        </div>
 
         <audio ref={audioRef} src="/Sons/axoson.mp3" loop preload="auto" />
 
