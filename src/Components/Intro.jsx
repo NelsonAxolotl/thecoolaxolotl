@@ -85,7 +85,7 @@ const Intro = () => {
 
         <div className="intro-logo-container">
           <img
-            src="/Pics/axolotllogo300.webp"
+            src="/Pics/axolotllogo600.webp"
             alt="Logo The Cool Axolotl"
             className="intro-logo"
             width="300"
