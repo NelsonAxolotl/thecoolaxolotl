@@ -11,6 +11,7 @@ const Intro = () => {
   const [zoomIn, setZoomIn] = useState(false);
   const [showBubbles, setShowBubbles] = useState(false);
   const [audioPlayed, setAudioPlayed] = useState(false);
+  const audioRef = useRef(null);
 
   useEffect(() => {
     // 👉 Préchargement silencieux des pages clés en arrière-plan
@@ -21,8 +22,6 @@ const Intro = () => {
     import("../Pages/Legale");
     import("../Pages/Politic");
   }, []);
-
-  const audioRef = useRef(null);
 
   useEffect(() => {
     setTimeout(() => setZoomIn(true), 400);

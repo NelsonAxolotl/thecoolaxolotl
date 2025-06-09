@@ -35,8 +35,8 @@ export default defineConfig({
     }),
   ],
   build: {
-    target: "es2017",
-    minify: "terser",
+    target: "es2019",
+    minify: "esbuild",
     sourcemap: false, // Désactive les sourcemaps en production pour réduire le poids des fichiers
     brotliSize: false, // Désactive le calcul des tailles Brotli pour améliorer la vitesse de build
     chunkSizeWarningLimit: 4096, // Évite les warnings inutiles pour les gros fichiers

@@ -534,7 +534,7 @@
 
 /* Effet de hover sur la timeline-item */
 .timeline-item:hover .timeline-icon {
-  animation: vibrate 0.3s ease-in-out;
+  animation: vibrate 2s ease-in-out infinite;
 }
 
 /* Définition de l'animation de vibration */
@@ -836,6 +836,7 @@
   border: 1px solid white;
   font-size: 1rem;
   cursor: pointer;
+  z-index: 10;
   box-shadow: 0 4px 8px rgba(255, 131, 7, 0.4);
   animation: floatAnimationOrange 5s infinite ease-in-out; /* Ajout de l'animation */
   transition: all 0.3s ease-in-out;

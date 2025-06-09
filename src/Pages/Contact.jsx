@@ -11,6 +11,10 @@ import contact from "../Pics/contact.webp";
 
 const Contact = () => {
   const { t } = useTranslation();
+  useEffect(() => {
+    // 👉 Préchargement silencieux des pages clés en arrière-plan
+    import("../Components/End");
+  }, []);
 
   useEffect(() => {
     setTimeout(() => window.scrollTo(0, 0), 200);
@@ -94,11 +98,12 @@ const Contact = () => {
       <Nav />
       <div className="video-background-contact">
         <img
-          src={contact}
+          src="/Pics/contact.webp"
           alt="Background"
           width="800"
           height="400"
           className="background-image-contact"
+          loading="lazy"
         />
         <video
           ref={videoRef}

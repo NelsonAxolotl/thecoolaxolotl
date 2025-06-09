@@ -8,6 +8,10 @@ import {
   faEarListen,
   faSyncAlt,
   faLeaf,
+  faMusic,
+  faPlane,
+  faAt,
+  faTheaterMasks,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Apropos.css";
 import Nav from "../Components/Nav";
@@ -24,7 +28,17 @@ const Apropos = () => {
     "ear-listen": faEarListen,
     "sync-alt": faSyncAlt,
     leaf: faLeaf,
+    music: faMusic,
+    plane: faPlane,
+    "masks-theater": faTheaterMasks,
+    at: faAt,
   };
+  const timeline = [
+    { icon: "music", color: "blue" },
+    { icon: "plane", color: "green" },
+    { icon: "theater-masks", color: "red" },
+    { icon: "at", color: "purple" },
+  ];
   const { t } = useTranslation();
   const [showPage, setShowPage] = useState(false);
   const [showSection, setShowSection] = useState(false);
@@ -243,11 +257,9 @@ const Apropos = () => {
                 ].map((item, idx) => (
                   <div key={idx} className="timeline-item">
                     <div className={`timeline-icon icon-${item.color}`}>
-                      <i
-                        className={`fas fa-${item.icon}`}
-                        aria-hidden="true"
-                      ></i>
+                      <FontAwesomeIcon icon={iconsMap[item.icon]} />
                     </div>
+
                     <div className="timeline-content">
                       <h3 className="timeline-title">{item.title}</h3>
                       <div className="timeline-date">

@@ -103,7 +103,7 @@ const Creations = () => {
         "Un site immersif reflétant l'énergie, la créativité de la compagnie du cirque Wanubida et une galerie dynamique intégrés.",
       image: wanubida,
       link: "https://www.wanubida.com",
-      technologies: ["HTML", "REACT", "JAVASCRIPT", "CSS", "SEO"],
+      technologies: ["HTML", "REACT", "JAVASCRIPT", "CSS", "SSAS", "SEO"],
       titleColor: "#fff",
       subtitleColor: "#fff",
       descriptionColor: "#f0f0f0",
@@ -120,7 +120,7 @@ const Creations = () => {
         "Un site élégant mettant en avant les spectacles à travers une galerie de photos saisissantes et des descriptions détaillées des performances.",
       image: poly,
       link: "https://www.compagniepolyr.fr",
-      technologies: ["HTML", "REACT", "JAVASCRIPT", "CSS", "SEO"],
+      technologies: ["HTML", "REACT", "JAVASCRIPT", "CSS", "SSAS", "SEO"],
       titleColor: "#fff",
       subtitleColor: "#fff",
       descriptionColor: "#dfe6e9",
@@ -137,7 +137,7 @@ const Creations = () => {
         "Un portfolio minimaliste et visuellement saisissant pour mettre en lumière les œuvres et l'univers unique d'une artiste incroyable.",
       image: manu,
       link: "https://www.emmanuelleferdyan.com",
-      technologies: ["HTML", "REACT", "JAVASCRIPT", "CSS", "SEO"],
+      technologies: ["HTML", "REACT", "JAVASCRIPT", "CSS", "SSAS", "SEO"],
       titleColor: "#fff",
       subtitleColor: "#fff",
       descriptionColor: "#f0f0f0",
@@ -146,6 +146,9 @@ const Creations = () => {
         stars: 5,
       },
     },
+  ];
+  const allTechnologies = [
+    ...new Set(projects.flatMap((project) => project.technologies)),
   ];
 
   const maquettes = [
@@ -240,6 +243,14 @@ const Creations = () => {
           <p className="summary-text">{t("port.summary")}</p>
         </div>
 
+        <ul className="project-technologies ">
+          {allTechnologies.map((tech, idx) => (
+            <li key={idx} className="technology-item">
+              {tech}
+            </li>
+          ))}
+        </ul>
+
         <h2 className="projects-section-title">
           <img
             ref={imageRef}
@@ -309,13 +320,13 @@ const Creations = () => {
                   {t(`projects.${project.id}.description`)}
                 </p>
 
-                <ul className="project-technologies">
+                {/* <ul className="project-technologies">
                   {project.technologies.map((tech, idx) => (
                     <li key={idx} className="technology-item">
                       {tech}
                     </li>
                   ))}
-                </ul>
+                </ul> */}
               </div>
 
               {/* Avis section */}
