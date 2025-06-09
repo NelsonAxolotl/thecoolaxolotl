@@ -67,16 +67,32 @@ const Apropos = () => {
       clearTimeout(endTimer);
     };
   }, []);
-
-  // Auto-play audio (comme tu l’avais)
   useEffect(() => {
     const audio = document.getElementById("background-audio");
-    if (audio) {
-      audio.volume = 0.01;
-      audio.play().catch((err) => {
-        console.error("Audio playback failed", err);
-      });
-    }
+
+    if (!audio) return;
+
+    audio.volume = 0.01;
+
+    const tryPlay = () => {
+      const playPromise = audio.play();
+
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          const resumePlayback = () => {
+            audio.play().catch(() => {});
+            document.removeEventListener("click", resumePlayback);
+            document.removeEventListener("touchstart", resumePlayback);
+          };
+
+          // Attendre une interaction utilisateur
+          document.addEventListener("click", resumePlayback);
+          document.addEventListener("touchstart", resumePlayback);
+        });
+      }
+    };
+
+    tryPlay();
   }, []);
 
   useEffect(() => {
