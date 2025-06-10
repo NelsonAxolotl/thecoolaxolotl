@@ -7,7 +7,6 @@ import "./Services.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
 import ServiceGrid from "../Components/ServiceGrid";
-import ShopifySection from "../Components/ShopifySection";
 import TimelineSection from "../Components/TimelineSection";
 import CustomPackageSection from "../Components/CustomPackageSection";
 import QuoteForm from "../Components/QuoteForm";
@@ -170,13 +169,6 @@ const Services = () => {
       description: t("ser-vices.design.description"),
       features: t("ser-vices.design.features", { returnObjects: true }),
     },
-    {
-      id: "wordpress",
-      image: word,
-      title: t("ser-vices.wordpress.title"),
-      description: t("ser-vices.wordpress.description"),
-      features: t("ser-vices.wordpress.features", { returnObjects: true }),
-    },
   ];
   const steps = t("timeline.steps", { returnObjects: true });
   const whyList = t("customPackage.why", { returnObjects: true });
@@ -219,7 +211,7 @@ const Services = () => {
           </p>
 
           <ServiceGrid services={services} />
-          <ShopifySection />
+
           <TimelineSection steps={steps} />
           <CustomPackageSection whyList={whyList} />
           <QuoteForm
