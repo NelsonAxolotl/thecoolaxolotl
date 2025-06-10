@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -347,11 +347,6 @@ const Apropos = () => {
               <div className="text-parcours">
                 <p>{t("story_message")}</p>
               </div>
-              <Link to="/Contact" aria-label="Aller à la page Contact">
-                <div className="bubble-parcours">
-                  <p>{t("call_to_action")}</p>
-                </div>
-              </Link>
             </div>
           </section>
         </>

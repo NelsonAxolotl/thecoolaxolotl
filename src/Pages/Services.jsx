@@ -13,7 +13,6 @@ import QuoteForm from "../Components/QuoteForm";
 
 import react from "../Pics/axoreact.webp";
 import design from "../Pics/design.webp";
-import word from "../Pics/axopress.webp";
 
 const Services = () => {
   const { t } = useTranslation(); // Utilisation du hook pour la traduction
@@ -211,7 +210,6 @@ const Services = () => {
           </p>
 
           <ServiceGrid services={services} />
-
           <TimelineSection steps={steps} />
           <CustomPackageSection whyList={whyList} />
           <QuoteForm
