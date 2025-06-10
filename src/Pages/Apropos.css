@@ -97,9 +97,8 @@
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   text-align: center;
-  z-index: 1; /* Corrigé */
   opacity: 1; /* Directement visible */
-  animation: floatText 4s ease-in-out infinite; /* Animation légère, sans fade-in bloquant */
+  animation: floatText 7s ease-in-out infinite; /* Animation légère, sans fade-in bloquant */
 }
 
 @keyframes floatText {
@@ -110,12 +109,6 @@
   50% {
     transform: translate(-50%, -50%) translateY(-8px);
   }
-}
-
-/* Lorsque la classe 'fade-in' est ajoutée au titre, il devient visible et monte */
-.parcours-title.fade-in {
-  opacity: 1; /* Rendre le titre visible */
-  transform: translate(-50%, -50%) translateY(0); /* Faire remonter le titre à sa position d'origine */
 }
 
 .bubbles span {
@@ -852,6 +845,11 @@
 
 .bubble-parcours:hover {
   background-color: rgb(164, 16, 90);
+}
+
+.bubble-parcours p {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .text-parcours {

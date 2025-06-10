@@ -69,30 +69,15 @@ const Apropos = () => {
   }, []);
   useEffect(() => {
     const audio = document.getElementById("background-audio");
-
-    if (!audio) return;
-
-    audio.volume = 0.01;
-
     const tryPlay = () => {
-      const playPromise = audio.play();
-
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          const resumePlayback = () => {
-            audio.play().catch(() => {});
-            document.removeEventListener("click", resumePlayback);
-            document.removeEventListener("touchstart", resumePlayback);
-          };
-
-          // Attendre une interaction utilisateur
-          document.addEventListener("click", resumePlayback);
-          document.addEventListener("touchstart", resumePlayback);
-        });
-      }
+      audio.volume = 0.01;
+      audio.play().catch((err) => {
+        console.warn("Lecture audio bloquée. En attente d’interaction.");
+      });
+      document.removeEventListener("click", tryPlay);
     };
 
-    tryPlay();
+    document.addEventListener("click", tryPlay);
   }, []);
 
   useEffect(() => {
