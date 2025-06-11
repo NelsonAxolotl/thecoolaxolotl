@@ -86,6 +86,13 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .p-title {
   position: absolute;
   top: 45%;
@@ -98,8 +105,8 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   text-align: center;
   opacity: 1; /* Directement visible */
-  /* animation: floatText 7s ease-in-out infinite; 
-  animation-delay: 0.1s;  */
+  animation: floatText 7s ease-in-out infinite;
+  animation-delay: 0.1s;
 }
 
 @keyframes floatText {
