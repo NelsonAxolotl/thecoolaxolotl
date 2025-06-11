@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import "./Legale.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
-import legale from "../Pics/legal.webp";
+// import legale from "../Pics/legal.webp";
 
 const Legale = () => {
   const { t } = useTranslation(); // Utilisation du hook pour la traduction
@@ -33,12 +33,12 @@ const Legale = () => {
       <Nav />
       <div className="legale fade-in-legale">
         <img
-          src={legale}
+          src="/Pics/legal.webp"
           alt="Axolotl"
           width="200"
           height="200"
           className="round-image-legale"
-          priority
+          fetchpriority="high"
         />
         <div className="legal-container">
           <h1>{t("legal.title")}</h1>
