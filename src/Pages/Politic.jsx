@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 import "./Politic.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
-import privacypolitic from "../Pics/politique.webp";
+// import privacypolitic from "../Pics/politique.webp";
 
 const Politic = () => {
   const { t } = useTranslation();
@@ -37,12 +37,12 @@ const Politic = () => {
       <Nav />
       <div className="politic fade-in-legale">
         <img
-          src={privacypolitic}
+          src="Pics/politique.webp"
           alt="axolotl politic"
           width="200"
           height="200"
           className="round-image-politic"
-          priority
+          fetchpriority="high"
         />
         <div className="container-politic">
           <h1>{t("privacy.title")}</h1>
