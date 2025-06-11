@@ -3,7 +3,7 @@ import "./End.css";
 import { Link } from "react-router-dom";
 // import legal from "../Pics/legal.webp";
 import axo from "../Pics/axolotllogo150.webp";
-import privacypolitic from "../Pics/politique.webp";
+// import privacypolitic from "../Pics/politique.webp";
 
 const End = () => {
   const { t } = useTranslation();
@@ -39,7 +39,7 @@ const End = () => {
         <div className="politique">
           <Link to="/Politique-de-confidentialité">
             <img
-              src={privacypolitic}
+              src="/Pics/politique-160.webp"
               width="80"
               height="80"
               alt={t("end.politicAlt")}
