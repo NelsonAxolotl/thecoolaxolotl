@@ -99,6 +99,7 @@
   text-align: center;
   opacity: 1; /* Directement visible */
   animation: floatText 7s ease-in-out infinite; /* Animation légère, sans fade-in bloquant */
+  animation-delay: 0.1s; /* ⏱ Petit décalage = meilleur LCP parfois */
 }
 
 @keyframes floatText {
@@ -108,6 +109,12 @@
   }
   50% {
     transform: translate(-50%, -50%) translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .p-title {
+    animation: none;
   }
 }
 
