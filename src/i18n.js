@@ -25,7 +25,10 @@ i18n
     interpolation: {
       escapeValue: false, // React échappe déjà les valeurs
     },
-    initImmediate: false,
+
+    react: {
+      useSuspense: false, // <--- Désactive le suspense, rend le contenu immédiatement (mais les traductions async arriveront ensuite)
+    },
   });
 
 export default i18n;
