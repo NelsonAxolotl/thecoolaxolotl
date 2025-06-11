@@ -188,7 +188,6 @@ const Apropos = () => {
 
       <div className="intro-content">
         <h1 className="parcours-title">{t("title")}</h1>
-        <p className="p-title">{t("subtitle")}</p>
       </div>
 
       {showSection && (
