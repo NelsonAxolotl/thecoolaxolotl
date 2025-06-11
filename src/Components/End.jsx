@@ -40,7 +40,7 @@ const End = () => {
           <Link to="/Politique-de-confidentialité">
             <img
               src={privacypolitic}
-              width="300"
+              width="150"
               height="150"
               alt={t("end.politicAlt")}
               className="round-image4"
