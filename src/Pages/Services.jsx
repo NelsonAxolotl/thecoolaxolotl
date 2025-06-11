@@ -7,12 +7,14 @@ import "./Services.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
 import ServiceGrid from "../Components/ServiceGrid";
+
 import TimelineSection from "../Components/TimelineSection";
 import CustomPackageSection from "../Components/CustomPackageSection";
 import QuoteForm from "../Components/QuoteForm";
 
 import react from "../Pics/axoreact.webp";
 import design from "../Pics/design.webp";
+// import word from "../Pics/axopress.webp";
 
 const Services = () => {
   const { t } = useTranslation(); // Utilisation du hook pour la traduction
@@ -168,6 +170,13 @@ const Services = () => {
       description: t("ser-vices.design.description"),
       features: t("ser-vices.design.features", { returnObjects: true }),
     },
+    // {
+    //   id: "wordpress",
+    //   image: word,
+    //   title: t("ser-vices.wordpress.title"),
+    //   description: t("ser-vices.wordpress.description"),
+    //   features: t("ser-vices.wordpress.features", { returnObjects: true }),
+    // },
   ];
   const steps = t("timeline.steps", { returnObjects: true });
   const whyList = t("customPackage.why", { returnObjects: true });
@@ -210,6 +219,7 @@ const Services = () => {
           </p>
 
           <ServiceGrid services={services} />
+
           <TimelineSection steps={steps} />
           <CustomPackageSection whyList={whyList} />
           <QuoteForm

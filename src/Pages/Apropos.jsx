@@ -202,8 +202,8 @@ const Apropos = () => {
                 src={cuty}
                 alt="Axolotl mignon"
                 className="round-image"
-                width="300"
-                height="300"
+                width="150"
+                height="150"
                 loading="lazy"
               />
             </div>
@@ -220,8 +220,8 @@ const Apropos = () => {
                 src={boat}
                 alt="Axolotl marin"
                 className="round-image2"
-                width="400"
-                height="300"
+                width="150"
+                height="150"
                 loading="lazy"
               />
               <h2 className="section-title2">{t("navigations")}</h2>
