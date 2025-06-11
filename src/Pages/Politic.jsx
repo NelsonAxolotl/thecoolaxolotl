@@ -42,7 +42,7 @@ const Politic = () => {
           width="200"
           height="200"
           className="round-image-politic"
-          loading="lazy"
+          priority
         />
         <div className="container-politic">
           <h1>{t("privacy.title")}</h1>

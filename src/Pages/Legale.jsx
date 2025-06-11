@@ -38,6 +38,7 @@ const Legale = () => {
           width="200"
           height="200"
           className="round-image-legale"
+          priority
         />
         <div className="legal-container">
           <h1>{t("legal.title")}</h1>
