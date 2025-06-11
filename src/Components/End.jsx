@@ -18,7 +18,7 @@ const End = () => {
               width="80"
               height="80"
               alt={t("end.legalAlt")}
-              class="round-image4"
+              className="round-image4"
               loading="lazy"
             />
           </Link>{" "}
