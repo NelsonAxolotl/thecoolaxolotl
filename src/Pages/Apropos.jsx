@@ -17,8 +17,8 @@ import "./Apropos.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
 
-import cuty from "../Pics/axopic.webp";
-import boat from "../Pics/axoaqua.webp";
+import cuty from "../Pics/axopics.webp";
+import boat from "../Pics/axoaquas.webp";
 import capitain from "../Pics/capitain.webp";
 import relax from "../Pics/relax.webp";
 
