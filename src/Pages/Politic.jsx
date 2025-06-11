@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 import "./Politic.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
-import privacypolitic from "../Pics/politic.webp";
+import privacypolitic from "../Pics/politique.webp";
 
 const Politic = () => {
   const { t } = useTranslation();
