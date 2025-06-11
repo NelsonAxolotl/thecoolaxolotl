@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 import "./Nav.css";
-import logo from "../Pics/axolotllogo300.webp";
+import logo from "../Pics/axolotllogo150.webp";
 
 const Nav = () => {
   const { t } = useTranslation();
@@ -81,8 +81,8 @@ const Nav = () => {
         <img
           src={logo}
           alt="Logo Axolotl"
-          width="300"
-          height="300"
+          width="150"
+          height="150"
           loading="lazy"
         />
       </div>
