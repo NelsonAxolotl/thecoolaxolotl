@@ -187,7 +187,8 @@ const Apropos = () => {
       <div className="overlay" />
 
       <div className="intro-content">
-        <h1 className="parcours-title">Titre statique test LCP</h1>
+        <h1 className="parcours-title">{t("title")}</h1>
+        <p className="p-title">{t("subtitle")}</p>
       </div>
 
       {showSection && (
@@ -203,6 +204,7 @@ const Apropos = () => {
                 className="round-image"
                 width="150"
                 height="150"
+                loading="lazy"
               />
             </div>
             <div className="text-content">
