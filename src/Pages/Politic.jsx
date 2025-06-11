@@ -33,6 +33,10 @@ const Politic = () => {
           height="200"
           className="round-image-politic"
           fetchpriority="high"
+          decoding="async"
+          loading="eager"
+          aria-hidden="true"
+          role="presentation"
         />
         <div className="container-politic">
           <h1>{t("privacy.title")}</h1>

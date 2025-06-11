@@ -25,6 +25,7 @@ i18n
     interpolation: {
       escapeValue: false, // React échappe déjà les valeurs
     },
+    initImmediate: false,
   });
 
 export default i18n;
