@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import frFlag from "../Pics/fr.svg";
-import enFlag from "../Pics/uk.svg";
+import frFlag from "../Pics/fr-flag2.webp";
+import enFlag from "../Pics/uk-flag2.webp";
 import "./LanguageSwitcher.css"; // ajoute cette ligne pour le CSS externe
 
 const LanguageSwitcher = () => {
@@ -22,6 +22,8 @@ const LanguageSwitcher = () => {
         role="button"
         tabIndex="0"
         className="flag"
+        loading="eager"
+        decoding="async"
       />
       <img
         src={enFlag}
@@ -32,6 +34,8 @@ const LanguageSwitcher = () => {
         role="button"
         tabIndex="0"
         className="flag"
+        loading="eager"
+        decoding="async"
       />
     </div>
   );
