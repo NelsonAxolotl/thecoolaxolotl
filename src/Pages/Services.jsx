@@ -7,7 +7,6 @@ import "./Services.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
 import ServiceGrid from "../Components/ServiceGrid";
-
 import TimelineSection from "../Components/TimelineSection";
 import CustomPackageSection from "../Components/CustomPackageSection";
 import QuoteForm from "../Components/QuoteForm";
@@ -219,7 +218,6 @@ const Services = () => {
           </p>
 
           <ServiceGrid services={services} />
-
           <TimelineSection steps={steps} />
           <CustomPackageSection whyList={whyList} />
           <QuoteForm

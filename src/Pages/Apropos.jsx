@@ -51,8 +51,8 @@ const Apropos = () => {
   }, []);
 
   useEffect(() => {
-    const pageTimer = setTimeout(() => setShowPage(true), 350);
-    const sectionTimer = setTimeout(() => setShowSection(true), 200);
+    const pageTimer = setTimeout(() => setShowPage(true), 200);
+    const sectionTimer = setTimeout(() => setShowSection(true), 350);
     const endTimer = setTimeout(() => setShowEnd(true), 500);
 
     const slowVideo = () => {
@@ -193,7 +193,7 @@ const Apropos = () => {
 
       {showSection && (
         <>
-          <section
+          <div
             className="naissance-section"
             aria-label="Naissance de l'Axolotl"
           >
@@ -329,7 +329,7 @@ const Apropos = () => {
                 ))}
               </div>
             </section>
-          </section>
+          </div>
 
           <section
             className="appel-a-action"
