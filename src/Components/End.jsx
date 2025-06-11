@@ -16,8 +16,8 @@ const End = () => {
             <img
               src={legal}
               alt={t("end.legalAlt")}
-              width="150"
-              height="150"
+              width="80"
+              height="80"
               className="round-image4"
               loading="lazy"
             />
@@ -40,8 +40,8 @@ const End = () => {
           <Link to="/Politique-de-confidentialité">
             <img
               src={privacypolitic}
-              width="150"
-              height="150"
+              width="80"
+              height="80"
               alt={t("end.politicAlt")}
               className="round-image4"
               loading="lazy"
