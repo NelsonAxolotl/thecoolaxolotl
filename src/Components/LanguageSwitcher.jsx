@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import frFlag from "../Pics/fr-flag2.webp";
-import enFlag from "../Pics/uk-flag2.webp";
+import frFlag from "../Pics/fr.svg";
+import enFlag from "../Pics/uk.svg";
 import "./LanguageSwitcher.css"; // ajoute cette ligne pour le CSS externe
 
 const LanguageSwitcher = () => {
