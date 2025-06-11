@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import "./End.css";
 import { Link } from "react-router-dom";
-import legal from "../Pics/legal.webp";
+// import legal from "../Pics/legal.webp";
 import axo from "../Pics/axolotllogo150.webp";
 import privacypolitic from "../Pics/politique.webp";
 
@@ -14,11 +14,11 @@ const End = () => {
         <div className="legal">
           <Link to="/Mentions-légales">
             <img
-              src={legal}
-              alt={t("end.legalAlt")}
+              src="/Pics/legal-160.webp"
               width="80"
               height="80"
-              className="round-image4"
+              alt={t("end.legalAlt")}
+              class="round-image4"
               loading="lazy"
             />
           </Link>{" "}
