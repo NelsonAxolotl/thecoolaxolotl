@@ -35,8 +35,8 @@ const Legale = () => {
         <img
           src={legale}
           alt="Axolotl"
-          width="300"
-          height="300"
+          width="200"
+          height="200"
           className="round-image-legale"
         />
         <div className="legal-container">

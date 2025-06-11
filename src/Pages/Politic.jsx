@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 import "./Politic.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
-import privacypolitic from "../Pics/privacypolitic.webp";
+import privacypolitic from "../Pics/politic.webp";
 
 const Politic = () => {
   const { t } = useTranslation();
@@ -39,8 +39,8 @@ const Politic = () => {
         <img
           src={privacypolitic}
           alt="axolotl politic"
-          width="400"
-          height="400"
+          width="200"
+          height="200"
           className="round-image-politic"
           loading="lazy"
         />
