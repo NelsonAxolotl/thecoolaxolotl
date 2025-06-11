@@ -98,8 +98,8 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   text-align: center;
   opacity: 1; /* Directement visible */
-  animation: floatText 7s ease-in-out infinite; /* Animation légère, sans fade-in bloquant */
-  animation-delay: 0.1s; /* ⏱ Petit décalage = meilleur LCP parfois */
+  /* animation: floatText 7s ease-in-out infinite; 
+  animation-delay: 0.1s;  */
 }
 
 @keyframes floatText {
