@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 
 import proto from "../Pics/proto2.webp";
 import dev from "../Pics/production2.webp";
-import hand from "../Pics/hand2.webp";
+import hand from "../Pics/client.webp";
 import analyse from "../Pics/analyse.webp";
 import maintenance from "../Pics/maintenance.webp";
 import int from "../Pics/prototype2.webp";
