@@ -9,7 +9,7 @@
 
 .image-wrapper {
   position: absolute;
-  top: 70px;
+  top: 40px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
@@ -28,9 +28,11 @@
 .container-politic {
   max-width: 1000px;
   background: #2c3e50;
-  padding: 180px 40px 40px;
+  padding: 60px 40px 40px;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  content-visibility: auto;
+  contain-intrinsic-size: 1000px;
 }
 
 .container-politic h1 {
@@ -38,7 +40,7 @@
   color: #fff;
   text-align: center;
   font-weight: 700;
-  margin: -20px 0 50px;
+  margin: 50px 0 50px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -107,5 +109,12 @@ ul {
   .container-politic li {
     font-size: 0.9rem;
     line-height: 1.5;
+  }
+
+  .container-politic h1,
+  .container-politic h2,
+  .container-politic p,
+  .container-politic li {
+    text-shadow: none;
   }
 }

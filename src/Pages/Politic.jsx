@@ -38,9 +38,9 @@ const Politic = () => {
             width="200"
             height="200"
             className="round-image-politic"
-            fetchpriority="high"
             decoding="async"
-            loading="eager"
+            loading="lazy"
+            fetchpriority="low"
             aria-hidden="true"
             role="presentation"
           />
