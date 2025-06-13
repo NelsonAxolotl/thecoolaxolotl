@@ -7,7 +7,6 @@ import "./Contact.css";
 import Nav from "../Components/Nav";
 import End from "../Components/End";
 import happy from "../Pics/happy.png";
-import contact from "../Pics/contact.webp";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -17,7 +16,10 @@ const Contact = () => {
   }, []);
 
   useEffect(() => {
-    setTimeout(() => window.scrollTo(0, 0), 200);
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
 
   const [showAxolotl, setShowAxolotl] = useState(false);
@@ -26,7 +28,7 @@ const Contact = () => {
   const videoRef = useRef(null);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowNav(true), 350);
+    const timer = setTimeout(() => setShowNav(true), 50); // ou 0
     const formTimer = setTimeout(() => setShowForm(true), 400);
     if (videoRef.current) videoRef.current.playbackRate = 0.4;
     return () => {
@@ -91,6 +93,12 @@ const Contact = () => {
   return (
     <>
       <Helmet>
+        <link
+          rel="preload"
+          as="image"
+          href="/Pics/contact2.webp"
+          type="image/webp"
+        />
         <title>{t("contact-meta.title")}</title>
         <meta name="description" content={t("contact-meta.description")} />
       </Helmet>
@@ -98,25 +106,27 @@ const Contact = () => {
       <Nav />
       <div className="video-background-contact">
         <img
-          src="/Pics/contact.webp"
+          src="/Pics/contact2.webp"
           alt="Background"
           width="800"
           height="400"
           className="background-image-contact"
-          loading="lazy"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
         />
         <video
           ref={videoRef}
           autoPlay
           muted
           loop
+          poster="/Pics/contact.webp" // <-- important
           className="background-video-contact"
         >
           <source src="/Videos/eau8.mp4" type="video/mp4" />
           Votre navigateur ne prend pas en charge la vidéo.
         </video>
       </div>
-
       <div className={`nav-container ${showNav ? "fade-in" : ""}`}>
         <section className="appel-action">
           <div className={`form-container ${showForm ? "show-form" : ""}`}>
@@ -246,7 +256,7 @@ const Contact = () => {
             </form>
 
             {isSent && showAxolotl && (
-              <div className="axolotl-container-happy">
+              <div className="axolotl-container-happy" aria-live="polite">
                 <img
                   src={happy}
                   alt="Axolotl"

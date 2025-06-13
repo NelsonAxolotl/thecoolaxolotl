@@ -6,7 +6,6 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #3a3cb93e;
   z-index: 1;
   opacity: 0; /* Début masqué pour l'animation */
   transform: translateY(20px); /* Légère translation vers le bas au départ */
@@ -15,9 +14,17 @@
 .nav-container.fade-in {
   opacity: 1; /* Navigation visible */
   transform: translateY(0); /* Position normale */
-  transition: opacity 1.5s ease-in; /* Diminuez la durée de transition */
+  transition: opacity 1s ease-in; /* Diminuez la durée de transition */
 }
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
 /* Section "Appel à l'Action" */
 .appel-action {
   position: relative;
@@ -27,7 +34,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .appel-a-action {
+  .appel-action {
     padding-bottom: 60px;
   }
 }
@@ -92,7 +99,7 @@
   font-size: 1rem;
   border: none;
   border-radius: 5px;
-  background-color: rgba(41, 128, 160, 0.8);
+  background-color: rgba(41, 128, 160, 0.9);
   color: rgb(255, 253, 253);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   transition: background-color 0.7s ease-in-out; /* Transition douce */
@@ -123,7 +130,7 @@ textarea::placeholder {
     255,
     131,
     7,
-    0.8
+    0.9
   ); /* Bouton avec fond semi-transparent */
   color: white;
   font-size: 1rem;
@@ -236,48 +243,53 @@ textarea::placeholder {
 }
 
 .video-background-contact {
-  position: fixed;
-  bottom: 0;
+  position: fixed; /* ou absolute selon ton design */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  overflow: hidden;
+}
+/* Image de fond */
+
+.background-image-contact {
+  z-index: -2;
+  filter: brightness(0.9); /* ou ce que tu veux visuellement */
+}
+
+.background-video-contact {
+  z-index: -3;
+  opacity: 0.5; /* adapte si nécessaire */
+}
+
+.background-image-contact,
+.background-video-contact {
+  position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  background: #0f0f0f;
-  z-index: -1; /* Assurez-vous que la vidéo reste en arrière-plan */
+  object-fit: cover;
+  pointer-events: none;
 }
 
-/* Image de fond */
+/* Teinte bleue nuit par-dessus */
+.video-background-contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 20, 50, 0.6); /* Teinte bleu nuit */
+  z-index: 1;
+}
+
+/* Assurez-vous que les médias sont sous la teinte */
 .background-image-contact {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 102%;
-  height: auto;
-  object-fit: cover; /* L'image couvre toute la surface sans déformation */
-  object-position: center;
-  transform: translate(-51%, -55%); /* Décale l’image vers le haut de 10% */
-  z-index: -2; /* Derrière la vidéo */
-  animation: fadeInContact 1s ease-in-out forwards;
-}
-
-@keyframes fadeInContact {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .background-image-contact {
-    width: 160%; /* Élargir pour éviter les bordures blanches */
-    height: 116%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-52%, -73%);
-    object-fit: cover;
-  }
+  z-index: -2;
+  object-position: top;
 }
 
 .background-video-contact {
@@ -287,7 +299,7 @@ textarea::placeholder {
   height: 100%;
   top: 0;
   left: 0;
-  opacity: 0.7;
+  opacity: 0.6;
   z-index: -1;
 }
 
@@ -303,6 +315,12 @@ textarea::placeholder {
   padding-bottom: 50px;
   padding-top: 50px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Légère ombre sur le texte */
+}
+
+@media screen and (max-width: 768px) {
+  .contact-header h1 {
+    font-size: 2.5rem;
+  }
 }
 
 .contact-email {
