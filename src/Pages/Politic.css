@@ -1,47 +1,35 @@
 .politic {
+  position: relative;
   background: #b2aeae;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 150px 20px 40px;
-}
-
-.image-wrapper {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-}
-
-.round-image-politic {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease;
+  padding: 20px 20px 40px;
+  padding-top: 150px;
 }
 
 .container-politic {
   max-width: 1000px;
-  background: #2c3e50;
-  padding: 60px 40px 40px;
+  padding: 40px 40px 40px;
+  padding-top: 180px;
   border-radius: 8px;
+  background: #2c3e50;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-  content-visibility: auto;
-  contain-intrinsic-size: 1000px;
+}
+
+.first-lcp {
+  text-shadow: none; /* accélère le rendu du texte */
 }
 
 .container-politic h1 {
   font-size: 2.5rem;
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-align: center;
   font-weight: 700;
-  margin: 50px 0 50px;
+  margin-bottom: 50px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-top: -20px;
 }
 
 .container-politic h2 {
@@ -53,24 +41,11 @@
 }
 
 .container-politic p,
-.container-politic li {
+li {
   font-size: 1.2rem;
   color: white;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.container-politic a {
-  font-weight: bold;
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.container-politic a:hover {
-  color: wheat;
+  line-height: 26px;
+  padding-bottom: 20px;
 }
 
 ul {
@@ -78,16 +53,58 @@ ul {
   list-style: disc;
 }
 
-/* ✅ Responsive (mobile) */
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: auto;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.round-image-politic {
+  top: 40px; /* place-la précisément */
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 200px; /* Augmente la taille par défaut */
+  height: 200px;
+  border-radius: 50%; /* Rend l'image ronde */
+  object-fit: cover; /* Adapte l'image au cadre rond */
+  z-index: 10; /* Assure que l'image est au-dessus des autres éléments */
+  border: 3px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.container-politic section p {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.container-politic section a {
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.container-politic section a:hover {
+  color: wheat; /* ou une autre couleur de hover */
+}
+
 @media screen and (max-width: 500px) {
   .round-image-politic {
     width: 150px;
     height: 150px;
+    top: 20px;
   }
 
   .container-politic {
-    padding: 180px 25px 40px;
     margin-top: -20px;
+    padding: 180px 25px 40px 25px;
   }
 
   .politic {
@@ -96,19 +113,23 @@ ul {
 
   .container-politic h1 {
     font-size: 2rem;
-    line-height: 1.2;
-    margin: -70px 0 40px;
+    margin-top: -70px;
+    line-height: 38px;
+    margin-bottom: 40px;
   }
 
   .container-politic h2 {
     font-size: 1.2rem;
-    line-height: 1.4;
+    line-height: 26px;
   }
 
-  .container-politic p,
+  .container-politic p {
+    font-size: 0.9rem;
+    padding: 0;
+  }
+
   .container-politic li {
     font-size: 0.9rem;
-    line-height: 1.5;
   }
 
   .container-politic h1,
