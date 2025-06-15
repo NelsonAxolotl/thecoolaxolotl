@@ -10,32 +10,15 @@ import happy from "../Pics/happy.png";
 
 const Contact = () => {
   const { t } = useTranslation();
-  useEffect(() => {
-    // 👉 Préchargement silencieux des pages clés en arrière-plan
-    import("../Components/End");
-  }, []);
+  const videoRef = useRef(null);
 
-  useEffect(() => {
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-  }, []);
-
+  const [imgLoaded, setImgLoaded] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
   const [showAxolotl, setShowAxolotl] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [showForm, setShowForm] = useState(false);
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowNav(true), 50); // ou 0
-    const formTimer = setTimeout(() => setShowForm(true), 400);
-    if (videoRef.current) videoRef.current.playbackRate = 0.4;
-    return () => {
-      clearTimeout(timer);
-      clearTimeout(formTimer);
-    };
-  }, []);
+  const [isSent, setIsSent] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -46,8 +29,26 @@ const Contact = () => {
     "bot-field": "",
   });
 
-  const [isSent, setIsSent] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  useEffect(() => {
+    import("../Components/End"); // Préchargement silencieux
+  }, []);
+
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowNav(true), 50);
+    const formTimer = setTimeout(() => setShowForm(true), 400);
+    if (videoRef.current) videoRef.current.playbackRate = 0.4;
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(formTimer);
+    };
+  }, []);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -59,8 +60,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (formData["bot-field"]) return; // Anti-spam
+    if (formData["bot-field"]) return;
 
     const { name, email, subject, message } = formData;
 
@@ -90,6 +90,8 @@ const Contact = () => {
       });
   };
 
+  const isPageReady = imgLoaded && videoReady;
+
   return (
     <>
       <Helmet>
@@ -104,13 +106,18 @@ const Contact = () => {
       </Helmet>
 
       <Nav />
-      <div className="video-background-contact">
+      <div
+        className={`video-background-contact ${
+          isPageReady ? "page-visible" : "page-hidden"
+        }`}
+      >
         <img
           src="/Pics/contact2.webp"
           alt="Background"
           width="800"
           height="400"
           className="background-image-contact"
+          onLoad={() => setImgLoaded(true)}
           loading="eager"
           fetchpriority="high"
           decoding="async"
@@ -120,13 +127,15 @@ const Contact = () => {
           autoPlay
           muted
           loop
-          poster="/Pics/contact.webp" // <-- important
+          onCanPlayThrough={() => setVideoReady(true)}
+          poster="/Pics/contact.webp"
           className="background-video-contact"
         >
           <source src="/Videos/eau8.mp4" type="video/mp4" />
           Votre navigateur ne prend pas en charge la vidéo.
         </video>
       </div>
+
       <div className={`nav-container ${showNav ? "fade-in" : ""}`}>
         <section className="appel-action">
           <div className={`form-container ${showForm ? "show-form" : ""}`}>
@@ -148,7 +157,6 @@ const Contact = () => {
               <div className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/the-cool-axolotl-8555a5351/"
-                  aria-label="LinkedIn"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -156,7 +164,6 @@ const Contact = () => {
                 </a>
                 <a
                   href="https://www.instagram.com/thecoolaxoltl/"
-                  aria-label="Instagram"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -168,7 +175,6 @@ const Contact = () => {
             <p>{t("contact-text")}</p>
 
             <form onSubmit={handleSubmit}>
-              {/* Honeypot */}
               <div className="honeypot">
                 <label htmlFor="bot-field" className="sr-only">
                   Ne pas remplir
@@ -191,7 +197,6 @@ const Contact = () => {
                 type="text"
                 name="name"
                 placeholder={t("placeholder")}
-                aria-label="Nom"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -205,7 +210,6 @@ const Contact = () => {
                 type="email"
                 name="email"
                 placeholder="Email"
-                aria-label="Email"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -219,7 +223,6 @@ const Contact = () => {
                 type="text"
                 name="subject"
                 placeholder={t("subject")}
-                aria-label="Sujet"
                 value={formData.subject}
                 onChange={handleChange}
                 required
@@ -232,7 +235,6 @@ const Contact = () => {
                 id="message"
                 name="message"
                 placeholder={t("message")}
-                aria-label="Message"
                 value={formData.message}
                 onChange={handleChange}
                 required
