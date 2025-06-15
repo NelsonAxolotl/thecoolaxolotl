@@ -77,6 +77,7 @@
   line-height: 26px;
   font-weight: 700;
   text-align: left;
+  color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Légère ombre sur le texte */
 }
 
@@ -107,10 +108,10 @@
 .form-container textarea {
   padding: 10px;
   font-size: 1rem;
-  border: none;
+  border: 1px solid #ffffff; /* Bordure claire ajoutée pour contraste */
   border-radius: 5px;
-  background-color: rgba(41, 128, 160, 0.9);
-  color: rgb(255, 253, 253);
+  background-color: rgba(41, 128, 160, 1);
+  color: rgb(255, 255, 255);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   transition: background-color 0.7s ease-in-out; /* Transition douce */
 }
@@ -122,26 +123,25 @@
 
 input::placeholder,
 textarea::placeholder {
-  color: #e4e4e4 !important; /* Placeholder plus clair */
+  color: #eaeaea !important;
 }
 
 /* Quand l'utilisateur tape dans le champ, on change le fond en blanc */
 .form-container input:focus,
 .form-container textarea:focus {
   background-color: #047d82; /* Fond blanc lorsqu'on tape */
-  color: #fffdfd;
+  color: #ffffff;
   border-color: #3498db; /* Optionnel : change la couleur de la bordure */
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.6); /* Ombre bleue subtile */
 }
 
+label {
+  color: #ffffff;
+}
+
 .submit-button {
   padding: 15px;
-  background-color: rgba(
-    255,
-    131,
-    7,
-    0.9
-  ); /* Bouton avec fond semi-transparent */
+  background-color: #ff6600;
   color: white;
   font-size: 1rem;
   font-weight: 450;
@@ -154,7 +154,7 @@ textarea::placeholder {
 }
 
 .submit-button:hover {
-  background-color: rgb(255, 100, 0);
+  background-color: #cc5200;
 }
 
 /* CSS pour les animations */
@@ -336,13 +336,13 @@ textarea::placeholder {
 .contact-email {
   display: block;
   font-size: 1.6rem;
-  color: #eaebec;
+  color: #ffffff;
   text-decoration: none;
   margin-top: 50px;
   margin-bottom: -50px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Légère ombre sur le texte */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Légère ombre sur le texte */
   font-weight: bold;
   position: relative;
   transition: all 0.5s ease;
@@ -373,11 +373,11 @@ textarea::placeholder {
 }
 
 .contact-email:hover {
-  color: #3ba6ed;
+  color: #61dafb; /* Bleu clair au survol */
 }
 
 .contact-phone {
-  color: #fef5f5; /* Couleur du texte */
+  color: #ffffff; /* Couleur du texte */
   cursor: pointer;
   font-size: 2rem; /* Taille de la police */
   text-decoration: none; /* Supprime le soulignement */
@@ -406,6 +406,17 @@ textarea::placeholder {
   justify-content: center;
   gap: 25px;
   margin-bottom: 20px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 @media screen and (max-width: 768px) {

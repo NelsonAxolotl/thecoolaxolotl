@@ -157,16 +157,22 @@ const Contact = () => {
               <div className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/the-cool-axolotl-8555a5351/"
+                  aria-label="linkedin - profil TheCoolAxolotl"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  {" "}
+                  <span className="sr-only">Instagram</span>
                   <i className="fa-brands fa-linkedin"></i>
                 </a>
                 <a
                   href="https://www.instagram.com/thecoolaxoltl/"
+                  aria-label="Instagram - profil TheCoolAxolotl"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  {" "}
+                  <span className="sr-only">Instagram</span>
                   <i className="fa-brands fa-instagram"></i>
                 </a>
               </div>
