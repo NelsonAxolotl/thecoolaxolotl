@@ -12,7 +12,7 @@
   "services": "Prestations",
   "portfolio": "Portfolio",
   "title": "Parcours",
-  "subtitle": "Un voyage singulier où chaque étape est un renouveau.",
+  "subtitle": "Un voyage singulier où chaque étape est un renouveau",
   "explorer": "Explorateur",
   "explorerDescription": "Tout a commencé par une passion pour la créativité et les idées uniques. Ce premier élan m'a conduit sur un chemin riche de découvertes et d'apprentissages. À l'image de l'axolotl, capable de se régénérer et d'évoluer tout en restant fidèle à son essence, je m'efforce de rester singulier tout en explorant sans cesse de nouvelles idées.",
   "navigations": "Navigations",
@@ -140,7 +140,9 @@
       "features": [
         "✨ Design moderne et animation",
         "✨ Performances et SEO",
-        "✨ Adaptabilité totale"
+        "✨ Adaptabilité totale",
+        "✨ Composants réutilisables",
+        "✨ Gestion efficace des hooks"
       ]
     },
     "design": {
@@ -149,7 +151,9 @@
       "features": [
         "✨ Étude de votre identité visuelle",
         "✨ Prototypes interactifs",
-        "✨ Design responsive"
+        "✨ Design responsive",
+        "✨ Expérience utilisateur optimisée",
+        "✨Création d’interfaces intuitives"
       ]
     },
     "wordpress": {

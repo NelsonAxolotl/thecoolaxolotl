@@ -265,7 +265,7 @@ label {
 
 .background-image-contact {
   z-index: -2;
-  filter: brightness(0.9); /* ou ce que tu veux visuellement */
+  filter: brightness(1); /* ou ce que tu veux visuellement */
 }
 
 .background-video-contact {
