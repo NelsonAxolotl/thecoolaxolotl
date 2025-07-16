@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-import { send } from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 import "./Contact.css";
 import Nav from "../Components/Nav";
@@ -64,12 +64,13 @@ const Contact = () => {
 
     const { name, email, subject, message } = formData;
 
-    send(
-      "service_8gb8bdg",
-      "template_2tt8tpr",
-      { name, email, subject, message },
-      "gyOAWsFJuZoqM16PD"
-    )
+    emailjs
+      .send(
+        "service_8gb8bdg",
+        "template_2tt8tpr",
+        { name, email, subject, message },
+        "gyOAWsFJuZoqM16PD" // ta clé publique
+      )
       .then(() => {
         setIsSent(true);
         setShowAxolotl(true);

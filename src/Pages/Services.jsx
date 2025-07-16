@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { send } from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
 import { Trans } from "react-i18next";
 import "./Services.css";
@@ -109,7 +109,8 @@ const Services = () => {
       ideas,
     };
 
-    send(serviceID, templateID, templateParams, userID)
+    emailjs
+      .send(serviceID, templateID, templateParams, userID)
       .then((response) => {
         console.log("Devis envoyé avec succès:", response);
         setQuoteSent(true);
