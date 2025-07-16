@@ -177,9 +177,8 @@ const Contact = () => {
                   <i className="fa-brands fa-instagram"></i>
                 </a>
               </div>
-              <p>{t("contact-text")}</p>
             </div>
-
+            <p>{t("contact-text")}</p>
             <form onSubmit={handleSubmit}>
               <div className="honeypot">
                 <label htmlFor="bot-field" className="sr-only">
