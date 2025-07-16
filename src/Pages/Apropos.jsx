@@ -61,18 +61,18 @@ const Apropos = () => {
       clearTimeout(endTimer);
     };
   }, []);
+
   useEffect(() => {
     const audio = document.getElementById("background-audio");
     const tryPlay = () => {
-      audio.volume = 0.01;
-
-      audio.play().catch((err) => {
-        console.error("Erreur lors de la lecture audio :", err);
-      });
-
+      if (audio) {
+        audio.volume = 0.01;
+        audio.play().catch((err) => {
+          console.error("Erreur lors de la lecture audio :", err);
+        });
+      }
       document.removeEventListener("click", tryPlay);
     };
-
     document.addEventListener("click", tryPlay);
   }, []);
 
@@ -86,9 +86,7 @@ const Apropos = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
+          if (entry.isIntersecting) entry.target.classList.add("visible");
         });
       },
       { threshold: 0.3 }
@@ -96,14 +94,14 @@ const Apropos = () => {
 
     const imageObserver = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) boatImage.classList.add("visible");
+        if (entry.isIntersecting) boatImage?.classList.add("visible");
       },
       { threshold: 0.3 }
     );
 
     const zoomObserver = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) zoomImage.classList.add("dezoom");
+        if (entry.isIntersecting) zoomImage?.classList.add("dezoom");
       },
       { threshold: 0.5 }
     );
@@ -115,23 +113,16 @@ const Apropos = () => {
     return () => {
       observer.disconnect();
       imageObserver.disconnect();
-      if (zoomImage) zoomObserver.unobserve(zoomImage);
+      zoomObserver.disconnect();
     };
   }, [showSection]);
 
   return (
     <>
       <Helmet>
-        {/* Titre de la page */}
         <title>{t("about1.metaTitle")}</title>
-
-        {/* Description SEO */}
         <meta name="description" content={t("about1.metaDescription")} />
-
-        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
-
-        {/* Open Graph (pour Facebook, LinkedIn, etc.) */}
         <meta property="og:title" content={t("about1.metaTitle")} />
         <meta property="og:description" content={t("about1.metaDescription")} />
         <meta property="og:type" content="website" />
@@ -140,8 +131,6 @@ const Apropos = () => {
           property="og:image"
           content="https://thecoolaxolotl.com/Pics/axopic.webp"
         />
-
-        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t("about1.metaTitle")} />
         <meta
@@ -256,7 +245,6 @@ const Apropos = () => {
                     <div className={`timeline-icon icon-${item.color}`}>
                       <FontAwesomeIcon icon={iconsMap[item.icon]} />
                     </div>
-
                     <div className="timeline-content">
                       <h3 className="timeline-title">{item.title}</h3>
                       <div className="timeline-date">
@@ -318,7 +306,6 @@ const Apropos = () => {
                     data-tooltip={item.tooltip}
                   >
                     <FontAwesomeIcon icon={iconsMap[item.icon]} />
-
                     <p>{item.text}</p>
                   </div>
                 ))}
