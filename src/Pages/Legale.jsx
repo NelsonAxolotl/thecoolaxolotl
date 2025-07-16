@@ -21,6 +21,13 @@ const Legale = () => {
   return showPage ? (
     <>
       <Helmet>
+        <link
+          rel="preload"
+          as="image"
+          href="/Pics/legal.webp"
+          type="image/webp"
+          fetchpriority="high"
+        />
         <title>{t("legal.metaTitle")}</title>
         <meta name="description" content={t("legal.metaDescription")} />
         <meta property="og:title" content={t("legal.metaTitle")} />
@@ -39,6 +46,8 @@ const Legale = () => {
           height="200"
           className="round-image-legale"
           fetchpriority="high"
+          loading="eager" // si tu veux forcer le chargement rapide
+          decoding="async"
         />
         <div className="legal-container">
           <h1>{t("legal.title")}</h1>

@@ -126,7 +126,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .p-title.animate {
-    animation: none;
+    animation: none !important;
   }
 }
 
