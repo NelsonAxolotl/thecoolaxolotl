@@ -281,7 +281,6 @@
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   margin-top: 5px;
-  animation: fadeInLogo 1.5s ease-in-out infinite;
 }
 
 /* Flèche vers le haut */
@@ -303,17 +302,6 @@
   }
   50% {
     transform: rotate(135deg) translateY(-5px);
-  }
-}
-
-/* Animation du texte */
-@keyframes fadeInLogo {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
   }
 }
 

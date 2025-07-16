@@ -104,7 +104,6 @@
   font-weight: bold;
   text-align: center;
   opacity: 1;
-  /* on enlève animation et text-shadow */
   text-shadow: none;
   animation: none;
 }

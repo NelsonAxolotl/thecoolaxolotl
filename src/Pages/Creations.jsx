@@ -298,8 +298,8 @@ const Creations = () => {
                   <img
                     src={project.image}
                     alt={t(`projects.${project.id}.title`)}
-                    width={300}
-                    height={300}
+                    width={15}
+                    height={150}
                     loading="lazy"
                     className={`project-image ${
                       index === projects.length - 1 ? "last-project-image" : ""
@@ -335,14 +335,6 @@ const Creations = () => {
                 >
                   {t(`projects.${project.id}.description`)}
                 </p>
-
-                {/* <ul className="project-technologies">
-                  {project.technologies.map((tech, idx) => (
-                    <li key={idx} className="technology-item">
-                      {tech}
-                    </li>
-                  ))}
-                </ul> */}
               </div>
 
               {/* Avis section */}
@@ -354,8 +346,8 @@ const Creations = () => {
                       <img
                         src={avis}
                         alt="Avis client"
-                        width={300}
-                        height={300}
+                        width={200}
+                        height={200}
                         className="avis-image"
                       />
                     </div>
@@ -382,8 +374,8 @@ const Creations = () => {
           <img
             ref={imageRef}
             src={maquette}
-            width={500}
-            height={500}
+            width={300}
+            height={300}
             alt="Icône artistique"
             className="title-icon"
           />
@@ -433,8 +425,8 @@ const Creations = () => {
           <img
             src={carnet}
             alt="Icône"
-            width={300}
-            height={300}
+            width={150}
+            height={150}
             className="title-icon"
           />
           <h2>{t(`blog.journal`)}</h2>
