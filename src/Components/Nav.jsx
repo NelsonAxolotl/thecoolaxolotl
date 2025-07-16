@@ -9,10 +9,7 @@ const Nav = () => {
   const { t } = useTranslation();
   const [showLinks, setShowLinks] = useState(false);
   const [showNavbarOnScroll, setShowNavbarOnScroll] = useState(false);
-  const [isNavOpen, setIsNavOpen] = useState(false);
-  const toggleNavbar = () => {
-    setIsNavOpen(!isNavOpen);
-  };
+
   const location = useLocation();
   const navigate = useNavigate();
   const firstLinkRef = useRef(null);
