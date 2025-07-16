@@ -32,6 +32,7 @@ const End = () => {
               height="150"
               alt={t("end.logoAlt")}
               className="round-image5"
+              loading="lazy"
             />
           </Link>
           <p>{t("end.copyright")}</p>

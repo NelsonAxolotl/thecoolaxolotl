@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-
 import proto from "../Pics/proto2.webp";
 import dev from "../Pics/production2.webp";
 import hand from "../Pics/client.webp";
@@ -11,7 +10,7 @@ const TimelineSection = ({ steps }) => {
   const { t } = useTranslation();
 
   const images = [hand, analyse, proto, int, dev, maintenance];
-
+  const defaultImage = hand; // Ou une autre image par défaut
   return (
     <div className="timeline-container2">
       <h2 className="timeline-title2">{t("timeline.title")}</h2>
@@ -30,7 +29,7 @@ const TimelineSection = ({ steps }) => {
             </div>
             <div className="timeline-image2">
               <img
-                src={images[index]}
+                src={images[index] || defaultImage}
                 alt={`Step ${index + 1}`}
                 width={200}
                 height={200}

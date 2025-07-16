@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -33,12 +32,7 @@ const Apropos = () => {
     "masks-theater": faTheaterMasks,
     at: faAt,
   };
-  const timeline = [
-    { icon: "music", color: "blue" },
-    { icon: "plane", color: "green" },
-    { icon: "theater-masks", color: "red" },
-    { icon: "at", color: "purple" },
-  ];
+
   const { t } = useTranslation();
   const [showPage, setShowPage] = useState(false);
   const [showSection, setShowSection] = useState(false);
@@ -71,9 +65,11 @@ const Apropos = () => {
     const audio = document.getElementById("background-audio");
     const tryPlay = () => {
       audio.volume = 0.01;
+
       audio.play().catch((err) => {
-        console.warn("Lecture audio bloquée. En attente d’interaction.");
+        console.error("Erreur lors de la lecture audio :", err);
       });
+
       document.removeEventListener("click", tryPlay);
     };
 
@@ -288,10 +284,9 @@ const Apropos = () => {
               />
               <div className="text-content">
                 <h2 className="section-title3">{t("captain_title")}</h2>
-                <p
-                  className="section-description"
-                  dangerouslySetInnerHTML={{ __html: t("captain_description") }}
-                />
+                <p className="section-description">
+                  {t("captain_description")}
+                </p>
               </div>
 
               <div className="interactive-section">
