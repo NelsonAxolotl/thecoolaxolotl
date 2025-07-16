@@ -37,6 +37,7 @@ const Apropos = () => {
   const [showPage, setShowPage] = useState(false);
   const [showSection, setShowSection] = useState(false);
   const [showEnd, setShowEnd] = useState(false);
+  const [animateTitle, setAnimateTitle] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -116,7 +117,12 @@ const Apropos = () => {
       zoomObserver.disconnect();
     };
   }, [showSection]);
-
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimateTitle(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
       <Helmet>
@@ -173,7 +179,9 @@ const Apropos = () => {
 
       <div className="intro-content">
         <h1 className="parcours-title">{t("title")}</h1>
-        <p className="p-title">{t("subtitle")}</p>
+        <p className={`p-title ${animateTitle ? "animate" : ""}`}>
+          {t("subtitle")}
+        </p>
       </div>
 
       {showSection && (

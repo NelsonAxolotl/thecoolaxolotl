@@ -102,12 +102,17 @@
   color: white;
   font-size: 2rem;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   text-align: center;
   opacity: 1;
+  /* on enlève animation et text-shadow */
+  text-shadow: none;
+  animation: none;
+}
+
+.p-title.animate {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   animation: floatText 7s ease-in-out infinite;
   animation-delay: 0.1s;
-  will-change: transform, opacity;
 }
 
 @keyframes floatText {
@@ -120,18 +125,16 @@
   }
 }
 
-@media (max-width: 768px) {
-  .p-title {
-    white-space: normal;
-    font-size: 1.4rem;
-    max-width: 80vw;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+@media (prefers-reduced-motion: reduce) {
+  .p-title.animate {
+    animation: none;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .p-title {
-    animation: none;
+@media (max-width: 768px) {
+  .p-title.animate {
+    animation: none !important;
+    text-shadow: none !important;
   }
 }
 
