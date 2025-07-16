@@ -298,7 +298,7 @@ const Creations = () => {
                   <img
                     src={project.image}
                     alt={t(`projects.${project.id}.title`)}
-                    width={15}
+                    width={150}
                     height={150}
                     loading="lazy"
                     className={`project-image ${
