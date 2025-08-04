@@ -77,6 +77,33 @@
       crossorigin="anonymous"
     />
 
+    <!-- HEAD -->
+    <style>
+      #font-preload-check::before {
+        content: "Aa";
+        font-family: "Quicksand", sans-serif;
+        font-weight: 400;
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        visibility: hidden;
+      }
+
+      #font-preload-check::after {
+        content: "Bb";
+        font-family: "Quicksand", sans-serif;
+        font-weight: 500;
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        visibility: hidden;
+      }
+    </style>
+
     <!-- Styles -->
     <link rel="stylesheet" href="/assets/styles.css" />
 
@@ -95,7 +122,7 @@
 
   <body>
     <div id="root"></div>
-
+    <div id="font-preload-check" aria-hidden="true"></div>
     <!-- Main Script -->
     <script type="module" src="/src/main.jsx" defer></script>
   </body>
