@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 import "./Nav.css";
 import logo from "../Pics/axolotllogo150.webp";
+import corail from "../Pics/algue.webp";
 
 const Nav = () => {
   const { t } = useTranslation();
@@ -90,16 +91,16 @@ const Nav = () => {
 
       <div className={clsx("navbar-links", { "video-active": showLinks })}>
         {showLinks && (
-          <video
-            autoPlay
-            muted
-            loop
-            className="navbar-background-video"
+          <img
+            src={corail}
+            alt="corail"
+            className="navbar-background-image"
             aria-hidden="true"
-          >
-            <source src="/Videos/bliss.mp4" type="video/mp4" />
-            Votre navigateur ne supporte pas les vidéos.
-          </video>
+            loading="eager"
+            decoding="async"
+            width="1920"
+            height="1080"
+          />
         )}
 
         <ul className="navbar-links-list">

@@ -201,7 +201,7 @@
     z-index: 999;
   }
 
-  .navbar-background-video {
+  /* .navbar-background-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -212,9 +212,20 @@
   }
 
   .navbar-background-video.slide-out {
-    transform: translateX(100vw); /* pousse vers la droite */
+    transform: translateX(100vw); 
     opacity: 0;
+  } */
+
+  .navbar-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
   }
+
   .navbar-links-list {
     position: relative;
     z-index: 1;
@@ -240,7 +251,7 @@
     padding: 1.5rem;
     font-size: 1.6rem;
     margin: 0;
-    color: rgb(255, 251, 251);
+    color: rgb(35, 201, 121);
   }
 
   .navbar-link:hover {
