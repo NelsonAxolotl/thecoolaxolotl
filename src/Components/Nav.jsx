@@ -98,8 +98,6 @@ const Nav = () => {
             aria-hidden="true"
             loading="eager"
             decoding="async"
-            width="1920"
-            height="1080"
           />
         )}
 
