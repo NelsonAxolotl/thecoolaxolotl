@@ -17,13 +17,21 @@ const Nav = () => {
 
   const isIntroPage = location.pathname === "/";
 
-  const handleShowLinks = () => {
-    setShowLinks((prev) => !prev);
-  };
+  const handleShowLinks = () => setShowLinks((prev) => !prev);
+  const handleNavClick = () => setShowLinks(false);
 
-  const handleNavClick = () => {
+  // lock body scroll when menu open
+  useEffect(() => {
+    document.body.style.overflow = showLinks ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [showLinks]);
+
+  // close menu on route change
+  useEffect(() => {
     setShowLinks(false);
-  };
+  }, [location.pathname]);
 
   useEffect(() => {
     if (showLinks && firstLinkRef.current) {
@@ -33,11 +41,7 @@ const Nav = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 250) {
-        setShowNavbarOnScroll(true);
-      } else {
-        setShowNavbarOnScroll(false);
-      }
+      setShowNavbarOnScroll(window.scrollY > 250);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -63,7 +67,7 @@ const Nav = () => {
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="cursor"></div>
+      <div className="cursor" />
 
       <div
         className="navbar-logo"
@@ -131,7 +135,7 @@ const Nav = () => {
         aria-label="Toggle navigation"
         aria-expanded={showLinks}
       >
-        <span className="burger-bar"></span>
+        <span className="burger-bar" />
       </button>
     </nav>
   );

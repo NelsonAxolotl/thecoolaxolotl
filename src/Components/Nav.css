@@ -184,12 +184,10 @@
     top: 0;
     right: 0;
     width: 100vw;
-    height: 230vw;
+    height: 130vh;
     padding: 2rem;
-    background: transparent;
-    transform: translateX(100%);
-    visibility: hidden;
     overflow: hidden;
+    visibility: hidden;
     opacity: 0;
     z-index: -1;
     transition: all 0.8s ease-out, opacity 0.8s ease;
@@ -225,6 +223,7 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    display: block;
   }
 
   .navbar-links-list {
