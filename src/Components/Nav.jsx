@@ -17,27 +17,23 @@ const Nav = () => {
 
   const isIntroPage = location.pathname === "/";
 
-  const handleShowLinks = () => setShowLinks((prev) => !prev);
-  const handleNavClick = () => setShowLinks(false);
+  // Toggle menu burger
+  const toggleMenu = () => setShowLinks((prev) => !prev);
 
-  // Bloquer le scroll uniquement quand le menu burger est ouvert
+  // Close menu (used on link click or navigation)
+  const closeMenu = () => setShowLinks(false);
+
+  // Bloquer le scroll quand menu burger ouvert
   useEffect(() => {
-    if (showLinks) {
-      document.body.style.overflow = "hidden";
-      document.documentElement.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
-    }
+    document.body.style.overflow = showLinks ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
     };
   }, [showLinks]);
 
-  // Fermer menu sur changement de page
+  // Fermer menu quand on change de page
   useEffect(() => {
-    setShowLinks(false);
+    closeMenu();
   }, [location.pathname]);
 
   // Focus sur le premier lien quand menu ouvert
@@ -47,13 +43,11 @@ const Nav = () => {
     }
   }, [showLinks]);
 
-  // Apparition navbar au scroll
+  // Apparition navbar au scroll > 250px
   useEffect(() => {
-    const handleScroll = () => {
-      setShowNavbarOnScroll(window.scrollY > 250);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setShowNavbarOnScroll(window.scrollY > 250);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const navLinks = [
@@ -67,10 +61,10 @@ const Nav = () => {
     <nav
       className={clsx("navbar", {
         "hide-navbar": isIntroPage,
-        "show-nav": showLinks,
-        "hide-nav": !showLinks,
         "visible-navbar": showNavbarOnScroll,
         "hidden-navbar": !showNavbarOnScroll,
+        "show-nav": showLinks,
+        "hide-nav": !showLinks,
       })}
       role="navigation"
       aria-label="Main navigation"
@@ -79,15 +73,16 @@ const Nav = () => {
 
       <div
         className="navbar-logo"
+        role="button"
+        tabIndex={0}
+        aria-label="Retour à l'accueil"
         onClick={() => {
-          setShowLinks(false);
+          closeMenu();
           navigate("/");
         }}
-        aria-label="Retour à l'accueil"
-        tabIndex={0}
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") {
-            setShowLinks(false);
+            closeMenu();
             navigate("/");
           }
         }}
@@ -95,8 +90,8 @@ const Nav = () => {
         <img
           src={logo}
           alt="Logo Axolotl"
-          width="150"
-          height="150"
+          width={150}
+          height={150}
           loading="eager"
         />
       </div>
@@ -116,14 +111,14 @@ const Nav = () => {
         <ul className="navbar-links-list">
           {navLinks.map(({ path, label }, index) => (
             <li
-              key={index}
+              key={path}
               className={clsx("navbar-item", {
                 [`slideInDown-${index + 1}`]: showLinks,
               })}
             >
               <Link
                 to={path}
-                onClick={handleNavClick}
+                onClick={closeMenu}
                 className={clsx("navbar-link", {
                   "active-link": location.pathname === path,
                 })}
@@ -138,8 +133,9 @@ const Nav = () => {
       </div>
 
       <button
+        type="button"
         className="navbar-burger"
-        onClick={handleShowLinks}
+        onClick={toggleMenu}
         aria-label="Toggle navigation"
         aria-expanded={showLinks}
       >
