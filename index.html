@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow" />
 
     <title>The Cool Axolotl - Création de sites web sur mesure</title>
@@ -77,53 +77,152 @@
       crossorigin="anonymous"
     />
 
-    <!-- HEAD -->
+    <!-- Inline CSS critique pour navbar + burger minimal -->
     <style>
-      #font-preload-check::before {
-        content: "Aa";
-        font-family: "Quicksand", sans-serif;
-        font-weight: 400;
-        position: absolute;
-        width: 0;
-        height: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        visibility: hidden;
+      /* Navbar visible rapidement */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        min-height: 75px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 0 1rem;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
       }
-
-      #font-preload-check::after {
-        content: "Bb";
-        font-family: "Quicksand", sans-serif;
-        font-weight: 500;
+      .navbar-logo img {
+        height: 60px;
+        width: auto;
+        cursor: pointer;
+      }
+      /* Bouton burger (hidden desktop) */
+      .navbar-burger {
+        display: none;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1100;
+      }
+      .burger-bar,
+      .burger-bar::before,
+      .burger-bar::after {
+        display: block;
+        width: 40px;
+        height: 3px;
+        position: relative;
+        border-radius: 3px;
+        background: white;
+        transition: all 0.4s ease-in-out;
+        will-change: transform, opacity;
+      }
+      .burger-bar::before,
+      .burger-bar::after {
+        content: "";
         position: absolute;
-        width: 0;
-        height: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        visibility: hidden;
+        left: 0;
+      }
+      .burger-bar::before {
+        transform: translateY(-12px);
+      }
+      .burger-bar::after {
+        transform: translateY(12px);
+      }
+      /* Animation burger toggle */
+      .show-nav .burger-bar {
+        background: transparent;
+      }
+      .show-nav .burger-bar::before {
+        transform: rotate(45deg);
+      }
+      .show-nav .burger-bar::after {
+        transform: rotate(-45deg);
+      }
+      /* Responsive : afficher burger en mobile */
+      @media screen and (max-width: 768px) {
+        .navbar-burger {
+          display: block;
+        }
       }
     </style>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="/assets/styles.css" />
-
-    <!-- Content Security Policy -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="
-        default-src 'self';
-        script-src 'self' 'unsafe-inline' https://kit.fontawesome.com https://unpkg.com https://vercel.live;
-        style-src 'self' 'unsafe-inline' https://ka-f.fontawesome.com;
-        img-src 'self' data: https://thecoolaxolotl.com https://unpkg.com;
-        font-src 'self' https://ka-f.fontawesome.com;
-        connect-src 'self' https://ka-f.fontawesome.com https://api.emailjs.com;"
+    <!-- Chargement différé du CSS complet -->
+    <link
+      rel="stylesheet"
+      href="/assets/styles.css"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link rel="stylesheet" href="/assets/styles.css" />
+    </noscript>
+
+    <!-- Préchargement image logo ou background du burger si besoin -->
+    <link rel="preload" as="image" href="/assets/axolotllogo.webp" />
+    <link rel="preload" as="image" href="/assets/algue.webp" />
   </head>
 
   <body>
+    <nav class="navbar" role="navigation" aria-label="Menu principal">
+      <div class="navbar-logo">
+        <a href="/">
+          <img src="/assets/axolotllogo.webp" alt="Logo The Cool Axolotl" />
+        </a>
+      </div>
+      <button
+        class="navbar-burger"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="navbar-menu"
+        id="burger-btn"
+        type="button"
+      >
+        <span class="burger-bar"></span>
+      </button>
+
+      <!-- Menu (à gérer en React ou HTML selon projet) -->
+      <div id="navbar-menu" class="navbar-menu">
+        <!-- Exemple liens -->
+        <a href="#services" class="navbar-item">Services</a>
+        <a href="#portfolio" class="navbar-item">Portfolio</a>
+        <a href="#contact" class="navbar-item">Contact</a>
+      </div>
+    </nav>
+
     <div id="root"></div>
     <div id="font-preload-check" aria-hidden="true"></div>
-    <!-- Main Script -->
+
+    <!-- Script toggle burger -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const burger = document.getElementById("burger-btn");
+        const navbar = document.querySelector(".navbar");
+        const menu = document.getElementById("navbar-menu");
+
+        burger.addEventListener("click", () => {
+          navbar.classList.toggle("show-nav");
+          const expanded = burger.getAttribute("aria-expanded") === "true";
+          burger.setAttribute("aria-expanded", !expanded);
+
+          // Toggle affichage menu responsive
+          if (menu.style.display === "block") {
+            menu.style.display = "none";
+          } else {
+            menu.style.display = "block";
+          }
+        });
+      });
+    </script>
+
+    <!-- Script principal React différé -->
     <script type="module" src="/src/main.jsx" defer></script>
   </body>
 </html>
