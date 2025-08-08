@@ -200,21 +200,6 @@
     z-index: 999;
   }
 
-  /* .navbar-background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
-
-  .navbar-background-video.slide-out {
-    transform: translateX(100vw); 
-    opacity: 0;
-  } */
-
   .navbar-background-image {
     position: absolute;
     top: 0;

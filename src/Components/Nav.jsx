@@ -97,7 +97,7 @@ const Nav = () => {
           alt="Logo Axolotl"
           width="150"
           height="150"
-          loading="lazy"
+          loading="eager"
         />
       </div>
 
