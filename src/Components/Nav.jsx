@@ -20,30 +20,38 @@ const Nav = () => {
   const handleShowLinks = () => setShowLinks((prev) => !prev);
   const handleNavClick = () => setShowLinks(false);
 
-  // lock body scroll when menu open
+  // Bloquer le scroll uniquement quand le menu burger est ouvert
   useEffect(() => {
-    document.body.style.overflow = showLinks ? "hidden" : "";
+    if (showLinks) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    }
     return () => {
       document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     };
   }, [showLinks]);
 
-  // close menu on route change
+  // Fermer menu sur changement de page
   useEffect(() => {
     setShowLinks(false);
   }, [location.pathname]);
 
+  // Focus sur le premier lien quand menu ouvert
   useEffect(() => {
     if (showLinks && firstLinkRef.current) {
       firstLinkRef.current.focus();
     }
   }, [showLinks]);
 
+  // Apparition navbar au scroll
   useEffect(() => {
     const handleScroll = () => {
       setShowNavbarOnScroll(window.scrollY > 250);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
