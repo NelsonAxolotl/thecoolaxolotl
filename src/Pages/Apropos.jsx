@@ -197,7 +197,7 @@ const Apropos = () => {
                 className="round-image"
                 width="150"
                 height="150"
-                loading="lazy"
+                fetchpriority="high"
               />
             </div>
             <div className="text-content">
