@@ -67,7 +67,7 @@ const Apropos = () => {
     const audio = document.getElementById("background-audio");
     const tryPlay = () => {
       if (audio) {
-        audio.volume = 0.01;
+        audio.volume = 0.03;
         audio.play().catch((err) => {
           console.error("Erreur lors de la lecture audio :", err);
         });

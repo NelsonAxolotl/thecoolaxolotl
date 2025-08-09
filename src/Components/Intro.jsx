@@ -29,7 +29,7 @@ const Intro = () => {
 
     const handleAudioPlay = () => {
       if (audioRef.current && !audioPlayed) {
-        audioRef.current.volume = 0.05;
+        audioRef.current.volume = 0.09;
         try {
           audioRef.current.play();
           setAudioPlayed(true);
