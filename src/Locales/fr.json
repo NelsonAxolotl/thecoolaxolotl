@@ -26,7 +26,7 @@
 
   "stage_exploration": "L’Exploration de la Scène",
   "timeline3_date": "2010 - 2025",
-  "timeline3_text": "Régisseur lumière depuis 2010, diplômé d’une licence en techniques du spectacle vivant, j’ai travaillé sur des productions variées : théâtre, concerts, événements en plein air, danse et performances multimédia. Au fil des années, j’ai développé une solide expertise en éclairage scénique, en régie de spectacles et en coordination d’équipes techniques.Mon métier m’amène à collaborer étroitement avec des artistes aux univers multiples, à comprendre les enjeux artistiques d’un projet et à anticiper les défis logistiques. Rigueur, réactivité et gestion du stress sont devenues des réflexes, et mon approche a évolué vers une véritable vision artistique : pour moi, l’éclairage n’est pas seulement une technique, mais un langage visuel au service de l’émotion et de la narration.",
+  "timeline3_text": "Régisseur lumière depuis 2010, diplômé d’une licence en techniques du spectacle vivant, j’ai travaillé sur des productions variées : théâtre, concerts, événements en plein air, danse et performances multimédia. Au fil des années, j’ai développé une solide expertise en éclairage scénique, en régie de spectacles et en coordination d’équipes techniques. Mon métier m’amène à collaborer étroitement avec des artistes aux univers multiples, à comprendre les enjeux artistiques d’un projet et à anticiper les défis logistiques. Rigueur, réactivité et gestion du stress sont devenues des réflexes, et mon approche a évolué vers une véritable vision artistique : pour moi, l’éclairage n’est pas seulement une technique, mais un langage visuel au service de l’émotion et de la narration.",
 
   "digital_dive": "La Plongée dans le Numérique",
   "timeline4_date": "2023 - présent",
@@ -183,7 +183,7 @@
     "steps": [
       {
         "title": "Faisons connaissance",
-        "description": "Prenons le temps d’échanger sur votre projet afin de cerner vos besoins, vos aspirations et vos objectifs, et de vous proposer la solution la plus adaptée."
+        "description": "Prenons le temps d’échanger sur votre projet afin de cerner vos besoins, aspirations, objectifs et de vous proposer la solution la plus adaptée."
       },
       {
         "title": "Analyse du produit et secteur",
@@ -199,7 +199,7 @@
       },
       {
         "title": "Déploiement/mise en production",
-        "description": "Une fois validé, Je déploie votre projet dans un environnement optimisé, assurant sa robustesse, sa stabilité et ses performances."
+        "description": "Une fois validé, je déploie votre projet dans un environnement optimisé, assurant sa robustesse, sa stabilité et ses performances."
       },
       {
         "title": "Maintenance",
@@ -266,6 +266,7 @@
         "blog": "Blog",
         "portfolio": "Portfolio",
         "ecommerce": "Boutique en ligne",
+        "maquette": "Maquette",
         "autre": "Autre"
       },
       "clientTypeOptions": {
@@ -275,8 +276,10 @@
         "autre": "Autre"
       },
       "projectNatureOptions": {
-        "maquette": "Maquette",
-        "creation": "Création complète",
+        "culture": "Culture",
+        "commercial": "Commercial",
+        "expérimental": "Expérimentale",
+        "éducatif": "Educatif",
         "autre": "Autre"
       }
     },
@@ -346,7 +349,7 @@
     },
     "section2": {
       "title": "2. Responsable du traitement des données",
-      "content": "Le site thecoolaxolotl.com est exploité par : The Cool Axolotl. Pour toute question concernant vos données personnelles, vous pouvez nous contacter à l’adresse suivante : thecoolaxolotl.com"
+      "content": "Le site thecoolaxolotl.com est exploité par : The Cool Axolotl. Pour toute question concernant vos données personnelles, vous pouvez nous contacter à l’adresse suivante : <a>{{email}}</a>"
     },
     "section3": {
       "title": "3. Données collectées",

@@ -26,7 +26,7 @@
 
   "stage_exploration": "Exploring the Stage",
   "timeline3_date": "2010 - 2025",
-  "timeline3_text": "Lighting Designer since 2010, with a degree in Performing Arts Technology, I have worked on a wide range of productions, including theatre, concerts, outdoor events, dance, and multimedia performances. Over the years, I have built solid expertise in stage lighting, show management, and coordinating technical teams.My work involves close collaboration with artists from diverse backgrounds, understanding the artistic objectives of each project, and anticipating logistical challenges. Precision, adaptability, and stress management have become second nature, and my approach has evolved into a true artistic vision: for me, lighting is not merely a technical skill, but a visual language serving emotion and storytelling.",
+  "timeline3_text": "Lighting Designer since 2010, with a degree in Performing Arts Technology, I have worked on a wide range of productions, including theatre, concerts, outdoor events, dance, and multimedia performances. Over the years, I have built solid expertise in stage lighting, show management, and coordinating technical teams. My work involves close collaboration with artists from diverse backgrounds, understanding the artistic objectives of each project, and anticipating logistical challenges. Precision, adaptability, and stress management have become second nature, and my approach has evolved into a true artistic vision: for me, lighting is not merely a technical skill, but a visual language serving emotion and storytelling.",
 
   "digital_dive": "Diving into the Digital World",
   "timeline4_date": "2023 - Present",
@@ -202,7 +202,7 @@
       },
       {
         "title": "Deployment",
-        "description": "Once approved, I deploy your project in an optimized environment, ensuring its robustness, stability and performance."
+        "description": "Once approved, i deploy your project in an optimized environment, ensuring its robustness, stability and performance."
       },
       {
         "title": "Maintenance",
@@ -269,6 +269,7 @@
         "blog": "Blog",
         "portfolio": "Portfolio",
         "ecommerce": "Online store",
+        "maquette": "Mockup",
         "autre": "Other"
       },
       "clientTypeOptions": {
@@ -278,8 +279,10 @@
         "autre": "Other"
       },
       "projectNatureOptions": {
-        "maquette": "Mockup",
-        "creation": "Full creation",
+        "culture": "Culture",
+        "commercial": "Commercial",
+        "expérimental": "Experimental",
+        "éducatif": "Educational",
         "autre": "Other"
       }
     },
@@ -348,7 +351,7 @@
     },
     "section2": {
       "title": "2. Data Controller",
-      "content": "The website thecoolaxolotl.com is operated by: The Cool Axolotl. For any inquiries regarding your data, contact us at: thecoolaxolotl.com"
+      "content": "The website thecoolaxolotl.com is operated by: The Cool Axolotl. For any inquiries regarding your data, contact us at: <a>{{email}}</a>"
     },
     "section3": {
       "title": "3. Data Collected",
@@ -388,7 +391,7 @@
     },
     "section12": {
       "title": "12. Contact",
-      "content": "For any questions about this privacy policy, contact: thecoolaxolotl.com"
+      "content": "For any questions about this privacy policy, contact: <a>{{email}}</a>"
     }
   },
   "end": {

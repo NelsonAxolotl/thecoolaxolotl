@@ -730,7 +730,7 @@
   transition: color 0.5s ease;
 }
 
-.interactive-item:hover::after {
+.interactive-item::after {
   content: attr(data-tooltip);
   position: absolute;
   top: -75px;
@@ -743,9 +743,12 @@
   font-size: 0.9rem;
   white-space: nowrap;
   box-shadow: 0 4px 6px rgb(255, 131, 7, 0.2);
+  opacity: 0;
+  pointer-events: none; /* Évite le déclenchement par l’infobulle */
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.interactive-item:hover::before {
+.interactive-item::before {
   content: "";
   position: absolute;
   top: -15px;
@@ -755,6 +758,18 @@
   height: 10px;
   background-color: rgb(255, 131, 7, 0.8);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Effet au survol : apparition fluide */
+.interactive-item:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* Remonte à sa place */
+}
+
+.interactive-item:hover::before {
+  opacity: 1;
 }
 
 @media screen and (max-width: 768px) {

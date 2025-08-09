@@ -566,6 +566,22 @@
   background-color: rgba(255, 255, 255, 0.5); /* Fond plus sombre au survol */
 }
 
+@media screen and (max-width: 768px) {
+  /* Le texte et le bouton toujours visibles */
+  .maquette-card .content {
+    opacity: 1 !important; /* Toujours visible */
+    position: absolute;
+    bottom: 10%;
+    transition: none; /* Pas de fade-in au scroll/tap */
+  }
+
+  .maquette-card .maquette-button {
+    opacity: 1 !important; /* Toujours visible */
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: none;
+  }
+}
+
 .project-reviews {
   max-width: 260px;
   height: 180px;

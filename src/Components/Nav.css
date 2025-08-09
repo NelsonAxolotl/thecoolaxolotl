@@ -80,11 +80,6 @@
   transform: scale(1.08);
 }
 
-.navbar-link:focus {
-  outline: 2px solid rgb(172, 18, 103);
-  outline-offset: 2px;
-}
-
 .navbar-burger {
   width: 40px;
   height: 40px;

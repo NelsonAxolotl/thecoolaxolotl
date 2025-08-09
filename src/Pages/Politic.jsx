@@ -52,11 +52,11 @@ const Politic = () => {
           {[...Array(11)].map((_, i) => {
             const sectionIndex = i + 2;
             const sectionKey = `privacy.section${sectionIndex}`;
-
+            const hasClickableEmail = sectionIndex === 2 || sectionIndex === 12;
             return (
               <section key={sectionIndex} id={`section-${sectionIndex}`}>
                 <h2>{t(`${sectionKey}.title`)}</h2>
-                {sectionIndex === 12 ? (
+                {hasClickableEmail ? (
                   <p>
                     <Trans
                       i18nKey={`${sectionKey}.content`}

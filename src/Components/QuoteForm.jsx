@@ -70,6 +70,9 @@ const QuoteForm = ({
           <option value="boutique en ligne">
             {t("quote.form.projectTypeOptions.ecommerce")}
           </option>
+          <option value="maquette">
+            {t("quote.form.projectTypeOptions.maquette")}
+          </option>
           <option value="autre">
             {t("quote.form.projectTypeOptions.autre")}
           </option>
@@ -157,11 +160,17 @@ const QuoteForm = ({
           required
         >
           <option value="">{t("quote.form.projectNature")}</option>
-          <option value="maquette">
-            {t("quote.form.projectNatureOptions.maquette")}
+          <option value="culture">
+            {t("quote.form.projectNatureOptions.culture")}
           </option>
-          <option value="creation">
-            {t("quote.form.projectNatureOptions.creation")}
+          <option value="commercial">
+            {t("quote.form.projectNatureOptions.commercial")}
+          </option>
+          <option value="expérimental">
+            {t("quote.form.projectNatureOptions.expérimental")}
+          </option>
+          <option value="éducatif">
+            {t("quote.form.projectNatureOptions.éducatif")}
           </option>
           <option value="autre">
             {t("quote.form.projectNatureOptions.autre")}
