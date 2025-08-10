@@ -74,7 +74,7 @@ const TimelineSection = ({ steps }) => {
           );
         })}
       </div>
-      {/* <Rocket triggerLaunch={launchRocket} /> */}
+      <Rocket triggerLaunch={launchRocket} />
     </div>
   );
 };

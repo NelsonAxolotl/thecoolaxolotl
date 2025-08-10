@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Rocket.css";
-
+import axofuz from "../Pics/axofuz.webp";
 const Rocket = ({ triggerLaunch }) => {
   const [launch, setLaunch] = useState(false);
 
@@ -14,15 +14,11 @@ const Rocket = ({ triggerLaunch }) => {
   }, [triggerLaunch, launch]);
 
   return (
-    <div
+    <img
+      src={axofuz}
+      alt="rocket"
       className={`rocket-emoji ${launch ? "launch" : ""}`}
-      style={{ fontSize: "3rem", userSelect: "none" }}
-      role="img"
-      aria-label="rocket"
-      title="Rocket launching animation"
-    >
-      🚀
-    </div>
+    />
   );
 };
 

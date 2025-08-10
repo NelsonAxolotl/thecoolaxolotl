@@ -3,44 +3,45 @@
   bottom: 0; /* en bas de la timeline */
   left: 50%;
   transform: translateX(-50%);
-  font-size: 3rem;
+  width: 80px; /* taille plus grande */
+  height: 80px;
+  border-radius: 50%; /* image ronde */
+  object-fit: cover; /* pas de déformation */
+  border: 4px solid white; /* contour blanc */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* ombre légère */
   z-index: 9999;
-  pointer-events: auto;
+  pointer-events: none;
   opacity: 1;
-  transition: opacity 0.3s ease;
 }
 
 @keyframes rocket-shake {
   0%,
   100% {
-    transform: translateX(-50%) rotate(0deg);
+    transform: translate(-50%, 0) rotate(0deg);
   }
   10% {
-    transform: translateX(calc(-50% + 5px)) rotate(5deg);
+    transform: translate(-50%, -3px) rotate(-3deg);
   }
   20% {
-    transform: translateX(calc(-50% - 5px)) rotate(-5deg);
+    transform: translate(-50%, 3px) rotate(3deg);
   }
   30% {
-    transform: translateX(calc(-50% + 3px)) rotate(3deg);
+    transform: translate(-50%, -3px) rotate(-3deg);
   }
   40% {
-    transform: translateX(calc(-50% - 3px)) rotate(-3deg);
+    transform: translate(-50%, 3px) rotate(3deg);
   }
   50% {
-    transform: translateX(calc(-50% + 2px)) rotate(2deg);
+    transform: translate(-50%, -2px) rotate(-2deg);
   }
   60% {
-    transform: translateX(calc(-50% - 2px)) rotate(-2deg);
+    transform: translate(-50%, 2px) rotate(2deg);
   }
   70% {
-    transform: translateX(calc(-50% + 1px)) rotate(1deg);
+    transform: translate(-50%, -1px) rotate(-1deg);
   }
   80% {
-    transform: translateX(calc(-50% - 1px)) rotate(-1deg);
-  }
-  90% {
-    transform: translateX(-50%) rotate(0deg);
+    transform: translate(-50%, 1px) rotate(1deg);
   }
 }
 
@@ -50,12 +51,12 @@
     opacity: 1;
   }
   100% {
-    bottom: 120%;
+    bottom: 120%; /* monte au-dessus du conteneur */
     opacity: 0;
   }
 }
 
 .rocket-emoji.launch {
-  animation: rocket-shake 1.5s ease-in-out 0.5s forwards,
-    rocket-launch 8s ease-in-out 2s forwards;
+  animation: rocket-shake 1s ease-in-out 0s 1,
+    /* vibration au début */ rocket-launch 8s forwards ease-in-out 1s; /* décollage smooth après 1s */
 }
