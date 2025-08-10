@@ -19,10 +19,28 @@ const Creations = () => {
   const { t } = useTranslation();
   const [showPage, setShowPage] = useState(false);
   const videoRef = useRef(null);
+  const audioRef = useRef(null);
 
   useEffect(() => {
     setTimeout(() => window.scrollTo(0, 0), 200);
   }, []);
+
+  useEffect(() => {
+    const tryPlay = () => {
+      if (audioRef.current) {
+        audioRef.current.volume = 0.01;
+        audioRef.current
+          .play()
+          .catch((err) =>
+            console.error("Erreur lors de la lecture audio :", err)
+          );
+      }
+      document.removeEventListener("click", tryPlay);
+    };
+    document.addEventListener("click", tryPlay);
+    return () => document.removeEventListener("click", tryPlay);
+  }, []);
+
   const [hasBeenVisible, setHasBeenVisible] = useState({
     blogCategory1: false,
     blogCategory2: false,
@@ -252,6 +270,7 @@ const Creations = () => {
           <source src="/Videos/underwater.mp4" type="video/mp4" />
           Votre navigateur ne prend pas en charge la vidéo.
         </video>
+        <audio ref={audioRef} src="/Sons/ragewater.mp3" loop preload="none" />
       </div>
       <div className={`portfolio-container ${showPage ? "fade-in" : ""}`}>
         <div className="summary-container">

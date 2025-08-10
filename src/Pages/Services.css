@@ -64,7 +64,7 @@
 .intro-text {
   font-size: 1.5rem;
   color: #f9f6f6;
-  line-height: 28px;
+  line-height: 30px;
   margin-bottom: 80px;
   font-weight: 550;
   text-align: justify;
@@ -212,6 +212,7 @@
 }
 
 .timeline-container2 {
+  position: relative;
   margin-top: 60px;
   padding: 20px;
   background-color: #0c5671e8;
@@ -529,7 +530,7 @@
 
 .quote-intro p {
   text-align: left;
-  line-height: 24px;
+  line-height: 28px;
   font-weight: 450;
   font-size: 1.15rem;
 }

@@ -28,8 +28,8 @@ const End = () => {
           <Link to="/">
             <img
               src={axo}
-              width="150"
-              height="150"
+              width="80"
+              height="80"
               alt={t("end.logoAlt")}
               className="round-image5"
               loading="lazy"
@@ -48,7 +48,10 @@ const End = () => {
               loading="lazy"
             />
           </Link>
-          <p>{t("end.politic")}</p>
+          <p>
+            <span className="break-line">{t("end.politicLine1")}</span>{" "}
+            <span>{t("end.politicLine2")}</span>
+          </p>
         </div>
       </div>
     </>

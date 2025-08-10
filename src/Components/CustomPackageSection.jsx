@@ -1,3 +1,4 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 const CustomPackageSection = ({ whyList }) => {
@@ -6,7 +7,16 @@ const CustomPackageSection = ({ whyList }) => {
   return (
     <div className="quote-intro">
       <h2>{t("customPackage.title")}</h2>
-      <p>{t("customPackage.intro")}</p>
+      <p>
+        {t("customPackage.intro")
+          .split("\n")
+          .map((line, index, arr) => (
+            <React.Fragment key={index}>
+              {line}
+              {index !== arr.length - 1 && <br />}
+            </React.Fragment>
+          ))}
+      </p>
       <div className="texte-centre">
         <div className="flex-pack">
           <h3>{t("customPackage.whyTitle")}</h3>
@@ -20,7 +30,7 @@ const CustomPackageSection = ({ whyList }) => {
             <strong>{t("customPackage.offerTitle")}</strong>
           </p>
           <p>{t("customPackage.offerDescription")}</p>
-          <p>{t("customPackage.offerDescription1")}</p>
+
           <p>
             <strong>
               <a href="mailto:thecoolaxolotldesigner@gmail.com">

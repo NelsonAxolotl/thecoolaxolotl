@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react"; // ← Ajouté
 import { Trans, useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 
@@ -7,6 +8,17 @@ import End from "../Components/End";
 
 const Politic = () => {
   const { t } = useTranslation();
+
+  const [showPage, setShowPage] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPage(true);
+    }, 250);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!showPage) return null; // On n'affiche rien tant que showPage est false
 
   return (
     <>
@@ -25,7 +37,9 @@ const Politic = () => {
       </Helmet>
 
       <Nav />
-      <div className="politic">
+      <div className="politic fade-in-politic">
+        {" "}
+        {/* ← Ajout de la classe */}
         <img
           src="Pics/politique.webp"
           alt="axolotl politic"
@@ -38,7 +52,6 @@ const Politic = () => {
           aria-hidden="true"
           role="presentation"
         />
-
         <div className="container-politic">
           <h1>{t("privacy.title")}</h1>
 
@@ -61,7 +74,7 @@ const Politic = () => {
                     <Trans
                       i18nKey={`${sectionKey}.content`}
                       components={{
-                        a: (
+                        1: (
                           <a
                             href="mailto:thecoolaxolotldesigner@gmail.com"
                             target="_blank"
@@ -69,6 +82,7 @@ const Politic = () => {
                             className="email-link"
                           />
                         ),
+                        br: <br />,
                       }}
                       values={{ email: "thecoolaxolotldesigner@gmail.com" }}
                     />

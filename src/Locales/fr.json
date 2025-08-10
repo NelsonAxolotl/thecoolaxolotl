@@ -18,11 +18,11 @@
   "navigations": "Navigations",
   "discover_notes": "La découverte des notes",
   "timeline1_date": "2001 - 2005",
-  "timeline1_text": "Mon voyage a commencé à Londres, où j'ai poursuivi un DEUG en musicologie en tant que guitariste. Cette expérience a été un tremplin : elle m'a permis de jouer en concert, de perfectionner mes compétences musicales à travers l'étude de divers styles (classique, traditionnel et contemporain) et de collaborer avec des artistes passionnés.",
+  "timeline1_text": "Mon voyage a commencé à Londres, où j'ai poursuivi un DEUG en musicologie en tant que guitariste. Cette expérience a été un tremplin : elle m'a permis de jouer en concert, de perfectionner mes compétences musicales à travers l'étude de divers styles (classique, traditionnel, contemporain) et de collaborer avec des artistes passionnés.",
 
   "world_adventures": "Les Aventures dans le Monde",
   "timeline2_date": "2006 - 2009",
-  "timeline2_text": "J'ai exploré des cultures riches à travers divers pays différents continents, travaillé dans des environnements multiculturels et occupé une variété de postes. Ces expériences ont élargi ma vision du monde, renforçant mon appréciation des différences culturelles et leur contribution au domaine créatif.",
+  "timeline2_text": "J'ai exploré des cultures riches à travers divers pays différents, en travaillant dans des environnements multiculturels . Ces expériences ont élargi ma vision du monde, renforçant mon appréciation des différences culturelles et leur contribution au domaine créatif.",
 
   "stage_exploration": "L’Exploration de la Scène",
   "timeline3_date": "2010 - 2025",
@@ -35,13 +35,13 @@
   "captain_title": "Capitaine",
   "captain_description": "Aujourd’hui, je navigue comme capitaine d’un navire dans les eaux de la créativité. Chaque projet est une exploration unique, guidée par des valeurs fortes comme l’écoute, la persévérance, et la curiosité. Je suis là pour transformer vos idées en une réalité sur mesure, en mêlant innovation et authenticité.",
 
-  "creative_solutions": "Trouver des solutions originales, adaptées à chaque défi.",
+  "creative_solutions": "Trouver des solutions originales, adaptées à chaque défi",
   "creativity": "Créativité",
-  "understanding_needs": "Comprendre vos besoins pour proposer une approche personnalisée.",
+  "understanding_needs": "Comprendre vos besoins pour proposer une approche personnalisée",
   "listening": "Écoute",
-  "responding_to_demands": "Répondre à des demandes variées, dans des contextes changeants.",
+  "responding_to_demands": "Répondre à des demandes variées, dans des contextes changeants",
   "adaptability": "Adaptabilité",
-  "transforming_obstacles": "Transformer chaque obstacle en opportunité de renouveau.",
+  "transforming_obstacles": "Transformer chaque obstacle en opportunité de renouveau",
   "resilience": "Résilience",
   "call_to_action": "Prêts à plonger ensemble ?",
   "story_message": "Votre histoire pourrait bien devenir la prochaine étape de mon parcours. Partagez vos idées, et voyons ensemble où cela nous mène !",
@@ -106,7 +106,7 @@
     },
     "category2": {
       "title": " Des sites qui se démarquent",
-      "content1": "Dans un monde où de nombreux sites se ressemblent, je choisis de m’éloigner des modèles standards pour proposer des sites visuellement intéressants. ",
+      "content1": "Dans un monde où de nombreux sites se ressemblent, je m’éloigner des modèles standards pour proposer des sites visuellement intéressants. ",
       "content2": "Je me spécialise dans des projets qui mettent en avant l'identité de mes clients, qu'ils soient artistes, thérapeutes ou entrepreneurs... ",
       "content3": "Chaque site devient ainsi une occasion de créer quelque chose d'unique, à l'image de ceux qui l’utilisent.",
       "content4": "C’est cette liberté créative et cette diversité qui alimentent ma passion pour un design sur-mesure et véritablement personnalisé."
@@ -217,8 +217,7 @@
       "✔️ Un accompagnement pour votre projet"
     ],
     "offerTitle": "🔹 Un package sur mesure !",
-    "offerDescription": "Plutôt qu’un tarif à la journée ou à l’heure, j'adapte la prestation à vos besoins réels,",
-    "offerDescription1": "pour une solution plus économique et efficace. 🚀",
+    "offerDescription": "Plutôt qu’un tarif à la journée ou à l’heure, j'adapte la prestation à vos besoins réels 🚀",
     "contact": "Contactez-moi",
     "estimation": "pour une estimation personnalisée !"
   },
@@ -349,7 +348,7 @@
     },
     "section2": {
       "title": "2. Responsable du traitement des données",
-      "content": "Le site thecoolaxolotl.com est exploité par : The Cool Axolotl. Pour toute question concernant vos données personnelles, vous pouvez nous contacter à l’adresse suivante : <a>{{email}}</a>"
+      "content": "Le site thecoolaxolotl.com est exploité par : The Cool Axolotl. Pour toute question concernant vos données personnelles, vous pouvez nous contacter à l’adresse suivante :  <1>thecoolaxolotldesigner@gmail.com</1>"
     },
     "section3": {
       "title": "3. Données collectées",
@@ -357,7 +356,7 @@
     },
     "section4": {
       "title": "4. Finalités de la collecte",
-      "content": "Les données collectées servent à améliorer l’expérience utilisateur, répondre aux demandes, envoyer des informations (si autorisé) et analyser la navigation."
+      "content": "Les données collectées servent à améliorer l’expérience utilisateur, répondre aux demandes, envoyer des informations et analyser la navigation."
     },
     "section5": {
       "title": "5. Base légale du traitement",
@@ -377,11 +376,11 @@
     },
     "section9": {
       "title": "9. Droits des utilisateurs",
-      "content": "Vous avez le droit d’accès, de rectification, de suppression, de portabilité et d’opposition. Contact : thecoolaxolotl.com"
+      "content": "Vous avez le droit d’accès, de rectification, de suppression, de portabilité et d’opposition."
     },
     "section10": {
       "title": "10. Cookies",
-      "content": "Le site utilise des cookies pour améliorer l’expérience utilisateur. Ils peuvent être désactivés via le navigateur."
+      "content": "Le site utilise des cookies pour améliorer l’expérience utilisateur. Ils peuvent être désactivés via le navigateur ."
     },
     "section11": {
       "title": "11. Modification de la politique de confidentialité",
@@ -389,7 +388,7 @@
     },
     "section12": {
       "title": "12. Contact",
-      "content": "Pour toute question concernant vos données personnelles, contactez : <a>{{email}}</a>"
+      "content": "Pour toute question concernant vos données personnelles, contactez :  <1>thecoolaxolotldesigner@gmail.com</1>"
     },
     "metaTitle": "Politique de confidentialité - The Cool Axolotl",
     "metaDescription": "Découvrez comment The Cool Axolotl collecte, traite et protège vos données personnelles conformément au RGPD."
@@ -399,7 +398,8 @@
     "legalAlt": "mention légale",
     "logoAlt": "logo de The Cool Axolotl",
     "copyright": "Copyright © 2025 | The Cool Axolotl",
-    "politic": "Politique de confidentialité",
+    "politicLine1": "Politique",
+    "politicLine2": "de confidentialité",
     "politicAlt": "politique de confidentialité axolotl"
   },
 

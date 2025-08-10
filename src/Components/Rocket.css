@@ -1,0 +1,61 @@
+.rocket-emoji {
+  position: absolute;
+  bottom: 0; /* en bas de la timeline */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  z-index: 9999;
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes rocket-shake {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  10% {
+    transform: translateX(calc(-50% + 5px)) rotate(5deg);
+  }
+  20% {
+    transform: translateX(calc(-50% - 5px)) rotate(-5deg);
+  }
+  30% {
+    transform: translateX(calc(-50% + 3px)) rotate(3deg);
+  }
+  40% {
+    transform: translateX(calc(-50% - 3px)) rotate(-3deg);
+  }
+  50% {
+    transform: translateX(calc(-50% + 2px)) rotate(2deg);
+  }
+  60% {
+    transform: translateX(calc(-50% - 2px)) rotate(-2deg);
+  }
+  70% {
+    transform: translateX(calc(-50% + 1px)) rotate(1deg);
+  }
+  80% {
+    transform: translateX(calc(-50% - 1px)) rotate(-1deg);
+  }
+  90% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+@keyframes rocket-launch {
+  0% {
+    bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    bottom: 120%;
+    opacity: 0;
+  }
+}
+
+.rocket-emoji.launch {
+  animation: rocket-shake 1.5s ease-in-out 0.5s forwards,
+    rocket-launch 8s ease-in-out 2s forwards;
+}

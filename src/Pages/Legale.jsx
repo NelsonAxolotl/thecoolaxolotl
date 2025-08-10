@@ -13,7 +13,7 @@ const Legale = () => {
   useEffect(() => {
     const pageTimer = setTimeout(() => {
       setShowPage(true);
-    }, 500);
+    }, 250);
 
     return () => clearTimeout(pageTimer); // Nettoyage du timeout
   }, []);

@@ -67,7 +67,7 @@ const Apropos = () => {
     const audio = document.getElementById("background-audio");
     const tryPlay = () => {
       if (audio) {
-        audio.volume = 0.03;
+        audio.volume = 0.01;
         audio.play().catch((err) => {
           console.error("Erreur lors de la lecture audio :", err);
         });
@@ -335,7 +335,16 @@ const Apropos = () => {
                 className="axolotl-image"
               />
               <div className="text-parcours">
-                <p>{t("story_message")}</p>
+                <p>
+                  {t("story_message")
+                    .split("\n")
+                    .map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
+                </p>
               </div>
             </div>
           </section>

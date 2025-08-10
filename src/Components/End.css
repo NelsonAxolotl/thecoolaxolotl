@@ -4,10 +4,11 @@
   justify-content: space-evenly;
   align-items: center;
   height: 180px;
+  gap: 100px;
   background: rgba(0, 0, 0, 0.762);
   color: rgb(255, 255, 255);
   padding-top: 10px;
-  padding-left: 70px;
+  padding-left: 35px;
   z-index: 1;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
 }
@@ -19,30 +20,18 @@
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.legal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.copy {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin: 0; /* Assurez-vous qu'il n'y a pas de marge externe */
-  padding: 0;
-}
-
+.legal,
+.copy,
 .politique {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  min-width: 150px; /* ajuste en fonction de ta taille d’image */
 }
 
-.round-image4 {
+.round-image4,
+.round-image5 {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -50,20 +39,42 @@
   border: 4px solid rgba(255, 255, 255, 0.8);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  transition: transform 0.5s ease-in-out; /* transition douce */
 }
 
-.round-image5 {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+.round-image4:hover,
+.round-image5:hover {
+  transform: scale(1.05); /* zoom au survol */
 }
 
 .copy img {
-  padding-top: 5px;
+  padding-top: 7px;
+}
+
+@media screen and (max-width: 1040px) and (min-width: 851px) {
+  .legal,
+  .copy,
+  .politique {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* espace entre image et texte */
+    align-items: center;
+    height: 150px; /* même hauteur pour équilibrer */
+    padding: 10px 0;
+  }
+
+  .politique p {
+    text-align: center;
+    width: 140px;
+    margin: 0;
+  }
+
+  /* Pour forcer un saut de ligne dans Politique de confidentialité */
+  .politique p br {
+    display: block;
+    content: "";
+    margin-bottom: 0.2em;
+  }
 }
 
 @media screen and (max-width: 850px) {

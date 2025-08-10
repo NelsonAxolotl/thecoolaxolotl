@@ -18,7 +18,7 @@
   "navigations": "Navigations",
   "discover_notes": "Discovery of Notes",
   "timeline1_date": "2001 - 2005",
-  "timeline1_text": "My journey began in London, where I pursued a DEUG in musicology as a guitarist. This experience was a springboard: it allowed me to play concerts, improve my musical skills through the study of various styles (classical, traditional, and contemporary) and collaborate with passionate artists.",
+  "timeline1_text": "My journey began in London, where I pursued a DEUG in musicology as a guitarist. This experience was a springboard: allowing me to play concerts, improve my musical skills through the study of various styles (classical, traditional, contemporary) and collaborate with passionate artists.",
 
   "world_adventures": "Adventures Around the World",
   "timeline2_date": "2006 - 2009",
@@ -35,17 +35,17 @@
   "captain_title": "Captain",
   "captain_description": "Today, I sail as the captain of a ship in the waters of creativity. Every project is a unique exploration, guided by strong values such as listening, perseverance, and curiosity. I am here to transform your ideas into a custom reality, blending innovation and authenticity.",
 
-  "creative_solutions": "Finding original solutions, tailored to each challenge.",
+  "creative_solutions": "Finding original solutions, tailored to each challenge",
   "creativity": "Creativity",
-  "understanding_needs": "Understanding your needs to offer a personalized approach.",
+  "understanding_needs": "Understanding your needs to offer a personalized approach",
   "listening": "Listening",
-  "responding_to_demands": "Responding to varied demands, in changing contexts.",
+  "responding_to_demands": "Responding to varied demands, in changing contexts",
   "adaptability": "Adaptability",
-  "transforming_obstacles": "Turning every obstacle into an opportunity for renewal.",
+  "transforming_obstacles": "Turning every obstacle into an opportunity for renewal",
   "resilience": "Resilience",
 
   "call_to_action": "Ready to dive in together?",
-  "story_message": "Your story could very well become the next step in my journey. Share your ideas, and let's see where it takes us!",
+  "story_message": "Your story could very well become the next step in my journey. \nShare your ideas, and let's see where it takes us !",
 
   "port": {
     "title": "Portfolio",
@@ -65,7 +65,7 @@
     "polyr": {
       "title": "PolyR Company",
       "subtitle": "Opera company",
-      "description": "An elegant site showcasing performances with detailed descriptions.",
+      "description": "An immersive website capturing the energy and creativity of the Wanubida Circus Company, featuring a dynamic gallery.",
       "review": "The Poly R team is absolutely delighted with the work of The Cool Axolotl, who created a tailor-made website. Today, the company is gaining visibility!",
       "arrow": "Click here",
       "review_image_alt": "Image representing a client review"
@@ -73,7 +73,7 @@
     "emmanuelle": {
       "title": "Emmanuelle Ferdyan",
       "subtitle": "Artist portfolio",
-      "description": "A minimalist portfolio to highlight the works and unique universe of an incredible artist.",
+      "description": "A minimalist portfolio carefully designed to showcase the works and unique world of an incredible artist.",
       "review": "The Cool Axolotl created a website that truly reflects me, and I am completely satisfied—and proud! Our exchanges were both friendly and efficient. A huge thank you!!!",
       "arrow": "Click here",
       "review_image_alt": "Image representing a client review"
@@ -103,7 +103,7 @@
     "journal": "Road Journal",
     "category1": {
       "title": " My First Clients",
-      "content1": "After completing my Boot Camp training at ' Le Reacteur ', I quickly realized that it wasn't enough to just create websites, but that I needed to stand out in order to attract my first clients. ",
+      "content1": "After completing my Boot Camp training at « Le Reacteur », I quickly realized that it wasn't enough to just create websites, but that I needed to stand out in order to attract my first clients. ",
       "content2": "Instead of following standard templates, I chose to design websites that capture the essence of each project and client, telling a unique visual story. ",
       "content3": "My first client came through word of mouth, and it was the perfect opportunity to put this personalized approach into practice, which would define my vision of design."
     },
@@ -134,7 +134,7 @@
     "contact": "Contact"
   },
   "prestations": "Services",
-  "prestationsIntro": "Passionate about creating modern and effective showcase websites, I use powerful tools like <0>React</0>, <1>JavaScript</1>, and <2>Vue.js</2> to craft solutions that reflect your identity and meet your needs. My commitment is to bring a fresh perspective, work with precision, and ensure each project is a success.",
+  "prestationsIntro": "Passionate about creating modern and effective showcase websites, I use powerful tools like <0>React</0>, <1>JavaScript</1>, and <2>Vue.js</2> to craft solutions that reflect your identity and meet your needs.<br/>My commitment is to bring a fresh perspective, precision, and ensuring every project succeeds.",
 
   "ser-vices": {
     "react": {
@@ -198,7 +198,7 @@
       },
       {
         "title": "Development and integration",
-        "description": "I implement the planned features, integrate layouts and content, and deploy a test platform to collect your feedback and make necessary adjustments."
+        "description": "I implement planned features, integrate layouts and content, deploy a test platform to collect your feedback and make necessary adjustments."
       },
       {
         "title": "Deployment",
@@ -212,7 +212,7 @@
   },
   "customPackage": {
     "title": "🌟 Custom Package 🌟",
-    "intro": "Every project is unique, and I understand that some needs are simpler than others. I offer personalized solutions tailored to your project's complexity and budget.",
+    "intro": "Every project is unique, and I understand that some needs are simpler than others.\nI offer personalized solutions tailored to your project's complexity and budget.",
     "whyTitle": "💡 Why a custom package?",
     "why": [
       "✔️ A price adjusted to your real needs",
@@ -220,8 +220,7 @@
       "✔️ Support throughout your project"
     ],
     "offerTitle": "🔹 A custom package!",
-    "offerDescription": "Rather than charging by the day or hour, I tailor the service to your real needs,",
-    "offerDescription1": "for a more cost-effective and efficient solution. 🚀",
+    "offerDescription": "Rather than charging by the day or hour, I tailor the service to your real needs 🚀",
     "contact": "Contact me",
     "estimation": "for a personalized quote!"
   },
@@ -261,7 +260,7 @@
       "otherClientType": "Specify your client type:",
       "domainNote": "Please note that the domain name cost is not included in the quote and will be added based on the chosen provider.",
       "submit": "Request a quote",
-      "consent": "By submitting this form, you agree that the information entered will be used to contact you regarding your quote or inquiry.",
+      "consent": "By submitting this form, you agree to be contacted about your quote or inquiry.",
 
       "projectTypeOptions": {
         "vitrine": "Showcase website",
@@ -351,7 +350,7 @@
     },
     "section2": {
       "title": "2. Data Controller",
-      "content": "The website thecoolaxolotl.com is operated by: The Cool Axolotl. For any inquiries regarding your data, contact us at: <a>{{email}}</a>"
+      "content": "The website thecoolaxolotl.com is operated by: The Cool Axolotl. For any inquiries regarding your data, <br/>contact us at: <1>thecoolaxolotldesigner@gmail.com</1>"
     },
     "section3": {
       "title": "3. Data Collected",
@@ -359,7 +358,7 @@
     },
     "section4": {
       "title": "4. Purpose of Data Collection",
-      "content": "Data is used to improve user experience, respond to requests, send updates (if consented), and analyze website use."
+      "content": "Data is used to improve user experience, respond to requests, send updates and analyze website use."
     },
     "section5": {
       "title": "5. Legal Basis",
@@ -379,7 +378,7 @@
     },
     "section9": {
       "title": "9. User Rights",
-      "content": "You have the right to access, correct, delete, transfer your data, and object to processing. Contact: thecoolaxolotl.com"
+      "content": "You have the right to access, correct, delete, transfer your data, and object to processing."
     },
     "section10": {
       "title": "10. Cookies",
@@ -391,7 +390,7 @@
     },
     "section12": {
       "title": "12. Contact",
-      "content": "For any questions about this privacy policy, contact: <a>{{email}}</a>"
+      "content": "For any questions about this privacy policy, contact: <1>thecoolaxolotldesigner@gmail.com</1>"
     }
   },
   "end": {

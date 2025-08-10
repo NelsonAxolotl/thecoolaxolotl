@@ -1,12 +1,27 @@
+.fade-in-politic {
+  opacity: 0;
+  animation: fadeInPolitique 1s ease-in-out forwards;
+}
+
+@keyframes fadeInPolitique {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .politic {
   position: relative;
   background: #b2aeae;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 20px 20px 40px;
-  padding-top: 150px;
+  padding-top: 160px;
 }
 
 .container-politic {
@@ -65,7 +80,7 @@ strong {
 }
 
 .round-image-politic {
-  top: 40px; /* place-la précisément */
+  top: 70px; /* place-la précisément */
   left: 50%;
   transform: translateX(-50%);
   position: absolute;

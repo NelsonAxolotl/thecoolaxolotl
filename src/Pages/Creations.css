@@ -476,8 +476,9 @@
   width: 300px;
   height: 300px;
   background-color: #000; /* Par défaut, noir */
-  background-size: cover; /* Assurez-vous que l'image de fond est bien recouverte */
-  background-position: left center no-repeat; /* Position de l'image de fond */
+  background-size: 300px; /* Assurez-vous que l'image de fond est bien recouverte */
+  background-position: left center;
+  background-repeat: no-repeat;
   transition: background-position 1s ease-in-out, background-size 1s ease-in-out,
     transform 0.8s ease, background-color 0.5s ease-in-out; /* Transition fluide */
 }
@@ -564,6 +565,17 @@
 .maquette-card:hover .maquette-button {
   opacity: 1; /* Devient visible au survol */
   background-color: rgba(255, 255, 255, 0.5); /* Fond plus sombre au survol */
+}
+
+/* Changement de style quand on survole le bouton lui-même */
+.maquette-card .maquette-button:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Plus clair ou plus foncé selon ton goût */
+  color: #000; /* Par exemple changer la couleur du texte */
 }
 
 @media screen and (max-width: 768px) {
