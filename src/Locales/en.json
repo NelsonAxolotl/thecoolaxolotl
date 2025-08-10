@@ -186,7 +186,7 @@
     "steps": [
       {
         "title": "Getting to know each other",
-        "description": "Let's take time to talk about your project to understand your needs, goals, and vision so I can offer the most suitable solution."
+        "description": "Let's take time to talk about your project to understand your needs, goals, vision so I can offer the most suitable solution."
       },
       {
         "title": "Product and market analysis",
@@ -212,7 +212,7 @@
   },
   "customPackage": {
     "title": "🌟 Custom Package 🌟",
-    "intro": "Every project is unique, and I understand that some needs are simpler than others.\nI offer personalized solutions tailored to your project's complexity and budget.",
+    "intro": "Every project is unique, and I understand that some needs are simpler than others. \nI offer personalized solutions tailored to your project's complexity and budget.",
     "whyTitle": "💡 Why a custom package?",
     "why": [
       "✔️ A price adjusted to your real needs",
@@ -220,7 +220,7 @@
       "✔️ Support throughout your project"
     ],
     "offerTitle": "🔹 A custom package!",
-    "offerDescription": "Rather than charging by the day or hour, I tailor the service to your real needs 🚀",
+    "offerDescription": "Instead of charging per day or hour, I adapt the service to your needs 🚀",
     "contact": "Contact me",
     "estimation": "for a personalized quote!"
   },
@@ -228,8 +228,8 @@
     "title": "Request a Quote",
     "intro": {
       "line1": "If you're interested in my services and want a personalized quote,",
-      "line2": " fill out the form below.",
-      "line3": "I will get back to you as soon as possible."
+      "line2": " fill out the form below,",
+      "line3": "i will get back to you very soon."
     },
     "tarifs": {
       "title": "💰 Standard Rates:",

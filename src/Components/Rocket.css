@@ -60,3 +60,9 @@
   animation: rocket-shake 1s ease-in-out 0s 1,
     /* vibration au début */ rocket-launch 8s forwards ease-in-out 1s; /* décollage smooth après 1s */
 }
+
+@media (max-width: 768px) {
+  .rocket-emoji {
+    display: none;
+  }
+}

@@ -209,12 +209,12 @@
   },
   "customPackage": {
     "title": "🌟 Package Sur Mesure 🌟",
-    "intro": "Chaque projet est unique, et je comprends que certains besoins sont plus simples que d'autres. Je propose des solutions personnalisées adaptées à la complexité de votre projet et budget.",
+    "intro": "Chaque projet est unique et je comprends que certains besoins sont plus simples que d'autres. \nJe propose des solutions personnalisées adaptées à la complexité de votre projet et budget.",
     "whyTitle": "💡 Pourquoi un package sur mesure ?",
     "why": [
       "✔️ Un tarif ajusté selon vos besoins réels",
       "✔️ Une solution flexible et évolutive",
-      "✔️ Un accompagnement pour votre projet"
+      "✔️ Un suivi pour votre projet"
     ],
     "offerTitle": "🔹 Un package sur mesure !",
     "offerDescription": "Plutôt qu’un tarif à la journée ou à l’heure, j'adapte la prestation à vos besoins réels 🚀",
@@ -224,9 +224,9 @@
   "quote": {
     "title": "Demander un devis",
     "intro": {
-      "line1": "Si vous êtes intéressé par mes services et souhaitez obtenir un devis personnalisé,",
-      "line2": "remplissez le formulaire ci-dessous.",
-      "line3": "Je reviendrai vers vous dans les plus brefs délais."
+      "line1": "Si vous êtes intéressé par mes services et souhaitez obtenir un devis,",
+      "line2": "remplissez le formulaire ci-dessous,",
+      "line3": "je reviendrai vers vous dans les plus brefs délais."
     },
     "tarifs": {
       "title": "💰 Tarifs standards :",
