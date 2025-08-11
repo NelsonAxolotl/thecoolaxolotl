@@ -17,7 +17,7 @@ const LanguageSwitcher = () => {
         src={frFlag}
         alt="Français"
         width="32"
-        height="20"
+        height="21"
         onClick={() => changeLanguage("fr")}
         role="button"
         tabIndex="0"
@@ -29,7 +29,7 @@ const LanguageSwitcher = () => {
         src={enFlag}
         alt="English"
         width="32"
-        height="20"
+        height="21"
         onClick={() => changeLanguage("en")}
         role="button"
         tabIndex="0"
