@@ -46,6 +46,7 @@ const Creations = () => {
     blogCategory2: false,
     blogCategory3: false,
     imageRef: false,
+    imageMaquetteRef: false,
     imageBlogRef: false,
   });
 
@@ -53,6 +54,7 @@ const Creations = () => {
   const blogCategory2Ref = useRef(null);
   const blogCategory3Ref = useRef(null);
   const imageRef = useRef(null);
+  const imageMaquetteRef = useRef(null);
   const imageBlogRef = useRef(null);
 
   useEffect(() => {
@@ -61,6 +63,7 @@ const Creations = () => {
       { ref: blogCategory2Ref, key: "blogCategory2" },
       { ref: blogCategory3Ref, key: "blogCategory3" },
       { ref: imageRef, key: "imageRef" },
+      { ref: imageMaquetteRef, key: "imageMaquetteRef" },
       { ref: imageBlogRef, key: "imageBlogRef" },
     ];
 
@@ -391,7 +394,7 @@ const Creations = () => {
 
         <h2 className="maquettes-section-title">
           <img
-            ref={imageRef}
+            ref={imageMaquetteRef}
             src={maquette}
             width={300}
             height={300}
