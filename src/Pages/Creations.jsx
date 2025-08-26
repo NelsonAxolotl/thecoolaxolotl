@@ -117,31 +117,31 @@ const Creations = () => {
   }, [videoRef.current]);
 
   const projects = [
-    {
-      id: "wanubida",
-      title: "Compagnie Wanubida",
-      subtitle: "Compagnie de Cirque",
-      description:
-        "Un site immersif reflétant l'énergie, la créativité de la compagnie du cirque Wanubida et une galerie dynamique intégrés.",
-      image: wanubida,
-      link: "https://www.wanubida.com",
-      technologies: [
-        "HTML",
-        "REACT",
-        "JAVASCRIPT",
-        "NEXT.JS",
-        "CSS",
-        "SSAS",
-        "SEO",
-      ],
-      titleColor: "#fff",
-      subtitleColor: "#fff",
-      descriptionColor: "#f0f0f0",
-      review: {
-        text: "Hyper réactif, créatif, précis dans son travail, à l'écoute de nos envies. Notre site est dynamique, simple d'utilisation, très clair. Un suivi parfait à notre image!!!",
-        stars: 5,
-      },
-    },
+    // {
+    //   id: "wanubida",
+    //   title: "Compagnie Wanubida",
+    //   subtitle: "Compagnie de Cirque",
+    //   description:
+    //     "Un site immersif reflétant l'énergie, la créativité de la compagnie du cirque Wanubida et une galerie dynamique intégrés.",
+    //   image: wanubida,
+    //   link: "https://www.wanubida.com",
+    //   technologies: [
+    //     "HTML",
+    //     "REACT",
+    //     "JAVASCRIPT",
+    //     "NEXT.JS",
+    //     "CSS",
+    //     "SSAS",
+    //     "SEO",
+    //   ],
+    //   titleColor: "#fff",
+    //   subtitleColor: "#fff",
+    //   descriptionColor: "#f0f0f0",
+    //   review: {
+    //     text: "Hyper réactif, créatif, précis dans son travail, à l'écoute de nos envies. Notre site est dynamique, simple d'utilisation, très clair. Un suivi parfait à notre image!!!",
+    //     stars: 5,
+    //   },
+    // },
     {
       id: "polyr",
       title: "Compagnie PolyR",
