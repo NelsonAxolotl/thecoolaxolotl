@@ -14,9 +14,10 @@ import avis from "../Pics/axoavis.webp";
 import portfolio from "../Pics/portfolio.webp";
 import maquette from "../Pics/maquette.webp";
 import carnet from "../Pics/carnet.webp";
+import review from "../Pics/avis.webp";
 
 const Creations = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [showPage, setShowPage] = useState(false);
   const videoRef = useRef(null);
   const audioRef = useRef(null);
@@ -366,8 +367,12 @@ const Creations = () => {
                     {/* Face avant avec l'image */}
                     <div className="flip-card-front">
                       <img
-                        src={avis}
-                        alt="Avis client"
+                        src={i18n.language === "en" ? review : avis} // <- ici le changement
+                        alt={
+                          i18n.language === "en"
+                            ? "Client review"
+                            : "Avis client"
+                        }
                         width={200}
                         height={200}
                         className="avis-image"

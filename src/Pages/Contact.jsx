@@ -19,6 +19,7 @@ const Contact = () => {
   const [showForm, setShowForm] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [isPageReady, setIsPageReady] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -40,15 +41,25 @@ const Contact = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
 
+  // Quand image et vidéo sont prêtes, la page devient visible
   useEffect(() => {
-    const timer = setTimeout(() => setShowNav(true), 50);
-    const formTimer = setTimeout(() => setShowForm(true), 400);
-    if (videoRef.current) videoRef.current.playbackRate = 0.4;
-    return () => {
-      clearTimeout(timer);
-      clearTimeout(formTimer);
-    };
-  }, []);
+    if (imgLoaded && videoReady) {
+      setIsPageReady(true);
+      if (videoRef.current) videoRef.current.playbackRate = 0.4;
+    }
+  }, [imgLoaded, videoReady]);
+
+  // Apparitions séquentielles : nav puis form
+  useEffect(() => {
+    if (isPageReady) {
+      const navTimer = setTimeout(() => setShowNav(true), 500); // nav après 0.5s
+      const formTimer = setTimeout(() => setShowForm(true), 1200); // formulaire après 1.2s
+      return () => {
+        clearTimeout(navTimer);
+        clearTimeout(formTimer);
+      };
+    }
+  }, [isPageReady]);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -69,7 +80,7 @@ const Contact = () => {
         "service_8gb8bdg",
         "template_2tt8tpr",
         { name, email, subject, message },
-        "gyOAWsFJuZoqM16PD" // ta clé publique
+        "gyOAWsFJuZoqM16PD"
       )
       .then(() => {
         setIsSent(true);
@@ -91,8 +102,6 @@ const Contact = () => {
       });
   };
 
-  const isPageReady = imgLoaded && videoReady;
-
   return (
     <>
       <Helmet>
@@ -106,7 +115,6 @@ const Contact = () => {
         <meta name="description" content={t("contact-meta.description")} />
       </Helmet>
 
-      <Nav />
       <div
         className={`video-background-contact ${
           isPageReady ? "page-visible" : "page-hidden"
@@ -138,6 +146,7 @@ const Contact = () => {
       </div>
 
       <div className={`nav-container ${showNav ? "fade-in" : ""}`}>
+        <Nav />
         <section className="appel-action">
           <div className={`form-container ${showForm ? "show-form" : ""}`}>
             <div className="contact-header">
@@ -162,8 +171,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {" "}
-                  <span className="sr-only">Instagram</span>
+                  <span className="sr-only">Linkedin</span>
                   <i className="fa-brands fa-linkedin"></i>
                 </a>
                 <a
@@ -172,13 +180,13 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {" "}
                   <span className="sr-only">Instagram</span>
                   <i className="fa-brands fa-instagram"></i>
                 </a>
               </div>
             </div>
             <p>{t("contact-text")}</p>
+
             <form onSubmit={handleSubmit}>
               <div className="honeypot">
                 <label htmlFor="bot-field" className="sr-only">
