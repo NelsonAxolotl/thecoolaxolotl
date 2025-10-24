@@ -144,9 +144,8 @@ const Contact = () => {
           Votre navigateur ne prend pas en charge la vidéo.
         </video>
       </div>
-
+      <Nav />
       <div className={`nav-container ${showNav ? "fade-in" : ""}`}>
-        <Nav />
         <section className="appel-action">
           <div className={`form-container ${showForm ? "show-form" : ""}`}>
             <div className="contact-header">
